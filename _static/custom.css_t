@@ -1,0 +1,4 @@
+
+#searchbox #searchlabel {
+    color: {{ theme_pink_1 }};
+}
