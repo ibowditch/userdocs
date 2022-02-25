@@ -115,7 +115,7 @@ Kiosk sign-in icon
 :::
 
 
-You can sign-out without a tag by clicking the green Sign-out button next to your name.
+You can sign-out without a tag by clicking the green Sign-out  button next to your name.
 
 ## Advanced Operations
 
