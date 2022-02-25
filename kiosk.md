@@ -52,6 +52,7 @@ Signed in!
 
 When you've finished, place your tag on the reader to sign-out. That's it!
 
+(usetag)=
 :::{admonition} Why you should always sign-in with your tag
 :name: usetag
 
@@ -65,6 +66,7 @@ The system records when a tag is used, and if your brigade is strict about using
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
 
 :::
+
 
 (blank_kiosk)=
 ### What if the kiosk screen is blank?

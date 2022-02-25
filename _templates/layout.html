@@ -5,34 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title></title>
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="_static/alabaster.css">
-    <link rel="stylesheet" href="_static/pygments.css">
-    <link rel="stylesheet" href="_static/custom.css"> <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script> <script src="_static/jquery.js"></script> <script src="_static/underscore.js"></script> <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" href="{{ pathto('_static/alabaster.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/custom.css', 1) }}">
 
-    <script id="documentation_options" data-url_root="" src="_static/documentation_options.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="searchindex.js" defer></script>
+    {%- for js in script_files %} {{ js_tag(js) }} {%- endfor %}
+
+    <script id="documentation_options" data-url_root="{{ url_root }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+    <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+    <script src="{{ pathto('searchindex.js', 1) }}" defer></script>
 
   </head>
   <body>
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-                <img alt="Logo" src="_static/python-logo-generic.svg" width="102" height="28">
+                <img alt="Logo" src="{{ pathto('_static/' + logo, 1)}}" width="102" height="28">
             </a>
         </div>
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="index.html">Home</a>
-                <a class="navbar-item" href="background.html">Background</a>
-                <a class="navbar-item" href="kiosk.html">Kiosk</a>
+                <a class="navbar-item" href="{{ pathto('index') }}">Home</a>
+                <a class="navbar-item" href="{{ pathto('background') }}">Background</a>
+                <a class="navbar-item" href="{{ pathto('kiosk') }}">Kiosk</a>
             </div>
             <div class="navbar-end">
                 <a class="navbar-item">
-                    <form class="search" action="#" method="get">
+                    <form class="search" action="{{ pathto('search') }}" method="get">
                         <input class="input is-rounded " type="text" placeholder="Search..." name="q" aria-labelledby="searchlabel"/>
                     </form>
                 </a>
@@ -42,7 +44,7 @@
     <main class="section">
         <div class="container">
             <div class="content" role="main">
-                
+                {{ body }}
             </div>
         </div>
     </main>
@@ -50,7 +52,7 @@
       <div class="content has-text-centered">
           <p>
               <strong>Our Site</strong> by <a href="https://example.com">Schlockchain</a>.
-              Copyright © 2022, Ian Bowditch
+              Copyright © {{ copyright }}
           </p>
       </div>
     </footer>

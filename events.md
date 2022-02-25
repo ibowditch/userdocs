@@ -1,5 +1,5 @@
 
-## Events
+# Events
 
 Events are a central part of the sign-in system. When you attend the station, you sign-in to an activity that is 
 occurring at the station, in the same way that you signed into an activity on the old Attendance Book. The details
@@ -33,7 +33,7 @@ The following actions will update an event on the kiosk:
 
 :::
 
-### A Busy Day on the Kiosk
+## A Busy Day on the Kiosk
 
 :::{figure-md} full-kiosk
 :class: myclass
@@ -121,7 +121,7 @@ activity types and collourss:
 
 
 
-### Pager callout
+## Pager callout
 
 :::{topic} Pager calls
 

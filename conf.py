@@ -20,6 +20,8 @@
 project = 'RFStag'
 # rst_epilog = '.. |project| replace:: %s' % project
 
+logo = "python-logo-generic.svg"
+
 copyright = '2022, Ian Bowditch'
 author = 'Ian Bowditch'
 # hostsite = "eb.fred"
@@ -74,7 +76,8 @@ html_title = "RFStag for electronic sign-in"
 
 html_logo = "_static/python-logo-generic.svg"
 
-html_css_files = ["https://code.iconify.design/2/2.1.2/iconify.min.js",
+html_css_files = ["alabaster.css", "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css",
+                  "https://code.iconify.design/2/2.1.2/iconify.min.js",
                   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
 
 # "custom2.css",
