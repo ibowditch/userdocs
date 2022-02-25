@@ -13,7 +13,7 @@ continue to improve the application as the technology improves, and I find bette
 It has been operating for 4 years now, including through the major fires of 2019-2020, starting with my home brigade, 
 and then growing to another 3 brigades, with more than 300 users.
 
-## Legal Requirement to Record Attendance
+## Legal Requirements
 
 The Executive at all RFS brigades are required, 
 by [State law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), to ensure that all members and visitors 
@@ -32,25 +32,27 @@ each activity is required to check and sign-off on attendance records for activi
 organise.
 
 
-## Problems with the paper Attendance Book
+## Problems with paper
+
+Keeping handwritten attendance records has some significant drawbacks:
 
 * Often written records are messy, sometimes illegible, inconsistent or inaccurate, and require 
-interpretation and follow-up to correct.
+  interpretation and follow-up to correct.
 
 * The Attendance Book is always physically at the station, and the information it holds is not 
-available anywhere else. 
+  available anywhere else. 
 
 * There is no backup - if the Attendance Book is lost or damaged, important records will be lost forever.
 
 * Keeping a physical Attendance Book can be unhygienic, as it (and the shared pen) is 
-touched by many Members, and could be a vector for infections such as flu or COVID-19.
+  touched by many Members, and could be a vector for infections such as flu or COVID-19.
 
 
-## The Benefits of Electronic Attendance records
+## Electronic Attendance records
 
 The original Attendance Book is generally fine for the purpose of meeting the legal requirements to record attendance.
 
-However, Attendance Records are also useful for brigade management, for example:
+However, Attendance Records also contain information that is useful for brigade management, for example:
 
 * Gauging participation of members, especially to recognise outstanding contributions, but also to
   identify members who are no longer active.
@@ -71,7 +73,7 @@ However, Attendance Records are also useful for brigade management, for example:
   district headquarters and other stakeholders.
 
 Because of this, many brigades transcribe the information from the Attendance Book into a spreadsheet 
-or database, so that it can be analysed and summarised. This is a slow manual process, which requires 
+or database, so that it can be analysed and summarised. This is a slow and tedious manual process, which requires 
 a great deal of effort on the part of volunteer members. 
 
 
@@ -122,14 +124,15 @@ When a Member has finished, they should tap their tag on the reader to sign-out.
 
 - Electronic tagging can completely replace the paper Attendance Book.
 
-- Attendance records are collected automatically and stored by a web application in the cloud.
+- Attendance records are collected automatically and stored by a web application in the cloud. No transcription or 
+  checking is needed.
 
 - Attendance records and reports are accessible to all members (login required).
 
 - Cloud based servers on Amazon Web Services can be accessed securely from anywhere, 
-   on any device, 24x7, using only a browser and internet connection.
+  on any device, 24x7, using only a browser and internet connection.
 
-- Highly secure and reliable servers, with regular, automatic database backups.
+- Highly secure and reliable servers, provide regular automatic database backups.
 
 - Data access is controlled by role. Officers can see and do more than ordinary members. 
    eg. Personnel Officer can monitor attendance of new members and detect lack of attendance

@@ -8,6 +8,8 @@ sphynx = "*"
 sphinx = "*"
 livereload = "*"
 myst-parser = "*"
+pylint = "*"
+sphinx-panels = "*"
 
 [dev-packages]
 
