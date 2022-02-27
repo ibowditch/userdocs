@@ -30,7 +30,6 @@ author = 'Ian Bowditch'
 release = '1.0'
 homepage = "http://kuringai.rfstag.org/bfb/"
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -70,14 +69,22 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_book_theme'       # 'sphinxdoc'        # 'alabaster'
+
+html_theme_options = { }
+
+html_theme_options = {
+    "home_page_in_toc": True,
+    "show_navbar_depth": 3,
+}
+
 
 html_title = "RFStag for electronic sign-in"
 
 html_logo = "_static/python-logo-generic.svg"
 
-html_css_files = ["alabaster.css", "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css",
-                  "https://code.iconify.design/2/2.1.2/iconify.min.js",
+html_css_files = [#"https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css",     # "alabaster.css",
+                  #"https://code.iconify.design/2/2.1.2/iconify.min.js",
                   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
 
 # "custom2.css",
@@ -115,15 +122,19 @@ myst_substitutions = {
 # }
 
 # templates_path = ["_templates"]
+# html_sidebars = {
+#   '**': [
+#  #   "about.html",
+#  #    "navigation.html",
+#  #    "relations.html",
+#     # "luv_sphinx.html",
+#     "searchbox.html",
+#     # "donate.html",
+#   ]
+# }
+
 html_sidebars = {
-  '**': [
-    "about.html",
-    "navigation.html",
-    "relations.html",
-    # "luv_sphinx.html",
-    "searchbox.html",
-    # "donate.html",
-  ]
+    "**": ["sbt-sidebar-nav.html", "sbt-sidebar-footer.html"]
 }
 
 # extlinks = {'issue': ('https://github.com/sphinx-doc/sphinx/issues/%s','issue %s'),

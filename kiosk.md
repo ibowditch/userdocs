@@ -52,7 +52,6 @@ Signed in!
 
 When you've finished, place your tag on the reader to sign-out. That's it!
 
-(usetag)=
 :::{admonition} Why you should always sign-in with your tag
 :name: usetag
 

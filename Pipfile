@@ -15,6 +15,7 @@ awsebcli = "*"
 boto3 = "*"
 botocore = "*"
 ghp-import = "*"
+sphinx-book-theme = "*"
 
 [dev-packages]
 
