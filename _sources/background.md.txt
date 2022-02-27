@@ -1,6 +1,6 @@
 # Project Background
 
-## In the beginning...
+## How it started
 
 This project started several years ago, when I decided to build a web application to help automate some of the
 admin tasks that were taking a lot of volunteer time at my local brigade.
@@ -10,13 +10,14 @@ It started with capturing attendance records, then grew to include reporting, sc
 My background as a software engineer (in a past life) came in handy, but there was still a big learning curve, and I 
 continue to improve the application as the technology improves, and I find better ways of doing things.
 
-It has been operating for 4 years now, including through the major fires of 2019-2020, starting with my home brigade, 
-and then growing to another 3 brigades, with more than 300 users.
+It has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
+home brigade, and then grew to include another 3 brigades, and now supports more than 300 users.
+
 
 ## Legal Requirements
 
 The Executive at all RFS brigades are required, 
-by [State law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), to ensure that all members and visitors 
+by [State Law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), to ensure that all members and visitors 
 record their attendance when participating in brigade activities.
 
 Traditionally, attendance was recorded in an Attendance Book, normally placed at the 
@@ -26,7 +27,7 @@ their signature.
 
 Attendance records are [State Records](https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17), and must be 
 [kept for at least 25 years](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf). 
-They are occasionally required during Coronial or other enquiries, and they 
+They are occasionally required during Coronial or other enquiries, and as such they 
 must be an accurate record of who attended and for what purpose. The Officer In Charge (OIC) of 
 each activity is required to check and sign-off on attendance records for activities that they 
 organise.
