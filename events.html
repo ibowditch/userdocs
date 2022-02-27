@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events &#8212; RFStag for electronic sign-in</title>
+    <title>Events &#8212; RFS electronic sign-in</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -62,7 +62,23 @@
 </label>
 <div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
-        <nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/nfc-logo-red-sm.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">RFS electronic sign-in</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -80,11 +96,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="overview.html">
    Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sysoverview.html">
-   System Overview
   </a>
  </li>
  <li class="toctree-l1">
@@ -244,12 +255,18 @@
                 
   <div class="section" id="events">
 <h1>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h1>
-<p>Events are a central part of the sign-in system. When you attend the station, you sign-in to an activity that is
-occurring at the station, in the same way that you signed into an activity on the old Attendance Book. The details
-of the activity were given at the top of the page in the Attendance Book, including the date, OIC, a description
-of the activity etc.</p>
+<p>Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.</p>
+<p>When you attend the station, you sign-in to an activity that is occurring at the station, in the same way that
+you signed into an activity on the old Attendance Book.</p>
 <p>An Event on the sign-in system is just like a page in the Attendance book. When you create an Event, you provide the
-same details as if you were filling in the top of the page in the Attendance book.</p>
+same details as if you were filling in the top of the page in the Attendance book, including:</p>
+<ul class="simple">
+<li><p>Date and time of an activity</p></li>
+<li><p>Name of the OIC running the activity</p></li>
+<li><p>The type of actvity (Training, Maintenance, Meeting, .. etc.)</p></li>
+<li><p>A brief description of the activity</p></li>
+<li><p>A list of members who attended the activity, along with the times they signed in and out</p></li>
+</ul>
 <p>When these details have been supplied, you will have a new event that members can sign-in to.</p>
 <div class="topic">
 <p class="topic-title">Anatomy of an Event</p>

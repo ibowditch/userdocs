@@ -8,7 +8,7 @@ admin tasks that were taking a lot of volunteer time at my local brigade.
 It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.
 
 My background as a software engineer (in a past life) came in handy, but there was still a big learning curve, and I 
-continue to improve the application as the technology improves, and I find better ways of doing things.
+continue to improve the application as the technology evolves, and as I find better ways of doing things.
 
 It has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
 home brigade, and then grew to include another 3 brigades, and now supports more than 300 users.

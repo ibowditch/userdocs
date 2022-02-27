@@ -34,13 +34,17 @@ you will see something like this on the kiosk screen:
 Kiosk screen with 1 event
 :::
 
-If the screen is blank or no events are available, jump to {ref}`blank_kiosk`.
-
 If the event you need is on the screen, all you have to do it to place your tag on the reader, 
 and you will be signed in. 
 
+```{margin} Blank screen?
+If the screen is blank or no events are available, jump to {ref}`blank_kiosk`.
+```
+
 You should then hear a beep as the tag is registered, and the screen will be updated as follows, with your name in 
 the event, and the time you signed in.
+
+
 
 :::{figure-md} kiosk1event1att
 :class: myclass
@@ -58,8 +62,8 @@ When you've finished, place your tag on the reader to sign-out. That's it!
 Your tag is unique to you, and essentially replaces your signature in the electronic attendance 
 records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.
 
-There is a mechanism which allows {ref}`notag` but this should only be used in exceptional cases, as the Kiosk 
-is a shared computer, and doesn't know who is at the keyboard. 
+There is a mechanism which allows {ref}`you to sign in without a tag<notag>` but this should only be used in 
+exceptional cases, as the Kiosk is a shared computer, and doesn't know who is at the keyboard. 
 
 The system records when a tag is used, and if your brigade is strict about using tags, 
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
@@ -120,8 +124,6 @@ You can sign-out without a tag by clicking the green Sign-out  button next to yo
 
 ## Advanced Operations
 
-### Multiple simultaneous events
-
 ### Changing attendance details
 
 ### Changing event details
@@ -129,6 +131,10 @@ You can sign-out without a tag by clicking the green Sign-out  button next to yo
 ### Deleting events
 
 ### Kiosk beeps
+
+### Multiple simultaneous events
+
+### Tips for organising a busy day
 
 ### Resetting the Kiosk
 

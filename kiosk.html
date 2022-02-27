@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Kiosk &#8212; RFStag for electronic sign-in</title>
+    <title>The Kiosk &#8212; RFS electronic sign-in</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -63,7 +63,23 @@
 </label>
 <div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
-        <nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/nfc-logo-red-sm.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">RFS electronic sign-in</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -81,11 +97,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="overview.html">
    Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sysoverview.html">
-   System Overview
   </a>
  </li>
  <li class="toctree-l1">
@@ -207,11 +218,6 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-simultaneous-events">
-     Multiple simultaneous events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#changing-attendance-details">
      Changing attendance details
     </a>
@@ -229,6 +235,16 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kiosk-beeps">
      Kiosk beeps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-simultaneous-events">
+     Multiple simultaneous events
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tips-for-organising-a-busy-day">
+     Tips for organising a busy day
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -291,11 +307,6 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-simultaneous-events">
-     Multiple simultaneous events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#changing-attendance-details">
      Changing attendance details
     </a>
@@ -313,6 +324,16 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kiosk-beeps">
      Kiosk beeps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-simultaneous-events">
+     Multiple simultaneous events
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tips-for-organising-a-busy-day">
+     Tips for organising a busy day
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -356,9 +377,12 @@ you will see something like this on the kiosk screen:</p>
 <img alt="Kiosk with 1 event" class="bg-primary mb-1" src="_images/kiosk1-event-b.jpg" />
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Kiosk screen with 1 event</span><a class="headerlink" href="#kiosk1event" title="Permalink to this image">¶</a></p>
 </div>
-<p>If the screen is blank or no events are available, jump to <a class="reference internal" href="#blank-kiosk"><span class="std std-ref">What if the kiosk screen is blank?</span></a>.</p>
 <p>If the event you need is on the screen, all you have to do it to place your tag on the reader,
 and you will be signed in.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Blank screen?</p>
+<p>If the screen is blank or no events are available, jump to <a class="reference internal" href="#blank-kiosk"><span class="std std-ref">What if the kiosk screen is blank?</span></a>.</p>
+</div>
 <p>You should then hear a beep as the tag is registered, and the screen will be updated as follows, with your name in
 the event, and the time you signed in.</p>
 <div class="myclass figure align-default" id="kiosk1event1att">
@@ -370,8 +394,8 @@ the event, and the time you signed in.</p>
 <p class="admonition-title">Why you should always sign-in with your tag</p>
 <p>Your tag is unique to you, and essentially replaces your signature in the electronic attendance
 records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.</p>
-<p>There is a mechanism which allows <a class="reference internal" href="#notag"><span class="std std-ref">Signing in without a tag</span></a> but this should only be used in exceptional cases, as the Kiosk
-is a shared computer, and doesn’t know who is at the keyboard.</p>
+<p>There is a mechanism which allows <a class="reference internal" href="#notag"><span class="std std-ref">you to sign in without a tag</span></a> but this should only be used in
+exceptional cases, as the Kiosk is a shared computer, and doesn’t know who is at the keyboard.</p>
 <p>The system records when a tag is used, and if your brigade is strict about using tags,
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.</p>
 </div>
@@ -410,9 +434,6 @@ in to an event by clicking on the sign-in icon:</p>
 </div>
 <div class="section" id="advanced-operations">
 <h2>Advanced Operations<a class="headerlink" href="#advanced-operations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="multiple-simultaneous-events">
-<h3>Multiple simultaneous events<a class="headerlink" href="#multiple-simultaneous-events" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="changing-attendance-details">
 <h3>Changing attendance details<a class="headerlink" href="#changing-attendance-details" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -424,6 +445,12 @@ in to an event by clicking on the sign-in icon:</p>
 </div>
 <div class="section" id="kiosk-beeps">
 <h3>Kiosk beeps<a class="headerlink" href="#kiosk-beeps" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="multiple-simultaneous-events">
+<h3>Multiple simultaneous events<a class="headerlink" href="#multiple-simultaneous-events" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tips-for-organising-a-busy-day">
+<h3>Tips for organising a busy day<a class="headerlink" href="#tips-for-organising-a-busy-day" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="resetting-the-kiosk">
 <h3>Resetting the Kiosk<a class="headerlink" href="#resetting-the-kiosk" title="Permalink to this headline">¶</a></h3>
