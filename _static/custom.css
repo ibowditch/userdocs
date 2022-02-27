@@ -1,0 +1,26 @@
+a.headerlink {
+    visibility: hidden;
+}
+
+a.brackets:before,
+span.brackets > a:before{
+    content: "[";
+}
+
+a.brackets:after,
+span.brackets > a:after {
+    content: "]";
+}
+
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink,
+caption:hover > a.headerlink,
+p.caption:hover > a.headerlink,
+div.code-block-caption:hover > a.headerlink {
+    visibility: visible;
+}
