@@ -17,10 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'RFStag'
+project = 'RFS Tag'
 # rst_epilog = '.. |project| replace:: %s' % project
 
-logo = "python-logo-generic.svg"
+# logo = "assets/images/nfc-logo-red-sm.png"
 
 copyright = '2022, Ian Bowditch'
 author = 'Ian Bowditch'
@@ -71,17 +71,15 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv']
 #
 html_theme = 'sphinx_book_theme'       # 'sphinxdoc'        # 'alabaster'
 
-html_theme_options = { }
-
 html_theme_options = {
     "home_page_in_toc": True,
     "show_navbar_depth": 3,
 }
 
 
-html_title = "RFStag for electronic sign-in"
+html_title = "RFS electronic sign-in"
 
-html_logo = "_static/python-logo-generic.svg"
+html_logo = "assets/images/nfc-logo-red-sm.png"      # "_static/python-logo-generic.svg"
 
 html_css_files = [#"https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css",     # "alabaster.css",
                   #"https://code.iconify.design/2/2.1.2/iconify.min.js",
@@ -133,9 +131,28 @@ myst_substitutions = {
 #   ]
 # }
 
-html_sidebars = {
-    "**": ["sbt-sidebar-nav.html", "sbt-sidebar-footer.html"]
-}
+# html_sidebars = {
+#     "**": ["sbt-sidebar-nav.html", "sbt-sidebar-footer.html"]
+# }
+#
+# html_sidebars = {
+#     "reference/blog/*": [
+#         "sidebar-logo.html",
+#         "search-field.html",
+#         "postcard.html",
+#         "recentposts.html",
+#         "tagcloud.html",
+#         "categories.html",
+#         "archives.html",
+#         "sbt-sidebar-nav.html",
+#         "sbt-sidebar-footer.html",
+#     ]
+# }
+
+
+
+
+
 
 # extlinks = {'issue': ('https://github.com/sphinx-doc/sphinx/issues/%s','issue %s'),
 #             'bushfire': ('http://kuringai.rfstag.org/bfb/%s','bushpage %s'),

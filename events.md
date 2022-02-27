@@ -1,13 +1,23 @@
 
 # Events
 
-Events are a central part of the sign-in system. When you attend the station, you sign-in to an activity that is 
-occurring at the station, in the same way that you signed into an activity on the old Attendance Book. The details
-of the activity were given at the top of the page in the Attendance Book, including the date, OIC, a description 
-of the activity etc.
+Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.
+
+When you attend the station, you sign-in to an activity that is occurring at the station, in the same way that 
+you signed into an activity on the old Attendance Book.
 
 An Event on the sign-in system is just like a page in the Attendance book. When you create an Event, you provide the
-same details as if you were filling in the top of the page in the Attendance book.
+same details as if you were filling in the top of the page in the Attendance book, including:
+
+* Date and time of an activity
+
+* Name of the OIC running the activity
+
+* The type of actvity (Training, Maintenance, Meeting, .. etc.) 
+  
+* A brief description of the activity
+
+* A list of members who attended the activity, along with the times they signed in and out
 
 When these details have been supplied, you will have a new event that members can sign-in to.
 
