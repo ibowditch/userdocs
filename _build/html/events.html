@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="_static/alabaster.css">
+    <link rel="stylesheet" href="_static/pygments.css">
+    <link rel="stylesheet" href="_static/custom.css"> <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script> <script src="_static/jquery.js"></script> <script src="_static/underscore.js"></script> <script src="_static/doctools.js"></script>
+
+    <script id="documentation_options" data-url_root="" src="_static/documentation_options.js"></script>
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js" defer></script>
+
+  </head>
+  <body>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img alt="Logo" src="_static/python-logo-generic.svg" width="102" height="28">
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">Home</a>
+                <a class="navbar-item" href="background.html">Background</a>
+                <a class="navbar-item" href="kiosk.html">Kiosk</a>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item">
+                    <form class="search" action="search.html" method="get">
+                        <input class="input is-rounded " type="text" placeholder="Search..." name="q" aria-labelledby="searchlabel"/>
+                    </form>
+                </a>
+            </div>
+        </div>
+      </nav>
+    <main class="section">
+        <div class="container">
+            <div class="content" role="main">
+                <section id="events">
+<h1>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h1>
+<p>Events are a central part of the sign-in system. When you attend the station, you sign-in to an activity that is
+occurring at the station, in the same way that you signed into an activity on the old Attendance Book. The details
+of the activity were given at the top of the page in the Attendance Book, including the date, OIC, a description
+of the activity etc.</p>
+<p>An Event on the sign-in system is just like a page in the Attendance book. When you create an Event, you provide the
+same details as if you were filling in the top of the page in the Attendance book.</p>
+<p>When these details have been supplied, you will have a new event that members can sign-in to.</p>
+<div class="topic">
+<p class="topic-title">Anatomy of an Event</p>
+<p>An event consists of a heading, containing information previously held in the heading of a page in the Attendance Book,
+and a list of attendees, including when they signed-in and signed out.</p>
+</div>
+<p><img alt="Current Event on the Kiosk!" src="_images/currentevent-a2.jpg" /></p>
+<div class="topic">
+<p class="topic-title">Updating an event on the kiosk</p>
+<p>The following actions will update an event on the kiosk:</p>
+<ol class="arabic simple">
+<li><p>Signing in or signing out with a tag.</p></li>
+<li><p>Signing in using the icon on the top right of the event</p></li>
+<li><p>Signing out using the “Sign-Out” button</p></li>
+<li><p>Clicking the title (event details) to edit the event</p></li>
+<li><p>Clicking a member name to edit their attendance details.</p></li>
+</ol>
+</div>
+<section id="a-busy-day-on-the-kiosk">
+<h2>A Busy Day on the Kiosk<a class="headerlink" href="#a-busy-day-on-the-kiosk" title="Permalink to this headline">¶</a></h2>
+<figure class="myclass align-default" id="full-kiosk">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/fullkiosk-a.jpg"><img alt="Busy Kiosk" class="bg-primary mb-1" src="_images/fullkiosk-a.jpg" style="width: 2000px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Busy Kiosk screen (click to enlarge)</span><a class="headerlink" href="#full-kiosk" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="#full-kiosk"><span class="std std-ref">Go to the full kiosk!</span></a></p>
+<div class="topic">
+<p class="topic-title">Event Types and Controls</p>
+<p>Events come in the following types:</p>
+<ol class="arabic">
+<li><p>Open/available</p>
+<p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
+they will accept sign-ins from members either using a tag, or using the sign-in icon.</p>
+</li>
+<li><p>Closed/completed</p>
+<p>Events close when their finish time has passed. They will be shown with a grey background when they are
+closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p>
+</li>
+<li><p>Future</p>
+<p>Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
+to sign-in with a tag, and no sign-in icon is shown for future events.</p>
+</li>
+<li><p>Overnight</p>
+<p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
+that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start
+<strong>or end</strong> on the current day, so such an event will appear on the start day and on the end day. This allows
+crew to sign out when they return from night shift.</p>
+</li>
+<li><p>Overlapping</p>
+<p>Events can overlap and/or run simultaneously. When they do, members will be asked to choose which event they
+want to attend when they tag in.</p>
+</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Set the end time for overnight events</p>
+<p>If the OIC doesn’t set the end time of an event so that it end the next day, members won’t be able to sign-out
+when they return from their shift, as the event won’t be shown on the kiosk.</p>
+<p>If there’s any chance you might be out past midnight (like Cinderella), make sure you set the end time past midnight.
+If you get back early, no problem.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Activity Types</p>
+<p>activity types and collourss:</p>
+<ol class="arabic simple">
+<li><p>Open/available
+Events become open 1 hour before their start time and remain open until their end time. When they are open,
+they will accept sign-ins from members either using a tag, or using the sign-in icon.</p></li>
+<li><p>Closed/completed
+Events close when their finish time has passed. They will be shown with a grey background when they are
+closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p></li>
+<li><p>Future
+Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
+to sign-in with a tag, and no sign-in icon is shown for future events.</p></li>
+<li><p>Overnight
+Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
+that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start
+<strong>or end</strong> on the current day, so such an event will appear on the start day and on the end day. This allows
+crew to sign out when they return from night shift.</p></li>
+</ol>
+</div>
+</section>
+<section id="pager-callout">
+<h2>Pager callout<a class="headerlink" href="#pager-callout" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title">Pager calls</p>
+<p>Pager Calls are detected by separate system which automagically creates a new event on the server
+as soon as a callout is received for your brigade.</p>
+<p>The event should be available for members to sign-in to when they arrive at the station.</p>
+</div>
+<p><img alt="Pager callout alt!" src="_images/pagercall-a2.jpg" /></p>
+</section>
+<section id="attendance">
+<h2>Attendance<a class="headerlink" href="#attendance" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tagging">
+<h2>Tagging<a class="headerlink" href="#tagging" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+      <div class="content has-text-centered">
+          <p>
+              <strong>Our Site</strong> by <a href="https://example.com">Schlockchain</a>.
+              Copyright © 2022, Ian Bowditch
+          </p>
+      </div>
+    </footer>
+  </body>
+</html>

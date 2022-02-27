@@ -10,6 +10,11 @@ livereload = "*"
 myst-parser = "*"
 pylint = "*"
 sphinx-panels = "*"
+aws = "*"
+awsebcli = "*"
+boto3 = "*"
+botocore = "*"
+ghp-import = "*"
 
 [dev-packages]
 
