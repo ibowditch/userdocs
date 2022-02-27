@@ -83,7 +83,8 @@ html_logo = "assets/images/nfc-logo-red-sm.png"      # "_static/python-logo-gene
 
 html_css_files = [#"https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css",     # "alabaster.css",
                   #"https://code.iconify.design/2/2.1.2/iconify.min.js",
-                  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+                    "custom.css",
+                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
 
 # "custom2.css",
 

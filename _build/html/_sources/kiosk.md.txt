@@ -1,7 +1,5 @@
 # The Kiosk
 
-## What is the Kiosk?
-
 The Kiosk is a small computer and screen, with a tag reader attached, that replaces the old Attendance Book, 
 and records attendance in electronic form. It is normally located at the front desk of the station. 
 
@@ -38,7 +36,7 @@ If the event you need is on the screen, all you have to do it to place your tag 
 and you will be signed in. 
 
 ```{margin} Blank screen?
-If the screen is blank or no events are available, jump to {ref}`blank_kiosk`.
+If the screen is blank or no events are available, jump to {ref}`blank_kiosk`
 ```
 
 You should then hear a beep as the tag is registered, and the screen will be updated as follows, with your name in 
@@ -54,16 +52,16 @@ the event, and the time you signed in.
 Signed in!
 :::
 
-When you've finished, place your tag on the reader to sign-out. That's it!
+When you've finished the activity, place your tag on the reader to sign-out. That's it!
 
 :::{admonition} Why you should always sign-in with your tag
 :name: usetag
 
-Your tag is unique to you, and essentially replaces your signature in the electronic attendance 
-records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.
-
 There is a mechanism which allows {ref}`you to sign in without a tag<notag>` but this should only be used in 
 exceptional cases, as the Kiosk is a shared computer, and doesn't know who is at the keyboard. 
+
+Your tag is unique to you, and essentially replaces your signature in the electronic attendance 
+records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.
 
 The system records when a tag is used, and if your brigade is strict about using tags, 
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
@@ -126,18 +124,58 @@ You can sign-out without a tag by clicking the green Sign-out  button next to yo
 
 ### Changing attendance details
 
-### Changing event details
+If you forgot to sign-in when you arrived at the station, and go back later to sign-in, you can revise the start 
+time by clicking on your name in the event. 
+
+You will then have the option of changing the sign-in time or other details of your attendance at that event. 
+Click Submit to save the new details.
 
 ### Deleting events
 
-### Kiosk beeps
+If a new event is created by mistake, it can be deleted using the trash icon in the event. 
+
+You may not delete an event which already has members listed as attending (the trash icon will not shown), to avoid 
+accidental loss of attendance records.
 
 ### Multiple simultaneous events
 
+On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
+(eg. Maintenance, and Training). 
+
+If that's the case, when you present your tag to sign-in, the system will ask you to 
+choose which of the available events you wish to join. Just click on the appropriate event and you will be signed in 
+to that.
+
 ### Tips for organising a busy day
+
+* Where possible, avoid overlapping events, as they will slow down the sign-in process for all members. 
+  
+* Choose the start and end times for events to match the expected duration of the event. Members can sign-in up to 1 
+  hour before the start time, and can sign-out at any time after that (even after the end time).
+  
+* If necessary, the end time for an event can be set earlier than the expected finish to avoid overlaps with other events. 
+  Make sure that it is set to allow any latecomers to sign-in (they can't sign-in after the end time), but it doesn't 
+  have to go right to the expected end of the activity if it will cause an overlap with other events.
 
 ### Resetting the Kiosk
 
+If, for any reason, the Kiosk becomes unresponsive, or is not working as intended, it can be restarted by using the
+"three finger salute" - control-alt-delete, then choose Reboot. This will restart the Kiosk safely, and it should be
+back up and running in a minute or so.
 
+:::{warning}
+
+Do not just turn the power off and then on again to reset the Kiosk. If the Kiosk is not shutdown properly, there 
+is a risk that it will be damaged, and it may not restart.
+
+:::
+
+### Kiosk beeps
+
+The Kiosk will beep when a tag is registered, as follows:
+
+* Single high pitched tone for signin in
+* Single low pitched tone for signin out
+* Multiple tones when a choice of events if required
 
 

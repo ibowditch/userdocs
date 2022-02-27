@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -186,11 +187,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-the-kiosk">
-   What is the Kiosk?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-operations">
    Basic Operations
   </a>
@@ -223,18 +219,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-event-details">
-     Changing event details
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deleting-events">
      Deleting events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kiosk-beeps">
-     Kiosk beeps
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -250,6 +236,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#resetting-the-kiosk">
      Resetting the Kiosk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kiosk-beeps">
+     Kiosk beeps
     </a>
    </li>
   </ul>
@@ -275,11 +266,6 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-the-kiosk">
-   What is the Kiosk?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-operations">
    Basic Operations
   </a>
@@ -312,18 +298,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-event-details">
-     Changing event details
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deleting-events">
      Deleting events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kiosk-beeps">
-     Kiosk beeps
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -341,6 +317,11 @@
      Resetting the Kiosk
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kiosk-beeps">
+     Kiosk beeps
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -354,8 +335,6 @@
                 
   <div class="section" id="the-kiosk">
 <h1>The Kiosk<a class="headerlink" href="#the-kiosk" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-the-kiosk">
-<h2>What is the Kiosk?<a class="headerlink" href="#what-is-the-kiosk" title="Permalink to this headline">¶</a></h2>
 <p>The Kiosk is a small computer and screen, with a tag reader attached, that replaces the old Attendance Book,
 and records attendance in electronic form. It is normally located at the front desk of the station.</p>
 <p>It is always-on and available 24h every day. It requires an internet connection (wifi or wired)
@@ -364,7 +343,6 @@ to function.</p>
 updated every night, just after midnight, to show events for the new day.</p>
 <p>NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out
 of events shown on the kiosk screen.</p>
-</div>
 <div class="section" id="basic-operations">
 <h2>Basic Operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="signing-in-the-easy-way">
@@ -381,7 +359,7 @@ you will see something like this on the kiosk screen:</p>
 and you will be signed in.</p>
 <div class="margin sidebar">
 <p class="sidebar-title">Blank screen?</p>
-<p>If the screen is blank or no events are available, jump to <a class="reference internal" href="#blank-kiosk"><span class="std std-ref">What if the kiosk screen is blank?</span></a>.</p>
+<p>If the screen is blank or no events are available, jump to <a class="reference internal" href="#blank-kiosk"><span class="std std-ref">What if the kiosk screen is blank?</span></a></p>
 </div>
 <p>You should then hear a beep as the tag is registered, and the screen will be updated as follows, with your name in
 the event, and the time you signed in.</p>
@@ -389,13 +367,13 @@ the event, and the time you signed in.</p>
 <img alt="Signed in!" class="bg-primary mb-1" src="_images/kiosk-1event-1att-b.jpg" />
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Signed in!</span><a class="headerlink" href="#kiosk1event1att" title="Permalink to this image">¶</a></p>
 </div>
-<p>When you’ve finished, place your tag on the reader to sign-out. That’s it!</p>
+<p>When you’ve finished the activity, place your tag on the reader to sign-out. That’s it!</p>
 <div class="admonition-why-you-should-always-sign-in-with-your-tag admonition" id="usetag">
 <p class="admonition-title">Why you should always sign-in with your tag</p>
-<p>Your tag is unique to you, and essentially replaces your signature in the electronic attendance
-records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.</p>
 <p>There is a mechanism which allows <a class="reference internal" href="#notag"><span class="std std-ref">you to sign in without a tag</span></a> but this should only be used in
 exceptional cases, as the Kiosk is a shared computer, and doesn’t know who is at the keyboard.</p>
+<p>Your tag is unique to you, and essentially replaces your signature in the electronic attendance
+records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.</p>
 <p>The system records when a tag is used, and if your brigade is strict about using tags,
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.</p>
 </div>
@@ -436,24 +414,55 @@ in to an event by clicking on the sign-in icon:</p>
 <h2>Advanced Operations<a class="headerlink" href="#advanced-operations" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="changing-attendance-details">
 <h3>Changing attendance details<a class="headerlink" href="#changing-attendance-details" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="changing-event-details">
-<h3>Changing event details<a class="headerlink" href="#changing-event-details" title="Permalink to this headline">¶</a></h3>
+<p>If you forgot to sign-in when you arrived at the station, and go back later to sign-in, you can revise the start
+time by clicking on your name in the event.</p>
+<p>You will then have the option of changing the sign-in time or other details of your attendance at that event.
+Click Submit to save the new details.</p>
 </div>
 <div class="section" id="deleting-events">
 <h3>Deleting events<a class="headerlink" href="#deleting-events" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="kiosk-beeps">
-<h3>Kiosk beeps<a class="headerlink" href="#kiosk-beeps" title="Permalink to this headline">¶</a></h3>
+<p>If a new event is created by mistake, it can be deleted using the trash icon in the event.</p>
+<p>You may not delete an event which already has members listed as attending (the trash icon will not shown), to avoid
+accidental loss of attendance records.</p>
 </div>
 <div class="section" id="multiple-simultaneous-events">
 <h3>Multiple simultaneous events<a class="headerlink" href="#multiple-simultaneous-events" title="Permalink to this headline">¶</a></h3>
+<p>On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
+(eg. Maintenance, and Training).</p>
+<p>If that’s the case, when you present your tag to sign-in, the system will ask you to
+choose which of the available events you wish to join. Just click on the appropriate event and you will be signed in
+to that.</p>
 </div>
 <div class="section" id="tips-for-organising-a-busy-day">
 <h3>Tips for organising a busy day<a class="headerlink" href="#tips-for-organising-a-busy-day" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Where possible, avoid overlapping events, as they will slow down the sign-in process for all members.</p></li>
+<li><p>Choose the start and end times for events to match the expected duration of the event. Members can sign-in up to 1
+hour before the start time, and can sign-out at any time after that (even after the end time).</p></li>
+<li><p>If necessary, the end time for an event can be set earlier than the expected finish to avoid overlaps with other events.
+Make sure that it is set to allow any latecomers to sign-in (they can’t sign-in after the end time), but it doesn’t
+have to go right to the expected end of the activity if it will cause an overlap with other events.</p></li>
+</ul>
 </div>
 <div class="section" id="resetting-the-kiosk">
 <h3>Resetting the Kiosk<a class="headerlink" href="#resetting-the-kiosk" title="Permalink to this headline">¶</a></h3>
+<p>If, for any reason, the Kiosk becomes unresponsive, or is not working as intended, it can be restarted by using the
+“three finger salute” - control-alt-delete, then choose Reboot. This will restart the Kiosk safely, and it should be
+back up and running in a minute or so.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not just turn the power off and then on again to reset the Kiosk. If the Kiosk is not shutdown properly, there
+is a risk that it will be damaged, and it may not restart.</p>
+</div>
+</div>
+<div class="section" id="kiosk-beeps">
+<h3>Kiosk beeps<a class="headerlink" href="#kiosk-beeps" title="Permalink to this headline">¶</a></h3>
+<p>The Kiosk will beep when a tag is registered, as follows:</p>
+<ul class="simple">
+<li><p>Single high pitched tone for signin in</p></li>
+<li><p>Single low pitched tone for signin out</p></li>
+<li><p>Multiple tones when a choice of events if required</p></li>
+</ul>
 </div>
 </div>
 </div>

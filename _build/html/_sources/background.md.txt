@@ -1,7 +1,5 @@
 # Project Background
 
-## How it started
-
 This project started several years ago, when I decided to build a web application to help automate some of the
 admin tasks that were taking a lot of volunteer time at my local brigade.
 
@@ -11,7 +9,31 @@ My background as a software engineer (in a past life) came in handy, but there w
 continue to improve the application as the technology evolves, and as I find better ways of doing things.
 
 It has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
-home brigade, and then grew to include another 3 brigades, and now supports more than 300 users.
+home brigade (~70 members), and then grew to include another 3 brigades, and now supports more than 300 users.
+
+## High level requirements
+
+* Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
+  procedures used with the Attendance Book.
+  
+* Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date 
+  and running.
+
+* Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades
+
+* Improve visibility and availability of attendance data to all brigade members and management.
+
+* Futher reduce admin effort by automatically producing reports based on attendance data.
+
+* Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
+  
+* High availability and reliability, including regular automatic backups.
+
+* Secure solution with password required for access. 
+
+* Automated installation and upgrades, with remote monitoring for Kiosk part of the system.
+
+* Uninterrupted service during server upgrades.
 
 
 ## Legal Requirements
