@@ -1,6 +1,8 @@
-# Administration Procedures
+# Administration Procedures (Under construction)
 
-## Adding a new Brigade
+## Setting Up
+
+### Adding a new Brigade
 
 Brigade specific settings
 Event types: The original list of options for setting the type of an event contained around 40 categories, 
@@ -15,7 +17,7 @@ number of events.
 These settings are available under admin:Brigade Settings.
 
 
-## Preparing and Issuing Tags
+### Preparing and Issuing Tags
 
 Preparation
 
@@ -59,80 +61,9 @@ You can also check the tag using android mobile phones. If you place the tag on 
 it should detect an NFC device. It will show the RFS member number, 
 the date when it was created, and the brigade it belongs to.
 
+### Training Users
 
-
-## Training Users
-
-## Adding New Members
-
-Personnel/Add new member
-
-Handles setup of user and contact details as well as new member record
-
-Only available to Personnel Officer
-
-TCard button on all events
-
-A TCard button has been added wherever you see details of an event, 
-including the kiosk, and when selecting an event in a calendar.
-
-Shows details needed to fill in a TCard or crew assigned to event
-
-Vehicle details (provided a vehicle is allocated)
-
-Crew list and qualifications
-
-## Updating Officers
-
-In the current release, there's a new menu item on the main landing page under Personnel, called Change Officers. 
-When you click on that, it will show a list of current officers.
-
-Normally, this will show officers for the current season, and in the rare event of an officer being changed during the 
-season, you can change the name associated with a position then save, to update it.
-
-When you pass into a new season (the date of which is defined as Season Start in your Brigade Settings, under admin), 
-there won't be any officers defined for the new season, but the officers from the previous season will still be in place 
-until they are either re-elected or changed at an election.
-
-In this case, the Change Officers form will show the officers from the previous season, but will also show a button 
-that allows you to "Copy Officers to <new season>". If you click this button, the system will create new Officer 
-records for all positions in the new season using the same names as the previous season. You can then edit this list 
-by changing the names of the officers to match the election results, then Save to update the system.
-
-In summary, the procedure to update officers after this year's election is as follows:
-Click the menu item Personnel/Change Officers
-Click the button "Copy Officers to 2021"
-Change the names under the Member column to match the officers elected in the recent election.
-Save
-
-## Voting Criteria
-
-## COVID-19 Report
-
-As we discussed the other week, I reviewed the NSW Government Covid safe record keeping guidelines, and it 
-appears that our electronic sign-in system meets the requirements for recording the visitor details needed by 
-NSW COVID contact tracing.
-
-Hopefully this will never be needed, but I also added a new report to the sign-in server (see COVID-19 Attendance 
-under the Officer menu), which lists details of all members who attended the station over the past 28 days. 
-This report uses the template given in NSW COVID-safe record keeping obligations.
-
-Our members are used to signing in and out at the station, and our attendance records are generally quite good, 
-perhaps better than records coming from scanning QR codes at the station. If the brigade is ever asked to assist 
-with contact tracing, this new report could be used in addition to the QR data.
-
-For now, we are still under instructions from FCC that members need to both sign-in and also scan a QR code at the station. 
-Our electronic attendance records for members appear to be sufficient to meet the NSW Government COVID requirements, 
-and with this system in place, it may not be strictly necessary for members to also scan the QR code. However, 
-we would need to get permission from FCC before telling members they no longer need to scan the QR codes.
-
-Naturally, non-members and other visitors would still need to sign-in using the Attendance Book, and also scan a QR code.
-
-
-
-
-
-## Defining Activity Types
+### Defining Activity Types
 
 The Member Activity report can now show all activities that were previously excluded, 
 if you check the box "Add Excluded Events". All events recorded during the season, without exception, 
@@ -155,15 +86,91 @@ the Member Activity Report. You would normally exclude Social: Social/Personal, 
 or External activities, or anything else you want. As noted above, activities that would normally be excluded (and not shown), 
 can be revealed temporarily with the new "Add Excluded Events" button.
 
+### Setting Voting Criteria
 
-## Vehicle Usage
 
-## Driver Activity
+## Periodic Admin Procedures
 
-## Recurring Events in the Calendar
 
-## Training Reports
+### Updating Officers
 
-## Managing Member Qualifications
+In the current release, there's a new menu item on the main landing page under Personnel, called Change Officers. 
+When you click on that, it will show a list of current officers.
 
-## AWS Credits (annual)
+Normally, this will show officers for the current season, and in the rare event of an officer being changed during the 
+season, you can change the name associated with a position then save, to update it.
+
+When you pass into a new season (the date of which is defined as Season Start in your Brigade Settings, under admin), 
+there won't be any officers defined for the new season, but the officers from the previous season will still be in place 
+until they are either re-elected or changed at an election.
+
+In this case, the Change Officers form will show the officers from the previous season, but will also show a button 
+that allows you to "Copy Officers to <new season>". If you click this button, the system will create new Officer 
+records for all positions in the new season using the same names as the previous season. You can then edit this list 
+by changing the names of the officers to match the election results, then Save to update the system.
+
+In summary, the procedure to update officers after this year's election is as follows:
+Click the menu item Personnel/Change Officers
+Click the button "Copy Officers to 2021"
+Change the names under the Member column to match the officers elected in the recent election.
+Save
+
+
+### Set Recurring Events in the Calendar
+
+### Generate Training Reports
+
+### Synchonising Member Qualifications
+
+### AWS Credits (annual)
+
+
+## Ad-Hoc Admin Tasks
+
+### Adding New Members
+
+Personnel/Add new member
+
+Handles setup of user and contact details as well as new member record
+
+Only available to Personnel Officer
+
+TCard button on all events
+
+A TCard button has been added wherever you see details of an event, 
+including the kiosk, and when selecting an event in a calendar.
+
+Shows details needed to fill in a TCard or crew assigned to event
+
+Vehicle details (provided a vehicle is allocated)
+
+Crew list and qualifications
+
+### COVID-19 Report
+
+As we discussed the other week, I reviewed the NSW Government Covid safe record keeping guidelines, and it 
+appears that our electronic sign-in system meets the requirements for recording the visitor details needed by 
+NSW COVID contact tracing.
+
+Hopefully this will never be needed, but I also added a new report to the sign-in server (see COVID-19 Attendance 
+under the Officer menu), which lists details of all members who attended the station over the past 28 days. 
+This report uses the template given in NSW COVID-safe record keeping obligations.
+
+Our members are used to signing in and out at the station, and our attendance records are generally quite good, 
+perhaps better than records coming from scanning QR codes at the station. If the brigade is ever asked to assist 
+with contact tracing, this new report could be used in addition to the QR data.
+
+For now, we are still under instructions from FCC that members need to both sign-in and also scan a QR code at the station. 
+Our electronic attendance records for members appear to be sufficient to meet the NSW Government COVID requirements, 
+and with this system in place, it may not be strictly necessary for members to also scan the QR code. However, 
+we would need to get permission from FCC before telling members they no longer need to scan the QR codes.
+
+Naturally, non-members and other visitors would still need to sign-in using the Attendance Book, and also scan a QR code.
+
+
+
+## Vehicles and Equipment
+
+### Driver Activity
+
+### Vehicle Usage

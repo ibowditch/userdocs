@@ -11,7 +11,9 @@ for the Kiosk, the server can be accessed by all members, for a variety of servi
 
 ## Landing/home page
 
-## Members
+## Menu of Services
+
+### Members
 
 Member menu
 Upcoming events - skip this for now
@@ -52,54 +54,54 @@ Officers can create new events here
 Members can only look, or nominate to attend
 
 
-### Upcoming Events
+#### Upcoming Events
 
-### Member Activity
+#### Member Activity
 
-### At Station
+#### At Station
 
-### My Contact Details
+#### My Contact Details
 
-### Event Calendar
+#### Event Calendar
 
-## Training
+### Training
 
-### Courses Available
+#### Courses Available
 
-### Quarterly Return
+#### Quarterly Return
 
-### Driver Training (placeholder)
+#### Driver Training (placeholder)
 
-### Training Materials (placeholder)
+#### Training Materials (placeholder)
 
-### Training Calendar
+#### Training Calendar
 
-## Secretary (placeholder)
+### Secretary (placeholder)
 
-## Officers
+### Officers
 
-### Add New Event (deprecated - see Calendar)
+#### Add New Event (deprecated - see Calendar)
 
-### Review past events (deprecated - see Calendar)
+#### Review past events (deprecated - see Calendar)
 
-### Review Future Events (deprecated - see Calendar)
+#### Review Future Events (deprecated - see Calendar)
 
-### Officer Calendar
+#### Officer Calendar
 
-### COVID-19 Attendance
+#### COVID-19 Attendance
 
-### Admin (deprecated)
+#### Admin (deprecated)
 
-## Vehicles
+### Vehicles
 
-### Update Vehicle Log
+#### Update Vehicle Log
 
-### Update Vehicle Log Sheet
+#### Update Vehicle Log Sheet
 
-### Vehicle Movements
+#### Vehicle Movements
 
-### Driver Activity
+#### Driver Activity
 
-### Vehicle Bookings
+#### Vehicle Bookings
 
-### User Docs
+#### User Docs

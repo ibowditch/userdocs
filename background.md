@@ -1,6 +1,6 @@
 # Project Background
 
-This project started several years ago, when I decided to build a web application to help automate some of the
+This project started in 2018, when I decided to build a web application to help automate some
 admin tasks that were taking a lot of volunteer time at my local brigade.
 
 It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.
@@ -11,32 +11,14 @@ continue to improve the application as the technology evolves, and as I find bet
 The system has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
 home brigade (~70 members), and then grew to include another 3 brigades, and now supports more than 300 users.
 
-## High level requirements
+## Requirements
 
-* Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
-  procedures used with the Attendance Book.
-  
-* Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date 
-  and running.
+Brigades have an obligation, {ref}`under law<legalreqs>`, to collect and maintain attendance records. 
+Given that we have to do this, how can we make the collection of these records more efficient, and what can 
+we do with these records once they are collected?
 
-* Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades
-
-* Improve visibility and availability of attendance data to all brigade members and management.
-
-* Futher reduce admin effort by automatically producing reports based on attendance data.
-
-* Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
-  
-* High availability and reliability, including regular automatic backups.
-
-* Secure solution with password required for access. 
-
-* Automated installation and upgrades, with remote monitoring for Kiosk part of the system.
-
-* Uninterrupted service during server upgrades.
-
-
-## Legal Requirements
+(legalreqs)=
+### Legal Requirements
 
 The Executive at all RFS brigades are required, 
 by [State Law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), to ensure that all members and visitors 
@@ -54,8 +36,35 @@ must be an accurate record of who attended and for what purpose. The Officer In 
 each activity is required to check and sign-off on attendance records for activities that they 
 organise.
 
+### System Requirements
 
-## Problems with paper
+This is what I was aiming to do with the new system:
+
+* Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
+  procedures used with the Attendance Book.
+
+* Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades
+  
+* Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date 
+  and running.
+  
+* Improve visibility and availability of attendance data to all brigade members and management.
+
+* Futher reduce admin effort by automatically producing reports based on attendance data.
+
+* Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
+  
+* High availability and reliability, including regular automatic backups.
+
+* Secure solution with password required for access. 
+
+
+## Attendance Records
+
+### The Attendance Book
+
+For many years, the  {ref}`RFS has required<legalreqs>` each brigade to keep an Attendance Book in their station, 
+and all members have had to sign in and out of activities at the station.
 
 Keeping handwritten attendance records has some significant drawbacks:
 
@@ -71,7 +80,7 @@ Keeping handwritten attendance records has some significant drawbacks:
   touched by many Members, and could be a vector for infections such as flu or COVID-19.
 
 
-## Electronic Attendance records
+### The Value of Attendance Data
 
 The original Attendance Book is generally fine for the purpose of meeting the legal requirements to record attendance.
 
@@ -100,7 +109,11 @@ or database, so that it can be analysed and summarised. This is a slow and tedio
 a great deal of effort on the part of volunteer members. 
 
 
-## The Solution: Electronic Sign-in
+## Switching to Electronic Sign-In
+
+Collecting attendance records electronically reduces admin overheads, and allows brigades to more easily extract 
+the useful data they contain to help run the brigade more efficiently.
+
 
 | Attendance Book              | Electronic sign-in                                                                                                                    |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -130,7 +143,7 @@ movements much of the time. No thanks.
 :::
 
 
-## How it works
+### Using the System to Sign In
 
 All Brigade Members are issued with a small key fob tag, which will be used for signing in and 
 out at the Station.
@@ -146,21 +159,3 @@ activity planned at that time, they will be asked to choose their activity.
 
 When a Member has finished, they should tap their tag on the reader to sign-out.
 
-## Benefits of Electronic Sign-in
-
-- Electronic tagging can completely replace the paper Attendance Book.
-
-- Attendance records are collected automatically and stored by a web application in the cloud. No transcription or 
-  checking is needed.
-
-- Attendance records and reports are accessible to all members (login required).
-
-- Cloud based servers on Amazon Web Services can be accessed securely from anywhere, 
-  on any device, 24x7, using only a browser and internet connection.
-
-- Highly secure and reliable servers, provide regular automatic database backups.
-
-- Data access is controlled by role. Officers can see and do more than ordinary members. 
-   eg. Personnel Officer can monitor attendance of new members and detect lack of attendance
-
-- A comprehensive and powerful administration interface is available for Brigade administrators.
