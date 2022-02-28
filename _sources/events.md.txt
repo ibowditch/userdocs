@@ -17,7 +17,6 @@ Attendance book, including:
   
 * A brief description of the activity
 
-* A list of members who attended the activity, along with the times they signed in and out
 
 When these details have been supplied, you will have a new event that members can sign-in to.
 
@@ -45,12 +44,15 @@ Upcoming Events, etc. but only if you are logged in as the member who is OIC on 
 If you aren't the OIC, you can still see the details of the event, but won't be able to change anything.
 
 
-Apart from updating the event (as above), the following actions will update an event on the kiosk:
+Apart from updating the event (as above), the following actions or triggers will update an event on the kiosk:
 
 1. Signing in or signing out with a tag.
 2. Signing in using the icon on the top right of the event
 3. Signing out using the "Sign-Out" button
 4. Clicking a member name to edit their attendance details.
+5. The event becomes open as the time reaches 1 hour before start time.
+6. The event becomes closed as the end time is passed.
+7. Just after midnight, when the "slate is cleaned", and events for the new day are shown.
 
 
 
@@ -133,19 +135,28 @@ If you get back early, no problem.
 
 The border around events is colour coded depending on the activity type, as follows:
 
-* Training - brown
+```{div} training
+* **Training**
+```
+```{div} incidents
+* **Incidents**
+```
+```{div} hazardreduction
+* **Hazard Reduction**
+```
+```{div} communityengagement
+* **Community Engagement**
+```
+```{div} maintenance
+* **Maintenance**
+```
+```{div} meetings
+* **Meetings**
+```
+```{div} other
+* **Other**
+```
 
-* Incidents - red
-
-* HR - dark red
-
-* Community Engagement - olive green
-
-* Maintenance - navy blue
-
-* Meeting - dark pink
-
-* Other - coral blue
 
 
 

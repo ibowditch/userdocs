@@ -184,6 +184,10 @@ If a new event is created by mistake, it can be deleted using the trash icon in 
 You may not delete an event which already has members listed as attending (the trash icon will not shown), to avoid 
 accidental loss of attendance records.
 
+### Transferring Members to a New Event
+
+### Form Timeouts
+
 ### Multiple simultaneous events
 
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
@@ -201,8 +205,8 @@ to that.
   hour before the start time, and can sign-out at any time after that (even after the end time).
   
 * If necessary, the end time for an event can be set earlier than the expected finish to avoid overlaps with other events. 
-  Make sure that it is set to allow any latecomers to sign-in (they can't sign-in after the end time), but it doesn't 
-  have to go right to the expected end of the activity if it will cause an overlap with other events.
+  Make sure that it is set late enough to allow any latecomers to sign-in (they can't sign-in after the end time), 
+  but it doesn't have to go right to the expected end of the activity if it will cause an overlap with other events.
 
 ### Resetting the Kiosk
 
@@ -223,7 +227,7 @@ The Kiosk will beep when a tag is registered, as follows:
 
 * Single high pitched tone for signing in
 * Single low pitched tone for signing out
-* Multiple tones when a choice of events if required
+* Multiple tones when a choice of events is required
 
 ### Tagging flowchart
 
