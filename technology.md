@@ -49,6 +49,12 @@
 
 ### Security
 
+### Documentation
+
+### Configuration Management (github)
+
 ### PI deployment
 
 ### PI remote access
+
+### Pager sub-system

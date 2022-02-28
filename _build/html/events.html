@@ -286,7 +286,6 @@ Attendance book, including:</p>
 <li><p>Name of the OIC running the activity</p></li>
 <li><p>The type of activity (Training, Maintenance, Meeting, .. etc.)</p></li>
 <li><p>A brief description of the activity</p></li>
-<li><p>A list of members who attended the activity, along with the times they signed in and out</p></li>
 </ul>
 <p>When these details have been supplied, you will have a new event that members can sign-in to.</p>
 <div class="topic">
@@ -302,12 +301,15 @@ and a list of attendees, including when they signed-in and signed out.</p>
 <p>Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the Brigade Calendar,
 Upcoming Events, etc. but only if you are logged in as the member who is OIC on the event.</p>
 <p>If you aren’t the OIC, you can still see the details of the event, but won’t be able to change anything.</p>
-<p>Apart from updating the event (as above), the following actions will update an event on the kiosk:</p>
+<p>Apart from updating the event (as above), the following actions or triggers will update an event on the kiosk:</p>
 <ol class="arabic simple">
 <li><p>Signing in or signing out with a tag.</p></li>
 <li><p>Signing in using the icon on the top right of the event</p></li>
 <li><p>Signing out using the “Sign-Out” button</p></li>
 <li><p>Clicking a member name to edit their attendance details.</p></li>
+<li><p>The event becomes open as the time reaches 1 hour before start time.</p></li>
+<li><p>The event becomes closed as the end time is passed.</p></li>
+<li><p>Just after midnight, when the “slate is cleaned”, and events for the new day are shown.</p></li>
 </ol>
 <div class="section" id="event-types">
 <h2>Event Types<a class="headerlink" href="#event-types" title="Permalink to this headline">¶</a></h2>
@@ -375,15 +377,41 @@ generally it includes the name of the paged brigade, the type of call, and the C
 <div class="section" id="colour-codes">
 <h2>Colour Codes<a class="headerlink" href="#colour-codes" title="Permalink to this headline">¶</a></h2>
 <p>The border around events is colour coded depending on the activity type, as follows:</p>
+<div class="training docutils">
 <ul class="simple">
-<li><p>Training - brown</p></li>
-<li><p>Incidents - red</p></li>
-<li><p>HR - dark red</p></li>
-<li><p>Community Engagement - olive green</p></li>
-<li><p>Maintenance - navy blue</p></li>
-<li><p>Meeting - dark pink</p></li>
-<li><p>Other - coral blue</p></li>
+<li><p><strong>Training</strong></p></li>
 </ul>
+</div>
+<div class="incidents docutils">
+<ul class="simple">
+<li><p><strong>Incidents</strong></p></li>
+</ul>
+</div>
+<div class="hazardreduction docutils">
+<ul class="simple">
+<li><p><strong>Hazard Reduction</strong></p></li>
+</ul>
+</div>
+<div class="communityengagement docutils">
+<ul class="simple">
+<li><p><strong>Community Engagement</strong></p></li>
+</ul>
+</div>
+<div class="maintenance docutils">
+<ul class="simple">
+<li><p><strong>Maintenance</strong></p></li>
+</ul>
+</div>
+<div class="meetings docutils">
+<ul class="simple">
+<li><p><strong>Meetings</strong></p></li>
+</ul>
+</div>
+<div class="other docutils">
+<ul class="simple">
+<li><p><strong>Other</strong></p></li>
+</ul>
+</div>
 </div>
 </div>
 

@@ -232,6 +232,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#covid-19-report">
+   COVID-19 Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defining-activity-types">
    Defining Activity Types
   </a>
@@ -254,6 +259,16 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#training-reports">
    Training Reports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-member-qualifications">
+   Managing Member Qualifications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aws-credits-annual">
+   AWS Credits (annual)
   </a>
  </li>
 </ul>
@@ -307,6 +322,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#covid-19-report">
+   COVID-19 Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defining-activity-types">
    Defining Activity Types
   </a>
@@ -331,6 +351,16 @@
    Training Reports
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-member-qualifications">
+   Managing Member Qualifications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aws-credits-annual">
+   AWS Credits (annual)
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -344,24 +374,120 @@
 <h1>Administration Procedures<a class="headerlink" href="#administration-procedures" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="adding-a-new-brigade">
 <h2>Adding a new Brigade<a class="headerlink" href="#adding-a-new-brigade" title="Permalink to this headline">¶</a></h2>
+<p>Brigade specific settings
+Event types: The original list of options for setting the type of an event contained around 40 categories,
+which was seen as too much by some brigades. To simplify this, brigade administrators can now set up a
+shorter list of options (in admin, under Brigade Settings), and any events created in future will be
+restricted to that shorter list. Past events will retain their original classification.
+Member activity: Currently, the Member Activity table shows hours contributed by each member during the specified season.
+This table can now be switched to show the number of events attended by members, as this is the method used by
+some brigades to assess activity. The season start date can also be changed by the brigade administrator
+(previously all brigades had to use the same date), as can the thresholds for attendance criteria for hours and
+number of events.
+These settings are available under admin:Brigade Settings.</p>
 </div>
 <div class="section" id="preparing-and-issuing-tags">
 <h2>Preparing and Issuing Tags<a class="headerlink" href="#preparing-and-issuing-tags" title="Permalink to this headline">¶</a></h2>
+<p>Preparation</p>
+<p>Before you start, make a list of all the new tags you want to prepare, including the member name, and their
+RFS member number</p>
+<p>Get a batch of tags to write. You can overwrite old tags if they are no longer in use</p>
+<p>Bring a marker pen to write the initials of the member on the tag when it is written</p>
+<p>On the Raspberry Pi kiosk terminal, press the F11 key to show the background</p>
+<p>Open a new command shell by clicking the black icon on the top row of the screen</p>
+<p>Type the command : writetags</p>
+<p>The program will prompt you to place a tag on tag reader.</p>
+<p>When you do, it will prompt you to provide an RFS member number. Type this in and hit ENTER</p>
+<p>The tag should then be written. When you remove the tag, it will prompt you for another one</p>
+<p>Repeat if needed for more tags</p>
+<p>On the last tag, if you press ENTER when prompted for an RFS member number the program will terminate.</p>
+<p>You can also terminate the program by typing ctrl-c</p>
+<p>Checking the tags</p>
+<p>Reboot the PI by clicking the top left raspberry symbol (top left of page), then choose reboot</p>
+<p>When restarted, add a new event with description “test” and category Social</p>
+<p>Then try to sign in to the new event using the new tags. The members name should appear in the new event,
+with the sign-in time</p>
+<p>Tag a second time to sign out</p>
+<p>You can also check the tag using android mobile phones. If you place the tag on the back of the phone,
+it should detect an NFC device. It will show the RFS member number,
+the date when it was created, and the brigade it belongs to.</p>
 </div>
 <div class="section" id="training-users">
 <h2>Training Users<a class="headerlink" href="#training-users" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="adding-new-members">
 <h2>Adding New Members<a class="headerlink" href="#adding-new-members" title="Permalink to this headline">¶</a></h2>
+<p>Personnel/Add new member</p>
+<p>Handles setup of user and contact details as well as new member record</p>
+<p>Only available to Personnel Officer</p>
+<p>TCard button on all events</p>
+<p>A TCard button has been added wherever you see details of an event,
+including the kiosk, and when selecting an event in a calendar.</p>
+<p>Shows details needed to fill in a TCard or crew assigned to event</p>
+<p>Vehicle details (provided a vehicle is allocated)</p>
+<p>Crew list and qualifications</p>
 </div>
 <div class="section" id="updating-officers">
 <h2>Updating Officers<a class="headerlink" href="#updating-officers" title="Permalink to this headline">¶</a></h2>
+<p>In the current release, there’s a new menu item on the main landing page under Personnel, called Change Officers.
+When you click on that, it will show a list of current officers.</p>
+<p>Normally, this will show officers for the current season, and in the rare event of an officer being changed during the
+season, you can change the name associated with a position then save, to update it.</p>
+<p>When you pass into a new season (the date of which is defined as Season Start in your Brigade Settings, under admin),
+there won’t be any officers defined for the new season, but the officers from the previous season will still be in place
+until they are either re-elected or changed at an election.</p>
+<p>In this case, the Change Officers form will show the officers from the previous season, but will also show a button
+that allows you to “Copy Officers to <new season>”. If you click this button, the system will create new Officer
+records for all positions in the new season using the same names as the previous season. You can then edit this list
+by changing the names of the officers to match the election results, then Save to update the system.</p>
+<p>In summary, the procedure to update officers after this year’s election is as follows:
+Click the menu item Personnel/Change Officers
+Click the button “Copy Officers to 2021”
+Change the names under the Member column to match the officers elected in the recent election.
+Save</p>
 </div>
 <div class="section" id="voting-criteria">
 <h2>Voting Criteria<a class="headerlink" href="#voting-criteria" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="covid-19-report">
+<h2>COVID-19 Report<a class="headerlink" href="#covid-19-report" title="Permalink to this headline">¶</a></h2>
+<p>As we discussed the other week, I reviewed the NSW Government Covid safe record keeping guidelines, and it
+appears that our electronic sign-in system meets the requirements for recording the visitor details needed by
+NSW COVID contact tracing.</p>
+<p>Hopefully this will never be needed, but I also added a new report to the sign-in server (see COVID-19 Attendance
+under the Officer menu), which lists details of all members who attended the station over the past 28 days.
+This report uses the template given in NSW COVID-safe record keeping obligations.</p>
+<p>Our members are used to signing in and out at the station, and our attendance records are generally quite good,
+perhaps better than records coming from scanning QR codes at the station. If the brigade is ever asked to assist
+with contact tracing, this new report could be used in addition to the QR data.</p>
+<p>For now, we are still under instructions from FCC that members need to both sign-in and also scan a QR code at the station.
+Our electronic attendance records for members appear to be sufficient to meet the NSW Government COVID requirements,
+and with this system in place, it may not be strictly necessary for members to also scan the QR code. However,
+we would need to get permission from FCC before telling members they no longer need to scan the QR codes.</p>
+<p>Naturally, non-members and other visitors would still need to sign-in using the Attendance Book, and also scan a QR code.</p>
+</div>
 <div class="section" id="defining-activity-types">
 <h2>Defining Activity Types<a class="headerlink" href="#defining-activity-types" title="Permalink to this headline">¶</a></h2>
+<p>The Member Activity report can now show all activities that were previously excluded,
+if you check the box “Add Excluded Events”. All events recorded during the season, without exception,
+will be shown in the table and included in the totals, even if you marked them as excluded in the
+Brigade Settings (see below).
+Unchecking the box will remove all excluded activity types.
+Activity types are organised in groups, and these groups are shown as headings in the Member Activity Report.
+If all event types in a group are excluded in Brigade Settings, and the check box “Add Excluded Events” is not checked,
+the group heading, eg. External, will not be shown in the Member Activity table.
+If you drill down on any item in the Member Activity table, it will show a list of events represented by that item.
+This page also has a “Show Excluded Events” check box, and if it is checked, it will show events that would normally
+be excluded in grey, otherwise, they will not be shown at all.
+The admin page for Brigade Settings has been tidied up. Activity Types for New Events shows the activity types that
+will appear in the drop down box when creating a new event. This list is now shown as checkboxes - check each item
+you want to appear when creating new events.  The list also shows the group the activity belongs to,
+eg.  Additional: Meeting, belongs to group “Additional”.
+Also in Brigade Settings, beside the Activity Types for New Events list is the list of Activity Types excluded from
+Member Activity Report. If you check an item in this list, all activities of this type will be excluded from
+the Member Activity Report. You would normally exclude Social: Social/Personal, but you can also exclude all Incidents,
+or External activities, or anything else you want. As noted above, activities that would normally be excluded (and not shown),
+can be revealed temporarily with the new “Add Excluded Events” button.</p>
 </div>
 <div class="section" id="vehicle-usage">
 <h2>Vehicle Usage<a class="headerlink" href="#vehicle-usage" title="Permalink to this headline">¶</a></h2>
@@ -374,6 +500,12 @@
 </div>
 <div class="section" id="training-reports">
 <h2>Training Reports<a class="headerlink" href="#training-reports" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="managing-member-qualifications">
+<h2>Managing Member Qualifications<a class="headerlink" href="#managing-member-qualifications" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="aws-credits-annual">
+<h2>AWS Credits (annual)<a class="headerlink" href="#aws-credits-annual" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

@@ -1,3 +1,18 @@
 li { line-height: 2.0em !important; }
 
 div.navbar_extra_footer { display: none !important; }
+
+/* These code the colour of events according to activity type */
+div.training.docutils > ul > li > p                         { color: saddlebrown !important; }
+div.incidents.docutils > ul > li > p                        { color: red !important; }
+div.hazardreduction.docutils > ul > li > p                  { color: darkred !important; }
+div.communityengagement.docutils > ul > li > p              { color: darkolivegreen !important; }
+div.CappedExternalActivity.docutils > ul > li > p           { color: darkorchid !important; }
+div.maintenance.docutils > ul > li > p                      { color: navy !important; }
+div.meetings.docutils > ul > li > p                         { color: darksalmon !important; }
+div.other.docutils > ul > li > p                            { color: coral !important; }
+div.AdditionalActivity.docutils > ul > li > p               { color: teal !important; }
+
+
+
+
