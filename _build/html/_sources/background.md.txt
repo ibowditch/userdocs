@@ -8,7 +8,7 @@ It started with capturing attendance records, then grew to include reporting, sc
 My background as a software engineer (in a past life) came in handy, but there was still a big learning curve, and I 
 continue to improve the application as the technology evolves, and as I find better ways of doing things.
 
-It has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
+The system has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
 home brigade (~70 members), and then grew to include another 3 brigades, and now supports more than 300 users.
 
 ## High level requirements
@@ -115,14 +115,17 @@ a great deal of effort on the part of volunteer members.
 
 :::{admonition} Why not use ACTIV?
 
-ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews for these
-callouts. 
+ACTIV is an excellent system provided by the RFS for relaying callouts to members, and assisting with forming crews 
+for these callouts. 
 
 However, at the moment, it does not have a reliable way of recording attendance at the station.
 
 It can detect your proximity to the station from your phone (including when driving past the station), 
 but this is not the same as attendance, and does not meet the current requirements of the SOPs and legislation for
 reliable and accurate attendance records.
+
+The GPS solution on your phone would also have to be always-on, meaning the good folks at ACTIV could track your 
+movements much of the time. No thanks.
 
 :::
 

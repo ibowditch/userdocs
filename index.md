@@ -8,5 +8,8 @@ overview
 background
 kiosk
 events
+server
+administration
+technology
 ```
 

@@ -6,6 +6,11 @@ and records attendance in electronic form. It is normally located at the front d
 It is always-on and available 24h every day. It requires an internet connection (wifi or wired) 
 to function.
 
+```{margin} Events
+Events are central to the design of the system, and come in many shapes and varieties. 
+For all the gory details, see the dedicated section on [Events](events)
+```
+
 The Kiosk screen shows events that start **or end** on the current day, and is automatically 
 updated every night, just after midnight, to show events for the new day.
 
@@ -122,6 +127,47 @@ You can sign-out without a tag by clicking the green Sign-out  button next to yo
 
 ## Advanced Operations
 
+(change-event)=
+### Changing Event Details
+
+Any event on the Kiosk screen can be updated by clicking on the title, in this case: "Assist SES in Hornsby Area":
+
+:::{figure-md} event2edit
+:class: myclass
+
+<img src="assets/images/kiosk1event-edit.jpg" alt="Single event" width="1467" class="bg-primary mb-1">
+
+Event to be updated
+:::
+
+The Kiosk will then display a form with all the details of the event. Everything except the date of the event can be
+changed/updated.
+
+Click Submit when done, and the revised event will appear on the Kiosk.
+
+
+:::{figure-md} event-update
+:class: myclass
+
+<img src="assets/images/event-edit-a.jpg" alt="Edit an event" width="1467" class="bg-primary mb-1">
+
+Update Event Form (click to enlarge)
+:::
+
+Notes:
+
+* Members can be added without start or end times, as a placeholder, if you know in advance who is expected to attend.
+  This is useful for planning events when you know who will be coming. These members will still have to sign in 
+  when they arrive. Other members can still sign-in to this event, even they are not on the preset list.
+  
+* Details such as "Chainsaw TFT operator" can be added for each member to reflect roles allocated by the Crew Leader.
+
+* Member qualifications can be reviewed using the TCard option (top right)
+  
+* Vehicles used in the activity can be marked (use the ctrl key to select multiple vehicles) as allocated, which is 
+  useful in determining vehicle bookings.
+
+
 ### Changing attendance details
 
 If you forgot to sign-in when you arrived at the station, and go back later to sign-in, you can revise the start 
@@ -129,6 +175,7 @@ time by clicking on your name in the event.
 
 You will then have the option of changing the sign-in time or other details of your attendance at that event. 
 Click Submit to save the new details.
+
 
 ### Deleting events
 
@@ -174,8 +221,34 @@ is a risk that it will be damaged, and it may not restart.
 
 The Kiosk will beep when a tag is registered, as follows:
 
-* Single high pitched tone for signin in
-* Single low pitched tone for signin out
+* Single high pitched tone for signing in
+* Single low pitched tone for signing out
 * Multiple tones when a choice of events if required
+
+### Tagging flowchart
+
+When you place your tag on the reader to sign in, the system goes through the following steps to work out an 
+appropriate action:
+
+1. Check if you are a member of this brigade. If not, you can't sign-in.
+
+2. Check if you are already signed in to an event today. If you are, your tag will sign you out of that event.
+
+3. If you aren't signed in to anything, it will check what events are available. If there's only one, then you will be
+   signed into that immediately.
+   
+4. If there is more than one event available (overlapping events), you will be asked to choose which one you want to 
+   enter.
+   
+5. If there are no events available, you will be prompted to create a new event before you can sign in.
+
+
+:::{figure-md} flowchart
+:class: myclass
+
+<img src="assets/images/tag-flowchart.jpg" alt="Tagging flowchart" width="1680px" class="bg-primary mb-1">
+
+Tagging flowchart
+:::
 
 
