@@ -124,6 +124,9 @@ It can detect your proximity to the station from your phone (including when driv
 but this is not the same as attendance, and does not meet the current requirements of the SOPs and legislation for
 reliable and accurate attendance records.
 
+The GPS solution on your phone would also have to be always-on, meaning the good folks at ACTIV could track your 
+movements much of the time. No thanks.
+
 :::
 
 
