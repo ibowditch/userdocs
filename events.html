@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -185,23 +186,25 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-busy-day-on-the-kiosk">
-   A Busy Day on the Kiosk
+  <a class="reference internal nav-link" href="#event-types">
+   Event Types
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-types">
+     Basic Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-types">
+     Additional Types
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pager-callout">
-   Pager callout
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#attendance">
-   Attendance
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tagging">
-   Tagging
+  <a class="reference internal nav-link" href="#colour-codes">
+   Colour Codes
   </a>
  </li>
 </ul>
@@ -225,23 +228,25 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-busy-day-on-the-kiosk">
-   A Busy Day on the Kiosk
+  <a class="reference internal nav-link" href="#event-types">
+   Event Types
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-types">
+     Basic Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-types">
+     Additional Types
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pager-callout">
-   Pager callout
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#attendance">
-   Attendance
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tagging">
-   Tagging
+  <a class="reference internal nav-link" href="#colour-codes">
+   Colour Codes
   </a>
  </li>
 </ul>
@@ -258,12 +263,12 @@
 <p>Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.</p>
 <p>When you attend the station, you sign-in to an activity that is occurring at the station, in the same way that
 you signed into an activity on the old Attendance Book.</p>
-<p>An Event on the sign-in system is just like a page in the Attendance book. When you create an Event, you provide the
-same details as if you were filling in the top of the page in the Attendance book, including:</p>
+<p>When you create an Event, you provide the same details as if you were filling in the top of the page in the
+Attendance book, including:</p>
 <ul class="simple">
 <li><p>Date and time of an activity</p></li>
 <li><p>Name of the OIC running the activity</p></li>
-<li><p>The type of actvity (Training, Maintenance, Meeting, .. etc.)</p></li>
+<li><p>The type of activity (Training, Maintenance, Meeting, .. etc.)</p></li>
 <li><p>A brief description of the activity</p></li>
 <li><p>A list of members who attended the activity, along with the times they signed in and out</p></li>
 </ul>
@@ -273,53 +278,55 @@ same details as if you were filling in the top of the page in the Attendance boo
 <p>An event consists of a heading, containing information previously held in the heading of a page in the Attendance Book,
 and a list of attendees, including when they signed-in and signed out.</p>
 </div>
-<p><img alt="Current Event on the Kiosk!" src="_images/currentevent-a2.jpg" /></p>
-<div class="topic">
-<p class="topic-title">Updating an event on the kiosk</p>
-<p>The following actions will update an event on the kiosk:</p>
+<div class="myclass figure align-default" id="event-anatomy">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/currentevent-a2.jpg"><img alt="Edit an event" class="bg-primary mb-1" src="_images/currentevent-a2.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Event components, as seen on the Kiosk (click to enlarge)</span><a class="headerlink" href="#event-anatomy" title="Permalink to this image">¶</a></p>
+</div>
+<p>Details of an event can be updated on the kiosk (see <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">Updating an event on the kiosk</span></a>).</p>
+<p>Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the Brigade Calendar,
+Upcoming Events, etc. but only if you are logged in as the member who is OIC on the event.</p>
+<p>If you aren’t the OIC, you can still see the details of the event, but won’t be able to change anything.</p>
+<p>Apart from updating the event (as above), the following actions will update an event on the kiosk:</p>
 <ol class="arabic simple">
 <li><p>Signing in or signing out with a tag.</p></li>
 <li><p>Signing in using the icon on the top right of the event</p></li>
 <li><p>Signing out using the “Sign-Out” button</p></li>
-<li><p>Clicking the title (event details) to edit the event</p></li>
 <li><p>Clicking a member name to edit their attendance details.</p></li>
 </ol>
-</div>
-<div class="section" id="a-busy-day-on-the-kiosk">
-<h2>A Busy Day on the Kiosk<a class="headerlink" href="#a-busy-day-on-the-kiosk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="event-types">
+<h2>Event Types<a class="headerlink" href="#event-types" title="Permalink to this headline">¶</a></h2>
 <div class="myclass figure align-default" id="full-kiosk">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/fullkiosk-a.jpg"><img alt="Busy Kiosk" class="bg-primary mb-1" src="_images/fullkiosk-a.jpg" style="width: 2000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Busy Kiosk screen (click to enlarge)</span><a class="headerlink" href="#full-kiosk" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Busy Kiosk screen (click to enlarge)</span><a class="headerlink" href="#full-kiosk" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#full-kiosk"><span class="std std-ref">Go to the full kiosk!</span></a></p>
-<div class="topic">
-<p class="topic-title">Event Types and Controls</p>
-<p>Events come in the following types:</p>
+<p>Events come in the following types (see above for examples):</p>
+<div class="section" id="basic-types">
+<h3>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
-<li><p>Open/available</p>
+<li><p>Open/available - white background, solid border</p>
 <p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
 they will accept sign-ins from members either using a tag, or using the sign-in icon.</p>
 </li>
-<li><p>Closed/completed</p>
+<li><p>Closed/completed - grey background, solid border</p>
 <p>Events close when their finish time has passed. They will be shown with a grey background when they are
 closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p>
 </li>
-<li><p>Future</p>
+<li><p>Future - white background, dashed border</p>
 <p>Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
 to sign-in with a tag, and no sign-in icon is shown for future events.</p>
 </li>
+</ol>
+</div>
+<div class="section" id="additional-types">
+<h3>Additional Types<a class="headerlink" href="#additional-types" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
 <li><p>Overnight</p>
 <p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
 that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start
 <strong>or end</strong> on the current day, so such an event will appear on the start day and on the end day. This allows
 crew to sign out when they return from night shift.</p>
 </li>
-<li><p>Overlapping</p>
-<p>Events can overlap and/or run simultaneously. When they do, members will be asked to choose which event they
-want to attend when they tag in.</p>
-</li>
 </ol>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Set the end time for overnight events</p>
@@ -328,42 +335,39 @@ when they return from their shift, as the event won’t be shown on the kiosk.</
 <p>If there’s any chance you might be out past midnight (like Cinderella), make sure you set the end time past midnight.
 If you get back early, no problem.</p>
 </div>
-<div class="topic">
-<p class="topic-title">Activity Types</p>
-<p>activity types and collourss:</p>
-<ol class="arabic simple">
-<li><p>Open/available
-Events become open 1 hour before their start time and remain open until their end time. When they are open,
-they will accept sign-ins from members either using a tag, or using the sign-in icon.</p></li>
-<li><p>Closed/completed
-Events close when their finish time has passed. They will be shown with a grey background when they are
-closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p></li>
-<li><p>Future
-Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
-to sign-in with a tag, and no sign-in icon is shown for future events.</p></li>
-<li><p>Overnight
-Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
-that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start
-<strong>or end</strong> on the current day, so such an event will appear on the start day and on the end day. This allows
-crew to sign out when they return from night shift.</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="pager-callout">
-<h2>Pager callout<a class="headerlink" href="#pager-callout" title="Permalink to this headline">¶</a></h2>
-<div class="topic">
-<p class="topic-title">Pager calls</p>
+<ol class="arabic" start="2">
+<li><p>External</p>
+<p>If an event is being run at another location, rather than at the station, attendance can still be recorded in the
+system.</p>
+<p>Members who are known to be attending this event should be added to the event by the OIC ahead
+of time. If they arrive at the station to travel to the event (eg. at a training centre), they can sign-in as normal.</p>
+<p>Any member not on the preset list will not be offered the option of signing in to external events when they tag in.
+External events normally run for a full day, and if the attendees are known up front, so there is no point asking
+other members not on the list whether they want to attend such events.</p>
+</li>
+<li><p>Pager Calls</p>
 <p>Pager Calls are detected by separate system which automagically creates a new event on the server
 as soon as a callout is received for your brigade.</p>
 <p>The event should be available for members to sign-in to when they arrive at the station.</p>
-</div>
+<p>The event title will be the same as the pager message. The format of this message will vary by district, but
+generally it includes the name of the paged brigade, the type of call, and the CAD number.</p>
+</li>
+</ol>
 <p><img alt="Pager callout alt!" src="_images/pagercall-a2.jpg" /></p>
 </div>
-<div class="section" id="attendance">
-<h2>Attendance<a class="headerlink" href="#attendance" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tagging">
-<h2>Tagging<a class="headerlink" href="#tagging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="colour-codes">
+<h2>Colour Codes<a class="headerlink" href="#colour-codes" title="Permalink to this headline">¶</a></h2>
+<p>The border around events is colour coded depending on the activity type, as follows:</p>
+<ul class="simple">
+<li><p>Training - brown</p></li>
+<li><p>Incidents - red</p></li>
+<li><p>HR - dark red</p></li>
+<li><p>Community Engagement - olive green</p></li>
+<li><p>Maintenance - navy blue</p></li>
+<li><p>Meeting - dark pink</p></li>
+<li><p>Other - coral blue</p></li>
+</ul>
 </div>
 </div>
 

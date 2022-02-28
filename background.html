@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -186,8 +187,8 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-it-started">
-   How it started
+  <a class="reference internal nav-link" href="#high-level-requirements">
+   High level requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -241,8 +242,8 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-it-started">
-   How it started
+  <a class="reference internal nav-link" href="#high-level-requirements">
+   High level requirements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -286,15 +287,29 @@
                 
   <div class="section" id="project-background">
 <h1>Project Background<a class="headerlink" href="#project-background" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="how-it-started">
-<h2>How it started<a class="headerlink" href="#how-it-started" title="Permalink to this headline">¶</a></h2>
 <p>This project started several years ago, when I decided to build a web application to help automate some of the
 admin tasks that were taking a lot of volunteer time at my local brigade.</p>
 <p>It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.</p>
 <p>My background as a software engineer (in a past life) came in handy, but there was still a big learning curve, and I
 continue to improve the application as the technology evolves, and as I find better ways of doing things.</p>
-<p>It has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my
-home brigade, and then grew to include another 3 brigades, and now supports more than 300 users.</p>
+<p>The system has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my
+home brigade (~70 members), and then grew to include another 3 brigades, and now supports more than 300 users.</p>
+<div class="section" id="high-level-requirements">
+<h2>High level requirements<a class="headerlink" href="#high-level-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing
+procedures used with the Attendance Book.</p></li>
+<li><p>Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date
+and running.</p></li>
+<li><p>Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades</p></li>
+<li><p>Improve visibility and availability of attendance data to all brigade members and management.</p></li>
+<li><p>Futher reduce admin effort by automatically producing reports based on attendance data.</p></li>
+<li><p>Low cost solution, using off-the-shelf hardware and a small annual subscription fee.</p></li>
+<li><p>High availability and reliability, including regular automatic backups.</p></li>
+<li><p>Secure solution with password required for access.</p></li>
+<li><p>Automated installation and upgrades, with remote monitoring for Kiosk part of the system.</p></li>
+<li><p>Uninterrupted service during server upgrades.</p></li>
+</ul>
 </div>
 <div class="section" id="legal-requirements">
 <h2>Legal Requirements<a class="headerlink" href="#legal-requirements" title="Permalink to this headline">¶</a></h2>
@@ -378,8 +393,8 @@ a great deal of effort on the part of volunteer members.</p>
 </table>
 <div class="admonition-why-not-use-activ admonition">
 <p class="admonition-title">Why not use ACTIV?</p>
-<p>ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews for these
-callouts.</p>
+<p>ACTIV is an excellent system provided by the RFS for relaying callouts to members, and assisting with forming crews
+for these callouts.</p>
 <p>However, at the moment, it does not have a reliable way of recording attendance at the station.</p>
 <p>It can detect your proximity to the station from your phone (including when driving past the station),
 but this is not the same as attendance, and does not meet the current requirements of the SOPs and legislation for
