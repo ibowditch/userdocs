@@ -202,6 +202,16 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mandatory-event-fields">
+   Mandatory Event Fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optional-fields">
+   Optional Fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#event-types">
    Event Types
   </a>
@@ -243,6 +253,16 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mandatory-event-fields">
+   Mandatory Event Fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optional-fields">
+   Optional Fields
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#event-types">
    Event Types
@@ -297,7 +317,7 @@ and a list of attendees, including when they signed-in and signed out.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/currentevent-a2.jpg"><img alt="Edit an event" class="bg-primary mb-1" src="_images/currentevent-a2.jpg" style="width: 1467px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Event components, as seen on the Kiosk (click to enlarge)</span><a class="headerlink" href="#event-anatomy" title="Permalink to this image">¶</a></p>
 </div>
-<p>Details of an event can be updated on the kiosk (see <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">Updating an event on the kiosk</span></a>).</p>
+<p>Details of an event <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">can be updated on the kiosk</span></a>.</p>
 <p>Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the Brigade Calendar,
 Upcoming Events, etc. but only if you are logged in as the member who is OIC on the event.</p>
 <p>If you aren’t the OIC, you can still see the details of the event, but won’t be able to change anything.</p>
@@ -311,6 +331,70 @@ Upcoming Events, etc. but only if you are logged in as the member who is OIC on 
 <li><p>The event becomes closed as the end time is passed.</p></li>
 <li><p>Just after midnight, when the “slate is cleaned”, and events for the new day are shown.</p></li>
 </ol>
+<div class="section" id="mandatory-event-fields">
+<h2>Mandatory Event Fields<a class="headerlink" href="#mandatory-event-fields" title="Permalink to this headline">¶</a></h2>
+<p>All events must include the following information:</p>
+<dl class="simple myst">
+<dt>Date</dt><dd><p>This defines the day on which the activity starts.</p>
+</dd>
+</dl>
+<div class="margin sidebar">
+<p class="sidebar-title">Event Start/End times</p>
+<p>Events are intended to represent a single shift, and normally start and end on the same day.
+In the case of extended operations running over several days (eg. out of area), details should be recorded
+using one event for each daily shift.</p>
+</div>
+<dl class="simple myst">
+<dt>Start time</dt><dd><p>The time, on the given date, when the activity begins. Members may sign in to an event from one hour
+before the given Start time, up to the End time.</p>
+</dd>
+<dt>End time</dt><dd><p>The time when the activity is expected to finish.  In most cases this will be on the same day as the Start
+Time, but if an event is expected to <a class="reference internal" href="#overnight"><span class="std std-ref">run overnight</span></a>, the End Time can be set to a time before the
+Start Time, which will be interpreted as being in the following day.</p>
+</dd>
+</dl>
+<div class="margin sidebar">
+<p class="sidebar-title">Changing Events</p>
+<p>On the Kiosk, anyone can <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">change the details of any event</span></a>. However, on the server, only the OIC is
+allowed to change their own event - all others can see the details, but not change them.</p>
+</div>
+<dl class="simple myst">
+<dt>Officer in Charge (OIC)</dt><dd><p>Only members who hold a current Officer position may be assigned as OIC. This includes
+Field Officers and Administrative positions. The OIC will normally attend the event, but they don’t have to.</p>
+</dd>
+<dt>Activity Type</dt><dd><p>Each brigade can define the types of activities that they wish to use, and the system administrator
+will set these up for the brigade. The activity type for an event should be chosen from the list of available types.</p>
+</dd>
+<dt>Description</dt><dd><p>A brief description of the activity should be provided for future reference, eg. “HR at Dawsons Creek”.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="optional-fields">
+<h2>Optional Fields<a class="headerlink" href="#optional-fields" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title">Events with no attendees</p>
+<p>Events can exist with no attendees, but if they are in the past, this usually serves no purpose, so the empty
+event can be deleted.</p>
+</div>
+<dl class="simple myst">
+<dt>Attendees/Crew</dt><dd><p>As members sign-in to an event, they are added to the list of attendees, along with the times they
+joined and left the activity. Any active member can sign in to an event, and the number of attendees is only
+limited by the number of active members in the brigade.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Members can only attend an event <strong>once</strong>. Once a member signs in to an event, they can sign-out later, but won’t be able
+to sign-in again to the same event. This allows members to use their tag to sign-in first, tag again to sign-out, then
+tag again to sign into another event. If necessary, a long-running event should be broken down into smaller parts
+if there are breaks or other activities in between.</p>
+</div>
+<dl class="simple myst">
+<dt>Vehicles</dt><dd><p>If brigade vehicles are used in a event, this can be noted in the event. This is useful in tracking
+vehicle availability when events are planned in advance.</p>
+</dd>
+</dl>
+</div>
 <div class="section" id="event-types">
 <h2>Event Types<a class="headerlink" href="#event-types" title="Permalink to this headline">¶</a></h2>
 <div class="myclass figure align-default" id="full-kiosk">
@@ -320,57 +404,51 @@ Upcoming Events, etc. but only if you are logged in as the member who is OIC on 
 <p>Events come in the following types (see above for examples):</p>
 <div class="section" id="basic-types">
 <h3>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic">
-<li><p>Open/available - white background, solid border</p>
-<p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
+<dl class="simple myst">
+<dt>Open/available - white background, solid border</dt><dd><p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
 they will accept sign-ins from members either using a tag, or using the sign-in icon.</p>
-</li>
-<li><p>Closed/completed - grey background, solid border</p>
-<p>Events close when their finish time has passed. They will be shown with a grey background when they are
+</dd>
+<dt>Closed/completed - grey background, solid border</dt><dd><p>Events close when their finish time has passed. They will be shown with a grey background when they are
 closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p>
-</li>
-<li><p>Future - white background, dashed border</p>
-<p>Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
+</dd>
+<dt>Future - white background, dashed border</dt><dd><p>Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
 to sign-in with a tag, and no sign-in icon is shown for future events.</p>
-</li>
-</ol>
+</dd>
+</dl>
 </div>
 <div class="section" id="additional-types">
 <h3>Additional Types<a class="headerlink" href="#additional-types" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic">
-<li><p>Overnight</p>
-<p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
+<dl class="simple myst" id="overnight">
+<dt>Overnight</dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
 that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start
 <strong>or end</strong> on the current day, so such an event will appear on the start day and on the end day. This allows
 crew to sign out when they return from night shift.</p>
-</li>
-</ol>
+</dd>
+</dl>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Set the end time for overnight events</p>
+<p><strong>Always set the end time for overnight events</strong></p>
 <p>If the OIC doesn’t set the end time of an event so that it end the next day, members won’t be able to sign-out
 when they return from their shift, as the event won’t be shown on the kiosk.</p>
 <p>If there’s any chance you might be out past midnight (like Cinderella), make sure you set the end time past midnight.
 If you get back early, no problem.</p>
 </div>
-<ol class="arabic" start="2">
-<li><p>External</p>
-<p>If an event is being run at another location, rather than at the station, attendance can still be recorded in the
+<dl class="simple myst">
+<dt>External</dt><dd><p>If an event is being run at another location, rather than at the station, attendance can still be recorded in the
 system.</p>
 <p>Members who are known to be attending this event should be added to the event by the OIC ahead
 of time. If they arrive at the station to travel to the event (eg. at a training centre), they can sign-in as normal.</p>
 <p>Any member not on the preset list will not be offered the option of signing in to external events when they tag in.
 External events normally run for a full day, and if the attendees are known up front, so there is no point asking
 other members not on the list whether they want to attend such events.</p>
-</li>
-<li><p>Pager Calls</p>
-<p>Pager Calls are detected by separate system which automagically creates a new event on the server
+</dd>
+<dt>Pager Calls</dt><dd><p>Pager Calls are detected by separate system which automagically creates a new event on the server
 as soon as a callout is received for your brigade.</p>
 <p>The event should be available for members to sign-in to when they arrive at the station.</p>
 <p>The event title will be the same as the pager message. The format of this message will vary by district, but
 generally it includes the name of the paged brigade, the type of call, and the CAD number.</p>
-</li>
-</ol>
+</dd>
+</dl>
 <p><img alt="Pager callout alt!" src="_images/pagercall-a2.jpg" /></p>
 </div>
 </div>
@@ -384,7 +462,7 @@ generally it includes the name of the paged brigade, the type of call, and the C
 </div>
 <div class="incidents docutils">
 <ul class="simple">
-<li><p><strong>Incidents</strong></p></li>
+<li><p><strong>Incidents (including Pager Calls)</strong></p></li>
 </ul>
 </div>
 <div class="hazardreduction docutils">
