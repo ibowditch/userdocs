@@ -1,6 +1,6 @@
 # Overview
 
-This web site describes following aspects of the electronic sign-in system
+This web site describes following aspects of the electronic sign-in system:
 
 1. [Background](background)
 
@@ -9,8 +9,8 @@ This web site describes following aspects of the electronic sign-in system
 
 2. [The Kiosk](kiosk)
 
-  > The Kiosk is the main component of the system, and used by most people. This section provides an overview of the Kiosk, 
-   along with a user guide.
+  > The Kiosk is the main component of the system, and used by most people on a day-to-day basis. This section 
+  > provides an overview of the Kiosk, along with a user guide.
 
 3. The Server
 

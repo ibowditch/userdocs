@@ -295,7 +295,7 @@
               <div>
                 
   <div class="section" id="events">
-<h1>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h1>
+<span id="eventsection"></span><h1>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h1>
 <p>Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.</p>
 <p>When you attend the station, you sign-in to an activity that is occurring at the station, in the same way that
 you signed into an activity on the old Attendance Book.</p>
@@ -420,16 +420,18 @@ to sign-in with a tag, and no sign-in icon is shown for future events.</p>
 <h3>Additional Types<a class="headerlink" href="#additional-types" title="Permalink to this headline">¶</a></h3>
 <dl class="simple myst" id="overnight">
 <dt>Overnight</dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
-that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start
-<strong>or end</strong> on the current day, so such an event will appear on the start day and on the end day. This allows
-crew to sign out when they return from night shift.</p>
+that an event runs overnight by giving a finish time in the next day.</p>
+<p>The kiosk shows all events that start <strong>or end</strong> on the current day, so such an event will appear on the start
+day and on the end day. This allows crew to sign out when they return from a night shift.</p>
 </dd>
 </dl>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Always set the end time for overnight events</strong></p>
-<p>If the OIC doesn’t set the end time of an event so that it end the next day, members won’t be able to sign-out
+<p>If the OIC doesn’t set the end time of an event so that it ends the next day, members won’t be able to sign-out
 when they return from their shift, as the event won’t be shown on the kiosk.</p>
+<p>Since events are always less than 24 hours in duration, in overnight events the end time must be less than the
+start time, eg. Start: 18:00, End: 06:00.</p>
 <p>If there’s any chance you might be out past midnight (like Cinderella), make sure you set the end time past midnight.
 If you get back early, no problem.</p>
 </div>
