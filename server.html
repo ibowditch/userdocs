@@ -222,8 +222,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#upcoming-events">
-       Upcoming Events
+      <a class="reference internal nav-link" href="#member-list">
+       Member List
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -237,13 +237,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#my-contact-details">
-       My Contact Details
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#event-calendar">
-       Event Calendar
+      <a class="reference internal nav-link" href="#events-calendar">
+       Events calendar
       </a>
      </li>
     </ul>
@@ -402,8 +397,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#upcoming-events">
-       Upcoming Events
+      <a class="reference internal nav-link" href="#member-list">
+       Member List
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -417,13 +412,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#my-contact-details">
-       My Contact Details
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#event-calendar">
-       Event Calendar
+      <a class="reference internal nav-link" href="#events-calendar">
+       Events calendar
       </a>
      </li>
     </ul>
@@ -552,62 +542,118 @@
                 
   <div class="section" id="sign-in-server-under-construction">
 <h1>Sign-in Server (Under construction)<a class="headerlink" href="#sign-in-server-under-construction" title="Permalink to this headline">¶</a></h1>
-<p>The entire system is a web application, which runs on a server in the cloud (in our case, Amazon Web services).</p>
-<p>All interactions with the system, including from the Kiosk, are made through this web application.</p>
-<p>The Kiosk is the “shop front” of the system, and is used most frequently by most users. As well as being the backend
-for the Kiosk, the server can be accessed by all members, for a variety of services, detailed below.</p>
+<p>The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a
+data centre run by Amazon Web Services in Sydney).</p>
+<p>All interactions with the system, including from the Kiosk (which runs in a web browser), are made through this
+web application. The Kiosk is the “shop front” of the system, and is used most frequently by most users day-to-day, and is covered in an
+<a class="reference internal" href="events.html#eventsection"><span class="std std-ref">earlier section</span></a>.</p>
+<p>Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has
+an internet connection and a browser available. This section describes the services available on the Sign-in server.</p>
 <div class="section" id="logging-in">
 <h2>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title">Multiple Tenants</p>
+<p>The system architecture is what is known as <em>multi-tenanted</em>. This allows the same server to support multiple brigades,
+with each being a distinct “tenant”. The brigade name in the url signifies which tenant/brigade you want to use.</p>
+<p>Each brigade has it’s own database, including the list of members, and you can only login to a brigade system if you
+are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
+any other brigades.</p>
+</div>
+<p>The sign-in server can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
+<strong>brigade</strong> in this url with the actual name of your brigade (eg. westleigh).</p>
+<p>You will be challenged to provide a username and password before you can login to the system.</p>
+<p>By default, your username is the same as the email address that you use to communicate with your brigade.</p>
+<p>The first time you login, your default password will be the same as your RFS member number - you will then be asked to
+change this password before proceeding.</p>
+<p>If you ever need to change your password (eg. if you forget it), you can change it by clicking on the <em>Lost password?</em>
+link on the login page. The system will then email you a link, and then you can change your password.</p>
 </div>
 <div class="section" id="landing-home-page">
 <h2>Landing/home page<a class="headerlink" href="#landing-home-page" title="Permalink to this headline">¶</a></h2>
+<p>When you have logged in the system will take you to the brigade home page, an example of which is shown below:</p>
+<div class="myclass figure align-default" id="home-page">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/homepage.jpg"><img alt="Landing page" class="bg-primary mb-1" src="_images/homepage.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Home/landing page on server (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple myst">
+<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">following sections</span></a> describe each of these in detail.</p>
+</dd>
+<dt>Membership Summary</dt><dd><p>Shows the total number of active members broken down by their skills set.</p>
+<p>It also shows, in red, the number of members currently on duty, ie. currently signed in at the station
+(but not yet signed out). These figures are updated live, whenever anyone signs in or out at the station.</p>
+</dd>
+<dt>Upcoming events</dt><dd><p>Shows details of future events in the calendar, including the number of members who have indicated
+that they will be attending. Further details are available by clicking on the event Details. Members can indicate
+their intention to attend these events in the Brigade Calendar (see below)</p>
+</dd>
+<dt>Shortcuts</dt><dd><p>The “At Station” shortcut shows a read-only replica of the Kiosk screen, and you can also access the
+Brigade Calendar. Both of these are also available under the Members menu in the Navigation bar.</p>
+</dd>
+</dl>
 </div>
 <div class="section" id="menu-of-services">
-<h2>Menu of Services<a class="headerlink" href="#menu-of-services" title="Permalink to this headline">¶</a></h2>
+<span id="menu"></span><h2>Menu of Services<a class="headerlink" href="#menu-of-services" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="members">
 <h3>Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h3>
-<p>Member menu
-Upcoming events - skip this for now
-Member List
-Officers and qualifications need to be kept up to date for this to be useful
-Personnel adds new officers in admin after agm
-Training officer sets all known quals, then maintains them
-Some quals are perpetual (eg. AF, CL, ..)
-Some expire
-Note date cert gained
-Lower case indicates expired
-Next release will show TCard with quals for any event
-Separate session for Training officer
-Privacy
-Implicitly assume members don’t have problem sharing mobile/email with other members
-If they don’t want that, don’t record it and won’t appear
-Show personnel how to do this (later)
-Member Activity
-Select season - year season started
-Shows hours recorded for each member in attendance book
-Good for awards end of year
-Also see who is not showing up
-Drill down in any number to see details, including totals
-At Station
-Mirror of kiosk
-Updated at same time as kiosk
-Look, don’t touch (except OIC)
-Events calendar
-Well organised brigade has a calendar of upcoming events
-Ideally members can indicate their intention to attend
-OIC can see who to expect
-See what’s happened and what’s coming up
-View by day/week/month
-Click on event for details
-Can indicate that will be attending (may be useful for call out)
-Can also drop out
-Officers can create new events here
-Members can only look, or nominate to attend</p>
-<div class="section" id="upcoming-events">
-<h4>Upcoming Events<a class="headerlink" href="#upcoming-events" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="member-list">
+<h4>Member List<a class="headerlink" href="#member-list" title="Permalink to this headline">¶</a></h4>
+<p>For internal use only, members have access to a summary of basic contact details of all active members through the
+Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser
+if a hard-copy is required.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Member Privacy
+If members do not wish their contact details to be shared with other members they can instruct the
+Personnel/Membership Officer to remove those details from this list.</p>
+<p>Also, this list is for Brigade use only, and should not be shared outside the Brigade.</p>
+</div>
+<div class="myclass figure align-default" id="memb-list">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/memblist-a.jpg"><img alt="Landing page" class="bg-primary mb-1" src="_images/memblist-a.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Member List (excerpt) (click to enlarge)</span><a class="headerlink" href="#memb-list" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notes</p>
+<ul class="simple">
+<li><p>Members only appear once on this list, in the first section they fit in to. It has the following sections:</p>
+<ul>
+<li><p>Field Officers</p></li>
+<li><p>Crew Leaders (CL, but not currently Field Officers)</p></li>
+<li><p>Tanker Drivers (Neither Field Officers or Crew Leaders)</p></li>
+<li><p>Drivers (None of above, but personnel vehicle qualified)</p></li>
+<li><p>Members (None of the above)</p></li>
+</ul>
+</li>
+</ul>
+<dl class="simple myst">
+<dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in lower case):</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Driving</p>
+<ul>
+<li><p>TD - Tanker driver</p></li>
+<li><p>PD - Personnel/light vehicle driver</p></li>
+</ul>
+</li>
+<li><p>First Aid (FAA, etc.)</p></li>
+<li><p>Safe working on roofs - SWR</p></li>
+<li><p>Chainsaw Operator - (TFT, TFI, etc.)</p></li>
+<li><p>Village Firefighter - VF</p></li>
+<li><p>Highest qualification - Group Leader (GL), Crew Leader (CL), Advanced Firefighter (AF), Basic Firefighter (BF)</p></li>
+</ul>
+<dl class="simple myst">
+<dt>Rank</dt><dd><p>This shows Field Officer positions in order of rank. All other members are shown as FF (Firefighter).</p>
+</dd>
+<dt>RfsID</dt><dd><p>This is the RFS Membership number issued by the RFS.</p>
+</dd>
+</dl>
 </div>
 <div class="section" id="member-activity">
 <h4>Member Activity<a class="headerlink" href="#member-activity" title="Permalink to this headline">¶</a></h4>
+<p>Select season - year season started
+Shows hours recorded for each member in attendance book
+Good for awards end of year
+Also see who is not showing up
+Drill down in any number to see details, including totals</p>
 <p>The Member Activity report can now show all activities that were previously excluded, if you check the box
 “Add Excluded Events”. All events recorded during the season, without exception, will be shown in the table and
 included in the totals, even if you marked them as excluded in the Brigade Settings (see below).
@@ -630,12 +676,22 @@ or External activities, or anything else you want. As noted above, activities th
 </div>
 <div class="section" id="at-station">
 <h4>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h4>
+<p>Read only replica  of kiosk
+Updated at same time as kiosk
+Look, don’t touch (except OIC)</p>
 </div>
-<div class="section" id="my-contact-details">
-<h4>My Contact Details<a class="headerlink" href="#my-contact-details" title="Permalink to this headline">¶</a></h4>
-</div>
-<div class="section" id="event-calendar">
-<h4>Event Calendar<a class="headerlink" href="#event-calendar" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="events-calendar">
+<h4>Events calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">¶</a></h4>
+<p>Well organised brigade has a calendar of upcoming events
+Ideally members can indicate their intention to attend
+OIC can see who to expect
+See what’s happened and what’s coming up
+View by day/week/month
+Click on event for details
+Can indicate that will be attending (may be useful for call out)
+Can also drop out
+Officers can create new events here
+Members can only look, or nominate to attend</p>
 </div>
 </div>
 <div class="section" id="training">

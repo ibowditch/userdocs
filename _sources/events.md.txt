@@ -1,4 +1,4 @@
-
+(eventsection)=
 # Events
 
 Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.
@@ -153,14 +153,18 @@ Future - white background, dashed border
 Overnight
    
 :  Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
-   that an event runs overnight by giving a finish time in the next day. The kiosk shows all events that start 
-   **or end** on the current day, so such an event will appear on the start day and on the end day. This allows 
-   crew to sign out when they return from night shift.
+   that an event runs overnight by giving a finish time in the next day. 
+
+   The kiosk shows all events that start **or end** on the current day, so such an event will appear on the start 
+   day and on the end day. This allows crew to sign out when they return from a night shift.
 
 :::{warning} **Always set the end time for overnight events**
 
-If the OIC doesn't set the end time of an event so that it end the next day, members won't be able to sign-out
+If the OIC doesn't set the end time of an event so that it ends the next day, members won't be able to sign-out
 when they return from their shift, as the event won't be shown on the kiosk.
+
+Since events are always less than 24 hours in duration, in overnight events the end time must be less than the 
+start time, eg. Start: 18:00, End: 06:00.
 
 If there's any chance you might be out past midnight (like Cinderella), make sure you set the end time past midnight. 
 If you get back early, no problem.
