@@ -11,8 +11,8 @@ Events are central to the design of the system, and come in many shapes and vari
 For all the gory details, see the dedicated section on [Events](events)
 ```
 
-The Kiosk screen shows events that start **or end** on the current day, and is automatically 
-updated every night, just after midnight, to show events for the new day.
+The Kiosk screen shows [events](events "described in a later section") that start **or end** on the current day, 
+and is automatically updated every night, just after midnight, to show events for the new day.
 
 NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out 
 of events shown on the kiosk screen.
@@ -66,7 +66,7 @@ There is a mechanism which allows {ref}`you to sign in without a tag<notag>` but
 exceptional cases, as the Kiosk is a shared computer, and doesn't know who is at the keyboard. 
 
 Your tag is unique to you, and essentially replaces your signature in the electronic attendance 
-records. Using your tag removes any doubt that it was you who signed-in, so it should be used whenever possible.
+records. Using your tag leaves little doubt that it was you who signed-in, so it should be used whenever possible.
 
 The system records when a tag is used, and if your brigade is strict about using tags, 
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
@@ -77,7 +77,7 @@ your administrator may remind you to use your tag if they see you are repeatedly
 (blank_kiosk)=
 ### What if the kiosk screen is blank?
 
-If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in. 
+If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in immediately. 
 
 Never fear - you can still sign-in, but first you'll need to create a new event on behalf of the OIC. You do this by 
 clicking the New Event+ button at the top right of the kiosk screen, and you will then see the following form:
@@ -101,9 +101,9 @@ As with the old Attendance Book, you would normally sign-in to one activity, des
 page (OIC, activity type, date, etc.). If you attended another activity later in the day, you would sign-out of the 
 first one and go to the next page to sign-in to the next activity.
 
-Signing in without an event would be like signing your name in the middle of a blank page in the old Attendance Book. 
-You really need to fill in the details at the top of the page to give the context, and show what you are actually 
-attending, and that's essentially what an event gives you.
+In the new system, signing in without an event would be like signing your name in the middle of a blank page in the 
+old Attendance Book. You really need to fill in the details at the top of the page to give the context, and show 
+what you are actually attending, and that's essentially what an event gives you.
 
 :::
 
@@ -127,8 +127,16 @@ You can sign-out without a tag by clicking the green Sign-out  button next to yo
 
 ## Advanced Operations
 
+```{margin} Form Timeouts
+Forms such as [Changing Event Details](change-event) prevent members 
+from signing in, so shouldn't be left uncompleted on the Kiosk screen. 
+
+If not completed in 15 minutes, forms will be automatically removed, and the screen will return 
+to the normal Kiosk view to allow members to continue signing in and out.
+```
+
 (change-event)=
-### Changing Event Details
+### Changing Events
 
 Any event on the Kiosk screen can be updated by clicking on the title, in this case: "Assist SES in Hornsby Area":
 
@@ -167,8 +175,8 @@ Notes:
 * Vehicles used in the activity can be marked (use the ctrl key to select multiple vehicles) as allocated, which is 
   useful in determining vehicle bookings.
 
-
-### Changing attendance details
+(change-att)=
+### Changing Attendance
 
 If you forgot to sign-in when you arrived at the station, and go back later to sign-in, you can revise the start 
 time by clicking on your name in the event. 
@@ -177,7 +185,7 @@ You will then have the option of changing the sign-in time or other details of y
 Click Submit to save the new details.
 
 
-### Deleting events
+### Deleting Events
 
 If a new event is created by mistake, it can be deleted using the trash icon in the event. 
 
@@ -186,7 +194,23 @@ accidental loss of attendance records.
 
 ### Transferring Members to a New Event
 
-### Form Timeouts
+The Transfer button, available in the form used to change events, allows members to be transferred from one event to 
+another following event.
+
+For example, if the brigade has a general meeting in the morning, followed immediately by station maintenance, 
+all members who attended the meeting (and haven't already left/signed out) can be transferred at the end of 
+the meeting to a new event for the maintenance.
+
+They will be automatically signed out of the meeting at the required time, and then automatically signed in to 
+the maintenance event at the same time. The meeting will be closed by setting the end time to the current time.
+
+This feature can be accessed by opening an existing event (click on the event title) and then click 
+the Transfer button on the top right. Fill in the details of the new event and submit, and the new event will appear 
+on the kiosk with all the members transferred from the original event.
+
+Members transferred to the new event only need to sign-out once before they leave, as they have already been 
+signed out of the original event.
+
 
 ### Multiple simultaneous events
 
@@ -194,7 +218,7 @@ On a busy day, it is possible that events will overlap in time, or there may be 
 (eg. Maintenance, and Training). 
 
 If that's the case, when you present your tag to sign-in, the system will ask you to 
-choose which of the available events you wish to join. Just click on the appropriate event and you will be signed in 
+choose which of the available events you wish to join. Just click on the appropriate event, and you will be signed in 
 to that.
 
 ### Tips for organising a busy day
@@ -228,6 +252,7 @@ The Kiosk will beep when a tag is registered, as follows:
 * Single high pitched tone for signing in
 * Single low pitched tone for signing out
 * Multiple tones when a choice of events is required
+
 
 ### Tagging flowchart
 

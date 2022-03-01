@@ -1,15 +1,18 @@
 # Project Background
 
-This project started in 2018, when I decided to build a web application to help automate some
-admin tasks that were taking a lot of volunteer time at my local brigade.
+This project to build an electronic sign-in system started in 2018, when I decided to build a web application to 
+help automate some admin tasks that were taking a lot of volunteer time at my local brigade.
 
 It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.
 
 My background as a software engineer (in a past life) came in handy, but there was still a big learning curve, and I 
 continue to improve the application as the technology evolves, and as I find better ways of doing things.
 
-The system has been running for 4 years now, including through the major fires of 2019-2020. The user base started with my 
-home brigade (~70 members), and then grew to include another 3 brigades, and now supports more than 300 users.
+The system first went live in November 2018, and has been running (almost) continuously since then, including through 
+the major fires of 2019-2020. 
+
+The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports 
+more than 300 users.
 
 ## Requirements
 
@@ -40,23 +43,24 @@ organise.
 
 This is what I was aiming to do with the new system:
 
-* Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
+1. Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
   procedures used with the Attendance Book.
 
-* Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades
+1. Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades
   
-* Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date 
+1. Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date 
   and running.
   
-* Improve visibility and availability of attendance data to all brigade members and management.
+1. Improve visibility and availability of attendance data to all brigade members and management.
 
-* Futher reduce admin effort by automatically producing reports based on attendance data.
+1. Futher reduce admin effort by automatically producing reports based on attendance data.
 
-* Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
-  
-* High availability and reliability, including regular automatic backups.
+1. Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
 
-* Secure solution with password required for access. 
+(availreq)=
+1. High availability and reliability, including regular automatic backups.
+
+1. Secure solution with password required for access. 
 
 
 ## Attendance Records
