@@ -82,6 +82,7 @@ If members do not wish their contact details to be shared with other members the
 Personnel/Membership Officer to remove those details from this list. 
 
 Also, this list is for Brigade use only, and should not be shared outside the Brigade.
+
 ```
 
 :::{figure-md} memb-list
