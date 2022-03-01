@@ -146,6 +146,12 @@ Vehicle details (provided a vehicle is allocated)
 
 Crew list and qualifications
 
+### Deleting Members
+
+Don't! If you do, you will also delete their attendance records, which is against the law.
+
+To stay out of jail, make them inactive instead.
+
 ### COVID-19 Report
 
 As we discussed the other week, I reviewed the NSW Government Covid safe record keeping guidelines, and it 
