@@ -93,7 +93,7 @@ Also, this list is for Brigade use only, and should not be shared outside the Br
 Member List (excerpt) (click to enlarge)
 :::
 
-Notes
+**Notes**
 
 * Members only appear once on this list, in the first section they fit in to. It has the following sections:
   * Field Officers
