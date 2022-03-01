@@ -76,7 +76,8 @@ For internal use only, members have access to a summary of basic contact details
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser 
 if a hard-copy is required.
 
-```{Warning} Member Privacy
+```{Warning} Member Privacy:
+
 If members do not wish their contact details to be shared with other members they can instruct the 
 Personnel/Membership Officer to remove those details from this list. 
 
