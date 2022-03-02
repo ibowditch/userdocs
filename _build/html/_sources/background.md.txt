@@ -42,26 +42,26 @@ organise.
 
 ### System Requirements
 
-This is what I was aiming to do with the new system:
+As well as meeting the Legal Requirements, this is what I was aiming to do with the new system:
 
 (availreq)=
 1. Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
-  procedures used with the Attendance Book.
+   procedures used with the Attendance Book.
 
-1. Capture attendance details in electronic form to reduce admin load for volunteers at RFS brigades
+1. Capture attendance details in electronic form to eliminate the need to transcribe attendance data.
   
 1. Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date 
-  and running.
+   and running.
   
 1. Improve visibility and availability of attendance data to all brigade members and management.
 
-1. Futher reduce admin effort by automatically producing reports based on attendance data.
+1. Futher reduce admin effort by automatically producing useful reports based on attendance data.
 
-1. Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
+1. Provide a low cost solution, using off-the-shelf hardware and a small annual subscription fee.
 
-1. High availability and reliability, including regular automatic backups.
+1. Provide high availability and reliability, including regular automatic backups.
 
-1. Secure solution with password required for access. 
+1. Ensure data privacy with a secure solution, with user accounts and passwords required for access. 
 
 
 ## Attendance Records

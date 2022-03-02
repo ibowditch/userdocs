@@ -1,7 +1,5 @@
 # Sign-in Server (Under construction)
 
-
-
 The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a 
 data centre run by Amazon Web Services in Sydney).
 
@@ -60,7 +58,7 @@ Upcoming events
   
 Shortcuts 
 : The "At Station" shortcut shows a read-only replica of the Kiosk screen, and you can also access the
-  Brigade Calendar. Both of these are also available under the Members menu in the Navigation bar.
+  *Brigade Calendar*. Both of these are also available under the Members menu in the Navigation bar.
 
 
 (menu)=
@@ -133,16 +131,23 @@ Member Activity (top section) (click to enlarge)
 
 <p style="text-align: center">---/\/\/\/\/\---</p>
 
-The Season (top right, above) is normally the current season, but records for previous years can also be viewed 
+The Season (top right, above) is normally the current season, but records for previous years can be viewed 
 by selecting an earlier season if historical data is available.
 
 The numbers in the table can represent either Hours - the total time contributed by the member, or Events - the number 
 of activities attended, and can switched with the control in the top right of the page.
 
-#### Activity Details
+##### Sorting
 
-If you click on any of the table elements, it will drill down to the underlying data, and show a complete listing 
-of all the events attended in the chosen category.
+The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed 
+by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but 
+this can be reversed by clicking the heading once more. The example in {ref}`Member Activity (top section)<act-top>` 
+is sorted by *Total*.
+
+##### Activity Details
+
+If you click on any of the numbers in the table, it will drill down to the underlying data, and show a complete 
+listing of all the events attended in the chosen category.
 
 :::{figure-md} act-detail
 :class: myclass
@@ -152,18 +157,11 @@ of all the events attended in the chosen category.
 Sample of Maintenance Activity for a Member (click to enlarge)
 :::
 
-#### Totals
+##### Totals
 
 Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
 Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show 
-a full listing of all member attendance at that type of activity.
-
-#### Sorting
-
-The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed 
-by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but 
-this can be reversed by clicking the heading once more. The example in {ref}`Member Activity (top section)<act-top>` 
-is sorted by *Total*.
+a full listing of all member attendance for that type of activity.
 
 ##### Voting Criteria and Colouring
 
@@ -203,7 +201,7 @@ At Station (click to enlarge)
 Unlike the Kiosk, you can not sign-in with this view, nor can you change any details.
 
 This view is live, and is updated automatically whenever there is any activity on the Kiosk, 
-including sign-in/out ot new events.
+including sign-in/out or new events created.
 
 #### Events calendar
 

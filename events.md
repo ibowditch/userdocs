@@ -160,11 +160,11 @@ Overnight
 
 :::{warning} **Always set the end time for overnight events**
 
-If the OIC doesn't set the end time of an event so that it ends the next day, members won't be able to sign-out
-when they return from their shift, as the event won't be shown on the kiosk.
-
 Since events are always less than 24 hours in duration, in overnight events the end time must be less than the 
 start time, eg. Start: 18:00, End: 06:00.
+
+If the OIC doesn't set the end time of an event so that it ends the next day, members won't be able to sign-out
+when they return from their shift, as the event won't be shown on the kiosk.
 
 If there's any chance you might be out past midnight (like Cinderella), make sure you set the end time past midnight. 
 If you get back early, no problem.
