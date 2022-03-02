@@ -15,8 +15,8 @@ an internet connection and a browser available. This section describes the servi
 ## Logging In
 
 ```{margin} Multiple Tenants
-The system architecture is what is known as [*multi-tenated*](multi-tenant-tech "*multi-tenanted*"). This allows the same server to support multiple brigades,
-with each being a distinct "tenant". The brigade name in the url signifies which tenant/brigade you want to use.
+The system architecture is what is known as [*multi-tenated*](multi-tenant-tech "*multi-tenanted*"). This allows 
+the same server to support multiple brigades, with each being a distinct "tenant".
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
@@ -139,18 +139,10 @@ by selecting an earlier season if historical data is available.
 The numbers in the table can represent either Hours - the total time contributed by the member, or Events - the number 
 of activities attended, and can switched with the control in the top right of the page.
 
-The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed 
-by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but 
-this can be reversed by clicking the heading once more. 
-
-Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
-The above example is sorted by *Total*.
-
-Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show a full
-listing of all member attendance at that type of activity.
+#### Activity Details
 
 If you click on any of the table elements, it will drill down to the underlying data, and show a complete listing 
-of all the events attended in the chosen category:
+of all the events attended in the chosen category.
 
 :::{figure-md} act-detail
 :class: myclass
@@ -160,15 +152,28 @@ of all the events attended in the chosen category:
 Sample of Maintenance Activity for a Member (click to enlarge)
 :::
 
+#### Totals
+
+Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
+Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show 
+a full listing of all member attendance at that type of activity.
+
+#### Sorting
+
+The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed 
+by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but 
+this can be reversed by clicking the heading once more. The example in {ref}`Member Activity (top section)<act-top>` 
+is sorted by *Total*.
+
 ##### Voting Criteria and Colouring
 
 Many brigades define Voting Criteria to determine which members are eligible to vote in Brigade Elections. Normally 
 these criteria specify a minimum number of hours in a season/year (or attendance at a minimum number of events),
 that the member must complete to be eligible to vote.
 
-The table uses these criteria (set by the administrator on behalf of the Executive), to identify members who have 
-met the criteria and those who have not. Members coloured yellow, are just below the criteria, those coloured red 
-are well below the criteria, and the others are above.
+The table uses these criteria ({ref}`set by the administrator<set-vote-crit>` on behalf of the Executive), 
+to identify members who have met the criteria and those who have not. Members coloured yellow, are just below 
+the criteria, those coloured red are well below the criteria, and the others are above.
 
 :::{figure-md} act-mid
 :class: myclass

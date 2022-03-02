@@ -90,6 +90,7 @@ the Member Activity Report. You would normally exclude Social: Social/Personal, 
 or External activities, or anything else you want. As noted above, activities that would normally be excluded (and not shown), 
 can be revealed temporarily with the new "Add Excluded Events" button.
 
+(set-vote-crit)=
 ### Setting Voting Criteria
 
 
