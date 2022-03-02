@@ -44,7 +44,7 @@ and you will be signed in.
 If the screen is blank or no events are available, jump to {ref}`blank_kiosk`
 ```
 
-You should then hear a beep as the tag is registered, and the screen will be updated as follows, with your name in 
+You should hear a beep as the tag is registered, and the screen will be updated as follows, with your name in 
 the event, and the time you signed in.
 
 
@@ -75,7 +75,7 @@ your administrator may remind you to use your tag if they see you are repeatedly
 
 
 (blank_kiosk)=
-### What if the Kiosk Ccreen is Blank?
+### What if the Kiosk Screen is Blank?
 
 If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in immediately. 
 
@@ -162,13 +162,13 @@ Click Submit when done, and the revised event will appear on the Kiosk.
 Update Event Form (click to enlarge)
 :::
 
-Notes:
+**Notes:**
 
 * Members can be added without start or end times, as a placeholder, if you know in advance who is expected to attend.
   This is useful for planning events when you know who will be coming. These members will still have to sign in 
   when they arrive. Other members can still sign-in to this event, even they are not on the preset list.
   
-* Details such as "Chainsaw TFT operator" can be added for each member to reflect roles allocated by the Crew Leader.
+* Details such as "K1B driver" can be added for each member to reflect roles allocated by the Crew Leader.
 
 * Member qualifications can be reviewed using the TCard option (top right)
   
@@ -248,7 +248,7 @@ All remaining members (who hadn't already signed out from the Meeting event), ha
 Meeting event to the new Maintenance event. They have been automatically signed out of the Meeting event, and 
 signed into the new Maintenance event. They only need to sign-out once, when they leave.
 
-If anyone was transferred to the new Maintenance event, but has to leave, can just sign-out anyway.
+If anyone was transferred to the new Maintenance event, but has to leave, they can just sign-out anyway.
 
 The Meeting event end time is adjusted to the time of the transfer, and is now closed, so no-one else 
 can sign-in to it.
@@ -261,14 +261,14 @@ new Maintenance event. They can sign-in to the new event if they hadn't really l
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
 (eg. Maintenance, and Training). 
 
-If that's the case, the system needs to work out which event you want to join (see {ref}`Tagging Flowchart<flowchart-pic>` below.
+If that's the case, the system needs to {ref}`work out which event you want to join<flowchart-pic>`.
 
 When you present your tag to sign-in, the system will ask you to choose which of the available events you wish 
 to join. Just click on the appropriate event, and you will be signed in to that.
 
 ### Tips for Organising a Busy Day
 
-* Where possible, avoid overlapping events, as they will slow down the sign-in process for all members. 
+* Where possible, *avoid overlapping events*, as they will slow down the sign-in process for all members. 
   
 * Choose the start and end times for events to match the expected duration of the event. Members can sign-in up to 1 
   hour before the start time, and can sign-out at any time after that (even after the end time).
