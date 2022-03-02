@@ -127,12 +127,9 @@ You can sign-out without a tag by clicking the green Sign-out  button next to yo
 
 ## Advanced Operations
 
-```{margin} Form Timeouts
+```{margin} Forms block sign-in
 Forms such as [Changing Event Details](change-event) prevent members 
 from signing in, so shouldn't be left uncompleted on the Kiosk screen. 
-
-If not completed in 15 minutes, forms will be automatically removed, and the screen will return 
-to the normal Kiosk view to allow members to continue signing in and out.
 ```
 
 (change-event)=
