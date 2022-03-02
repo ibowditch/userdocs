@@ -77,7 +77,7 @@ html_theme_options = {
 }
 
 
-html_title = "RFS electronic sign-in"
+html_title = "RFS Tag"      #  - Electronic Sign-in"
 
 html_logo = "assets/images/nfc-logo-red-sm.png"      # "_static/python-logo-generic.svg"
 

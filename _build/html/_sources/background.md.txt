@@ -148,7 +148,7 @@ movements much of the time. No thanks.
 :::
 
 
-### Using the System to Sign In
+## Using the System to Sign In
 
 All Brigade Members are issued with a small key fob tag, which will be used for signing in and 
 out at the Station.
@@ -163,4 +163,29 @@ planned at that time, they will be automatically signed in. If there is more tha
 activity planned at that time, they will be asked to choose their activity.
 
 When a Member has finished, they should tap their tag on the reader to sign-out.
+
+## Site Map
+
+This web site describes following aspects of the electronic sign-in system:
+
+1. [Background](background)
+
+  > This section describes the origin of the system, the requirements (legal and otherwise). There is also a brief 
+  > overview of the objectives of the system, and a summary of how it operates. 
+
+2. [The Kiosk](kiosk)
+
+  > The Kiosk is the main component of the system, and used by most people on a day-to-day basis. This section 
+  > provides an overview of the Kiosk, along with a user guide.
+
+3. [The Server](server)
+
+  > The system runs on a cloud server (the Kiosk is connected to the server using a web interface). This section gives a 
+  > review of the features available on the cloud server, which can be accessed by officers and members of the brigade 
+  > from any device (login required).
+
+4. [Technology](technology)
+
+  > A brief overview of the main technologies - both hardware and software - used in the system.
+
 
