@@ -1,5 +1,7 @@
 # Sign-in Server (Under construction)
 
+
+
 The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a 
 data centre run by Amazon Web Services in Sydney).
 
@@ -13,12 +15,8 @@ an internet connection and a browser available. This section describes the servi
 ## Logging In
 
 ```{margin} Multiple Tenants
-The system architecture is what is known as *multi-tenanted*. This allows the same server to support multiple brigades,
+The system architecture is what is known as [*multi-tenated*](multi-tenant-tech "*multi-tenanted*"). This allows the same server to support multiple brigades,
 with each being a distinct "tenant". The brigade name in the url signifies which tenant/brigade you want to use.
-
-Each brigade has it's own database, including the list of members, and you can only login to a brigade system if you 
-are a member there. Once you are logged in, you can only access data for your own brigade, and you won't see data for 
-any other brigades. 
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
@@ -47,7 +45,7 @@ Home/landing page on server (click to enlarge)
 :::
 
 Navigation bar 
-: Used to access most functions. The {ref}`following sections<menu>` describe each of these in detail.
+: Used to access most functions. The {ref}`Menu of Services<menu>` section below describes each of these in detail.
 
 Membership Summary
 : Shows the total number of active members broken down by their skills set. 
@@ -96,22 +94,22 @@ Member List (excerpt) (click to enlarge)
 **Notes**
 
 * Members only appear once on this list, in the first section they fit in to. It has the following sections:
-  * Field Officers
-  * Crew Leaders (CL, but not currently Field Officers)
-  * Tanker Drivers (Neither Field Officers or Crew Leaders)
-  * Drivers (None of above, but personnel vehicle qualified)
-  * Members (None of the above)
+  * **Field Officers**
+  * **Crew Leaders** (CL, but not currently Field Officers)
+  * **Tanker Drivers** (Neither Field Officers or Crew Leaders)
+  * **Drivers** (None of above, but personnel vehicle qualified)
+  * **Members** (None of the above)
 
 Qualifications
-: This shows any qualification in the following areas (expired qualifications shown in lower case):
+: This shows any qualification in the following areas (expired qualifications shown in *lower case*):
 * Driving
-  * TD - Tanker driver (including current RFD)
-  * PD - Personnel/light vehicle driver  (including current RFD)
-* First Aid (FAA, etc.)
-* Safe working on roofs - SWR
-* Chainsaw Operator - (TFT, TFI, etc.)
-* Village Firefighter - VF
-* Highest qualification - Group Leader (GL), Crew Leader (CL), Advanced Firefighter (AF), Basic Firefighter (BF)
+  * **TD** - Tanker driver (including current RFD)
+  * **PD** - Personnel/light vehicle driver  (including current RFD)
+* First Aid (**FAA**, etc.)
+* Safe Working on Roofs - **SWR**
+* Chainsaw Operator - (**TFT**, **TFI**, etc.)
+* Village Firefighter - **VF**
+* Highest qualification - Group Leader (**GL**), Crew Leader (**CL**), Advanced Firefighter (**AF**), Basic Firefighter (**BF**)
 
 Rank
 : This shows Field Officer positions in order of rank. All other members are shown as FF (Firefighter).
@@ -121,38 +119,86 @@ RfsID
 
 #### Member Activity
 
-Select season - year season started
-Shows hours recorded for each member in attendance book
-Good for awards end of year
-Also see who is not showing up
-Drill down in any number to see details, including totals
+The Member Activity menu item shows a summary of all activity in a fire season, in the form of a table with one row
+for each active member. The member activity is broken down into major categories such as Training, 
+HR, Maintenance, etc.
 
-The Member Activity report can now show all activities that were previously excluded, if you check the box 
-"Add Excluded Events". All events recorded during the season, without exception, will be shown in the table and 
-included in the totals, even if you marked them as excluded in the Brigade Settings (see below). 
-Unchecking the box will remove all excluded activity types.
-Activity types are organised in groups, and these groups are shown as headings in the Member Activity Report. 
-If all event types in a group are excluded in Brigade Settings, and the check box "Add Excluded Events" is not checked, 
-the group heading, eg. External, will not be shown in the Member Activity table.
-If you drill down on any item in the Member Activity table, it will show a list of events represented by that item. 
-This page also has a "Show Excluded Events" check box, and if it is checked, it will show events that would normally 
-be excluded in grey, otherwise, they will not be shown at all.
-The admin page for Brigade Settings has been tidied up. Activity Types for New Events shows the activity types that 
-will appear in the drop down box when creating a new event. This list is now shown as checkboxes - check each item 
-you want to appear when creating new events.  The list also shows the group the activity belongs to, 
-eg.  Additional: Meeting, belongs to group "Additional".
-Also in Brigade Settings, beside the Activity Types for New Events list is the list of Activity Types excluded 
-from Member Activity Report. If you check an item in this list, all activities of this type will be excluded from 
-the Member Activity Report. You would normally exclude Social: Social/Personal, but you can also exclude all Incidents, 
-or External activities, or anything else you want. As noted above, activities that would normally be excluded 
-(and not shown), can be revealed temporarily with the new "Add Excluded Events" button.
+:::{figure-md} act-top
+:class: myclass
+
+<img src="assets/images/act-top-a.jpg" alt="Member Activity (top section)" width="1467" class="bg-primary mb-1">
+
+Member Activity (top section) (click to enlarge)
+:::
+
+<p style="text-align: center">---/\/\/\/\/\---</p>
+
+The Season (top right, above) is normally the current season, but records for previous years can also be viewed 
+by selecting an earlier season if historical data is available.
+
+The numbers in the table can represent either Hours - the total time contributed by the member, or Events - the number 
+of activities attended, and can switched with the control in the top right of the page.
+
+The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed 
+by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but 
+this can be reversed by clicking the heading once more. 
+
+Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
+The above example is sorted by *Total*.
+
+Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show a full
+listing of all member attendance at that type of activity.
+
+If you click on any of the table elements, it will drill down to the underlying data, and show a complete listing 
+of all the events attended in the chosen category:
+
+:::{figure-md} act-detail
+:class: myclass
+
+<img src="assets/images/act-detail.jpg" alt="Sample of Maintenance Activity for a Member" width="1467" class="bg-primary mb-1">
+
+Sample of Maintenance Activity for a Member (click to enlarge)
+:::
+
+##### Voting Criteria and Colouring
+
+Many brigades define Voting Criteria to determine which members are eligible to vote in Brigade Elections. Normally 
+these criteria specify a minimum number of hours in a season/year (or attendance at a minimum number of events),
+that the member must complete to be eligible to vote.
+
+The table uses these criteria (set by the administrator on behalf of the Executive), to identify members who have 
+met the criteria and those who have not. Members coloured yellow, are just below the criteria, those coloured red 
+are well below the criteria, and the others are above.
+
+:::{figure-md} act-mid
+:class: myclass
+
+<img src="assets/images/act-mid-a.jpg" alt="Member Activity (middle section)" width="1467" class="bg-primary mb-1">
+
+Member Activity (middle section) (click to enlarge)
+:::
+
+The criteria are normally specified for an entire year. Rather than having all members well below the criteria for the 
+majority of the year, the table calculates progress on a pro-rata basis, eg. if the annual requirements was for 60 hours,
+anyone below 30 hours at the midpoint of the season point would be coloured either yellow or red. Details of 
+this calculation can be seen by clicking the Key button - see {ref}`Member Activity (top section)<act-top>`
 
 #### At Station
 
-Read only replica  of kiosk
-Updated at same time as kiosk
-Look, don’t touch (except OIC)
+The At Station item shows a replica of the Kiosk, including all events and members attending. 
 
+:::{figure-md} dashboard
+:class: myclass
+
+<img src="assets/images/dashboard.jpg" alt="At Station" width="1467" class="bg-primary mb-1">
+
+At Station (click to enlarge)
+:::
+
+Unlike the Kiosk, you can not sign-in with this view, nor can you change any details.
+
+This view is live, and is updated automatically whenever there is any activity on the Kiosk, 
+including sign-in/out ot new events.
 
 #### Events calendar
 

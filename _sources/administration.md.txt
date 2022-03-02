@@ -17,6 +17,10 @@ number of events.
 These settings are available under admin:Brigade Settings.
 
 
+Each brigade has it's own database, including the list of members, and you can only login to a brigade system if you 
+are a member there. Once you are logged in, you can only access data for your own brigade, and you won't see data for 
+any other brigades. 
+
 ### Preparing and Issuing Tags
 
 Preparation

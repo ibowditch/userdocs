@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -230,6 +231,13 @@
       <a class="reference internal nav-link" href="#member-activity">
        5.3.1.2. Member Activity
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#voting-criteria-and-colouring">
+         5.3.1.2.1. Voting Criteria and Colouring
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#at-station">
@@ -405,6 +413,13 @@
       <a class="reference internal nav-link" href="#member-activity">
        5.3.1.2. Member Activity
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#voting-criteria-and-colouring">
+         5.3.1.2.1. Voting Criteria and Colouring
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#at-station">
@@ -553,11 +568,8 @@ an internet connection and a browser available. This section describes the servi
 <h2><span class="section-number">5.1. </span>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
 <div class="margin sidebar">
 <p class="sidebar-title">Multiple Tenants</p>
-<p>The system architecture is what is known as <em>multi-tenanted</em>. This allows the same server to support multiple brigades,
+<p>The system architecture is what is known as <a class="reference internal" href="technology.html#multi-tenant-tech"><span class="std std-ref"><em>multi-tenated</em></span></a>. This allows the same server to support multiple brigades,
 with each being a distinct “tenant”. The brigade name in the url signifies which tenant/brigade you want to use.</p>
-<p>Each brigade has it’s own database, including the list of members, and you can only login to a brigade system if you
-are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
-any other brigades.</p>
 </div>
 <p>The sign-in server can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
 <strong>brigade</strong> in this url with the actual name of your brigade (eg. westleigh).</p>
@@ -576,7 +588,7 @@ link on the login page. The system will then email you a link, and then you can 
 <p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Home/landing page on server (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="simple myst">
-<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">following sections</span></a> describe each of these in detail.</p>
+<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">Menu of Services</span></a> section below describes each of these in detail.</p>
 </dd>
 <dt>Membership Summary</dt><dd><p>Shows the total number of active members broken down by their skills set.</p>
 <p>It also shows, in red, the number of members currently on duty, ie. currently signed in at the station
@@ -615,30 +627,30 @@ Personnel/Membership Officer to remove those details from this list.</p>
 <ul class="simple">
 <li><p>Members only appear once on this list, in the first section they fit in to. It has the following sections:</p>
 <ul>
-<li><p>Field Officers</p></li>
-<li><p>Crew Leaders (CL, but not currently Field Officers)</p></li>
-<li><p>Tanker Drivers (Neither Field Officers or Crew Leaders)</p></li>
-<li><p>Drivers (None of above, but personnel vehicle qualified)</p></li>
-<li><p>Members (None of the above)</p></li>
+<li><p><strong>Field Officers</strong></p></li>
+<li><p><strong>Crew Leaders</strong> (CL, but not currently Field Officers)</p></li>
+<li><p><strong>Tanker Drivers</strong> (Neither Field Officers or Crew Leaders)</p></li>
+<li><p><strong>Drivers</strong> (None of above, but personnel vehicle qualified)</p></li>
+<li><p><strong>Members</strong> (None of the above)</p></li>
 </ul>
 </li>
 </ul>
 <dl class="simple myst">
-<dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in lower case):</p>
+<dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in <em>lower case</em>):</p>
 </dd>
 </dl>
 <ul class="simple">
 <li><p>Driving</p>
 <ul>
-<li><p>TD - Tanker driver (including current RFD)</p></li>
-<li><p>PD - Personnel/light vehicle driver  (including current RFD)</p></li>
+<li><p><strong>TD</strong> - Tanker driver (including current RFD)</p></li>
+<li><p><strong>PD</strong> - Personnel/light vehicle driver  (including current RFD)</p></li>
 </ul>
 </li>
-<li><p>First Aid (FAA, etc.)</p></li>
-<li><p>Safe working on roofs - SWR</p></li>
-<li><p>Chainsaw Operator - (TFT, TFI, etc.)</p></li>
-<li><p>Village Firefighter - VF</p></li>
-<li><p>Highest qualification - Group Leader (GL), Crew Leader (CL), Advanced Firefighter (AF), Basic Firefighter (BF)</p></li>
+<li><p>First Aid (<strong>FAA</strong>, etc.)</p></li>
+<li><p>Safe Working on Roofs - <strong>SWR</strong></p></li>
+<li><p>Chainsaw Operator - (<strong>TFT</strong>, <strong>TFI</strong>, etc.)</p></li>
+<li><p>Village Firefighter - <strong>VF</strong></p></li>
+<li><p>Highest qualification - Group Leader (<strong>GL</strong>), Crew Leader (<strong>CL</strong>), Advanced Firefighter (<strong>AF</strong>), Basic Firefighter (<strong>BF</strong>)</p></li>
 </ul>
 <dl class="simple myst">
 <dt>Rank</dt><dd><p>This shows Field Officer positions in order of rank. All other members are shown as FF (Firefighter).</p>
@@ -649,36 +661,59 @@ Personnel/Membership Officer to remove those details from this list.</p>
 </div>
 <div class="section" id="member-activity">
 <h4><span class="section-number">5.3.1.2. </span>Member Activity<a class="headerlink" href="#member-activity" title="Permalink to this headline">¶</a></h4>
-<p>Select season - year season started
-Shows hours recorded for each member in attendance book
-Good for awards end of year
-Also see who is not showing up
-Drill down in any number to see details, including totals</p>
-<p>The Member Activity report can now show all activities that were previously excluded, if you check the box
-“Add Excluded Events”. All events recorded during the season, without exception, will be shown in the table and
-included in the totals, even if you marked them as excluded in the Brigade Settings (see below).
-Unchecking the box will remove all excluded activity types.
-Activity types are organised in groups, and these groups are shown as headings in the Member Activity Report.
-If all event types in a group are excluded in Brigade Settings, and the check box “Add Excluded Events” is not checked,
-the group heading, eg. External, will not be shown in the Member Activity table.
-If you drill down on any item in the Member Activity table, it will show a list of events represented by that item.
-This page also has a “Show Excluded Events” check box, and if it is checked, it will show events that would normally
-be excluded in grey, otherwise, they will not be shown at all.
-The admin page for Brigade Settings has been tidied up. Activity Types for New Events shows the activity types that
-will appear in the drop down box when creating a new event. This list is now shown as checkboxes - check each item
-you want to appear when creating new events.  The list also shows the group the activity belongs to,
-eg.  Additional: Meeting, belongs to group “Additional”.
-Also in Brigade Settings, beside the Activity Types for New Events list is the list of Activity Types excluded
-from Member Activity Report. If you check an item in this list, all activities of this type will be excluded from
-the Member Activity Report. You would normally exclude Social: Social/Personal, but you can also exclude all Incidents,
-or External activities, or anything else you want. As noted above, activities that would normally be excluded
-(and not shown), can be revealed temporarily with the new “Add Excluded Events” button.</p>
+<p>The Member Activity menu item shows a summary of all activity in a fire season, in the form of a table with one row
+for each active member. The member activity is broken down into major categories such as Training,
+HR, Maintenance, etc.</p>
+<div class="myclass figure align-default" id="act-top">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/act-top-a.jpg"><img alt="Member Activity (top section)" class="bg-primary mb-1" src="_images/act-top-a.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Member Activity (top section) (click to enlarge)</span><a class="headerlink" href="#act-top" title="Permalink to this image">¶</a></p>
+</div>
+<p style="text-align: center">---/\/\/\/\/\---</p>
+<p>The Season (top right, above) is normally the current season, but records for previous years can also be viewed
+by selecting an earlier season if historical data is available.</p>
+<p>The numbers in the table can represent either Hours - the total time contributed by the member, or Events - the number
+of activities attended, and can switched with the control in the top right of the page.</p>
+<p>The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed
+by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but
+this can be reversed by clicking the heading once more.</p>
+<p>Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member.
+The above example is sorted by <em>Total</em>.</p>
+<p>Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show a full
+listing of all member attendance at that type of activity.</p>
+<p>If you click on any of the table elements, it will drill down to the underlying data, and show a complete listing
+of all the events attended in the chosen category:</p>
+<div class="myclass figure align-default" id="act-detail">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/act-detail.jpg"><img alt="Sample of Maintenance Activity for a Member" class="bg-primary mb-1" src="_images/act-detail.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Sample of Maintenance Activity for a Member (click to enlarge)</span><a class="headerlink" href="#act-detail" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="voting-criteria-and-colouring">
+<h5><span class="section-number">5.3.1.2.1. </span>Voting Criteria and Colouring<a class="headerlink" href="#voting-criteria-and-colouring" title="Permalink to this headline">¶</a></h5>
+<p>Many brigades define Voting Criteria to determine which members are eligible to vote in Brigade Elections. Normally
+these criteria specify a minimum number of hours in a season/year (or attendance at a minimum number of events),
+that the member must complete to be eligible to vote.</p>
+<p>The table uses these criteria (set by the administrator on behalf of the Executive), to identify members who have
+met the criteria and those who have not. Members coloured yellow, are just below the criteria, those coloured red
+are well below the criteria, and the others are above.</p>
+<div class="myclass figure align-default" id="act-mid">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/act-mid-a.jpg"><img alt="Member Activity (middle section)" class="bg-primary mb-1" src="_images/act-mid-a.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Member Activity (middle section) (click to enlarge)</span><a class="headerlink" href="#act-mid" title="Permalink to this image">¶</a></p>
+</div>
+<p>The criteria are normally specified for an entire year. Rather than having all members well below the criteria for the
+majority of the year, the table calculates progress on a pro-rata basis, eg. if the annual requirements was for 60 hours,
+anyone below 30 hours at the midpoint of the season point would be coloured either yellow or red. Details of
+this calculation can be seen by clicking the Key button - see <a class="reference internal" href="#act-top"><span class="std std-ref">Member Activity (top section)</span></a></p>
+</div>
 </div>
 <div class="section" id="at-station">
 <h4><span class="section-number">5.3.1.3. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h4>
-<p>Read only replica  of kiosk
-Updated at same time as kiosk
-Look, don’t touch (except OIC)</p>
+<p>The At Station item shows a replica of the Kiosk, including all events and members attending.</p>
+<div class="myclass figure align-default" id="dashboard">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/dashboard.jpg"><img alt="At Station" class="bg-primary mb-1" src="_images/dashboard.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">¶</a></p>
+</div>
+<p>Unlike the Kiosk, you can not sign-in with this view, nor can you change any details.</p>
+<p>This view is live, and is updated automatically whenever there is any activity on the Kiosk,
+including sign-in/out ot new events.</p>
 </div>
 <div class="section" id="events-calendar">
 <h4><span class="section-number">5.3.1.4. </span>Events calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">¶</a></h4>
