@@ -3,7 +3,7 @@
 The Kiosk is a small computer and screen, with a tag reader attached, that replaces the old Attendance Book, 
 and records attendance in electronic form. It is normally located at the front desk of the station. 
 
-It is always-on and available 24h every day. It requires an internet connection (wifi or wired) 
+It is always-on and available 24h every day. It requires an internet connection (Wi-Fi or wired) 
 to function.
 
 ```{margin} Events
@@ -197,29 +197,71 @@ accidental loss of attendance records.
 The Transfer button, available in the form used to change events, allows members to be transferred from one event to 
 another following event.
 
-For example, if the brigade has a general meeting in the morning, followed immediately by station maintenance, 
-all members who attended the meeting (and haven't already left/signed out) can be transferred at the end of 
-the meeting to a new event for the maintenance.
+In the following example, the brigade had a general meeting in the morning. The meeting started at 9:30 and 
+finished at 10:30, earlier than the planned finish time of 11:00. 
+The current time is 10:40, and 3 of the original 10 attendees have already signed out and left. 
 
-They will be automatically signed out of the meeting at the required time, and then automatically signed in to 
-the maintenance event at the same time. The meeting will be closed by setting the end time to the current time.
+The remaining members are available to help in the next activity - Vehicle Maintenance - which will start at the 
+current time.
 
-This feature can be accessed by opening an existing event (click on the event title) and then click 
-the Transfer button on the top right. Fill in the details of the new event and submit, and the new event will appear 
-on the kiosk with all the members transferred from the original event.
+:::{figure-md} prexfer
+:class: myclass
 
-Members transferred to the new event only need to sign-out once before they leave, as they have already been 
-signed out of the original event.
+<img src="assets/images/prexfer-a.jpg" alt="Monthly Meeting" width="1467" class="bg-primary mb-1">
 
+Monthly Meeting
+:::
+
+Open the meeting event by clicking on the title "March General Meeting", to get to the following form:
+
+:::{figure-md} updxfer
+:class: myclass
+
+<img src="assets/images/updxfer2.jpg" alt="Update Monthly Meeting" width="1467" class="bg-primary mb-1">
+
+Update Monthly Meeting
+:::
+
+Then click the Transfer button at the top right. In the Transfer form, fill in the details of the next event 
+(Maintenance - Vehicle Checks).
+
+:::{figure-md} inxfer
+:class: myclass
+
+<img src="assets/images/inxfer-a.jpg" alt="Transfer from Monthly Meeting" width="1467" class="bg-primary mb-1">
+
+Transfer from Monthly Meeting
+:::
+
+Submit the form with the new details, then you will return to the main Kiosk screen:
+
+:::{figure-md} postxfer
+:class: myclass
+
+<img src="assets/images/postxfer.jpg" alt="Transfer Complete" width="1467" class="bg-primary mb-1">
+
+Transfer Complete
+:::
+
+All remaining members (who hadn't already signed out), have been transferred from the Meeting event to the 
+new Maintenance event. They have been automatically signed out of the Meeting event, and 
+signed into the new Maintenance event. They only need to sign-out once, when they leave.
+
+The Meeting event end time is adjusted to the time of the transfer, and is now closed, so no-one else 
+can sign-in to it.
+
+Members who had already signed out of the Meeting event at the time of transfer, are not transferred to the 
+new Maintenance event. They can sign-in to the new event if they hadn't really left.
 
 ### Multiple simultaneous events
 
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
 (eg. Maintenance, and Training). 
 
-If that's the case, when you present your tag to sign-in, the system will ask you to 
-choose which of the available events you wish to join. Just click on the appropriate event, and you will be signed in 
-to that.
+If that's the case, the system needs to work out which event you want to join (see [Tagging Flowchart below](flowchart).
+
+When you present your tag to sign-in, the system will ask you to choose which of the available events you wish 
+to join. Just click on the appropriate event, and you will be signed in to that.
 
 ### Tips for organising a busy day
 
@@ -253,7 +295,7 @@ The Kiosk will beep when a tag is registered, as follows:
 * Single low pitched tone for signing out
 * Multiple tones when a choice of events is required
 
-
+(flowchart)=
 ### Tagging flowchart
 
 When you place your tag on the reader to sign in, the system goes through the following steps to work out an 

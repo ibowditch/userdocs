@@ -1,4 +1,4 @@
-# Project Background
+# Introduction
 
 This project to build an electronic sign-in system started in 2018, when I decided to build a web application to 
 help automate some admin tasks that were taking a lot of volunteer time at my local brigade.
@@ -44,6 +44,7 @@ organise.
 
 This is what I was aiming to do with the new system:
 
+(availreq)=
 1. Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing 
   procedures used with the Attendance Book.
 
@@ -58,7 +59,6 @@ This is what I was aiming to do with the new system:
 
 1. Low cost solution, using off-the-shelf hardware and a small annual subscription fee.
 
-(availreq)=
 1. High availability and reliability, including regular automatic backups.
 
 1. Secure solution with password required for access. 
@@ -81,7 +81,7 @@ Keeping handwritten attendance records has some significant drawbacks:
 
 * There is no backup - if the Attendance Book is lost or damaged, important records will be lost forever.
 
-* Keeping a physical Attendance Book can be unhygienic, as it (and the shared pen) is 
+* Keeping a physical Attendance Book can be unhygienic, as it (and the often shared pen) is 
   touched by many Members, and could be a vector for infections such as flu or COVID-19.
 
 

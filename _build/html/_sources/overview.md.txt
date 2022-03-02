@@ -12,13 +12,13 @@ This web site describes following aspects of the electronic sign-in system:
   > The Kiosk is the main component of the system, and used by most people on a day-to-day basis. This section 
   > provides an overview of the Kiosk, along with a user guide.
 
-3. The Server
+3. [The Server](server)
 
   > The system runs on a cloud server (the Kiosk is connected to the server using a web interface). This section gives a 
   > review of the features available on the cloud server, which can be accessed by officers and members of the brigade 
   > from any device (login required).
 
-4. Technology
+4. [Technology](technology)
 
   > A brief overview of the main technologies - both hardware and software - used in the system.
 

@@ -105,8 +105,8 @@ Member List (excerpt) (click to enlarge)
 Qualifications
 : This shows any qualification in the following areas (expired qualifications shown in lower case):
 * Driving
-  * TD - Tanker driver
-  * PD - Personnel/light vehicle driver
+  * TD - Tanker driver (including current RFD)
+  * PD - Personnel/light vehicle driver  (including current RFD)
 * First Aid (FAA, etc.)
 * Safe working on roofs - SWR
 * Chainsaw Operator - (TFT, TFI, etc.)
