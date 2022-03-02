@@ -167,13 +167,17 @@ Update Event Form (click to enlarge)
 * Members can be added without start or end times, as a placeholder, if you know in advance who is expected to attend.
   This is useful for planning events when you know who will be coming. These members will still have to sign in 
   when they arrive. Other members can still sign-in to this event, even they are not on the preset list.
-  
+
 * Details such as "K1B driver" can be added for each member to reflect roles allocated by the Crew Leader.
 
 * Member qualifications can be reviewed using the TCard option (top right)
   
 * Vehicles used in the activity can be marked (use the ctrl key to select multiple vehicles) as allocated, which is 
   useful in determining vehicle bookings.
+
+* Attendees can be removed if necessary using the *Delete* checkbox to the right of their name. This is useful if someone 
+  signed in to the wrong event by mistake. Use with caution though, as genuine attendance records should not be deleted.
+
 
 (change-att)=
 ### Changing Attendance
@@ -256,6 +260,14 @@ can sign-in to it.
 Members who had already signed out of the Meeting event at the time of transfer, are not transferred to the 
 new Maintenance event. They can sign-in to the new event if they hadn't really left.
 
+### T-Cards
+
+In the top right of the {ref}`event form<event-update>` (top right) you will see a T-Card button. 
+This is used to retrieve most of the information needed to complete a T-Card. 
+It's not really intended for use on the Kiosk, but an OIC can access this 
+information in the front seat of a truck using their phone, so it might be handy then.
+
+
 ### Multiple Simultaneous Events
 
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
@@ -265,6 +277,9 @@ If that's the case, the system needs to {ref}`work out which event you want to j
 
 When you present your tag to sign-in, the system will ask you to choose which of the available events you wish 
 to join. Just click on the appropriate event, and you will be signed in to that.
+
+
+
 
 ### Tips for Organising a Busy Day
 
@@ -304,7 +319,7 @@ The Kiosk will beep when a tag is registered, as follows:
 When you place your tag on the reader to sign in, the system goes through the following steps to work out an 
 appropriate action:
 
-1. Check if you are a member of this brigade. If not, you can't sign-in.
+1. Check if you are an active member of this brigade. If not, you can't sign-in.
 
 2. Check if you are already signed in to an event today. If you are, your tag will sign you out of that event.
 

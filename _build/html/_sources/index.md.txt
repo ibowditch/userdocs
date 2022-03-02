@@ -2,7 +2,6 @@
 
 ```{toctree}
     :maxdepth: 2
-    :caption: "Contents:"
    :numbered:
 background
 kiosk
