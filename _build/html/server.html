@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -544,6 +545,9 @@
 <h1><span class="section-number">5. </span>Sign-in Server (Under construction)<a class="headerlink" href="#sign-in-server-under-construction" title="Permalink to this headline">¶</a></h1>
 <p>The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a
 data centre run by Amazon Web Services in Sydney).</p>
+<p>Some
+:red<code class="docutils literal notranslate"><span class="pre">colored</span> <span class="pre">text</span></code> at last!
+:raw-html:<code class="docutils literal notranslate"><span class="pre">&lt;font</span> <span class="pre">color=&quot;blue&quot;&gt;Blue</span> <span class="pre">word,&lt;/font&gt;</span></code> And a word without color</p>
 <p>All interactions with the system, including from the Kiosk (which runs in a web browser), are made through this
 web application. The Kiosk is the “shop front” of the system, and is used most frequently by most users day-to-day, and is covered in an
 <a class="reference internal" href="events.html#eventsection"><span class="std std-ref">earlier section</span></a>.</p>
@@ -553,11 +557,8 @@ an internet connection and a browser available. This section describes the servi
 <h2><span class="section-number">5.1. </span>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
 <div class="margin sidebar">
 <p class="sidebar-title">Multiple Tenants</p>
-<p>The system architecture is what is known as <em>multi-tenanted</em>. This allows the same server to support multiple brigades,
+<p>The system architecture is what is known as <a class="reference internal" href="technology.html#multi-tenant-tech"><span class="std std-ref"><em>multi-tenated</em></span></a>. This allows the same server to support multiple brigades,
 with each being a distinct “tenant”. The brigade name in the url signifies which tenant/brigade you want to use.</p>
-<p>Each brigade has it’s own database, including the list of members, and you can only login to a brigade system if you
-are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
-any other brigades.</p>
 </div>
 <p>The sign-in server can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
 <strong>brigade</strong> in this url with the actual name of your brigade (eg. westleigh).</p>
@@ -576,7 +577,7 @@ link on the login page. The system will then email you a link, and then you can 
 <p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Home/landing page on server (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="simple myst">
-<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">following sections</span></a> describe each of these in detail.</p>
+<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">Menu of Services</span></a> section below describes each of these in detail.</p>
 </dd>
 <dt>Membership Summary</dt><dd><p>Shows the total number of active members broken down by their skills set.</p>
 <p>It also shows, in red, the number of members currently on duty, ie. currently signed in at the station
@@ -615,30 +616,30 @@ Personnel/Membership Officer to remove those details from this list.</p>
 <ul class="simple">
 <li><p>Members only appear once on this list, in the first section they fit in to. It has the following sections:</p>
 <ul>
-<li><p>Field Officers</p></li>
-<li><p>Crew Leaders (CL, but not currently Field Officers)</p></li>
-<li><p>Tanker Drivers (Neither Field Officers or Crew Leaders)</p></li>
-<li><p>Drivers (None of above, but personnel vehicle qualified)</p></li>
-<li><p>Members (None of the above)</p></li>
+<li><p><strong>Field Officers</strong></p></li>
+<li><p><strong>Crew Leaders</strong> (CL, but not currently Field Officers)</p></li>
+<li><p><strong>Tanker Drivers</strong> (Neither Field Officers or Crew Leaders)</p></li>
+<li><p><strong>Drivers</strong> (None of above, but personnel vehicle qualified)</p></li>
+<li><p><strong>Members</strong> (None of the above)</p></li>
 </ul>
 </li>
 </ul>
 <dl class="simple myst">
-<dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in lower case):</p>
+<dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in <em>lower case</em>):</p>
 </dd>
 </dl>
 <ul class="simple">
 <li><p>Driving</p>
 <ul>
-<li><p>TD - Tanker driver (including current RFD)</p></li>
-<li><p>PD - Personnel/light vehicle driver  (including current RFD)</p></li>
+<li><p><strong>TD</strong> - Tanker driver (including current RFD)</p></li>
+<li><p><strong>PD</strong> - Personnel/light vehicle driver  (including current RFD)</p></li>
 </ul>
 </li>
-<li><p>First Aid (FAA, etc.)</p></li>
-<li><p>Safe working on roofs - SWR</p></li>
-<li><p>Chainsaw Operator - (TFT, TFI, etc.)</p></li>
-<li><p>Village Firefighter - VF</p></li>
-<li><p>Highest qualification - Group Leader (GL), Crew Leader (CL), Advanced Firefighter (AF), Basic Firefighter (BF)</p></li>
+<li><p>First Aid (<strong>FAA</strong>, etc.)</p></li>
+<li><p>Safe Working on Roofs - <strong>SWR</strong></p></li>
+<li><p>Chainsaw Operator - (<strong>TFT</strong>, <strong>TFI</strong>, etc.)</p></li>
+<li><p>Village Firefighter - <strong>VF</strong></p></li>
+<li><p>Highest qualification - Group Leader (<strong>GL</strong>), Crew Leader (<strong>CL</strong>), Advanced Firefighter (<strong>AF</strong>), Basic Firefighter (<strong>BF</strong>)</p></li>
 </ul>
 <dl class="simple myst">
 <dt>Rank</dt><dd><p>This shows Field Officer positions in order of rank. All other members are shown as FF (Firefighter).</p>

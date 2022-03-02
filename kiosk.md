@@ -75,7 +75,7 @@ your administrator may remind you to use your tag if they see you are repeatedly
 
 
 (blank_kiosk)=
-### What if the kiosk screen is blank?
+### What if the Kiosk Ccreen is Blank?
 
 If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in immediately. 
 
@@ -109,7 +109,7 @@ what you are actually attending, and that's essentially what an event gives you.
 
 
 (notag)=
-### Signing in without a tag
+### Signing in Without a Tag
 
 You really should {ref}`use your tag<usetag>`, but if you don't have it you can still sign 
 in to an event by clicking on the sign-in icon: 
@@ -195,7 +195,7 @@ accidental loss of attendance records.
 ### Transferring Members to a New Event
 
 The Transfer button, available in the form used to change events, allows members to be transferred from one event to 
-another following event.
+another following event. This saves the fuss of everyone signing out and then signing in immediately to a new event.
 
 In the following example, the brigade had a general meeting in the morning. The meeting started at 9:30 and 
 finished at 10:30, earlier than the planned finish time of 11:00. 
@@ -219,33 +219,36 @@ Open the meeting event by clicking on the title "March General Meeting", to get 
 
 <img src="assets/images/updxfer2.jpg" alt="Update Monthly Meeting" width="1467" class="bg-primary mb-1">
 
-Update Monthly Meeting
+Update Monthly Meeting (Click to enlarge)
 :::
 
-Then click the Transfer button at the top right. In the Transfer form, fill in the details of the next event 
-(Maintenance - Vehicle Checks).
+Then click the Transfer button at the top right. 
+
+In the Transfer form, fill in the details of the next event (Maintenance - Vehicle Checks).
 
 :::{figure-md} inxfer
 :class: myclass
 
 <img src="assets/images/inxfer-a.jpg" alt="Transfer from Monthly Meeting" width="1467" class="bg-primary mb-1">
 
-Transfer from Monthly Meeting
+Transfer from Monthly Meeting (Click to enlarge)
 :::
 
-Submit the form with the new details, then you will return to the main Kiosk screen:
+Submit the Transfer form with the new details, then you will return to the main Kiosk screen:
 
 :::{figure-md} postxfer
 :class: myclass
 
 <img src="assets/images/postxfer.jpg" alt="Transfer Complete" width="1467" class="bg-primary mb-1">
 
-Transfer Complete
+Transfer Complete (Click to enlarge)
 :::
 
-All remaining members (who hadn't already signed out), have been transferred from the Meeting event to the 
-new Maintenance event. They have been automatically signed out of the Meeting event, and 
+All remaining members (who hadn't already signed out from the Meeting event), have been transferred from the 
+Meeting event to the new Maintenance event. They have been automatically signed out of the Meeting event, and 
 signed into the new Maintenance event. They only need to sign-out once, when they leave.
+
+If anyone was transferred to the new Maintenance event, but has to leave, can just sign-out anyway.
 
 The Meeting event end time is adjusted to the time of the transfer, and is now closed, so no-one else 
 can sign-in to it.
@@ -253,17 +256,17 @@ can sign-in to it.
 Members who had already signed out of the Meeting event at the time of transfer, are not transferred to the 
 new Maintenance event. They can sign-in to the new event if they hadn't really left.
 
-### Multiple simultaneous events
+### Multiple Simultaneous Events
 
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
 (eg. Maintenance, and Training). 
 
-If that's the case, the system needs to work out which event you want to join (see [Tagging Flowchart below](flowchart).
+If that's the case, the system needs to work out which event you want to join (see {ref}`Tagging Flowchart<flowchart-pic>` below.
 
 When you present your tag to sign-in, the system will ask you to choose which of the available events you wish 
 to join. Just click on the appropriate event, and you will be signed in to that.
 
-### Tips for organising a busy day
+### Tips for Organising a Busy Day
 
 * Where possible, avoid overlapping events, as they will slow down the sign-in process for all members. 
   
@@ -287,7 +290,7 @@ is a risk that it will be damaged, and it may not restart.
 
 :::
 
-### Kiosk beeps
+### Kiosk Beeps
 
 The Kiosk will beep when a tag is registered, as follows:
 
@@ -296,7 +299,7 @@ The Kiosk will beep when a tag is registered, as follows:
 * Multiple tones when a choice of events is required
 
 (flowchart)=
-### Tagging flowchart
+### Tagging Flowchart
 
 When you place your tag on the reader to sign in, the system goes through the following steps to work out an 
 appropriate action:
@@ -314,7 +317,7 @@ appropriate action:
 5. If there are no events available, you will be prompted to create a new event before you can sign in.
 
 
-:::{figure-md} flowchart
+:::{figure-md} flowchart-pic
 :class: myclass
 
 <img src="assets/images/tag-flowchart.jpg" alt="Tagging flowchart" width="1680px" class="bg-primary mb-1">

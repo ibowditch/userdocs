@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -563,7 +564,10 @@
 <h3><span class="section-number">7.3.4. </span>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="multi-tenant">
-<h3><span class="section-number">7.3.5. </span>Multi-tenant<a class="headerlink" href="#multi-tenant" title="Permalink to this headline">¶</a></h3>
+<span id="multi-tenant-tech"></span><h3><span class="section-number">7.3.5. </span>Multi-tenant<a class="headerlink" href="#multi-tenant" title="Permalink to this headline">¶</a></h3>
+<p>Each brigade has it’s own database, including the list of members, and you can only login to a brigade system if you
+are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
+any other brigades.</p>
 </div>
 <div class="section" id="admin">
 <h3><span class="section-number">7.3.6. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h3>

@@ -1,7 +1,14 @@
 # Sign-in Server (Under construction)
 
+
+
 The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a 
 data centre run by Amazon Web Services in Sydney).
+
+Some 
+:red`colored text` at last!
+:raw-html:`<font color="blue">Blue word,</font>` And a word without color
+
 
 All interactions with the system, including from the Kiosk (which runs in a web browser), are made through this 
 web application. The Kiosk is the "shop front" of the system, and is used most frequently by most users day-to-day, and is covered in an
@@ -13,12 +20,8 @@ an internet connection and a browser available. This section describes the servi
 ## Logging In
 
 ```{margin} Multiple Tenants
-The system architecture is what is known as *multi-tenanted*. This allows the same server to support multiple brigades,
+The system architecture is what is known as [*multi-tenated*](multi-tenant-tech "*multi-tenanted*"). This allows the same server to support multiple brigades,
 with each being a distinct "tenant". The brigade name in the url signifies which tenant/brigade you want to use.
-
-Each brigade has it's own database, including the list of members, and you can only login to a brigade system if you 
-are a member there. Once you are logged in, you can only access data for your own brigade, and you won't see data for 
-any other brigades. 
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
@@ -47,7 +50,7 @@ Home/landing page on server (click to enlarge)
 :::
 
 Navigation bar 
-: Used to access most functions. The {ref}`following sections<menu>` describe each of these in detail.
+: Used to access most functions. The {ref}`Menu of Services<menu>` section below describes each of these in detail.
 
 Membership Summary
 : Shows the total number of active members broken down by their skills set. 
@@ -96,22 +99,22 @@ Member List (excerpt) (click to enlarge)
 **Notes**
 
 * Members only appear once on this list, in the first section they fit in to. It has the following sections:
-  * Field Officers
-  * Crew Leaders (CL, but not currently Field Officers)
-  * Tanker Drivers (Neither Field Officers or Crew Leaders)
-  * Drivers (None of above, but personnel vehicle qualified)
-  * Members (None of the above)
+  * **Field Officers**
+  * **Crew Leaders** (CL, but not currently Field Officers)
+  * **Tanker Drivers** (Neither Field Officers or Crew Leaders)
+  * **Drivers** (None of above, but personnel vehicle qualified)
+  * **Members** (None of the above)
 
 Qualifications
-: This shows any qualification in the following areas (expired qualifications shown in lower case):
+: This shows any qualification in the following areas (expired qualifications shown in *lower case*):
 * Driving
-  * TD - Tanker driver (including current RFD)
-  * PD - Personnel/light vehicle driver  (including current RFD)
-* First Aid (FAA, etc.)
-* Safe working on roofs - SWR
-* Chainsaw Operator - (TFT, TFI, etc.)
-* Village Firefighter - VF
-* Highest qualification - Group Leader (GL), Crew Leader (CL), Advanced Firefighter (AF), Basic Firefighter (BF)
+  * **TD** - Tanker driver (including current RFD)
+  * **PD** - Personnel/light vehicle driver  (including current RFD)
+* First Aid (**FAA**, etc.)
+* Safe Working on Roofs - **SWR**
+* Chainsaw Operator - (**TFT**, **TFI**, etc.)
+* Village Firefighter - **VF**
+* Highest qualification - Group Leader (**GL**), Crew Leader (**CL**), Advanced Firefighter (**AF**), Basic Firefighter (**BF**)
 
 Rank
 : This shows Field Officer positions in order of rank. All other members are shown as FF (Firefighter).
@@ -120,6 +123,11 @@ RfsID
 : This is the RFS Membership number issued by the RFS.
 
 #### Member Activity
+
+
+
+
+
 
 Select season - year season started
 Shows hours recorded for each member in attendance book
