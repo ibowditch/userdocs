@@ -33,6 +33,9 @@ any other brigades.
 
 ### html/css
 
+If not completed in 15 minutes, forms will be automatically removed, and the screen will return 
+to the normal Kiosk view to allow members to continue signing in and out.
+
 ### Configuration Management
 
 ### Development Environment

@@ -178,13 +178,19 @@ the criteria, those coloured red are well below the criteria, and the others are
 
 <img src="assets/images/act-mid-a.jpg" alt="Member Activity (middle section)" width="1467" class="bg-primary mb-1">
 
-Member Activity (middle section) (click to enlarge)
+Member Activity sorted on Total  (middle section) (click to enlarge)
 :::
 
-The criteria are normally specified for an entire year. Rather than having all members well below the criteria for the 
-majority of the year, the table calculates progress on a pro-rata basis, eg. if the annual requirements was for 60 hours,
-anyone below 30 hours at the midpoint of the season point would be coloured either yellow or red. Details of 
-this calculation can be seen by clicking the Key button - see {ref}`Member Activity (top section)<act-top>`
+The criteria are normally specified for an entire year. Since the Member Activity report is available to all members 
+throughout the year, rather than having all members shown as well below the criteria for the first part of the year, 
+the table calculates progress on a pro-rata basis.
+
+Details of this calculation can be seen by clicking the Key button (top left) - see {ref}`Member Activity (top section)<act-top>`
+
+In the {ref}`example above<act-mid>`, we are 306 days through the year (83.8%), and the annual 
+quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
+
+Anyone with more than 50.3 hours is coloured white, just less than that is coloured yellow, and further down, red.
 
 #### At Station
 
