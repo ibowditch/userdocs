@@ -169,7 +169,7 @@ Many brigades define Voting Criteria to determine which members are eligible to 
 these criteria specify a minimum number of hours in a season/year (or attendance at a minimum number of events),
 that the member must complete to be eligible to vote.
 
-The table uses these criteria ({ref}`set by the administrator<set-vote-crit>` on behalf of the Executive), 
+The Member Activity table uses these criteria ({ref}`set by the administrator<set-vote-crit>` on behalf of the Executive), 
 to identify members who have met the criteria and those who have not. Members coloured yellow, are just below 
 the criteria, those coloured red are well below the criteria, and the others are above.
 
@@ -178,19 +178,21 @@ the criteria, those coloured red are well below the criteria, and the others are
 
 <img src="assets/images/act-mid-a.jpg" alt="Member Activity (middle section)" width="1467" class="bg-primary mb-1">
 
-Member Activity sorted on Total  (middle section) (click to enlarge)
+Member Activity sorted on Total (middle section) (click to enlarge)
 :::
 
 The criteria are normally specified for an entire year. Since the Member Activity report is available to all members 
 throughout the year, rather than having all members shown as well below the criteria for the first part of the year, 
 the table calculates progress on a pro-rata basis.
 
-Details of this calculation can be seen by clicking the Key button (top left) - see {ref}`Member Activity (top section)<act-top>`
+Details of the pro-rata calculation can be seen by clicking the 
+Key button (top left) - see {ref}`Member Activity (top section)<act-top>`
 
 In the {ref}`example above<act-mid>`, we are 306 days through the year (83.8%), and the annual 
 quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
 
-Anyone with more than 50.3 hours is coloured white, just less than that is coloured yellow, and further down, red.
+Anyone with a Total of more than 50.3 hours is coloured white, just less than that is coloured yellow, 
+and further down, red.
 
 #### At Station
 
@@ -209,7 +211,37 @@ Unlike the Kiosk, you can not sign-in with this view, nor can you change any det
 This view is live, and is updated automatically whenever there is any activity on the Kiosk, 
 including sign-in/out or new events created.
 
-#### Events calendar
+#### Events Calendar
+
+A calendar view is provided so members can see all activities in the past, and also the future.
+
+The view can be adjusted to show months, weeks, or days as required. Move forward or backward in time 
+using the arrows in the top right.
+
+
+##### Viewing Events
+
+You can view the details of any event in the calendar just by clicking on it. 
+
+In general you will see a view like this - read only, but with all the details.
+
+If you are logged in as the OIC of the event, you will be able to modify the settings, as in ...
+
+
+
+##### Filtering Events
+
+The view can be filtered using the Search function, so for example you can easily find all "Training" events, or 
+those attended by a particular member (just search for their surname).
+
+##### Adding New Events (Officers)
+
+The calendar can also be used by Officers to add new events planned for future dates.
+
+##### Registering for Future Events (All Members)
+
+plus cancelling registration
+
 
 Well organised brigade has a calendar of upcoming events
 Ideally members can indicate their intention to attend

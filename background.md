@@ -168,7 +168,7 @@ When a Member has finished, they should tap their tag on the reader to sign-out.
 
 This web site describes following aspects of the electronic sign-in system:
 
-1. [Background](background)
+1. [Introduction](background)
 
   > This section describes the origin of the system, the requirements (legal and otherwise). There is also a brief 
   > overview of the objectives of the system, and a summary of how it operates. 
@@ -178,13 +178,18 @@ This web site describes following aspects of the electronic sign-in system:
   > The Kiosk is the main component of the system, and used by most people on a day-to-day basis. This section 
   > provides an overview of the Kiosk, along with a user guide.
 
-3. [The Server](server)
+3. [Events](events)
+
+  > Events are a key part of the system, analogous to a page in the old Attendance Book. This section describes the
+  > various types of events, and the ways they can be defined and updated.
+
+4. [The Server](server)
 
   > The system runs on a cloud server (the Kiosk is connected to the server using a web interface). This section gives a 
   > review of the features available on the cloud server, which can be accessed by officers and members of the brigade 
   > from any device (login required).
 
-4. [Technology](technology)
+5. [Technology](technology)
 
   > A brief overview of the main technologies - both hardware and software - used in the system.
 

@@ -44,6 +44,14 @@ to the normal Kiosk view to allow members to continue signing in and out.
 
 ### NFC drivers
 
+## Raspberry PI
+
+### Installation of Kiosk
+
+### Networking
+
+### Troubleshooting
+
 
 ## Operations
 
