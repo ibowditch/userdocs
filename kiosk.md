@@ -26,7 +26,7 @@ of events shown on the kiosk screen.
 The Kiosk is designed to make it as quick and easy as possible for members to sign-in and 
 sign-out of activities at the station.
 
-In general, the OIC who has organised an activity should set up an event in advance, and when you get to the station, 
+In general, the OIC who has organised an activity should {ref}`set up an event in advance<cal-add-event>`, and when you get to the station, 
 you will see something like this on the kiosk screen:
 
 :::{figure-md} kiosk1event

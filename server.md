@@ -72,11 +72,9 @@ Shortcuts
 
 
 (menu)=
-## Menu of Services
+## Member Menu
 
-### Members
-
-#### Member List
+### Member List
 
 For internal use only, members have access to a summary of basic contact details of all active members through the
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser 
@@ -126,7 +124,7 @@ RfsID
 : This is the RFS Membership number issued by the RFS.
 
 (memb-act)=
-#### Member Activity
+### Member Activity
 
 The Member Activity menu item shows a summary of all activity in a fire season, in the form of a table with one row
 for each active member. The member activity is broken down into major categories such as Training, 
@@ -148,14 +146,14 @@ by selecting an earlier season if historical data is available.
 The numbers in the table can represent either Hours - the total time contributed by the member, or Events - the number 
 of activities attended, and can switched with the control in the top right of the page.
 
-##### Sorting
+#### Sorting
 
 The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed 
 by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but 
 this can be reversed by clicking the heading once more. The example in {ref}`Member Activity (top section)<act-top>` 
 is sorted by *Total*.
 
-##### Activity Details
+#### Activity Details
 
 If you click on any of the numbers in the table, it will drill down to the underlying data, and show a complete 
 listing of all the events attended in the chosen category.
@@ -168,14 +166,14 @@ listing of all the events attended in the chosen category.
 Sample of Maintenance Activity for a Member (click to enlarge)
 :::
 
-##### Totals
+#### Totals
 
 Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
 
 Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show 
 a full listing of all member attendance for that type of activity.
 
-##### Voting Criteria and Colouring
+#### Voting Criteria and Colouring
 
 Many brigades define Voting Criteria to determine which members are eligible to vote in Brigade Elections. Normally 
 these criteria specify a minimum number of hours in a season/year (or attendance at a minimum number of events),
@@ -206,7 +204,7 @@ quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
 Anyone with a Total of more than 50.3 hours is coloured white, just less than that is coloured yellow, 
 and further down, red.
 
-#### At Station
+### At Station
 
 The At Station item shows a replica of the Kiosk, including all events and members attending. 
 
@@ -224,7 +222,7 @@ This view is live, and is updated automatically whenever there is any activity o
 including sign-in/out or new events created.
 
 (calendar)=
-#### Events Calendar
+### Events Calendar
 
 A calendar view is provided so members can see all brigade activities in the past, and also the future.
 
@@ -247,7 +245,7 @@ Calendar Month View (click to enlarge)
   all "Training" events, or those attended by a particular member (just search for their surname).
 
 
-##### Viewing Event Details
+#### Viewing Event Details
 
 You can view the details of any event in the calendar just by clicking on it. 
 
@@ -264,7 +262,7 @@ Event read-only view (click to enlarge)
 Note that all the fields are grey - this means you can't change anything. However, if you were logged in as the OIC of 
 this event, you would be able to update the details as shown earlier {ref}`for the Kiosk<event-update>`.
 
-##### Week View
+#### Week View
 
 Click the week button at the top of the page to go to the Week view:
 
@@ -277,13 +275,13 @@ Calendar Week View (click to enlarge)
 :::
 
 (cal-add-event)=
-##### Adding New Events (Officers)
+#### Adding New Events (Officers)
 
 If you are logged in as an Officer, you can create a new event in the calendar by selecting the area representing the 
 times your activity will run (shown in blue above). You will then be asked to provide the details of the event. You can 
 only create new events in the future like this, to protect the integrity of the attendance record.
 
-##### Plan to Attend
+#### Plan to Attend
 
 Members can indicate their intention to attend future events using the calendar. If they previously committed to 
 attend an event, they can change that by withdrawing their name. 
@@ -305,7 +303,7 @@ In the Week view shown above:
 You can always click on the event itself to {ref}`see all the details<ev-read-view>`, and to confirm that 
 you are on the list.
   
-##### Signing Off on an Event (Officers)
+#### Signing Off on an Event (Officers)
 
 According to the original Attendance Book, Officers are supposed to check the attendance records for any activity 
 they run, and once corrected, sign it off and cross out the page so it can't be changed again.
@@ -326,9 +324,9 @@ Officer Checking their Event (click to enlarge)
 
 Once an event has been completed, only the OIC can update the details.
 
-### Personnel
+## Personnel Menu
 
-#### Change Officers
+### Change Officers
 
 Most brigades hold elections every year, and new Officers are elected by members.
 
@@ -340,11 +338,11 @@ If the date is after the end of the season, and no Officers have yet been saved 
 copy the list of Officers from the previous season to the new season. This new list can then be edited as required to 
 get to the new list of Officers, then saved to update the records.
 
-#### Add New Member
+### Add New Member
 
 This allows details of a new member to be recorded in the system. An RFS membership number is required.
 
-#### Annual Attendance
+### Annual Attendance
 
 Some districts require hard-copies of attendance records to be sent to HQ for storage each year, similar to the old
 Attendance Books.
@@ -354,15 +352,15 @@ either to PDF or to paper by your browser as required, and then sent on to HQ.
 
 
 
-### Training
+## Training Menu
 
 The Training menu is normally only available to the Training Officer and their assistants. 
 
-#### Courses Available
+### Courses Available
 
 This shows a list of Courses available in the brigade calendar.
 
-#### Quarterly Return
+### Quarterly Return
 
 Some districts require brigades to submit a summary of all Training activities undertaken each querter. This report 
 provides a list of all TRAINING events, with brief details of each activity.
@@ -375,38 +373,38 @@ provides a list of all TRAINING events, with brief details of each activity.
 Training Quarterly Return (click to enlarge)
 :::
 
-#### Training Calendar
+### Training Calendar
 
 This is just a filtered version of the Brigade Event calendar, showing only events of type TRAINING. 
 It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
-### Officers
+## Officers Menu
 
 The Officers Menu is only available to members who currently hold an Officer position within the brigade, 
 either as a Field Officer, or in an Administration role.
 
-#### Add New Event (deprecated - see Calendar)
+### Add New Event (deprecated - see Calendar)
 
 This is an alternative way for Officers to create a new event (it's probably easier 
 to {ref}`use the Brigade Calendar<cal-add-event>`). A blank event form {ref}`as used in the Kiosk<event-update>` 
 is displayed. Fill in the details to add a new event.
 
-#### Review past events (deprecated - see Calendar)
+### Review past events (deprecated - see Calendar)
 
-#### Review Future Events (deprecated - see Calendar)
+### Review Future Events (deprecated - see Calendar)
 
-#### Officer Calendar (deprecated - see Calendar)
+### Officer Calendar (deprecated - see Calendar)
 
 This is just a filtered version of the Brigade Event calendar, showing only events of where the OIC is the member who 
 is logged in. It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
-#### COVID-19 Attendance
+### COVID-19 Attendance
 
 This report was produced to assist in contact tracing during the COVID-19 pandemic. It shows details of all members who 
 attended the station during the past 21 days. Unless another pandemic or similar requires this, it will be withdrawn 
 in the near future.
 
-#### Admin (deprecated)
+### Admin (deprecated)
 
 All Officers have access to the special administration section of the application, though some have more 
 access than others.
@@ -414,7 +412,7 @@ access than others.
 There are very few features in the admin section that can not be done in the main section, so access to this area will 
 probably be restricted further to genuine system administrators in the near future.
 
-### Vehicles
+## Vehicles Menu
 
 An optional feature of the system is to record and maintain records of vehicle movements. It is intended to replace
 the logbook records used in most RFS vehicles.
@@ -423,7 +421,7 @@ As well as recording details of vehicles movements, this feature also provides r
 as well as driving records for members.
 
 (vehlogs)=
-#### Update Vehicle Log
+### Update Vehicle Log
 
 This records the information journey taken in a brigade vehicle which was normally written in the log book.
 
@@ -440,13 +438,13 @@ Vehicle Log (single journey) (click to enlarge)
 
 The vehicle which you selected earlier is fixed, as is the initial odometer reading (taken from prior records). 
 
-#### Update Vehicle Log Sheet
+### Update Vehicle Log Sheet
 
 This item allows bulk input of journeys, and can be used to transcribe a log sheet into the system.
 
 It has one line for each journey, with the same content as the {ref}`Vehicle Log<vehlogs>`.
 
-#### Vehicle Movements
+### Vehicle Movements
 
 This shows a summary of vehicle movements in a form similar to the {ref}`Member Activity table<memb-act>`.
 
@@ -463,7 +461,7 @@ full listing of movements for that vehicles in the required category.
 
 Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.
 
-#### Driver Activity
+### Driver Activity
 
 This shows a summary of driver journeys in a form similar to the {ref}`Member Activity table<memb-act>`.
 
@@ -480,7 +478,7 @@ numbers will show a full listing of journeys for this driver in the required cat
 
 Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.
 
-#### Vehicle Bookings
+### Vehicle Bookings
 
 This shows a calendar with all events where a vehicle has been reserved as part of an event - 
 see {ref}`Event Fields<ev-veh>`. It can be useful to see what vehicles are committed, and when, to avoid any clashes.
