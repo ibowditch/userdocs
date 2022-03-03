@@ -1,4 +1,4 @@
-# Sign-in Server (Under construction)
+# Sign-in Server
 
 The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a 
 data centre run by Amazon Web Services in Sydney).
@@ -29,6 +29,16 @@ change this password before proceeding.
 
 If you ever need to change your password (eg. if you forget it), you can change it by clicking on the *Lost password?* 
 link on the login page. The system will then email you a link, and then you can change your password.
+
+```{admonition} We know who you are...
+Unlike the Kiosk, which is a shared device, and the system doesn't know who is operating it at any given moment, when you 
+log into the server, you use your own personal identifier (usually your email address), so the system knows who you are.
+
+It also knows what you are, and can tell if you are an Officer (and what type), or not, based on records held in the system database.
+
+The system uses this knowledge to control access to certain functions. Officers can do a little bit more than ordinary members, 
+and specialist Officers, eg. Training, have access to specific areas.
+```
 
 ## Landing/home page
 
@@ -115,6 +125,7 @@ Rank
 RfsID
 : This is the RFS Membership number issued by the RFS.
 
+(memb-act)=
 #### Member Activity
 
 The Member Activity menu item shows a summary of all activity in a fire season, in the form of a table with one row
@@ -160,6 +171,7 @@ Sample of Maintenance Activity for a Member (click to enlarge)
 ##### Totals
 
 Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
+
 Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show 
 a full listing of all member attendance for that type of activity.
 
@@ -211,6 +223,7 @@ Unlike the Kiosk, you can not sign-in with this view, nor can you change any det
 This view is live, and is updated automatically whenever there is any activity on the Kiosk, 
 including sign-in/out or new events created.
 
+(calendar)=
 #### Events Calendar
 
 A calendar view is provided so members can see all brigade activities in the past, and also the future.
@@ -263,6 +276,7 @@ Click the week button at the top of the page to go to the Week view:
 Calendar Week View (click to enlarge)
 :::
 
+(cal-add-event)=
 ##### Adding New Events (Officers)
 
 If you are logged in as an Officer, you can create a new event in the calendar by selecting the area representing the 
@@ -272,7 +286,7 @@ only create new events in the future like this, to protect the integrity of the 
 ##### Plan to Attend
 
 Members can indicate their intention to attend future events using the calendar. If they previously committed to 
-attend an event, they can change that by withdrawing their name.
+attend an event, they can change that by withdrawing their name. 
 
 This allows Officers to plan activities, and to see who is interested in attending.
 
@@ -288,45 +302,175 @@ In the Week view shown above:
 * Past events show a tick mark in the top right if you have attended them. Past events can not be changed on 
   the calendar.
   
+You can always click on the event itself to {ref}`see all the details<ev-read-view>`, and to confirm that 
+you are on the list.
+  
+
+### Personnel
+
+#### Change Officers
+
+Most brigades hold elections every year, and new Officers are elected by members.
+
+This item allows the Personnel Officer to update the list of Officers of the brigade. If the current date is before 
+the end of the season, it just shows the current list of Officer positions, with the members who hold those positions. 
+Small changes can be made in case of retirement or departures as needed.
+
+If the date is after the end of the season, and no Officers have yet been saved for the new season, the system will offer to 
+copy the list of Officers from the previous season to the new season. This new list can then be edited as required to 
+get to the new list of Officers, then saved to update the records.
+
+#### Add New Member
+
+This allows details of a new member to be recorded in the system. An RFS membership number is required.
+
+#### Annual Attendance
+
+Some districts require hard-copies of attendance records to be sent to HQ for storage each year, similar to the old
+Attendance Books.
+
+This item will produce a listing of all attendance in a format similar to the old Attendance Book, which can be printed 
+either to PDF or to paper by your browser as required, and then sent on to HQ.
+
+
 
 ### Training
 
+The Training menu is normally only available to the Training Officer and their assistants. 
+
 #### Courses Available
+
+This shows a list of Courses available in the brigade calendar.
 
 #### Quarterly Return
 
-#### Driver Training (placeholder)
+Some districts require brigades to submit a summary of all Training activities undertaken each querter. This report 
+provides a list of all TRAINING events, with brief details of each activity.
 
-#### Training Materials (placeholder)
+:::{figure-md} train-qtr
+:class: myclass
+
+<img src="assets/images/train-qtr.jpg" alt="Training Quarterly Return" width="1467" class="bg-primary mb-1">
+
+Training Quarterly Return (click to enlarge)
+:::
 
 #### Training Calendar
 
-### Secretary (placeholder)
+This is just a filtered version of the Brigade Event calendar, showing only events of type TRAINING. 
+It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
 ### Officers
 
+The Officers Menu is only available to members who currently hold an Officer position within the brigade, 
+either as a Field Officer, or in an Administration role.
+
 #### Add New Event (deprecated - see Calendar)
+
+This is an alternative way for Officers to create a new event (it's probably easier 
+to {ref}`use the Brigade Calendar<cal-add-event>`). A blank event form {ref}`as used in the Kiosk<event-update>` 
+is displayed. Fill in the details to add a new event.
 
 #### Review past events (deprecated - see Calendar)
 
 #### Review Future Events (deprecated - see Calendar)
 
-#### Officer Calendar
+#### Officer Calendar (deprecated - see Calendar)
+
+This is just a filtered version of the Brigade Event calendar, showing only events of where the OIC is the member who 
+is logged in. It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
 #### COVID-19 Attendance
 
+This report was produced to assist in contact tracing during the COVID-19 pandemic. It shows details of all members who 
+attended the station during the past 21 days. Unless another pandemic or similar requires this, it will be withdrawn 
+in the near future.
+
 #### Admin (deprecated)
+
+All Officers have access to the special administration section of the application, though some have more 
+access than others.
+
+There are very few features in the admin section that can not be done in the main section, so access to this area will 
+probably be restricted further to genuine system administrators in the near future.
 
 ### Vehicles
 
+An optional feature of the system is to record and maintain records of vehicle movements. It is intended to replace
+the logbook records used in most RFS vehicles.
+
+As well as recording details of vehicles movements, this feature also provides reports and summaries of vehicles use, 
+as well as driving records for members.
+
+(vehlogs)=
 #### Update Vehicle Log
+
+This records the information journey taken in a brigade vehicle which was normally written in the log book.
+
+When selected, this will ask you to choose which vehicle you want to add a record for, then it will show the 
+following form:
+
+:::{figure-md} vehlog
+:class: myclass
+
+<img src="assets/images/vehlog.jpg" alt="Vehicle Log (single journey)" width="1467" class="bg-primary mb-1">
+
+Vehicle Log (single journey) (click to enlarge)
+:::
+
+The vehicle which you selected earlier is fixed, as is the initial odometer reading (taken from prior records). 
 
 #### Update Vehicle Log Sheet
 
+This item allows bulk input of journeys, and can be used to transcribe a log sheet into the system.
+
+It has one line for each journey, with the same content as the {ref}`Vehicle Log<vehlogs>`.
+
 #### Vehicle Movements
+
+This shows a summary of vehicle movements in a form similar to the {ref}`Member Activity table<memb-act>`.
+
+:::{figure-md} veh-mov
+:class: myclass
+
+<img src="assets/images/veh-mov.jpg" alt="Vehicle Movements" width="1467" class="bg-primary mb-1">
+
+Vehicle Movements (click to enlarge)
+:::
+
+Each vehicle is listed and it's use in various types of activity is shown. Clicking on the numbers will show a 
+full listing of movements for that vehicles in the required category.
+
+Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.
 
 #### Driver Activity
 
+This shows a summary of driver journeys in a form similar to the {ref}`Member Activity table<memb-act>`.
+
+:::{figure-md} drvmov
+:class: myclass
+
+<img src="assets/images/drvmov.jpg" alt="Vehicle Movements" width="1467" class="bg-primary mb-1">
+
+Driver Journeys (click to enlarge)
+:::
+
+Each brigade driver is listed and their participation in various types of activity is shown. Clicking on the 
+numbers will show a full listing of journeys for this driver in the required category.
+
+Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.
+
 #### Vehicle Bookings
 
-#### User Docs
+This shows a calendar with all events where a vehicle has been reserved as part of an event - 
+see {ref}`Event Fields<ev-veh>`. It can be useful to see what vehicles are committed, and when, to avoid any clashes.
+
+:::{figure-md} vehcal
+:class: myclass
+
+<img src="assets/images/vehcal.jpg" alt="Vehicle Bookings" width="1467" class="bg-primary mb-1">
+
+Vehicle Bookings (click to enlarge)
+:::
+
+It shows all vehicle bookings, but can be filtered using Search (top right) to restrict the events shown.

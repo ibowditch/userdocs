@@ -112,6 +112,7 @@ tag again to sign into another event. If necessary, a long-running event should 
 if there are breaks or other activities in between.
 ```
 
+(ev-veh)=
 Vehicles 
 : If brigade vehicles are used in a event, this can be noted in the event. This is useful in tracking
   vehicle availability when events are planned in advance. 
