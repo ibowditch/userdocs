@@ -328,23 +328,23 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-new-event-deprecated-see-calendar">
-     4.6.1. Add New Event (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#add-new-event">
+     4.6.1. Add New Event
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-past-events-deprecated-see-calendar">
-     4.6.2. Review past events (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#review-past-events">
+     4.6.2. Review Past Events
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-future-events-deprecated-see-calendar">
-     4.6.3. Review Future Events (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#review-future-events">
+     4.6.3. Review Future Events
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#officer-calendar-deprecated-see-calendar">
-     4.6.4. Officer Calendar (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#officer-calendar">
+     4.6.4. Officer Calendar
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -547,23 +547,23 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-new-event-deprecated-see-calendar">
-     4.6.1. Add New Event (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#add-new-event">
+     4.6.1. Add New Event
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-past-events-deprecated-see-calendar">
-     4.6.2. Review past events (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#review-past-events">
+     4.6.2. Review Past Events
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-future-events-deprecated-see-calendar">
-     4.6.3. Review Future Events (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#review-future-events">
+     4.6.3. Review Future Events
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#officer-calendar-deprecated-see-calendar">
-     4.6.4. Officer Calendar (deprecated - see Calendar)
+    <a class="reference internal nav-link" href="#officer-calendar">
+     4.6.4. Officer Calendar
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -631,9 +631,8 @@ an internet connection and a browser available. This section describes the servi
 <div class="section" id="logging-in">
 <h2><span class="section-number">4.1. </span>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
 <div class="margin sidebar">
-<p class="sidebar-title">Multiple Tenants</p>
-<p>The system architecture is what is known as <a class="reference internal" href="technology.html#multi-tenant-tech"><span class="std std-ref"><em>multi-tenated</em></span></a>. This allows
-the same server to support multiple brigades, with each being a distinct “tenant”.</p>
+<p class="sidebar-title">Separate Domains</p>
+<p>The same server supports <a class="reference internal" href="technology.html#multi-tenant-tech"><span class="std std-ref">multiple brigades</span></a>, so you need to say which one you need.</p>
 </div>
 <p>The sign-in server can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
 <strong>brigade</strong> in this url with the actual name of your brigade (eg. westleigh).</p>
@@ -654,24 +653,25 @@ and specialist Officers, eg. Training, have access to specific areas.</p>
 </div>
 <div class="section" id="landing-home-page">
 <h2><span class="section-number">4.2. </span>Landing/home page<a class="headerlink" href="#landing-home-page" title="Permalink to this headline">¶</a></h2>
-<p>When you have logged in the system will take you to the brigade home page, an example of which is shown below:</p>
+<p>When you have logged in, the system will take you to the brigade home page, an example of which is shown below:</p>
 <div class="myclass figure align-default" id="home-page">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/homepage.jpg"><img alt="Landing page" class="bg-primary mb-1" src="_images/homepage.jpg" style="width: 1467px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Home/landing page on server (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="simple myst">
-<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">Menu of Services</span></a> section below describes each of these in detail.</p>
+<dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">Menu</span></a> section below describes each of these in detail.</p>
 </dd>
-<dt>Membership Summary</dt><dd><p>Shows the total number of active members broken down by their skills set.</p>
+<dt>Membership Summary</dt><dd><p>Shows the total number of active members broken down by their skill sets.</p>
 <p>It also shows, in red, the number of members currently on duty, ie. currently signed in at the station
 (but not yet signed out). These figures are updated live, whenever anyone signs in or out at the station.</p>
 </dd>
 <dt>Upcoming events</dt><dd><p>Shows details of future events in the calendar, including the number of members who have indicated
 that they will be attending. Further details are available by clicking on the event Details. Members can indicate
-their intention to attend these events in the Brigade Calendar (see below)</p>
+their intention to attend these events in the <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Calendar</span></a>.</p>
 </dd>
-<dt>Shortcuts</dt><dd><p>The “At Station” shortcut shows a read-only replica of the Kiosk screen, and you can also access the
-<em>Brigade Calendar</em>. Both of these are also available under the Members menu in the Navigation bar.</p>
+<dt>Shortcuts</dt><dd><p>The <strong><a class="reference internal" href="#at-stat"><span class="std std-ref">At Station</span></a></strong> shortcut shows a read-only replica of the Kiosk screen, and you can also
+access the <strong><a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Calendar</span></a></strong>. Both of these are also available under the Member menu
+in the Navigation bar.</p>
 </dd>
 </dl>
 </div>
@@ -679,7 +679,7 @@ their intention to attend these events in the Brigade Calendar (see below)</p>
 <span id="menu"></span><h2><span class="section-number">4.3. </span>Member Menu<a class="headerlink" href="#member-menu" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="member-list">
 <h3><span class="section-number">4.3.1. </span>Member List<a class="headerlink" href="#member-list" title="Permalink to this headline">¶</a></h3>
-<p>For internal use only, members have access to a summary of basic contact details of all active members through the
+<p>For internal use only, Members have access to a summary of basic contact details of all active members through the
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser
 if a hard-copy is required.</p>
 <div class="admonition warning">
@@ -761,7 +761,7 @@ listing of all the events attended in the chosen category.</p>
 </div>
 <div class="section" id="totals">
 <h4><span class="section-number">4.3.2.3. </span>Totals<a class="headerlink" href="#totals" title="Permalink to this headline">¶</a></h4>
-<p>Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member.</p>
+<p>Each row has a <strong>Total</strong> figure, and when clicked this will show activity in all categories, for the selected member.</p>
 <p>Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show
 a full listing of all member attendance for that type of activity.</p>
 </div>
@@ -789,7 +789,7 @@ and further down, red.</p>
 </div>
 </div>
 <div class="section" id="at-station">
-<h3><span class="section-number">4.3.3. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h3>
+<span id="at-stat"></span><h3><span class="section-number">4.3.3. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h3>
 <p>The At Station item shows a replica of the Kiosk, including all events and members attending.</p>
 <div class="myclass figure align-default" id="dashboard">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/dashboard.jpg"><img alt="At Station" class="bg-primary mb-1" src="_images/dashboard.jpg" style="width: 1467px;" /></a>
@@ -822,7 +822,7 @@ all “Training” events, or those attended by a particular member (just search
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/ev-read-view.jpg"><img alt="Event read-only view" class="bg-primary mb-1" src="_images/ev-read-view.jpg" style="width: 1467px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">¶</a></p>
 </div>
-<p>Note that all the fields are grey - this means you can’t change anything. However, if you were logged in as the OIC of
+<p>Note that all the fields are grey, which this means you can’t change anything. However, if you were logged in as the OIC of
 this event, you would be able to update the details as shown earlier <a class="reference internal" href="kiosk.html#event-update"><span class="std std-ref">for the Kiosk</span></a>.</p>
 </div>
 <div class="section" id="week-view">
@@ -843,7 +843,7 @@ only create new events in the future like this, to protect the integrity of the 
 <h4><span class="section-number">4.3.4.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">¶</a></h4>
 <p>Members can indicate their intention to attend future events using the calendar. If they previously committed to
 attend an event, they can change that by withdrawing their name.</p>
-<p>This allows Officers to plan activities, and to see who is interested in attending.</p>
+<p>This allows Officers to get expected numbers for their planned activities, and to see who is interested in attending.</p>
 <p>In the Week view shown above:</p>
 <ul class="simple">
 <li><p>Each event from today onwards includes a symbol in the top right of the event. If the symbol shows <strong>+</strong>, you
@@ -854,22 +854,26 @@ click the symbol and you will be removed (the symbol will change back to <strong
 <li><p>Past events show a tick mark in the top right if you have attended them. Past events can not be changed on
 the calendar.</p></li>
 </ul>
-<p>You can always click on the event itself to <a class="reference internal" href="#ev-read-view"><span class="std std-ref">see all the details</span></a>, and to confirm that
-you are on the list.</p>
+<p>You can always click in the centre of the event itself to <a class="reference internal" href="#ev-read-view"><span class="std std-ref">see all the details</span></a>,
+and confirm that you are on the list.</p>
 </div>
 <div class="section" id="signing-off-on-an-event-officers">
-<h4><span class="section-number">4.3.4.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">¶</a></h4>
+<span id="off-signoff"></span><h4><span class="section-number">4.3.4.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">¶</a></h4>
 <p>According to the original Attendance Book, Officers are supposed to check the attendance records for any activity
-they run, and once corrected, sign it off and cross out the page so it can’t be changed again.</p>
+they run, and once corrected and checked, sign it off and cross out the page so it can’t be changed again.</p>
 <p>In the sign-in system, this can be done by opening the calendar and finding an event you (the OIC) have run,
 and clicking on it.</p>
-<p>You will then be able to check the records, making any corrections as needed. You should then click the box marked
-“Checked” to sign it off.</p>
+<p>You will then be able to check the attendance records, making any corrections as needed. You should then click
+the box marked “Checked” to sign it off.</p>
 <div class="myclass figure align-default" id="offcheck">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/offcheck.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/offcheck.jpg" style="width: 1467px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">¶</a></p>
 </div>
 <p>Once an event has been completed, only the OIC can update the details.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Restricted Access</p>
+<p>Only the Personnel/Membership Officer and their assistants have access to this Menu.</p>
+</div>
 </div>
 </div>
 </div>
@@ -881,9 +885,11 @@ and clicking on it.</p>
 <p>This item allows the Personnel Officer to update the list of Officers of the brigade. If the current date is before
 the end of the season, it just shows the current list of Officer positions, with the members who hold those positions.
 Small changes can be made in case of retirement or departures as needed.</p>
-<p>If the date is after the end of the season, and no Officers have yet been saved for the new season, the system will offer to
-copy the list of Officers from the previous season to the new season. This new list can then be edited as required to
-get to the new list of Officers, then saved to update the records.</p>
+<p>If the date is after the end of the season, and no Officers have yet been saved for the new season, the system will
+also show a button that allows you to <strong>“Copy Officers to <new season>”</strong>. If you click this button, the system
+will create new Officer records for all positions in the new season using the same names as the previous season.
+You can then edit this list by changing the names of the officers to match the election results, then Save to
+update the system.</p>
 </div>
 <div class="section" id="add-new-member">
 <h3><span class="section-number">4.4.2. </span>Add New Member<a class="headerlink" href="#add-new-member" title="Permalink to this headline">¶</a></h3>
@@ -895,6 +901,10 @@ get to the new list of Officers, then saved to update the records.</p>
 Attendance Books.</p>
 <p>This item will produce a listing of all attendance in a format similar to the old Attendance Book, which can be printed
 either to PDF or to paper by your browser as required, and then sent on to HQ.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Restricted Access</p>
+<p>Only the Training Officer and their assistants have access to this Menu.</p>
+</div>
 </div>
 </div>
 <div class="section" id="training-menu">
@@ -917,26 +927,36 @@ provides a list of all TRAINING events, with brief details of each activity.</p>
 <h3><span class="section-number">4.5.3. </span>Training Calendar<a class="headerlink" href="#training-calendar" title="Permalink to this headline">¶</a></h3>
 <p>This is just a filtered version of the Brigade Event calendar, showing only events of type TRAINING.
 It operates in exactly the same way as <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Event calendar</span></a></p>
+<div class="margin sidebar">
+<p class="sidebar-title">Restricted Access</p>
+<p>Only current Office bearers, either Field Officers or Administrative Officers have access to this Menu.</p>
+</div>
 </div>
 </div>
 <div class="section" id="officers-menu">
 <h2><span class="section-number">4.6. </span>Officers Menu<a class="headerlink" href="#officers-menu" title="Permalink to this headline">¶</a></h2>
 <p>The Officers Menu is only available to members who currently hold an Officer position within the brigade,
 either as a Field Officer, or in an Administration role.</p>
-<div class="section" id="add-new-event-deprecated-see-calendar">
-<h3><span class="section-number">4.6.1. </span>Add New Event (deprecated - see Calendar)<a class="headerlink" href="#add-new-event-deprecated-see-calendar" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="add-new-event">
+<h3><span class="section-number">4.6.1. </span>Add New Event<a class="headerlink" href="#add-new-event" title="Permalink to this headline">¶</a></h3>
 <p>This is an alternative way for Officers to create a new event (it’s probably easier
 to <a class="reference internal" href="#cal-add-event"><span class="std std-ref">use the Brigade Calendar</span></a>). A blank event form <a class="reference internal" href="kiosk.html#event-update"><span class="std std-ref">as used in the Kiosk</span></a>
 is displayed. Fill in the details to add a new event.</p>
 </div>
-<div class="section" id="review-past-events-deprecated-see-calendar">
-<h3><span class="section-number">4.6.2. </span>Review past events (deprecated - see Calendar)<a class="headerlink" href="#review-past-events-deprecated-see-calendar" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="review-past-events">
+<h3><span class="section-number">4.6.2. </span>Review Past Events<a class="headerlink" href="#review-past-events" title="Permalink to this headline">¶</a></h3>
+<p>This a legacy feature to show past events run by this Officer. It is superseded by the <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Calendar</span></a>.
+Just search for your surname with the calendar, and you will see all events - past and future - that you have
+been involved with.</p>
 </div>
-<div class="section" id="review-future-events-deprecated-see-calendar">
-<h3><span class="section-number">4.6.3. </span>Review Future Events (deprecated - see Calendar)<a class="headerlink" href="#review-future-events-deprecated-see-calendar" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="review-future-events">
+<h3><span class="section-number">4.6.3. </span>Review Future Events<a class="headerlink" href="#review-future-events" title="Permalink to this headline">¶</a></h3>
+<p>This a legacy feature to show future events run by this Officer. It is superseded by the <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Calendar</span></a>.
+Just search for your surname with the calendar, and you will see all events - past and future - that you have
+been involved with.</p>
 </div>
-<div class="section" id="officer-calendar-deprecated-see-calendar">
-<h3><span class="section-number">4.6.4. </span>Officer Calendar (deprecated - see Calendar)<a class="headerlink" href="#officer-calendar-deprecated-see-calendar" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="officer-calendar">
+<h3><span class="section-number">4.6.4. </span>Officer Calendar<a class="headerlink" href="#officer-calendar" title="Permalink to this headline">¶</a></h3>
 <p>This is just a filtered version of the Brigade Event calendar, showing only events of where the OIC is the member who
 is logged in. It operates in exactly the same way as <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Event calendar</span></a></p>
 </div>
@@ -999,7 +1019,7 @@ numbers will show a full listing of journeys for this driver in the required cat
 <p>Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.</p>
 </div>
 <div class="section" id="vehicle-bookings">
-<h3><span class="section-number">4.7.5. </span>Vehicle Bookings<a class="headerlink" href="#vehicle-bookings" title="Permalink to this headline">¶</a></h3>
+<span id="vehbook"></span><h3><span class="section-number">4.7.5. </span>Vehicle Bookings<a class="headerlink" href="#vehicle-bookings" title="Permalink to this headline">¶</a></h3>
 <p>This shows a calendar with all events where a vehicle has been reserved as part of an event -
 see <a class="reference internal" href="events.html#ev-veh"><span class="std std-ref">Event Fields</span></a>. It can be useful to see what vehicles are committed, and when, to avoid any clashes.</p>
 <div class="myclass figure align-default" id="vehcal">

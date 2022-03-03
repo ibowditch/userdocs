@@ -23,7 +23,7 @@ of events shown on the kiosk screen.
 (easyway)=
 ### Signing in - The Easy Way
 
-The Kiosk is designed to make it as quick and easy as possible for members to sign-in and 
+The Kiosk is designed to make it as quick and easy as possible for Members to sign-in and 
 sign-out of activities at the station.
 
 In general, the OIC who has organised an activity should {ref}`set up an event in advance<cal-add-event>`, and when you get to the station, 
@@ -80,7 +80,7 @@ your administrator may remind you to use your tag if they see you are repeatedly
 If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in immediately. 
 
 Never fear - you can still sign-in, but first you'll need to create a new event on behalf of the OIC. You do this by 
-clicking the New Event+ button at the top right of the kiosk screen, and you will then see the following form:
+clicking the **New Event+** button at the top right of the kiosk screen, and then you will then see the following form:
 
 :::{figure-md} kiosk-newevent
 :class: myclass
@@ -102,7 +102,7 @@ page (OIC, activity type, date, etc.). If you attended another activity later in
 first one and go to the next page to sign-in to the next activity.
 
 In the new system, signing in without an event would be like signing your name in the middle of a blank page in the 
-old Attendance Book. You really need to fill in the details at the top of the page to give the context, and show 
+old Attendance Book. You need to fill in the details at the top of the page to give the context, and show 
 what you are actually attending, and that's essentially what an event gives you.
 
 :::
@@ -112,7 +112,7 @@ what you are actually attending, and that's essentially what an event gives you.
 ### Signing in Without a Tag
 
 You really should {ref}`use your tag<usetag>`, but if you don't have it you can still sign 
-in to an event by clicking on the sign-in icon: 
+in to an event by clicking on the sign-in icon in the event: 
 
 :::{figure-md} signin
 :class: myclass
@@ -123,7 +123,7 @@ Kiosk sign-in icon
 :::
 
 
-You can sign-out without a tag by clicking the green Sign-out  button next to your name.
+You can sign-out without a tag by clicking the green **Sign-out**  button next to your name.
 
 ## Advanced Operations
 
@@ -167,10 +167,10 @@ Update Event Form (click to enlarge)
 
 * Details such as "K1B driver" can be added for each member to reflect roles allocated by the Crew Leader.
 
-* Member qualifications can be reviewed using the TCard option (top right)
+* Member qualifications can be reviewed using the {ref}`TCard option<tcard>` (top right)
   
 * Vehicles used in the activity can be marked (use the ctrl key to select multiple vehicles) as allocated, which is 
-  useful in determining vehicle bookings.
+  useful in determining {ref}`vehicle bookings<vehbook>`.
 
 * Attendees can be removed if necessary using the *Delete* checkbox to the right of their name. This is useful if someone 
   signed in to the wrong event by mistake. Use with caution though, as genuine attendance records should not be deleted.
@@ -195,8 +195,9 @@ accidental loss of attendance records.
 
 ### Transferring Members to a New Event
 
-The Transfer button, available in the form used to change events, allows members to be transferred from one event to 
-another following event. This saves the fuss of everyone signing out and then signing in immediately to a new event.
+The **Transfer** button, available in the form used to change events, allows members to be transferred from 
+one event to another following event. This saves the fuss of everyone signing out and then signing in immediately 
+to a new event.
 
 In the following example, the brigade had a general meeting in the morning. The meeting started at 9:30 and 
 finished at 10:30, earlier than the planned finish time of 11:00. 
@@ -257,6 +258,7 @@ can sign-in to it.
 Members who had already signed out of the Meeting event at the time of transfer, are not transferred to the 
 new Maintenance event. They can sign-in to the new event if they hadn't really left.
 
+(tcard)=
 ### T-Cards
 
 In the top right of the {ref}`event form<event-update>` (top right) you will see a T-Card button. 
@@ -290,7 +292,7 @@ to join. Just click on the appropriate event, and you will be signed in to that.
 ### Resetting the Kiosk
 
 If, for any reason, the Kiosk becomes unresponsive, or is not working as intended, it can be restarted by using the
-"three finger salute" - control-alt-delete, then choose Reboot. This will restart the Kiosk safely, and it should be
+*three finger salute* - ctrl-alt-delete, then choose Reboot. This will restart the Kiosk safely, and it should be
 back up and running in a minute or so.
 
 :::{warning}
