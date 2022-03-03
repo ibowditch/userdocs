@@ -132,56 +132,11 @@ Save
 
 ## Ad-Hoc Admin Tasks
 
-### Adding New Members
-
-Personnel/Add new member
-
-Handles setup of user and contact details as well as new member record
-
-Only available to Personnel Officer
-
-TCard button on all events
-
-A TCard button has been added wherever you see details of an event, 
-including the kiosk, and when selecting an event in a calendar.
-
-Shows details needed to fill in a TCard or crew assigned to event
-
-Vehicle details (provided a vehicle is allocated)
-
-Crew list and qualifications
-
 ### Deleting Members
 
 Don't! If you do, you will also delete their attendance records, which is against the law.
 
 To stay out of jail, make them inactive instead.
 
-### COVID-19 Report
 
-As we discussed the other week, I reviewed the NSW Government Covid safe record keeping guidelines, and it 
-appears that our electronic sign-in system meets the requirements for recording the visitor details needed by 
-NSW COVID contact tracing.
-
-Hopefully this will never be needed, but I also added a new report to the sign-in server (see COVID-19 Attendance 
-under the Officer menu), which lists details of all members who attended the station over the past 28 days. 
-This report uses the template given in NSW COVID-safe record keeping obligations.
-
-Our members are used to signing in and out at the station, and our attendance records are generally quite good, 
-perhaps better than records coming from scanning QR codes at the station. If the brigade is ever asked to assist 
-with contact tracing, this new report could be used in addition to the QR data.
-
-For now, we are still under instructions from FCC that members need to both sign-in and also scan a QR code at the station. 
-Our electronic attendance records for members appear to be sufficient to meet the NSW Government COVID requirements, 
-and with this system in place, it may not be strictly necessary for members to also scan the QR code. However, 
-we would need to get permission from FCC before telling members they no longer need to scan the QR codes.
-
-Naturally, non-members and other visitors would still need to sign-in using the Attendance Book, and also scan a QR code.
-
-
-
-## Vehicles and Equipment
-
-### Driver Activity
-
-### Vehicle Usage
+### Changes to Vehicle Fleet

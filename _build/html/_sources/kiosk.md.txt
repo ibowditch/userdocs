@@ -276,8 +276,6 @@ When you present your tag to sign-in, the system will ask you to choose which of
 to join. Just click on the appropriate event, and you will be signed in to that.
 
 
-
-
 ### Tips for Organising a Busy Day
 
 * Where possible, *avoid overlapping events*, as they will slow down the sign-in process for all members. 
