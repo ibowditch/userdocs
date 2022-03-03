@@ -264,7 +264,7 @@ Event read-only view (click to enlarge)
 Note that all the fields are grey - this means you can't change anything. However, if you were logged in as the OIC of 
 this event, you would be able to update the details as shown earlier {ref}`for the Kiosk<event-update>`.
 
-#### Week View
+##### Week View
 
 Click the week button at the top of the page to go to the Week view:
 
@@ -305,7 +305,7 @@ In the Week view shown above:
 You can always click on the event itself to {ref}`see all the details<ev-read-view>`, and to confirm that 
 you are on the list.
   
-#### Signing Off on an Event (Officers)
+##### Signing Off on an Event (Officers)
 
 According to the original Attendance Book, Officers are supposed to check the attendance records for any activity 
 they run, and once corrected, sign it off and cross out the page so it can't be changed again.
