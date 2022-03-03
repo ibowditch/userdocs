@@ -37,7 +37,7 @@ Attendance records are [State Records](https://legislation.nsw.gov.au/view/pdf/a
 [kept for at least 25 years](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf). 
 They are occasionally required during Coronial or other enquiries, and as such they 
 must be an accurate record of who attended and for what purpose. The Officer In Charge (OIC) of 
-each activity is required to check and sign-off on attendance records for activities that they 
+each activity is required to {ref}`check and sign-off<off-signoff>` on attendance records for activities that they 
 organise.
 
 ### System Requirements
@@ -59,9 +59,9 @@ As well as meeting the Legal Requirements, this is what I was aiming to do with 
 
 1. Provide a low cost solution, using off-the-shelf hardware and a small annual subscription fee.
 
-1. Provide high availability and reliability, including regular automatic backups.
+1. Provide high availability, reliability, and data security, including regular automatic backups.
 
-1. Ensure data privacy with a secure solution, with user accounts and passwords required for access. 
+1. Ensure data privacy, with user accounts and passwords required for access. 
 
 
 ## Attendance Records
@@ -92,7 +92,7 @@ The original Attendance Book is generally fine for the purpose of meeting the le
 However, Attendance Records also contain information that is useful for brigade management, for example:
 
 * Gauging participation of members, especially to recognise outstanding contributions, but also to
-  identify members who are no longer active.
+  easily identify members who are no longer active.
 
 * Gaining visibility on who is doing what in the brigade (and how much), especially for identifying opportunities 
   to "share the load".
@@ -108,10 +108,14 @@ However, Attendance Records also contain information that is useful for brigade 
   
 * Summarising activity for reporting purposes, to identify trends in types of activity, and to inform
   district headquarters and other stakeholders.
+  
+* Real time updates of who is at station can be provided to Officers, Members and HQ if attendance records 
+  are available on-line.
 
-Because of this, many brigades transcribe the information from the Attendance Book into a spreadsheet 
-or database, so that it can be analysed and summarised. This is a slow and tedious manual process, which requires 
-a great deal of effort on the part of volunteer members. 
+
+To realise the value of attendance data, many brigades transcribe the information from the Attendance Book 
+into a spreadsheet or database, so that it can be analysed and summarised. This is a slow and tedious manual 
+process, which requires a great deal of effort on the part of volunteer members. 
 
 
 ## Switching to Electronic Sign-In
@@ -131,14 +135,14 @@ the useful data they contain to help run the brigade more efficiently.
 
 
 
-:::{admonition} Why not use ACTIV?
+:::{admonition} Why not use RFS ACTIV?
 
-ACTIV is an excellent system provided by the RFS for relaying callouts to members, and assisting with forming crews 
+RFS ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews 
 for these callouts. 
 
 However, at the moment, it does not have a reliable way of recording attendance at the station.
 
-It can detect your proximity to the station from your phone (including when driving past the station), 
+It can detect your proximity to the station from the GPS on your phone (including when driving past the station), 
 but this is not the same as attendance, and does not meet the current requirements of the SOPs and legislation for
 reliable and accurate attendance records.
 
@@ -162,7 +166,7 @@ Members will then tap their tag on a reader to sign-in. If there is a only one a
 planned at that time, they will be automatically signed in. If there is more than one 
 activity planned at that time, they will be asked to choose their activity.
 
-When a Member has finished, they should tap their tag on the reader to sign-out.
+When a Member has finished, they tap their tag on the reader to sign-out.
 
 ## Site Map
 

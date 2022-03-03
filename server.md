@@ -12,9 +12,8 @@ an internet connection and a browser available. This section describes the servi
 
 ## Logging In
 
-```{margin} Multiple Tenants
-The system architecture is what is known as [*multi-tenated*](multi-tenant-tech "*multi-tenanted*"). This allows 
-the same server to support multiple brigades, with each being a distinct "tenant".
+```{margin} Separate Domains
+The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you need to say which one you need.
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
@@ -42,7 +41,7 @@ and specialist Officers, eg. Training, have access to specific areas.
 
 ## Landing/home page
 
-When you have logged in the system will take you to the brigade home page, an example of which is shown below:
+When you have logged in, the system will take you to the brigade home page, an example of which is shown below:
 
 :::{figure-md} home-page
 :class: myclass
@@ -53,10 +52,10 @@ Home/landing page on server (click to enlarge)
 :::
 
 Navigation bar 
-: Used to access most functions. The {ref}`Menu of Services<menu>` section below describes each of these in detail.
+: Used to access most functions. The {ref}`Menu<menu>` section below describes each of these in detail.
 
 Membership Summary
-: Shows the total number of active members broken down by their skills set. 
+: Shows the total number of active members broken down by their skill sets. 
   
   It also shows, in red, the number of members currently on duty, ie. currently signed in at the station 
   (but not yet signed out). These figures are updated live, whenever anyone signs in or out at the station.
@@ -64,11 +63,12 @@ Membership Summary
 Upcoming events
 : Shows details of future events in the calendar, including the number of members who have indicated 
   that they will be attending. Further details are available by clicking on the event Details. Members can indicate 
-  their intention to attend these events in the Brigade Calendar (see below)
+  their intention to attend these events in the {ref}`Brigade Calendar<calendar>`.
   
 Shortcuts 
-: The "At Station" shortcut shows a read-only replica of the Kiosk screen, and you can also access the
-  *Brigade Calendar*. Both of these are also available under the Members menu in the Navigation bar.
+: The **{ref}`At Station<at-stat>`** shortcut shows a read-only replica of the Kiosk screen, and you can also 
+  access the **{ref}`Brigade Calendar<calendar>`**. Both of these are also available under the Member menu 
+  in the Navigation bar.
 
 
 (menu)=
@@ -76,7 +76,7 @@ Shortcuts
 
 ### Member List
 
-For internal use only, members have access to a summary of basic contact details of all active members through the
+For internal use only, Members have access to a summary of basic contact details of all active members through the
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser 
 if a hard-copy is required.
 
@@ -168,7 +168,7 @@ Sample of Maintenance Activity for a Member (click to enlarge)
 
 #### Totals
 
-Each row has a Total figure, and when clicked this will show activity in all categories, for the selected member. 
+Each row has a **Total** figure, and when clicked this will show activity in all categories, for the selected member. 
 
 Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show 
 a full listing of all member attendance for that type of activity.
@@ -204,6 +204,7 @@ quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
 Anyone with a Total of more than 50.3 hours is coloured white, just less than that is coloured yellow, 
 and further down, red.
 
+(at-stat)=
 ### At Station
 
 The At Station item shows a replica of the Kiosk, including all events and members attending. 
@@ -259,7 +260,7 @@ In general you will see a view like this:
 Event read-only view (click to enlarge)
 :::
 
-Note that all the fields are grey - this means you can't change anything. However, if you were logged in as the OIC of 
+Note that all the fields are grey, which this means you can't change anything. However, if you were logged in as the OIC of 
 this event, you would be able to update the details as shown earlier {ref}`for the Kiosk<event-update>`.
 
 #### Week View
@@ -286,7 +287,7 @@ only create new events in the future like this, to protect the integrity of the 
 Members can indicate their intention to attend future events using the calendar. If they previously committed to 
 attend an event, they can change that by withdrawing their name. 
 
-This allows Officers to plan activities, and to see who is interested in attending.
+This allows Officers to get expected numbers for their planned activities, and to see who is interested in attending.
 
 In the Week view shown above:
 
@@ -300,19 +301,20 @@ In the Week view shown above:
 * Past events show a tick mark in the top right if you have attended them. Past events can not be changed on 
   the calendar.
   
-You can always click on the event itself to {ref}`see all the details<ev-read-view>`, and to confirm that 
-you are on the list.
-  
+You can always click in the centre of the event itself to {ref}`see all the details<ev-read-view>`, 
+and confirm that you are on the list.
+
+(off-signoff)=
 #### Signing Off on an Event (Officers)
 
 According to the original Attendance Book, Officers are supposed to check the attendance records for any activity 
-they run, and once corrected, sign it off and cross out the page so it can't be changed again.
+they run, and once corrected and checked, sign it off and cross out the page so it can't be changed again.
 
 In the sign-in system, this can be done by opening the calendar and finding an event you (the OIC) have run, 
 and clicking on it.
 
-You will then be able to check the records, making any corrections as needed. You should then click the box marked 
-"Checked" to sign it off.
+You will then be able to check the attendance records, making any corrections as needed. You should then click 
+the box marked "Checked" to sign it off.
 
 :::{figure-md} offcheck
 :class: myclass
@@ -324,6 +326,10 @@ Officer Checking their Event (click to enlarge)
 
 Once an event has been completed, only the OIC can update the details.
 
+```{margin} Restricted Access
+Only the Personnel/Membership Officer and their assistants have access to this Menu.
+```
+
 ## Personnel Menu
 
 ### Change Officers
@@ -334,9 +340,11 @@ This item allows the Personnel Officer to update the list of Officers of the bri
 the end of the season, it just shows the current list of Officer positions, with the members who hold those positions. 
 Small changes can be made in case of retirement or departures as needed.
 
-If the date is after the end of the season, and no Officers have yet been saved for the new season, the system will offer to 
-copy the list of Officers from the previous season to the new season. This new list can then be edited as required to 
-get to the new list of Officers, then saved to update the records.
+If the date is after the end of the season, and no Officers have yet been saved for the new season, the system will 
+also show a button that allows you to **"Copy Officers to <new season>"**. If you click this button, the system 
+will create new Officer records for all positions in the new season using the same names as the previous season. 
+You can then edit this list by changing the names of the officers to match the election results, then Save to 
+update the system.
 
 ### Add New Member
 
@@ -350,7 +358,9 @@ Attendance Books.
 This item will produce a listing of all attendance in a format similar to the old Attendance Book, which can be printed 
 either to PDF or to paper by your browser as required, and then sent on to HQ.
 
-
+```{margin} Restricted Access
+Only the Training Officer and their assistants have access to this Menu.
+```
 
 ## Training Menu
 
@@ -378,22 +388,34 @@ Training Quarterly Return (click to enlarge)
 This is just a filtered version of the Brigade Event calendar, showing only events of type TRAINING. 
 It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
+
+```{margin} Restricted Access
+Only current Office bearers, either Field Officers or Administrative Officers have access to this Menu.
+```
 ## Officers Menu
 
 The Officers Menu is only available to members who currently hold an Officer position within the brigade, 
 either as a Field Officer, or in an Administration role.
 
-### Add New Event (deprecated - see Calendar)
+### Add New Event
 
 This is an alternative way for Officers to create a new event (it's probably easier 
 to {ref}`use the Brigade Calendar<cal-add-event>`). A blank event form {ref}`as used in the Kiosk<event-update>` 
 is displayed. Fill in the details to add a new event.
 
-### Review past events (deprecated - see Calendar)
+### Review Past Events
 
-### Review Future Events (deprecated - see Calendar)
+This a legacy feature to show past events run by this Officer. It is superseded by the {ref}`Brigade Calendar<calendar>`. 
+Just search for your surname with the calendar, and you will see all events - past and future - that you have 
+been involved with.
 
-### Officer Calendar (deprecated - see Calendar)
+### Review Future Events
+
+This a legacy feature to show future events run by this Officer. It is superseded by the {ref}`Brigade Calendar<calendar>`. 
+Just search for your surname with the calendar, and you will see all events - past and future - that you have 
+been involved with.
+
+### Officer Calendar
 
 This is just a filtered version of the Brigade Event calendar, showing only events of where the OIC is the member who 
 is logged in. It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
@@ -478,6 +500,7 @@ numbers will show a full listing of journeys for this driver in the required cat
 
 Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.
 
+(vehbook)=
 ### Vehicle Bookings
 
 This shows a calendar with all events where a vehicle has been reserved as part of an event - 

@@ -309,8 +309,9 @@ and a list of attendees, including when they signed-in and signed out.</p>
 <p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Event components, as seen on the Kiosk (click to enlarge)</span><a class="headerlink" href="#event-anatomy" title="Permalink to this image">¶</a></p>
 </div>
 <p>Details of an event <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">can be updated on the kiosk</span></a>.</p>
-<p>Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the Brigade Calendar,
-Upcoming Events, etc. but only if you are logged in as the member who is OIC on the event.</p>
+<p>Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the
+<a class="reference internal" href="server.html#calendar"><span class="std std-ref">Brigade Calendar</span></a>, Upcoming Events, etc. but only if you are logged in as the
+member who is OIC on the event.</p>
 <p>If you aren’t the OIC, you can still see the details of the event, but won’t be able to change anything.</p>
 <p>Apart from updating the event (as above), the following actions or triggers will update an event on the kiosk:</p>
 <ol class="arabic simple">
@@ -318,8 +319,8 @@ Upcoming Events, etc. but only if you are logged in as the member who is OIC on 
 <li><p>Signing in using the icon on the top right of the event</p></li>
 <li><p>Signing out using the “Sign-Out” button</p></li>
 <li><p>Clicking a member name to edit their attendance details.</p></li>
-<li><p>The event becomes open as the time reaches 1 hour before start time.</p></li>
-<li><p>The event becomes closed as the end time is passed.</p></li>
+<li><p>As the event becomes open as the time reaches 1 hour before start time.</p></li>
+<li><p>As the event closes when the end time is passed.</p></li>
 <li><p>Just after midnight, when the “slate is cleaned”, and events for the new day are shown.</p></li>
 </ol>
 <div class="section" id="mandatory-event-fields">
@@ -331,7 +332,7 @@ Upcoming Events, etc. but only if you are logged in as the member who is OIC on 
 </dl>
 <div class="margin sidebar">
 <p class="sidebar-title">Event Start/End times</p>
-<p>Events are intended to represent a single shift, and normally start and end on the same day.
+<p>Events represent a single shift, and normally start and end on the same day.
 In the case of extended operations running over several days (eg. out of area), details should be recorded
 using one event for each daily shift.</p>
 </div>
@@ -347,7 +348,7 @@ Start Time, which will be interpreted as being in the following day.</p>
 <div class="margin sidebar">
 <p class="sidebar-title">Changing Events</p>
 <p>On the Kiosk, anyone can <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">change the details of any event</span></a>. However, on the server, only the OIC is
-allowed to change their own event - all others can see the details, but not change them.</p>
+allowed to change their own event.</p>
 </div>
 <dl class="simple myst">
 <dt>Officer in Charge (OIC)</dt><dd><p>Only members who hold a current Officer position may be assigned as OIC. This includes
@@ -375,14 +376,14 @@ limited by the number of active members in the brigade.</p>
 </dl>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Members can only attend an event <strong>once</strong>. Once a member signs in to an event, they can sign-out later, but won’t be able
+<p>Members can only attend an event <strong>once</strong>. When a member signs in to an event, they can sign-out later, but won’t be able
 to sign-in again to the same event. This allows members to use their tag to sign-in first, tag again to sign-out, then
 tag again to sign into another event. If necessary, a long-running event should be broken down into smaller parts
 if there are breaks or other activities in between.</p>
 </div>
 <dl class="simple myst" id="ev-veh">
 <dt>Vehicles</dt><dd><p>If brigade vehicles are used in a event, this can be noted in the event. This is useful in tracking
-vehicle availability when events are planned in advance.</p>
+<a class="reference internal" href="server.html#vehbook"><span class="std std-ref">vehicle availability</span></a> when events are planned in advance.</p>
 </dd>
 </dl>
 </div>
@@ -403,7 +404,7 @@ they will accept sign-ins from members either using a tag, or using the sign-in 
 closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p>
 </dd>
 <dt>Future - white background, dashed border</dt><dd><p>Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
-to sign-in with a tag, and no sign-in icon is shown for future events.</p>
+to sign-in with a tag, and no sign-in icon is shown.</p>
 </dd>
 </dl>
 </div>
@@ -412,8 +413,8 @@ to sign-in with a tag, and no sign-in icon is shown for future events.</p>
 <dl class="simple myst" id="overnight">
 <dt>Overnight</dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
 that an event runs overnight by giving a finish time in the next day.</p>
-<p>The kiosk shows all events that start <strong>or end</strong> on the current day, so such an event will appear on the start
-day and on the end day. This allows crew to sign out when they return from a night shift.</p>
+<p>The kiosk shows all events that start <strong>or end</strong> on the current day, so an overnight event will appear on the start
+day <strong>and</strong> on the end day. This allows crew to sign out when they return from a night shift.</p>
 </dd>
 </dl>
 <div class="admonition warning">
@@ -442,7 +443,10 @@ as soon as a callout is received for your brigade.</p>
 generally it includes the name of the paged brigade, the type of call, and the CAD number.</p>
 </dd>
 </dl>
-<p><img alt="Pager callout alt!" src="_images/pagercall-a2.jpg" /></p>
+<div class="myclass figure align-default" id="pager-callout">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pagercall-a2.jpg"><img alt="Pager callout event" class="bg-primary mb-1" src="_images/pagercall-a2.jpg" style="width: 2000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Pager callout event (click to enlarge)</span><a class="headerlink" href="#pager-callout" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="colour-codes">

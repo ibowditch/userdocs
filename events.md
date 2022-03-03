@@ -38,8 +38,9 @@ Event components, as seen on the Kiosk (click to enlarge)
 
 Details of an event {ref}`can be updated on the kiosk<change-event>`.
 
-Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the Brigade Calendar, 
-Upcoming Events, etc. but only if you are logged in as the member who is OIC on the event. 
+Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the 
+{ref}`Brigade Calendar<calendar>`, Upcoming Events, etc. but only if you are logged in as the 
+member who is OIC on the event. 
 
 If you aren't the OIC, you can still see the details of the event, but won't be able to change anything.
 
@@ -50,8 +51,8 @@ Apart from updating the event (as above), the following actions or triggers will
 2. Signing in using the icon on the top right of the event
 3. Signing out using the "Sign-Out" button
 4. Clicking a member name to edit their attendance details.
-5. The event becomes open as the time reaches 1 hour before start time.
-6. The event becomes closed as the end time is passed.
+5. As the event becomes open as the time reaches 1 hour before start time.
+6. As the event closes when the end time is passed.
 7. Just after midnight, when the "slate is cleaned", and events for the new day are shown.
 
 ## Mandatory Event Fields
@@ -62,7 +63,7 @@ Date
 : This defines the day on which the activity starts.
 
 ```{margin} Event Start/End times
-Events are intended to represent a single shift, and normally start and end on the same day. 
+Events represent a single shift, and normally start and end on the same day. 
 In the case of extended operations running over several days (eg. out of area), details should be recorded 
 using one event for each daily shift.
 ```
@@ -78,7 +79,7 @@ End time
 
 ```{margin} Changing Events
 On the Kiosk, anyone can [change the details of any event](change-event). However, on the server, only the OIC is 
-allowed to change their own event - all others can see the details, but not change them.
+allowed to change their own event.
 ```
 
 Officer in Charge (OIC) 
@@ -106,7 +107,7 @@ Attendees/Crew
   limited by the number of active members in the brigade. 
  
 ```{tip}
-Members can only attend an event **once**. Once a member signs in to an event, they can sign-out later, but won't be able 
+Members can only attend an event **once**. When a member signs in to an event, they can sign-out later, but won't be able 
 to sign-in again to the same event. This allows members to use their tag to sign-in first, tag again to sign-out, then 
 tag again to sign into another event. If necessary, a long-running event should be broken down into smaller parts 
 if there are breaks or other activities in between.
@@ -115,7 +116,7 @@ if there are breaks or other activities in between.
 (ev-veh)=
 Vehicles 
 : If brigade vehicles are used in a event, this can be noted in the event. This is useful in tracking
-  vehicle availability when events are planned in advance. 
+  {ref}`vehicle availability<vehbook>` when events are planned in advance. 
    
 
 ## Event Types
@@ -146,7 +147,7 @@ Closed/completed - grey background, solid border
 Future - white background, dashed border
    
 :  Events starting more than 1 hour in the future are shown with a dashed border. They will not be available 
-   to sign-in with a tag, and no sign-in icon is shown for future events.
+   to sign-in with a tag, and no sign-in icon is shown.
 
 ### Additional Types
 
@@ -156,8 +157,8 @@ Overnight
 :  Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
    that an event runs overnight by giving a finish time in the next day. 
 
-   The kiosk shows all events that start **or end** on the current day, so such an event will appear on the start 
-   day and on the end day. This allows crew to sign out when they return from a night shift.
+   The kiosk shows all events that start **or end** on the current day, so an overnight event will appear on the start 
+   day **and** on the end day. This allows crew to sign out when they return from a night shift.
 
 :::{warning} **Always set the end time for overnight events**
 
@@ -194,8 +195,13 @@ Pager Calls
    The event title will be the same as the pager message. The format of this message will vary by district, but 
    generally it includes the name of the paged brigade, the type of call, and the CAD number. 
 
+:::{figure-md} pager-callout
+:class: myclass
 
-![Pager callout alt!](/assets/images/pagercall-a2.jpg "Pager callout event")
+<img src="assets/images/pagercall-a2.jpg" alt="Pager callout event" width="2000px" class="bg-primary mb-1">
+
+Pager callout event (click to enlarge)
+:::
 
 (colour-coding)=
 ## Colour Codes
