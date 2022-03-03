@@ -213,46 +213,81 @@ including sign-in/out or new events created.
 
 #### Events Calendar
 
-A calendar view is provided so members can see all activities in the past, and also the future.
+A calendar view is provided so members can see all brigade activities in the past, and also the future.
 
-The view can be adjusted to show months, weeks, or days as required. Move forward or backward in time 
-using the arrows in the top right.
+:::{figure-md} cal-month
+:class: myclass
+
+<img src="assets/images/cal-month-a.jpg" alt="Calendar Month View" width="1467" class="bg-primary mb-1">
+
+Calendar Month View (click to enlarge)
+:::
+
+**Notes**:
+
+* The calendar view can be adjusted to show months, weeks, or days as required. Move forward or backward in time 
+  using the arrows in the top right.
+
+* Events are {ref}`colour coded<colour-coding>` by Activity type in the same way as on the Kiosk.
+
+* The view can be filtered using the Search function (top right of the page), so for example you can easily find 
+  all "Training" events, or those attended by a particular member (just search for their surname).
 
 
-##### Viewing Events
+##### Viewing Event Details
 
 You can view the details of any event in the calendar just by clicking on it. 
 
-In general you will see a view like this - read only, but with all the details.
+In general you will see a view like this:
 
-If you are logged in as the OIC of the event, you will be able to modify the settings, as in ...
+:::{figure-md} ev-read-view
+:class: myclass
 
+<img src="assets/images/ev-read-view.jpg" alt="Event read-only view" width="1467" class="bg-primary mb-1">
 
+Event read-only view (click to enlarge)
+:::
 
-##### Filtering Events
+Note that all the fields are grey - this means you can't change anything. However, if you were logged in as the OIC of 
+this event, you would be able to update the details as shown earlier {ref}`for the Kiosk<event-update>`.
 
-The view can be filtered using the Search function, so for example you can easily find all "Training" events, or 
-those attended by a particular member (just search for their surname).
+#### Week View
+
+Click the week button at the top of the page to go to the Week view:
+
+:::{figure-md} call-week-a
+:class: myclass
+
+<img src="assets/images/cal-week-a.jpg" alt="Calendar Week View" width="1467" class="bg-primary mb-1">
+
+Calendar Week View (click to enlarge)
+:::
 
 ##### Adding New Events (Officers)
 
-The calendar can also be used by Officers to add new events planned for future dates.
+If you are logged in as an Officer, you can create a new event in the calendar by selecting the area representing the 
+times your activity will run (shown in blue above). You will then be asked to provide the details of the event. You can 
+only create new events in the future like this, to protect the integrity of the attendance record.
 
-##### Registering for Future Events (All Members)
+##### Plan to Attend
 
-plus cancelling registration
+Members can indicate their intention to attend future events using the calendar. If they previously committed to 
+attend an event, they can change that by withdrawing their name.
 
+This allows Officers to plan activities, and to see who is interested in attending.
 
-Well organised brigade has a calendar of upcoming events
-Ideally members can indicate their intention to attend
-OIC can see who to expect
-See what’s happened and what’s coming up
-View by day/week/month
-Click on event for details
-Can indicate that will be attending (may be useful for call out)
-Can also drop out
-Officers can create new events here
-Members can only look, or nominate to attend
+In the Week view shown above:
+
+* Each event from today onwards includes a symbol in the top right of the event. If the symbol shows **+**, you 
+  are not on the list of prospective attendees, but if you click the symbol this will indicate that you intend
+  to join the activity, and your name will be added to the list. 
+  
+* If the symbol shows as **x**, you are already on the list of prospective attendees, but if you change your mind, 
+  click the symbol and you will be removed (the symbol will change back to **+**)
+  
+* Past events show a tick mark in the top right if you have attended them. Past events can not be changed on 
+  the calendar.
+  
 
 ### Training
 
