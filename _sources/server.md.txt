@@ -305,6 +305,26 @@ In the Week view shown above:
 You can always click on the event itself to {ref}`see all the details<ev-read-view>`, and to confirm that 
 you are on the list.
   
+#### Signing Off on an Event (Officers)
+
+According to the original Attendance Book, Officers are supposed to check the attendance records for any activity 
+they run, and once corrected, sign it off and cross out the page so it can't be changed again.
+
+In the sign-in system, this can be done by opening the calendar and finding an event you (the OIC) have run, 
+and clicking on it.
+
+You will then be able to check the records, making any corrections as needed. You should then click the box marked 
+"Checked" to sign it off.
+
+:::{figure-md} offcheck
+:class: myclass
+
+<img src="assets/images/offcheck.jpg" alt="Calendar Week View" width="1467" class="bg-primary mb-1">
+
+Officer Checking their Event (click to enlarge)
+:::
+
+Once an event has been completed, only the OIC can update the details.
 
 ### Personnel
 
