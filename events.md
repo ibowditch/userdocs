@@ -196,7 +196,7 @@ Pager Calls
 
 ![Pager callout alt!](/assets/images/pagercall-a2.jpg "Pager callout event")
 
-
+(colour-coding)=
 ## Colour Codes
 
 The border around events is colour coded depending on the activity type, as follows:
