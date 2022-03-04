@@ -13,7 +13,7 @@ an internet connection and a browser available. This section describes the servi
 ## Logging In
 
 ```{margin} Separate Domains
-The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you need to say which one you need.
+The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you need to say which one you require.
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
@@ -76,7 +76,7 @@ Shortcuts
 
 ### Member List
 
-For internal use only, Members have access to a summary of basic contact details of all active members through the
+Members have access to a summary of basic contact details of all active members through the
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser 
 if a hard-copy is required.
 
@@ -260,7 +260,7 @@ In general you will see a view like this:
 Event read-only view (click to enlarge)
 :::
 
-Note that all the fields are grey, which this means you can't change anything. However, if you were logged in as the OIC of 
+Note that all the fields are grey, which means you can't change anything. However, if you were logged in as the OIC of 
 this event, you would be able to update the details as shown earlier {ref}`for the Kiosk<event-update>`.
 
 #### Week View
@@ -284,8 +284,7 @@ only create new events in the future like this, to protect the integrity of the 
 
 #### Plan to Attend
 
-Members can indicate their intention to attend future events using the calendar. If they previously committed to 
-attend an event, they can change that by withdrawing their name. 
+Members can indicate their intention to attend future events using the calendar. 
 
 This allows Officers to get expected numbers for their planned activities, and to see who is interested in attending.
 
@@ -307,10 +306,10 @@ and confirm that you are on the list.
 (off-signoff)=
 #### Signing Off on an Event (Officers)
 
-According to the original Attendance Book, Officers are supposed to check the attendance records for any activity 
+According to the original Attendance Book, Officers are required to check the attendance records for any activity 
 they run, and once corrected and checked, sign it off and cross out the page so it can't be changed again.
 
-In the sign-in system, this can be done by opening the calendar and finding an event you (the OIC) have run, 
+In the sign-in system, this can be done by opening the calendar and finding the event you (the OIC) have run, 
 and clicking on it.
 
 You will then be able to check the attendance records, making any corrections as needed. You should then click 
@@ -326,11 +325,13 @@ Officer Checking their Event (click to enlarge)
 
 Once an event has been completed, only the OIC can update the details.
 
+
+## Personnel Menu
+
 ```{margin} Restricted Access
 Only the Personnel/Membership Officer and their assistants have access to this Menu.
 ```
 
-## Personnel Menu
 
 ### Change Officers
 
@@ -341,7 +342,7 @@ the end of the season, it just shows the current list of Officer positions, with
 Small changes can be made in case of retirement or departures as needed.
 
 If the date is after the end of the season, and no Officers have yet been saved for the new season, the system will 
-also show a button that allows you to **"Copy Officers to <new season>"**. If you click this button, the system 
+also show a button that allows you to **"Copy Officers to new season"**. If you click this button, the system 
 will create new Officer records for all positions in the new season using the same names as the previous season. 
 You can then edit this list by changing the names of the officers to match the election results, then Save to 
 update the system.
@@ -358,11 +359,12 @@ Attendance Books.
 This item will produce a listing of all attendance in a format similar to the old Attendance Book, which can be printed 
 either to PDF or to paper by your browser as required, and then sent on to HQ.
 
+
+## Training Menu
+
 ```{margin} Restricted Access
 Only the Training Officer and their assistants have access to this Menu.
 ```
-
-## Training Menu
 
 The Training menu is normally only available to the Training Officer and their assistants. 
 
@@ -389,11 +391,12 @@ This is just a filtered version of the Brigade Event calendar, showing only even
 It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
 
-```{margin} Restricted Access
-Only current Office bearers, either Field Officers or Administrative Officers have access to this Menu.
-```
+
 ## Officers Menu
 
+```{margin} Restricted Access
+Only current Office bearers, either Field Officers or Administrative Officers, have access to this Menu.
+```
 The Officers Menu is only available to members who currently hold an Officer position within the brigade, 
 either as a Field Officer, or in an Administration role.
 
