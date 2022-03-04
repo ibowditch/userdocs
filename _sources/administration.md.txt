@@ -96,31 +96,6 @@ can be revealed temporarily with the new "Add Excluded Events" button.
 
 ## Periodic Admin Procedures
 
-
-### Updating Officers
-
-In the current release, there's a new menu item on the main landing page under Personnel, called Change Officers. 
-When you click on that, it will show a list of current officers.
-
-Normally, this will show officers for the current season, and in the rare event of an officer being changed during the 
-season, you can change the name associated with a position then save, to update it.
-
-When you pass into a new season (the date of which is defined as Season Start in your Brigade Settings, under admin), 
-there won't be any officers defined for the new season, but the officers from the previous season will still be in place 
-until they are either re-elected or changed at an election.
-
-In this case, the Change Officers form will show the officers from the previous season, but will also show a button 
-that allows you to "Copy Officers to <new season>". If you click this button, the system will create new Officer 
-records for all positions in the new season using the same names as the previous season. You can then edit this list 
-by changing the names of the officers to match the election results, then Save to update the system.
-
-In summary, the procedure to update officers after this year's election is as follows:
-Click the menu item Personnel/Change Officers
-Click the button "Copy Officers to 2021"
-Change the names under the Member column to match the officers elected in the recent election.
-Save
-
-
 ### Set Recurring Events in the Calendar
 
 ### Generate Training Reports
