@@ -30,6 +30,7 @@ If you ever need to change your password (eg. if you forget it), you can change 
 link on the login page. The system will then email you a link, and then you can change your password.
 
 ```{admonition} We know who you are...
+:class: tip
 Unlike the Kiosk, which is a shared device, and the system doesn't know who is operating it at any given moment, when you 
 log into the server, you use your own personal identifier (usually your email address), so the system knows who you are.
 
@@ -80,7 +81,8 @@ Members have access to a summary of basic contact details of all active members 
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser 
 if a hard-copy is required.
 
-```{Warning} Member Privacy:
+```{admonition} Member Privacy
+:class: caution
 
 If members do not wish their contact details to be shared with other members they can instruct the 
 Personnel/Membership Officer to remove those details from this list. 
