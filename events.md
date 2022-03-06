@@ -62,7 +62,7 @@ All events must include the following information:
 Date 
 : This defines the day on which the activity starts.
 
-```{margin} Event Start/End times
+```{margin} Extended Operations
 Events represent a single shift, and normally start and end on the same day. 
 In the case of extended operations running over several days (eg. out of area), details should be recorded 
 using one event for each daily shift.
@@ -106,8 +106,9 @@ Attendees/Crew
   joined and left the activity. Any active member can sign in to an event, and the number of attendees is only 
   limited by the number of active members in the brigade. 
  
-```{tip}
-Members can only attend an event **once**. When a member signs in to an event, they can sign-out later, but won't be able 
+```{admonition} Members can only attend an event **once**
+:class: tip
+When a member signs in to an event, they can sign-out later, but won't be able 
 to sign-in again to the same event. This allows members to use their tag to sign-in first, tag again to sign-out, then 
 tag again to sign into another event. If necessary, a long-running event should be broken down into smaller parts 
 if there are breaks or other activities in between.
@@ -160,8 +161,8 @@ Overnight
    The kiosk shows all events that start **or end** on the current day, so an overnight event will appear on the start 
    day **and** on the end day. This allows crew to sign out when they return from a night shift.
 
-:::{warning} **Always set the end time for overnight events**
-
+:::{admonition} **Always set the end time for overnight events**
+:class: warning
 Since events are always less than 24 hours in duration, in overnight events the end time must be less than the 
 start time, eg. Start: 18:00, End: 06:00.
 

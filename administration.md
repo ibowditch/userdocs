@@ -1,5 +1,10 @@
 # Administration Procedures (Under construction)
 
+```{margin} Restricted Access
+Access to most of the Administration procedures below is restricted to genuine system admins, 
+and these not generally available to Members or Officers.
+```
+
 ## Adding a new Brigade
 
 ## Preparing and Issuing Tags
@@ -47,7 +52,7 @@ it should detect an NFC device. It will show the RFS member number, the date whe
 If you have full admin privileges, under brigade Settings, you will see your own Brigade. Select that and then you will
 see the following fields:
 
-Location - used in landigng page
+Location - used in landing page
 Phone - used in landing page
 Bio - used?
 

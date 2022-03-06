@@ -136,6 +136,7 @@ the useful data they contain to help run the brigade more efficiently.
 
 
 :::{admonition} Why not use RFS ACTIV?
+:class: attention
 
 RFS ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews 
 for these callouts. 

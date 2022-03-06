@@ -61,6 +61,7 @@ When you've finished the activity, place your tag on the reader to sign-out. Tha
 
 :::{admonition} Why you should always sign-in with your tag
 :name: usetag
+:class: tip
 
 There is a mechanism which allows {ref}`you to sign in without a tag<notag>` but this should only be used in 
 exceptional cases, as the Kiosk is a shared computer, and doesn't know who is at the keyboard. 
@@ -119,11 +120,14 @@ in to an event by clicking on the sign-in icon in the event:
 
 <img src="assets/images/signin.jpg" alt="Kiosk sign-in" width="50px" class="bg-primary mb-1">
 
+[comment]: <> (<span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span>)
+
+
 Kiosk sign-in icon
 :::
 
 
-You can sign-out without a tag by clicking the green **Sign-out**  button next to your name.
+You can sign-out without a tag by clicking the <span class="badge badge-pill badge-success">Sign Out</span>  button next to your name.
 
 ## Advanced Operations
 
@@ -295,11 +299,9 @@ If, for any reason, the Kiosk becomes unresponsive, or is not working as intende
 *three finger salute* - ctrl-alt-delete, then choose Reboot. This will restart the Kiosk safely, and it should be
 back up and running in a minute or so.
 
-:::{warning}
-
-Do not just turn the power off and then on again to reset the Kiosk. If the Kiosk is not shutdown properly, there 
-is a risk that it will be damaged, and it may not restart.
-
+:::{admonition} Do not turn the power off and then on again to reset the Kiosk
+:class: warning
+If the Kiosk is not shutdown properly, there is a risk that it will be damaged, and it may not restart.
 :::
 
 ### Kiosk Beeps
