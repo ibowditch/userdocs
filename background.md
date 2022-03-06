@@ -153,22 +153,6 @@ movements much of the time. No thanks.
 :::
 
 
-## Using the System to Sign In
-
-All Brigade Members are issued with a small key fob tag, which will be used for signing in and 
-out at the Station.
-
-The OIC organising an activity schedules the event online in advance, using a phone, tablet or PC.
-
-On the day of the activity, Members arriving at the Station will see the activities planned 
-for that day on a screen at the entrance of the Station.
-
-Members will then tap their tag on a reader to sign-in. If there is a only one activity 
-planned at that time, they will be automatically signed in. If there is more than one 
-activity planned at that time, they will be asked to choose their activity.
-
-When a Member has finished, they tap their tag on the reader to sign-out.
-
 ## Site Map
 
 This web site describes following aspects of the electronic sign-in system:
@@ -176,12 +160,12 @@ This web site describes following aspects of the electronic sign-in system:
 1. [Introduction](background)
 
   > This section describes the origin of the system, the requirements (legal and otherwise). There is also a brief 
-  > overview of the objectives of the system, and a summary of how it operates. 
+  > overview of the objectives of the system. 
 
 2. [The Kiosk](kiosk)
 
-  > The Kiosk is the main component of the system, and used by most people on a day-to-day basis. This section 
-  > provides an overview of the Kiosk, along with a user guide.
+  > The Kiosk collects attendance records in place of the Attendance Book, and is used by most people 
+  > on a day-to-day basis. This section provides an overview of the Kiosk, along with a user guide.
 
 3. [Events](events)
 

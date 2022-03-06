@@ -381,15 +381,15 @@
                 
   <div class="section" id="the-kiosk">
 <h1><span class="section-number">2. </span>The Kiosk<a class="headerlink" href="#the-kiosk" title="Permalink to this headline">¶</a></h1>
-<p>The Kiosk is a small computer and screen, with a tag reader attached, that replaces the old Attendance Book,
-and records attendance in electronic form. It is normally located at the front desk of the station.</p>
+<p>The Kiosk is a small computer (a Raspberry PI) and screen, with a tag reader attached, that
+replaces the old Attendance Book, and records attendance in electronic form. It is normally located
+at the front desk of the station.</p>
+<div class="margin figure align-default" id="kiosk-parts">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/kiosk-parts.jpg"><img alt="Kiosk parts" class="bg-primary mb-1" src="_images/kiosk-parts.jpg" style="width: 1000px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">NFC tag, reader, and PI</span><a class="headerlink" href="#kiosk-parts" title="Permalink to this image">¶</a></p>
+</div>
 <p>It is always-on and available 24h every day. It requires an internet connection (Wi-Fi or wired)
 to function.</p>
-<div class="margin sidebar">
-<p class="sidebar-title">Events</p>
-<p>Events are central to the design of the system, and come in many shapes and varieties.
-For all the gory details, see the dedicated section on <a class="reference internal" href="events.html"><span class="doc std std-doc">Events</span></a></p>
-</div>
 <p>The Kiosk screen shows <a class="reference internal" href="events.html"><span class="doc std std-doc">events</span></a> that start <strong>or end</strong> on the current day,
 and is automatically updated every night, just after midnight, to show events for the new day.</p>
 <p>NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out
@@ -404,7 +404,7 @@ sign-out of activities at the station.</p>
 and when you get to the station, you will see something like this on the kiosk screen:</p>
 <div class="myclass figure align-default" id="kiosk1event">
 <img alt="Kiosk with 1 event" class="bg-primary mb-1" src="_images/kiosk1-event-b.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Kiosk screen with 1 event</span><a class="headerlink" href="#kiosk1event" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Kiosk screen with 1 event</span><a class="headerlink" href="#kiosk1event" title="Permalink to this image">¶</a></p>
 </div>
 <p>If the event you need is on the screen, all you have to do it to place your tag on the reader,
 and you will be signed in.</p>
@@ -416,7 +416,7 @@ and you will be signed in.</p>
 the event, and the time you signed in.</p>
 <div class="myclass figure align-default" id="kiosk1event1att">
 <img alt="Signed in!" class="bg-primary mb-1" src="_images/kiosk-1event-1att-b.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Signed in!</span><a class="headerlink" href="#kiosk1event1att" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Signed in!</span><a class="headerlink" href="#kiosk1event1att" title="Permalink to this image">¶</a></p>
 </div>
 <p>When you’ve finished the activity, place your tag on the reader to sign-out. That’s it!</p>
 <div class="tip admonition" id="usetag">
@@ -437,7 +437,7 @@ clicking the <span class="badge badge-pill badge-primary"><strong>New Event+</st
 the kiosk screen, and then you will then see the following form:</p>
 <div class="myclass figure align-default" id="kiosk-newevent">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/kiosk-newevent-a.jpg"><img alt="Kiosk new event form" class="bg-primary mb-1" src="_images/kiosk-newevent-a.jpg" style="width: 2000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Kiosk new event form</span><a class="headerlink" href="#kiosk-newevent" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Kiosk new event form</span><a class="headerlink" href="#kiosk-newevent" title="Permalink to this image">¶</a></p>
 </div>
 <p>Once you’ve completed the details, click <span class="badge badge-pill badge-primary"><strong>Submit</strong></span> (top left),
 and the kiosk screen should then show the event you just created.</p>
@@ -458,7 +458,7 @@ what you are actually attending, and that’s essentially what an event gives yo
 in to an event by clicking on the sign-in icon in the event:</p>
 <div class="myclass figure align-default" id="signin">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/signin.jpg"><img alt="Kiosk sign-in" class="bg-primary mb-1" src="_images/signin.jpg" style="width: 50px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Kiosk sign-in icon</span><a class="headerlink" href="#signin" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Kiosk sign-in icon</span><a class="headerlink" href="#signin" title="Permalink to this image">¶</a></p>
 </div>
 <p>You can sign-out without a tag by clicking the <span class="badge badge-pill badge-success">Sign Out</span> button next to your name.</p>
 </div>
@@ -476,14 +476,15 @@ from signing in, so shouldn’t be left uncompleted on the Kiosk screen.</p>
 <span style="color:blue;">”Assist SES in Hornsby Area”</span>:</p>
 <div class="myclass figure align-default" id="event2edit">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/kiosk1event-edit.jpg"><img alt="Single event" class="bg-primary mb-1" src="_images/kiosk1event-edit.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Event to be updated</span><a class="headerlink" href="#event2edit" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Event to be updated</span><a class="headerlink" href="#event2edit" title="Permalink to this image">¶</a></p>
 </div>
-<p>The Kiosk will then display a form with all the details of the event. Everything except the date of the event can be
-changed/updated.</p>
-<p>Click <span class="badge badge-pill badge-primary"><strong>Submit</strong></span> when done, and the revised event will appear on the Kiosk.</p>
+<p>The Kiosk will then display a form with all the details of the event. Everything except the date of the
+event can be changed/updated.</p>
+<p>Click <span class="badge badge-pill badge-primary"><strong>Submit</strong></span> when done, and the revised event will
+appear on the Kiosk.</p>
 <div class="myclass figure align-default" id="event-update">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/event-edit-a.jpg"><img alt="Edit an event" class="bg-primary mb-1" src="_images/event-edit-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Update Event Form (click to enlarge)</span><a class="headerlink" href="#event-update" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Update Event Form (click to enlarge)</span><a class="headerlink" href="#event-update" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Notes:</strong></p>
 <ul class="simple">
@@ -531,25 +532,25 @@ The current time is 10:40, and 3 of the original 10 attendees have already signe
 current time.</p>
 <div class="myclass figure align-default" id="prexfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/prexfer-a.jpg"><img alt="Monthly Meeting" class="bg-primary mb-1" src="_images/prexfer-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Monthly Meeting</span><a class="headerlink" href="#prexfer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Monthly Meeting</span><a class="headerlink" href="#prexfer" title="Permalink to this image">¶</a></p>
 </div>
 <p>Open the meeting event by clicking on the
 title <span style="color:blue;">”March General Meeting”</span>, to get to the following form:</p>
 <div class="myclass figure align-default" id="updxfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/updxfer2.jpg"><img alt="Update Monthly Meeting" class="bg-primary mb-1" src="_images/updxfer2.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Update Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#updxfer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Update Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#updxfer" title="Permalink to this image">¶</a></p>
 </div>
 <p>Then click the <span class="badge badge-pill badge-info"><strong>Transfer</strong></span> button at the top right.</p>
 <p>In the Transfer form, fill in the details of the next event (Maintenance - Vehicle Checks).</p>
 <div class="myclass figure align-default" id="inxfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/inxfer-a.jpg"><img alt="Transfer from Monthly Meeting" class="bg-primary mb-1" src="_images/inxfer-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Transfer from Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#inxfer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Transfer from Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#inxfer" title="Permalink to this image">¶</a></p>
 </div>
 <p><span class="badge badge-pill badge-primary"><strong>Submit</strong></span> the Transfer form with the new details,
 then you will return to the main Kiosk screen:</p>
 <div class="myclass figure align-default" id="postxfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/postxfer.jpg"><img alt="Transfer Complete" class="bg-primary mb-1" src="_images/postxfer.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Transfer Complete (Click to enlarge)</span><a class="headerlink" href="#postxfer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Transfer Complete (Click to enlarge)</span><a class="headerlink" href="#postxfer" title="Permalink to this image">¶</a></p>
 </div>
 <p>All remaining members (who hadn’t already signed out from the Meeting event), have been transferred from the
 Meeting event to the new Maintenance event. They have been automatically signed out of the Meeting event, and
@@ -621,7 +622,7 @@ enter.</p></li>
 </ol>
 <div class="myclass figure align-default" id="flowchart-pic">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/tag-flowchart.jpg"><img alt="Tagging flowchart" class="bg-primary mb-1" src="_images/tag-flowchart.jpg" style="width: 1680px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Tagging flowchart</span><a class="headerlink" href="#flowchart-pic" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">Tagging flowchart</span><a class="headerlink" href="#flowchart-pic" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
