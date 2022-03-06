@@ -316,10 +316,10 @@ member who is OIC on the event.</p>
 <p>Apart from updating the event (as above), the following actions or triggers will update an event on the kiosk:</p>
 <ol class="arabic simple">
 <li><p>Signing in or signing out with a tag.</p></li>
-<li><p>Signing in using the icon on the top right of the event</p></li>
-<li><p>Signing out using the “Sign-Out” button</p></li>
+<li><p>Signing in using the <span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span> icon on the top right of the event</p></li>
+<li><p>Signing out using the <span class="badge badge-pill badge-success">Sign Out</span> button</p></li>
 <li><p>Clicking a member name to edit their attendance details.</p></li>
-<li><p>As the event becomes open as the time reaches 1 hour before start time.</p></li>
+<li><p>When the event becomes open as the time reaches 1 hour before start time.</p></li>
 <li><p>As the event closes when the end time is passed.</p></li>
 <li><p>Just after midnight, when the “slate is cleaned”, and events for the new day are shown.</p></li>
 </ol>
@@ -337,7 +337,7 @@ In the case of extended operations running over several days (eg. out of area), 
 using one event for each daily shift.</p>
 </div>
 <dl class="simple myst">
-<dt>Start time</dt><dd><p>The time, on the given date, when the activity begins. Members may sign in to an event from one hour
+<dt>Start time</dt><dd><p>The time, on the given Date, when the activity begins. Members may sign in to an event from one hour
 before the given Start time, up to the End time.</p>
 </dd>
 <dt>End time</dt><dd><p>The time when the activity is expected to finish.  In most cases this will be on the same day as the Start
@@ -413,8 +413,8 @@ to sign-in with a tag, and no sign-in icon is shown.</p>
 <dl class="simple myst" id="overnight">
 <dt>Overnight</dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
 that an event runs overnight by giving a finish time in the next day.</p>
-<p>The kiosk shows all events that start <strong>or end</strong> on the current day, so an overnight event will appear on the start
-day <strong>and</strong> on the end day. This allows crew to sign out when they return from a night shift.</p>
+<p>The kiosk shows all events that start <strong>or end</strong> on the current day, so an overnight event will appear on both
+the start day <strong>and</strong> on the end day. This allows crew to sign out when they return from a night shift.</p>
 </dd>
 </dl>
 <div class="warning admonition">
@@ -432,14 +432,17 @@ system.</p>
 <p>Members who are known to be attending this event should be added to the event by the OIC ahead
 of time. If they arrive at the station to travel to the event (eg. at a training centre), they can sign-in as normal.</p>
 <p>Any member not on the preset list will not be offered the option of signing in to external events when they tag in.
-External events normally run for a full day, and if the attendees are known up front, so there is no point asking
+External events normally run for a full day, and if the attendees are known up front, there is no point asking
 other members not on the list whether they want to attend such events.</p>
 </dd>
-<dt>Pager Calls</dt><dd><p>Pager Calls are detected by separate system which automagically creates a new event on the server
+<dt>Pager Calls</dt><dd><p>Pager Calls are detected by a separate system which automagically creates a new event on the server
 as soon as a callout is received for your brigade.</p>
 <p>The event should be available for members to sign-in to when they arrive at the station.</p>
 <p>The event title will be the same as the pager message. The format of this message will vary by district, but
 generally it includes the name of the paged brigade, the type of call, and the CAD number.</p>
+<p>The actual OIC is not known when the pager call arrives, so the system assigns the call out officer or the SDC
+as the OIC by default. This should be <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">updated</span></a> by the actual OIC when the crew returns
+to station.</p>
 </dd>
 </dl>
 <div class="myclass figure align-default" id="pager-callout">

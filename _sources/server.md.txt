@@ -17,7 +17,7 @@ The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you nee
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
-**brigade** in this url with the actual name of your brigade (eg. westleigh).
+<span style="color:blue;">brigade</span> in this url with the actual name of your brigade (eg. westleigh).
 
 You will be challenged to provide a username and password before you can login to the system.
 
@@ -27,7 +27,7 @@ The first time you login, your default password will be the same as your RFS mem
 change this password before proceeding.
 
 If you ever need to change your password (eg. if you forget it), you can change it by clicking on the *Lost password?* 
-link on the login page. The system will then email you a link, and then you can change your password.
+link on the login page. The system will then email you a link, and you can change your password.
 
 ```{admonition} We know who you are...
 :class: tip
@@ -36,8 +36,9 @@ log into the server, you use your own personal identifier (usually your email ad
 
 It also knows what you are, and can tell if you are an Officer (and what type), or not, based on records held in the system database.
 
-The system uses this knowledge to control access to certain functions. Officers can do a little bit more than ordinary members, 
-and specialist Officers, eg. Training, have access to specific areas.
+The system uses this knowledge to control access to certain functions. Officers can do a little bit more than 
+ordinary members (eg. they can create new events), and specialist Officers, eg. Training, have access 
+to specific areas.
 ```
 
 ## Landing/home page
@@ -68,8 +69,8 @@ Upcoming events
   their intention to attend these events in the {ref}`Brigade Calendar<calendar>`.
   
 Shortcuts 
-: The **{ref}`At Station<at-stat>`** shortcut shows a read-only replica of the Kiosk screen, and you can also 
-  access the **{ref}`Brigade Calendar<calendar>`**. Both of these are also available under the Member menu 
+: The {ref}`At Station<at-stat>` shortcut shows a read-only replica of the Kiosk screen, and you can also 
+  access the {ref}`Brigade Calendar<calendar>`. Both of these are also available under the Member menu 
   in the Navigation bar.
 
 
@@ -146,8 +147,9 @@ Member Activity (top section) (click to enlarge)
 The Season (top right, above) is normally the current season, but records for previous years can be viewed 
 by selecting an earlier season if historical data is available.
 
-The numbers in the table can represent either Hours - the total time contributed by the member, or Events - the number 
-of activities attended, and can switched with the control in the top right of the page.
+The numbers in the table can represent either **Hours** - the total time contributed by the member, 
+or **Events** - the number of activities attended, and these can be switched using the control in the top 
+right of the page.
 
 #### Sorting
 
@@ -183,8 +185,9 @@ these criteria specify a minimum number of hours in a season/year (or attendance
 that the member must complete to be eligible to vote.
 
 The Member Activity table uses these criteria ({ref}`set by the administrator<set-vote-crit>` on behalf of the Executive), 
-to identify members who have met the criteria and those who have not. Members coloured yellow, are just below 
-the criteria, those coloured red are well below the criteria, and the others are above.
+to identify members who have met the criteria and those who have not. Members 
+coloured yellow, are just below 
+the criteria, those coloured red, are well below the criteria, and the others are above.
 
 :::{figure-md} act-mid
 :class: myclass
@@ -211,7 +214,7 @@ and further down, red.
 (at-stat)=
 ### At Station
 
-The At Station item shows a replica of the Kiosk, including all events and members attending. 
+The **At Station** item shows a replica of the Kiosk, including all events and members attending. 
 
 :::{figure-md} dashboard
 :class: myclass
@@ -241,8 +244,10 @@ Calendar Month View (click to enlarge)
 
 **Notes**:
 
-* The calendar view can be adjusted to show months, weeks, or days as required. Move forward or backward in time 
-  using the arrows in the top right.
+* The calendar view can be adjusted to show a <span class="badge badge-pill badge-primary">**day**</span>, 
+  <span class="badge badge-pill badge-primary">**week**</span>, 
+  or <span class="badge badge-pill badge-primary">**month**</span>,
+  as required. Move forward or backward in time using the arrows in the top right.
 
 * Events are {ref}`colour coded<colour-coding>` by Activity type in the same way as on the Kiosk.
 
@@ -294,15 +299,18 @@ This allows Officers to get expected numbers for their planned activities, and t
 
 In the Week view shown above:
 
-* Each event from today onwards includes a symbol in the top right of the event. If the symbol shows **+**, you 
-  are not on the list of prospective attendees, but if you click the symbol this will indicate that you intend
+* Each event from today onwards includes a symbol in the top right of the event. If the symbol shows
+  <span class="fas fa-user-plus" style="color:brown; font-size:20px;"></span>, you 
+  are not on the list of prospective attendees, but if you click this symbol it will indicate that you intend
   to join the activity, and your name will be added to the list. 
   
-* If the symbol shows as **x**, you are already on the list of prospective attendees, but if you change your mind, 
-  click the symbol and you will be removed (the symbol will change back to **+**)
+* If the symbol shows as <span class="fas fa-user-times" style="color:brown; font-size:20px;"></span>, 
+  you are already on the list of prospective attendees, but if you change your mind, click the symbol and you 
+  will be removed (the symbol will change back 
+  to <span class="fas fa-user-plus" style="color:brown; font-size:20px;"></span>)
   
-* Past events show a tick mark in the top right if you have attended them. Past events can not be changed on 
-  the calendar.
+* Past events show a tick mark <span class="fas fa-user-check" style="color:brown; font-size:20px;"></span> in 
+  the top right if you have attended them. Past events can not be changed on the calendar.
   
 You can always click in the centre of the event itself to {ref}`see all the details<ev-read-view>`, 
 and confirm that you are on the list.
@@ -401,8 +409,6 @@ It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 ```{margin} Restricted Access
 Only current Office bearers, either Field Officers or Administrative Officers, have access to this Menu.
 ```
-The Officers Menu is only available to members who currently hold an Officer position within the brigade, 
-either as a Field Officer, or in an Administration role.
 
 ### Add New Event
 
@@ -424,8 +430,8 @@ been involved with.
 
 ### Officer Calendar
 
-This is just a filtered version of the Brigade Event calendar, showing only events of where the OIC is the member who 
-is logged in. It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
+This is just a filtered version of the Brigade Event calendar, showing only events where the 
+OIC is the member who is logged in. It operates in exactly the same way as {ref}`Brigade Event calendar<calendar>`
 
 ### COVID-19 Attendance
 
@@ -444,7 +450,7 @@ probably be restricted further to genuine system administrators in the near futu
 ## Vehicles Menu
 
 An optional feature of the system is to record and maintain records of vehicle movements. It is intended to replace
-the logbook records used in most RFS vehicles.
+the paper logbook records used in most RFS vehicles.
 
 As well as recording details of vehicles movements, this feature also provides reports and summaries of vehicles use, 
 as well as driving records for members.

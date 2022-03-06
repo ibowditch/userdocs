@@ -48,10 +48,10 @@ If you aren't the OIC, you can still see the details of the event, but won't be 
 Apart from updating the event (as above), the following actions or triggers will update an event on the kiosk:
 
 1. Signing in or signing out with a tag.
-2. Signing in using the icon on the top right of the event
-3. Signing out using the "Sign-Out" button
+2. Signing in using the <span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span> icon on the top right of the event
+3. Signing out using the <span class="badge badge-pill badge-success">Sign Out</span> button
 4. Clicking a member name to edit their attendance details.
-5. As the event becomes open as the time reaches 1 hour before start time.
+5. When the event becomes open as the time reaches 1 hour before start time.
 6. As the event closes when the end time is passed.
 7. Just after midnight, when the "slate is cleaned", and events for the new day are shown.
 
@@ -69,7 +69,7 @@ using one event for each daily shift.
 ```
 
 Start time 
-: The time, on the given date, when the activity begins. Members may sign in to an event from one hour
+: The time, on the given Date, when the activity begins. Members may sign in to an event from one hour
   before the given Start time, up to the End time.
 
 End time 
@@ -158,8 +158,8 @@ Overnight
 :  Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
    that an event runs overnight by giving a finish time in the next day. 
 
-   The kiosk shows all events that start **or end** on the current day, so an overnight event will appear on the start 
-   day **and** on the end day. This allows crew to sign out when they return from a night shift.
+   The kiosk shows all events that start **or end** on the current day, so an overnight event will appear on both 
+   the start day **and** on the end day. This allows crew to sign out when they return from a night shift.
 
 :::{admonition} **Always set the end time for overnight events**
 :class: warning
@@ -183,18 +183,22 @@ External
    of time. If they arrive at the station to travel to the event (eg. at a training centre), they can sign-in as normal.
    
    Any member not on the preset list will not be offered the option of signing in to external events when they tag in. 
-   External events normally run for a full day, and if the attendees are known up front, so there is no point asking 
+   External events normally run for a full day, and if the attendees are known up front, there is no point asking 
    other members not on the list whether they want to attend such events.
 
 Pager Calls
       
-:  Pager Calls are detected by separate system which automagically creates a new event on the server 
+:  Pager Calls are detected by a separate system which automagically creates a new event on the server 
    as soon as a callout is received for your brigade.
 
    The event should be available for members to sign-in to when they arrive at the station.
 
    The event title will be the same as the pager message. The format of this message will vary by district, but 
    generally it includes the name of the paged brigade, the type of call, and the CAD number. 
+
+   The actual OIC is not known when the pager call arrives, so the system assigns the call out officer or the SDC
+   as the OIC by default. This should be {ref}`updated<change-event>` by the actual OIC when the crew returns 
+   to station.
 
 :::{figure-md} pager-callout
 :class: myclass

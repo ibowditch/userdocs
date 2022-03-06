@@ -26,8 +26,8 @@ of events shown on the kiosk screen.
 The Kiosk is designed to make it as quick and easy as possible for Members to sign-in and 
 sign-out of activities at the station.
 
-In general, the OIC who has organised an activity should {ref}`set up an event in advance<cal-add-event>`, and when you get to the station, 
-you will see something like this on the kiosk screen:
+In general, the OIC who has organised an activity should {ref}`set up an event in advance<cal-add-event>`, 
+and when you get to the station, you will see something like this on the kiosk screen:
 
 :::{figure-md} kiosk1event
 :class: myclass
@@ -71,7 +71,6 @@ records. Using your tag leaves little doubt that it was you who signed-in, so it
 
 The system records when a tag is used, and if your brigade is strict about using tags, 
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
-
 :::
 
 
@@ -92,7 +91,8 @@ the kiosk screen, and then you will then see the following form:
 Kiosk new event form
 :::
 
-Once you've completed the details, click <span class="badge badge-pill badge-primary">**Submit**</span>, and the kiosk screen should then show the event you just created.
+Once you've completed the details, click <span class="badge badge-pill badge-primary">**Submit**</span> (top left), 
+and the kiosk screen should then show the event you just created.
 
 You can now {ref}`sign-in by placing your tag on the reader<easyway>`.
 
@@ -101,7 +101,7 @@ You can now {ref}`sign-in by placing your tag on the reader<easyway>`.
 
 As with the old Attendance Book, you would normally sign-in to one activity, described in the heading of the 
 page (OIC, activity type, date, etc.). If you attended another activity later in the day, you would sign-out of the 
-first one and go to the next page to sign-in to the next activity.
+first one and go to the next page and sign-in to the next activity.
 
 In the new system, signing in without an event would be like signing your name in the middle of a blank page in the 
 old Attendance Book. You need to fill in the details at the top of the page to give the context, and show 
@@ -140,7 +140,8 @@ from signing in, so shouldn't be left uncompleted on the Kiosk screen.
 (change-event)=
 ### Changing Events
 
-Any event on the Kiosk screen can be updated by clicking on the title, in this case: "Assist SES in Hornsby Area":
+Any event on the Kiosk screen can be updated by clicking on the title, in this case: 
+<span style="color:blue;">"Assist SES in Hornsby Area"</span>:
 
 :::{figure-md} event2edit
 :class: myclass
@@ -172,11 +173,13 @@ Update Event Form (click to enlarge)
 
 * Details such as "K1B driver" can be added for each member to reflect roles allocated by the Crew Leader.
 
-* Member qualifications can be reviewed using the {ref}`TCard option<tcard>` (top right)
+* Member qualifications can be reviewed using the <span class="badge badge-pill badge-warning">**T-Card**</span> 
+  {ref}`option<tcard>` (top right)
   
 * Vehicles used in the activity can be marked (use the ctrl key to select multiple vehicles) as allocated, which is 
   useful in determining {ref}`vehicle bookings<vehbook>`.
 
+(delatt)=
 * Attendees can be removed if necessary using the *Delete* checkbox to the right of their name. This is useful if someone 
   signed in to the wrong event by mistake. Use with caution though, as genuine attendance records should not be deleted.
 
@@ -193,13 +196,16 @@ Click <span class="badge badge-pill badge-primary">**Submit**</span> to save the
 If you sign-out by accident, you can delete the out time using the same method, and you will no 
 longer be signed out.
 
+If you sign-in by accident, you can delete your attendance using the {ref}`delete attendance option<delatt>` 
+in the event form.
+
 
 ### Deleting Events
 
 If a new event is created by mistake, it can be deleted using the trash 
 icon <span class="fa fa-trash fa-lg" style="color:blue;"></span> in the event. 
 
-You may not delete an event which already has members listed as attending (the trash icon will not shown), to avoid 
+You may not delete an event which already has members listed as attending (the trash icon will not be shown), to avoid 
 accidental loss of attendance records.
 
 ### Transferring Members to a New Event
@@ -223,7 +229,8 @@ current time.
 Monthly Meeting
 :::
 
-Open the meeting event by clicking on the title "March General Meeting", to get to the following form:
+Open the meeting event by clicking on the 
+title <span style="color:blue;">"March General Meeting"</span>, to get to the following form:
 
 :::{figure-md} updxfer
 :class: myclass
@@ -303,7 +310,7 @@ to join. Just click on the appropriate event, and you will be signed in to that.
 ### Resetting the Kiosk
 
 If, for any reason, the Kiosk becomes unresponsive, or is not working as intended, it can be restarted by using the
-*three finger salute* - ctrl-alt-delete, then choose Reboot. This will restart the Kiosk safely, and it should be
+*three finger salute* - ctrl-alt-delete - then choose Reboot. This will restart the Kiosk safely, and it should be
 back up and running in a minute or so.
 
 :::{admonition} Do not turn the power off and then on again to reset the Kiosk
