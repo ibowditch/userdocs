@@ -378,8 +378,6 @@ either to PDF or to paper by your browser as required, and then sent on to HQ.
 Only the Training Officer and their assistants have access to this Menu.
 ```
 
-The Training menu is normally only available to the Training Officer and their assistants. 
-
 ### Courses Available
 
 This shows a list of Courses available in the brigade calendar.

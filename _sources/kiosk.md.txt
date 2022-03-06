@@ -1,15 +1,17 @@
 # The Kiosk
 
-The Kiosk is a small computer and screen, with a tag reader attached, that replaces the old Attendance Book, 
-and records attendance in electronic form. It is normally located at the front desk of the station. 
+The Kiosk is a small computer (a Raspberry PI) and screen, with a tag reader attached, that 
+replaces the old Attendance Book, and records attendance in electronic form. It is normally located 
+at the front desk of the station. 
+:::{figure-md} kiosk-parts
+:class: margin
 
+<img src="assets/images/kiosk-parts.jpg" alt="Kiosk parts" width="1000px" class="bg-primary mb-1">
+
+NFC tag, reader, and PI
+:::
 It is always-on and available 24h every day. It requires an internet connection (Wi-Fi or wired) 
 to function.
-
-```{margin} Events
-Events are central to the design of the system, and come in many shapes and varieties. 
-For all the gory details, see the dedicated section on [Events](events)
-```
 
 The Kiosk screen shows [events](events "described in a later section") that start **or end** on the current day, 
 and is automatically updated every night, just after midnight, to show events for the new day.
@@ -17,7 +19,6 @@ and is automatically updated every night, just after midnight, to show events fo
 NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out 
 of events shown on the kiosk screen.
  
-
 ## Basic Operations
 
 (easyway)=
@@ -47,8 +48,6 @@ If the screen is blank or no events are available, jump to {ref}`blank_kiosk`
 You should hear a beep as the tag is registered, and the screen will be updated as follows, with your name in 
 the event, and the time you signed in.
 
-
-
 :::{figure-md} kiosk1event1att
 :class: myclass
 
@@ -56,7 +55,6 @@ the event, and the time you signed in.
 
 Signed in!
 :::
-
 When you've finished the activity, place your tag on the reader to sign-out. That's it!
 
 :::{admonition} Why you should always sign-in with your tag
@@ -151,10 +149,11 @@ Any event on the Kiosk screen can be updated by clicking on the title, in this c
 Event to be updated
 :::
 
-The Kiosk will then display a form with all the details of the event. Everything except the date of the event can be
-changed/updated.
+The Kiosk will then display a form with all the details of the event. Everything except the date of the 
+event can be changed/updated.
 
-Click <span class="badge badge-pill badge-primary">**Submit**</span> when done, and the revised event will appear on the Kiosk.
+Click <span class="badge badge-pill badge-primary">**Submit**</span> when done, and the revised event will 
+appear on the Kiosk.
 
 
 :::{figure-md} event-update
