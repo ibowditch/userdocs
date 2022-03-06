@@ -199,7 +199,8 @@ throughout the year, rather than having all members shown as well below the crit
 the table calculates progress on a pro-rata basis.
 
 Details of the pro-rata calculation can be seen by clicking the 
-Key button (top left) - see {ref}`Member Activity (top section)<act-top>`
+<span class="badge badge-pill badge-primary">**Key**</span> button (top left) - 
+see {ref}`Member Activity (top section)<act-top>`
 
 In the {ref}`example above<act-mid>`, we are 306 days through the year (83.8%), and the annual 
 quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
@@ -268,7 +269,7 @@ this event, you would be able to update the details as shown earlier {ref}`for t
 
 #### Week View
 
-Click the week button at the top of the page to go to the Week view:
+Click the <span class="badge badge-pill badge-primary">**week**</span> button at the top of the page to go to the Week view:
 
 :::{figure-md} call-week-a
 :class: myclass

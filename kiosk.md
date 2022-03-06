@@ -81,7 +81,8 @@ your administrator may remind you to use your tag if they see you are repeatedly
 If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in immediately. 
 
 Never fear - you can still sign-in, but first you'll need to create a new event on behalf of the OIC. You do this by 
-clicking the **New Event+** button at the top right of the kiosk screen, and then you will then see the following form:
+clicking the <span class="badge badge-pill badge-primary">**New Event+**</span> button at the top right of 
+the kiosk screen, and then you will then see the following form:
 
 :::{figure-md} kiosk-newevent
 :class: myclass
@@ -91,7 +92,7 @@ clicking the **New Event+** button at the top right of the kiosk screen, and the
 Kiosk new event form
 :::
 
-Once you've completed the details, click Submit, and the kiosk screen should then show the event you just created.
+Once you've completed the details, click <span class="badge badge-pill badge-primary">**Submit**</span>, and the kiosk screen should then show the event you just created.
 
 You can now {ref}`sign-in by placing your tag on the reader<easyway>`.
 
@@ -127,7 +128,7 @@ Kiosk sign-in icon
 :::
 
 
-You can sign-out without a tag by clicking the <span class="badge badge-pill badge-success">Sign Out</span>  button next to your name.
+You can sign-out without a tag by clicking the <span class="badge badge-pill badge-success">Sign Out</span> button next to your name.
 
 ## Advanced Operations
 
@@ -152,7 +153,7 @@ Event to be updated
 The Kiosk will then display a form with all the details of the event. Everything except the date of the event can be
 changed/updated.
 
-Click Submit when done, and the revised event will appear on the Kiosk.
+Click <span class="badge badge-pill badge-primary">**Submit**</span> when done, and the revised event will appear on the Kiosk.
 
 
 :::{figure-md} event-update
@@ -187,7 +188,7 @@ If you forgot to sign-in when you arrived at the station, and go back later to s
 time by *clicking on your name* in the event.
 
 You will then have the option of changing the sign-in time or other details of your attendance at that event. 
-Click Submit to save the new details.
+Click <span class="badge badge-pill badge-primary">**Submit**</span> to save the new details.
 
 If you sign-out by accident, you can delete the out time using the same method, and you will no 
 longer be signed out.
@@ -195,16 +196,17 @@ longer be signed out.
 
 ### Deleting Events
 
-If a new event is created by mistake, it can be deleted using the trash icon in the event. 
+If a new event is created by mistake, it can be deleted using the trash 
+icon <span class="fa fa-trash fa-lg" style="color:blue;"></span> in the event. 
 
 You may not delete an event which already has members listed as attending (the trash icon will not shown), to avoid 
 accidental loss of attendance records.
 
 ### Transferring Members to a New Event
 
-The **Transfer** button, available in the form used to change events, allows members to be transferred from 
-one event to another following event. This saves the fuss of everyone signing out and then signing in immediately 
-to a new event.
+The <span class="badge badge-pill badge-info">**Transfer**</span> button, available in the form used to 
+change events, allows members to be transferred from one event to another following event. 
+This saves the fuss of everyone signing out and then signing in immediately to a new event.
 
 In the following example, the brigade had a general meeting in the morning. The meeting started at 9:30 and 
 finished at 10:30, earlier than the planned finish time of 11:00. 
@@ -231,7 +233,7 @@ Open the meeting event by clicking on the title "March General Meeting", to get 
 Update Monthly Meeting (Click to enlarge)
 :::
 
-Then click the Transfer button at the top right. 
+Then click the <span class="badge badge-pill badge-info">**Transfer**</span> button at the top right. 
 
 In the Transfer form, fill in the details of the next event (Maintenance - Vehicle Checks).
 
@@ -243,7 +245,8 @@ In the Transfer form, fill in the details of the next event (Maintenance - Vehic
 Transfer from Monthly Meeting (Click to enlarge)
 :::
 
-Submit the Transfer form with the new details, then you will return to the main Kiosk screen:
+<span class="badge badge-pill badge-primary">**Submit**</span> the Transfer form with the new details, 
+then you will return to the main Kiosk screen:
 
 :::{figure-md} postxfer
 :class: myclass
@@ -268,7 +271,8 @@ new Maintenance event. They can sign-in to the new event if they hadn't really l
 (tcard)=
 ### T-Cards
 
-In the top right of the {ref}`event form<event-update>` (top right) you will see a T-Card button. 
+In the top right of the {ref}`event form<event-update>` (top right) you will see a 
+<span class="badge badge-pill badge-warning">**T-Card**</span>  button. 
 This is used to retrieve most of the information needed to complete a T-Card. 
 It's not really intended for use on the Kiosk, but an OIC can access this 
 information in the front seat of a truck using their phone, so it might be handy then.
