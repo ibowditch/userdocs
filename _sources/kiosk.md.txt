@@ -120,11 +120,14 @@ in to an event by clicking on the sign-in icon in the event:
 
 <img src="assets/images/signin.jpg" alt="Kiosk sign-in" width="50px" class="bg-primary mb-1">
 
+[comment]: <> (<span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span>)
+
+
 Kiosk sign-in icon
 :::
 
 
-You can sign-out without a tag by clicking the green **Sign-out**  button next to your name.
+You can sign-out without a tag by clicking the <span class="badge badge-pill badge-success">Sign Out</span>  button next to your name.
 
 ## Advanced Operations
 

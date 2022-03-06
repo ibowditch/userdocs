@@ -58,8 +58,9 @@ Navigation bar
 Membership Summary
 : Shows the total number of active members broken down by their skill sets. 
   
-  It also shows, in red, the number of members currently on duty, ie. currently signed in at the station 
-  (but not yet signed out). These figures are updated live, whenever anyone signs in or out at the station.
+  It also shows, in <span style="color:red;">**red**</span>, the number of members currently on duty, 
+  ie. currently signed in at the station (but not yet signed out). These figures are updated live, 
+  whenever anyone signs in or out at the station.
 
 Upcoming events
 : Shows details of future events in the calendar, including the number of members who have indicated 
