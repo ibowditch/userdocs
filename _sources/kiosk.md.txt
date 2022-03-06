@@ -184,10 +184,13 @@ Update Event Form (click to enlarge)
 ### Changing Attendance
 
 If you forgot to sign-in when you arrived at the station, and go back later to sign-in, you can revise the start 
-time by clicking on your name in the event. 
+time by *clicking on your name* in the event.
 
 You will then have the option of changing the sign-in time or other details of your attendance at that event. 
 Click Submit to save the new details.
+
+If you sign-out by accident, you can delete the out time using the same method, and you will no 
+longer be signed out.
 
 
 ### Deleting Events
