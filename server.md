@@ -291,6 +291,13 @@ If you are logged in as an Officer, you can create a new event in the calendar b
 times your activity will run (shown in blue above). You will then be asked to provide the details of the event. You can 
 only create new events in the future like this, to protect the integrity of the attendance record.
 
+```{admonition} Creating Events in Advance
+:class: tip
+Events {ref}`need to be created anyway<need-event>`, so that members can sign in on the day. It usually 
+makes sense for the OIC to create events in advance so that members can see what is coming up (in the calendar), 
+and also to avoid putting the onus of creating a new event on the first member to turn up on the day.
+```
+
 #### Plan to Attend
 
 Members can indicate their intention to attend future events using the calendar. 

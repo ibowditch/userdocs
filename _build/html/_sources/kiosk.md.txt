@@ -94,7 +94,7 @@ and the kiosk screen should then show the event you just created.
 
 You can now {ref}`sign-in by placing your tag on the reader<easyway>`.
 
-
+(need-event)=
 :::{topic} Why do I sign-in to an event rather than just sign-in to the station?
 
 As with the old Attendance Book, you would normally sign-in to one activity, described in the heading of the 
