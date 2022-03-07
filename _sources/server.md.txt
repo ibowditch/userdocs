@@ -295,7 +295,8 @@ only create new events in the future like this, to protect the integrity of the 
 
 Members can indicate their intention to attend future events using the calendar. 
 
-This allows Officers to get expected numbers for their planned activities, and to see who is interested in attending.
+This allows Officers to get expected numbers for their planned activities, and to see who is interested 
+in attending, without needing to exchange a lot of emails.
 
 In the Week view shown above:
 
