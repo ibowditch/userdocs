@@ -32,7 +32,7 @@ link on the login page. The system will then email you a link, and you can chang
 ```{admonition} We know who you are...
 :class: tip
 Unlike the Kiosk, which is a shared device, and the system doesn't know who is operating it at any given moment, when you 
-log into the server, you use your own personal identifier (usually your email address), so the system knows who you are.
+log into the server you use your own personal identifier (usually your email address), so the system knows who you are.
 
 It also knows what you are, and can tell if you are an Officer (and what type), or not, based on records held in the system database.
 
