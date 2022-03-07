@@ -293,10 +293,9 @@ only create new events in the future like this, to protect the integrity of the 
 
 ```{admonition} Creating Events in Advance
 :class: tip
-Events need to be created anyway, so that members can sign in on the day. So it usually makes sense 
-for the OIC to create events in advance so that members can see what is coming up (in the calendar), 
-and also to avoid putting the onus of creating a new event on the first member to turn up on the day, 
-as they may not know all the correct details.
+Events {ref}`need to be created anyway<need-event>`, so that members can sign in on the day. It usually 
+makes sense for the OIC to create events in advance so that members can see what is coming up (in the calendar), 
+and also to avoid putting the onus of creating a new event on the first member to turn up on the day.
 ```
 
 #### Plan to Attend
