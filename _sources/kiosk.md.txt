@@ -38,12 +38,16 @@ and when you get to the station, you will see something like this on the kiosk s
 Kiosk screen with 1 event
 :::
 
-If the event you need is on the screen, all you have to do it to place your tag on the reader, 
-and you will be signed in. 
+If the event you need is on the screen, all you have to do is to hold your tag near the reader, 
+and you will be signed in. (If the screen is blank or no events are available, jump to {ref}`blank_kiosk`)
 
-```{margin} Blank screen?
-If the screen is blank or no events are available, jump to {ref}`blank_kiosk`
-```
+:::{figure-md} tagging
+:class: margin
+
+<img src="assets/images/tagging2.jpg" alt="tagging" width="1000px" class="bg-primary mb-1">
+
+Hold your tag close to the centre of the reader for 1 second
+:::
 
 You should hear a beep as the tag is registered, and the screen will be updated as follows, with your name in 
 the event, and the time you signed in.
@@ -55,7 +59,7 @@ the event, and the time you signed in.
 
 Signed in!
 :::
-When you've finished the activity, place your tag on the reader to sign-out. That's it!
+When you've finished the activity, use your tag again to sign-out. That's it!
 
 :::{admonition} Why you should always sign-in with your tag
 :name: usetag
