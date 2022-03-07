@@ -1,6 +1,6 @@
 # The Kiosk
 
-The Kiosk is a small computer (a Raspberry PI) and screen, with a tag reader attached, that 
+The Kiosk is a small computer (a Raspberry PI), with a screen and a tag reader attached, that 
 replaces the old Attendance Book, and records attendance in electronic form. It is normally located 
 at the front desk of the station. 
 :::{figure-md} kiosk-parts
