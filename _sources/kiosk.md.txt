@@ -65,7 +65,7 @@ When you've finished the activity, use your tag again to sign-out. That's it!
 :name: usetag
 :class: tip
 
-There is a mechanism which allows {ref}`you to sign in without a tag<notag>` but this should only be used in 
+There is a mechanism which allows {ref}`you to sign-in without a tag<notag>` but this should only be used in 
 exceptional cases, as the Kiosk is a shared computer, and doesn't know who is at the keyboard. 
 
 Your tag is unique to you, and essentially replaces your signature in the electronic attendance 
@@ -79,7 +79,8 @@ your administrator may remind you to use your tag if they see you are repeatedly
 (blank_kiosk)=
 ### What if the Kiosk Screen is Blank?
 
-If the OIC hasn't set up an event in advance, no event is available, and you won't be able to sign-in immediately. 
+If the OIC hasn't {ref}`set up an event<cal-add-event>` in advance, no event is available, and you won't be 
+able to sign-in immediately. 
 
 Never fear - you can still sign-in, but first you'll need to create a new event on behalf of the OIC. You do this by 
 clicking the <span class="badge badge-pill badge-primary">**New Event+**</span> button at the top right of 
@@ -99,7 +100,7 @@ and the kiosk screen should then show the event you just created.
 You can now {ref}`sign-in using your tag<easyway>`.
 
 (need-event)=
-:::{topic} Why do I sign-in to an event rather than just sign-in to the station?
+:::{topic} Why do I need to create an event rather than just sign-in to the station?
 
 As with the old Attendance Book, you would normally sign-in to one activity, described in the heading of the 
 page (OIC, activity type, date, etc.). If you attended another activity later in the day, you would sign-out of the 
@@ -115,8 +116,8 @@ what you are actually attending, and that's essentially what an event gives you.
 (notag)=
 ### Signing in Without a Tag
 
-You really should {ref}`use your tag<usetag>`, but if you don't have it you can still sign 
-in to an event by clicking on the sign-in icon in the event: 
+You really should {ref}`use your tag<usetag>`, but if you don't have it you can still sign-in to 
+an event by clicking on the sign-in icon in the event: 
 
 :::{figure-md} signin
 :class: myclass

@@ -81,7 +81,6 @@ End time
 On the Kiosk, anyone can [change the details of any event](change-event). However, on the server, only the OIC is 
 allowed to change their own event.
 ```
-
 Officer in Charge (OIC) 
 : Only members who hold a current Officer position may be assigned as OIC. This includes 
   Field Officers and Administrative positions. The OIC will normally attend the event, but they don't have to.
@@ -103,14 +102,14 @@ event can be deleted.
 
 Attendees/Crew
 : As members sign-in to an event, they are added to the list of attendees, along with the times they 
-  joined and left the activity. Any active member can sign in to an event, and the number of attendees is only 
+  joined and left the activity. Any active member can sign-in to an event, and the number of attendees is only 
   limited by the number of active members in the brigade. 
  
 ```{admonition} Members can only attend an event **once**
 :class: tip
 When a member signs in to an event, they can sign-out later, but won't be able 
 to sign-in again to the same event. This allows members to use their tag to sign-in first, tag again to sign-out, then 
-tag again to sign into another event. If necessary, a long-running event should be broken down into smaller parts 
+tag again to sign-in to another event. If necessary, a long-running event should be broken down into smaller parts 
 if there are breaks or other activities in between.
 ```
 
@@ -186,6 +185,7 @@ External
    External events normally run for a full day, and if the attendees are known up front, there is no point asking 
    other members not on the list whether they want to attend such events.
 
+(pagercalls)=
 Pager Calls
       
 :  Pager Calls are detected by a separate system which automagically creates a new event on the server 
