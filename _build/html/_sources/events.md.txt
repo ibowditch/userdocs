@@ -40,10 +40,8 @@ Details of an event {ref}`can be updated on the kiosk<change-event>`.
 
 Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the 
 {ref}`Brigade Calendar<calendar>`, Upcoming Events, etc. but only if you are logged in as the 
-member who is OIC on the event. 
-
-If you aren't the OIC, you can still see the details of the event, but won't be able to change anything.
-
+member who is OIC on the event. If you aren't the OIC, you can still see the details of the event, 
+but won't be able to change anything.
 
 Apart from updating the event (as above), the following actions or triggers will update an event on the kiosk:
 

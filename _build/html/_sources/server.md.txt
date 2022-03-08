@@ -296,10 +296,10 @@ only create new events in the future like this, to protect the integrity of the 
 As a courtesy to members, Officers should create events in advance, so that members don't have to do it
 for them if they arrive at the station before the OIC. 
 
-Apart from {ref}`pager callouts<pagercalls>`, most brigade activities such as Training, Meetings, Maintenance etc. 
-are planned in advance, and events {ref}`need to be created for them anyway<need-event>`. It's better not to leave 
-this to the very last moment (at the kiosk), but instead set them up in advance so members can see what activities are 
-coming up in the brigade calendar. 
+Apart from {ref}`pager callouts<pagercalls>`, most brigade activities such as Strike Teams, Training, Meetings, 
+Maintenance etc. are planned in advance, and events {ref}`need to be created for them anyway<need-event>`. 
+It's better not to leave this to the very last moment (at the kiosk), but instead set them up in advance so members 
+can see what activities are coming up in the brigade calendar. 
 ```
 
 #### Plan to Attend
