@@ -74,6 +74,43 @@ Shortcuts
   in the Navigation bar.
 
 
+
+## Home Menu
+
+### Executive Team
+
+This shows a list of current Officers, both Field  and Administrative.
+
+### Create Problem Report
+
+This allows you to create a new problem ticket if you see any problems with the system. You can also use it to provide 
+feedback or suggestions (these will be much appreciated).
+
+Please provide as much detail as possible to assist with investigations: 
+* Where were you in the system (add a copy of the url if available)
+* What were you doing
+* What happened
+* Etc…
+
+You can attach a screenshot if you've been on the sign-in server. This form also works ok on a phone, so if you have 
+trouble on the kiosk, take a photo of the screen and attach that with your ticket.
+
+Please set the priority to an appropriate level. If you decide it's no longer needed, you can withdraw it.
+
+I will investigate and respond to any problems as soon as I can.
+
+### List Problem Reports
+
+This shows a list of all tickets raised by your brigade.
+
+You can click on the title to see more details. When you do, you can update the ticket if you raised it, otherwise
+you can see the details, but can't change them.
+
+### User Guide
+
+Points to this User Guide. You'll need to find your own way back, as it's an external site.
+
+
 (menu)=
 ## Member Menu
 

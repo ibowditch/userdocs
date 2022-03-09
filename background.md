@@ -24,20 +24,22 @@ we do with these records once they are collected?
 (legalreqs)=
 ### Legal Requirements
 
-The Executive at all RFS brigades are required, 
-by [State Law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), to ensure that all members and visitors 
-record their attendance when participating in brigade activities.
+All RFS brigades are required, 
+by [State Law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), 
+to ensure that all members and visitors record their attendance when participating in brigade activities.
 
 Traditionally, attendance was recorded in an Attendance Book, normally placed at the 
-front of the station. Officers completed the details of the activity at the top of each page, 
+front of the station. Brigade Officers completed the details of the activity at the top of each page, 
 then members who attended recorded their details, including arrival and departure times and 
 their signature.
 
 Attendance records are [State Records](https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17), and must be 
 [kept for at least 25 years](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf). 
-They are occasionally required during Coronial or other enquiries, and as such they 
-must be an accurate record of who attended and for what purpose. The Officer In Charge (OIC) of 
-each activity is required to {ref}`check and sign-off<off-signoff>` on attendance records for activities that they 
+They are occasionally required during Coronial or other enquiries, and may also be used to support claims under
+Workers Compensation legislation, among other things.
+
+As such, they must be an accurate record of who attended RFS activites and for what purpose. The Officer In Charge (OIC) 
+of each activity is required to {ref}`check and sign-off<off-signoff>` on attendance records for activities that they 
 organise.
 
 ### System Requirements
@@ -57,7 +59,7 @@ As well as meeting the Legal Requirements, this is what I was aiming to do with 
 
 1. Futher reduce admin effort by automatically producing useful reports based on attendance data.
 
-1. Provide a low cost solution, using off-the-shelf hardware and a small annual subscription fee.
+1. Provide a low cost solution, using off-the-shelf hardware and a modest annual subscription fee.
 
 1. Provide high availability, reliability, and data security, including regular automatic backups.
 
