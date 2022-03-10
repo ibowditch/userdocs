@@ -180,6 +180,11 @@ This web site describes following aspects of the electronic sign-in system:
   > review of the features available on the cloud server, which can be accessed by officers and members of the brigade 
   > from any device (login required).
 
+5. [Administration Procedures](administration)
+
+  > A brief overview of the main procedures used by system administrators to set up and run the system.
+
+
 5. [Technology](technology)
 
   > A brief overview of the main technologies - both hardware and software - used in the system.

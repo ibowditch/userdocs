@@ -249,38 +249,43 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#database">
+     6.3.6. Database
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#admin">
-     6.3.6. Admin
+     6.3.7. Admin
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#user-authentication">
-     6.3.7. User Authentication
+     6.3.8. User Authentication
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#html-css">
-     6.3.8. html/css
+     6.3.9. html/css
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuration-management">
-     6.3.9. Configuration Management
+     6.3.10. Configuration Management
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#development-environment">
-     6.3.10. Development Environment
+     6.3.11. Development Environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#automated-testing">
-     6.3.11. Automated Testing
+     6.3.12. Automated Testing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nfc-drivers">
-     6.3.12. NFC drivers
+     6.3.13. NFC drivers
     </a>
    </li>
   </ul>
@@ -328,7 +333,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#database">
+    <a class="reference internal nav-link" href="#id1">
      6.5.4. Database
     </a>
    </li>
@@ -442,38 +447,43 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#database">
+     6.3.6. Database
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#admin">
-     6.3.6. Admin
+     6.3.7. Admin
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#user-authentication">
-     6.3.7. User Authentication
+     6.3.8. User Authentication
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#html-css">
-     6.3.8. html/css
+     6.3.9. html/css
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuration-management">
-     6.3.9. Configuration Management
+     6.3.10. Configuration Management
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#development-environment">
-     6.3.10. Development Environment
+     6.3.11. Development Environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#automated-testing">
-     6.3.11. Automated Testing
+     6.3.12. Automated Testing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nfc-drivers">
-     6.3.12. NFC drivers
+     6.3.13. NFC drivers
     </a>
    </li>
   </ul>
@@ -521,7 +531,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#database">
+    <a class="reference internal nav-link" href="#id1">
      6.5.4. Database
     </a>
    </li>
@@ -570,6 +580,20 @@
 <h1><span class="section-number">6. </span>Technology (Under construction)<a class="headerlink" href="#technology-under-construction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="system-architecture">
 <h2><span class="section-number">6.1. </span>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The system is a standard client-server web application, built on the Django framework, with the following major
+architectural additions:</p>
+<ul class="simple">
+<li><p>Multi-tenanting, to allow the web server to support a number of brigades.</p></li>
+<li><p>Channels/websockets, that allow bi-directional communication between the client and server. These are used to enable
+asynchronous updates of web pages when external events such as tagging in occur.</p></li>
+<li><p>Load balancing and on-demand scaling, provided by AWS Elastic Beanstalk. Under load, the system will automatically
+adjust by adding more servers and network capacity within defined bounds, and will offload these when demands drops.</p></li>
+<li><p>Access control to the web application is through User accounts, with usernames and passwords required for any access
+to the server. This leverages <a class="reference external" href="https://docs.djangoproject.com/en/4.0/topics/auth/#user-authentication-in-django">Django’s excellent User Authentication</a>
+system, which includes granular permission setting by group and for individual users.</p></li>
+<li><p>Fast relational database support is provided using *<em>PostgreSQL</em>, which also provides native support for the
+partitioning used in multi-tenanting. All data is backed up daily inside the secure AWS infrastructure.</p></li>
+</ul>
 </div>
 <div class="section" id="hardware">
 <h2><span class="section-number">6.2. </span>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
@@ -581,6 +605,7 @@
 </div>
 <div class="section" id="server">
 <h3><span class="section-number">6.2.3. </span>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<p>t2.medium used as main server. Up to 4 servers can be deployed if demand requires.</p>
 </div>
 </div>
 <div class="section" id="software">
@@ -603,28 +628,33 @@
 are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
 any other brigades.</p>
 </div>
+<div class="section" id="database">
+<h3><span class="section-number">6.3.6. </span>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h3>
+<p>PostgreSQL is used as the back-end. <a class="reference external" href="https://opensource.com/article/17/11/django-orm">Django’s Object-Relational Mapper (ORM)</a>
+is used to access the database, so there is very little raw SQL in the system.</p>
+</div>
 <div class="section" id="admin">
-<h3><span class="section-number">6.3.6. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.7. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="user-authentication">
-<h3><span class="section-number">6.3.7. </span>User Authentication<a class="headerlink" href="#user-authentication" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.8. </span>User Authentication<a class="headerlink" href="#user-authentication" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="html-css">
-<h3><span class="section-number">6.3.8. </span>html/css<a class="headerlink" href="#html-css" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.9. </span>html/css<a class="headerlink" href="#html-css" title="Permalink to this headline">¶</a></h3>
 <p>If not completed in 15 minutes, forms will be automatically removed, and the screen will return
 to the normal Kiosk view to allow members to continue signing in and out.</p>
 </div>
 <div class="section" id="configuration-management">
-<h3><span class="section-number">6.3.9. </span>Configuration Management<a class="headerlink" href="#configuration-management" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.10. </span>Configuration Management<a class="headerlink" href="#configuration-management" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="development-environment">
-<h3><span class="section-number">6.3.10. </span>Development Environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.11. </span>Development Environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="automated-testing">
-<h3><span class="section-number">6.3.11. </span>Automated Testing<a class="headerlink" href="#automated-testing" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.12. </span>Automated Testing<a class="headerlink" href="#automated-testing" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="nfc-drivers">
-<h3><span class="section-number">6.3.12. </span>NFC drivers<a class="headerlink" href="#nfc-drivers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.13. </span>NFC drivers<a class="headerlink" href="#nfc-drivers" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="raspberry-pi">
@@ -650,8 +680,8 @@ to the normal Kiosk view to allow members to continue signing in and out.</p>
 <div class="section" id="cache">
 <h3><span class="section-number">6.5.3. </span>Cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="database">
-<h3><span class="section-number">6.5.4. </span>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3><span class="section-number">6.5.4. </span>Database<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="security">
 <h3><span class="section-number">6.5.5. </span>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h3>
