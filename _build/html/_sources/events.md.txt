@@ -13,7 +13,7 @@ Attendance book, including:
 
 * Name of the OIC running the activity
 
-* The type of activity (Training, Maintenance, Meeting, .. etc.) 
+* The type of activity (Training, Maintenance, Meeting, etc.) 
   
 * A brief description of the activity
 
@@ -88,7 +88,7 @@ Activity Type
   will set these up for the brigade. The activity type for an event should be chosen from the list of available types.
 
 Description 
-: A brief description of the activity should be provided for future reference, eg. "HR at Dawsons Creek".  
+: A brief description of the activity should be provided for future reference, e.g. "HR at Dawsons Creek".  
 
    
 ## Optional Fields
@@ -113,7 +113,7 @@ if there are breaks or other activities in between.
 
 (ev-veh)=
 Vehicles 
-: If brigade vehicles are used in a event, this can be noted in the event. This is useful in tracking
+: If brigade vehicles are used in an event, this can be noted in the event. This is useful in tracking
   {ref}`vehicle availability<vehbook>` when events are planned in advance. 
    
 
@@ -161,7 +161,7 @@ Overnight
 :::{admonition} **Always set the end time for overnight events**
 :class: warning
 Since events are always less than 24 hours in duration, in overnight events the end time must be less than the 
-start time, eg. Start: 18:00, End: 06:00.
+start time, e.g. Start: 18:00, End: 06:00.
 
 If the OIC doesn't set the end time of an event so that it ends the next day, members won't be able to sign-out
 when they return from their shift, as the event will have been wiped from the kiosk at midnight.
@@ -177,7 +177,7 @@ External
    system.
 
    Members who are known to be attending this event should be added to the event by the OIC ahead 
-   of time. If they arrive at the station to travel to the event (eg. at a training centre), they can sign-in as normal.
+   of time. If they arrive at the station to travel to the event (e.g. at a training centre), they can sign-in as normal.
    
    Any member not on the preset list will not be offered the option of signing in to external events when they tag in. 
    External events normally run for a full day, and if the attendees are known up front, there is no point asking 
@@ -194,7 +194,7 @@ Pager Calls
    The event title will be the same as the pager message. The format of this message will vary by district, but 
    generally it includes the name of the paged brigade, the type of call, and the CAD number. 
 
-   The actual OIC is not known when the pager call arrives, so the system assigns the call out officer or the SDC
+   The actual OIC is not known when the pager call arrives, so the system assigns the call-out officer or the SDC
    as the OIC by default. This should be {ref}`updated<change-event>` by the actual OIC when the crew returns 
    to station.
 

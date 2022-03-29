@@ -4,7 +4,7 @@ The entire system is a web application, which runs on a server in the cloud (in 
 data centre run by Amazon Web Services in Sydney).
 
 All interactions with the system, including from the Kiosk (which runs in a web browser), are made through this 
-web application. The Kiosk is the "shop front" of the system, and is used most frequently by most users day-to-day, and is covered in an
+web application. The Kiosk is the "shopfront" of the system, and is used most frequently by most users day-to-day, and is covered in an
 {ref}`earlier section<eventsection>`.
 
 Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has 
@@ -17,7 +17,7 @@ The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you nee
 ```
 
 The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
-<span style="color:blue;">brigade</span> in this url with the actual name of your brigade (eg. westleigh).
+<span style="color:blue;">brigade</span> in this url with the actual name of your brigade (e.g. westleigh).
 
 You will be challenged to provide a username and password before you can login to the system.
 
@@ -26,7 +26,7 @@ By default, your username is the same as the email address that you use to commu
 The first time you login, your default password will be the same as your RFS member number - you will then be asked to 
 change this password before proceeding.
 
-If you ever need to change your password (eg. if you forget it), you can change it by clicking on the *Lost password?* 
+If you ever need to change your password (e.g. if you forget it), you can change it by clicking on the *Lost password?* 
 link on the login page. The system will then email you a link, and you can change your password.
 
 ```{admonition} We know who you are...
@@ -50,7 +50,7 @@ When you have logged in, the system will take you to the brigade home page, an e
 
 <img src="assets/images/homepage.jpg" alt="Landing page" width="1467" class="bg-primary mb-1">
 
-Home/landing page on server (click to enlarge)
+Home/landing page on the server (click to enlarge)
 :::
 
 Navigation bar 
@@ -60,7 +60,7 @@ Membership Summary
 : Shows the total number of active members broken down by their skill sets. 
   
   It also shows, in <span style="color:red;">**red**</span>, the number of members currently on duty, 
-  ie. currently signed in at the station (but not yet signed out). These figures are updated live, 
+  i.e. currently signed in at the station (but not yet signed out). These figures are updated live, 
   whenever anyone signs in or out at the station.
 
 Upcoming events
@@ -143,7 +143,7 @@ Member List (excerpt) (click to enlarge)
 * Members only appear once on this list, in the first section they fit in to. It has the following sections:
   * **Field Officers**
   * **Crew Leaders** (CL, but not currently Field Officers)
-  * **Tanker Drivers** (Neither Field Officers or Crew Leaders)
+  * **Tanker Drivers** (Neither Field Officers nor Crew Leaders)
   * **Drivers** (None of above, but personnel vehicle qualified)
   * **Members** (None of the above)
 
@@ -296,7 +296,7 @@ Calendar Month View (click to enlarge)
 
 You can view the details of any event in the calendar just by clicking on it. 
 
-In general you will see a view like this:
+In general, you will see a view like this:
 
 :::{figure-md} ev-read-view
 :class: myclass
@@ -354,7 +354,7 @@ In the Week view shown above:
   to join the activity, and your name will be added to the list. 
   
 * If the symbol shows as <span class="fas fa-user-times" style="color:brown; font-size:20px;"></span>, 
-  you are already on the list of prospective attendees, but if you change your mind, click the symbol and you 
+  you are already on the list of prospective attendees, but if you change your mind, click the symbol, and you 
   will be removed (the symbol will change back 
   to <span class="fas fa-user-plus" style="color:brown; font-size:20px;"></span>)
   
@@ -368,7 +368,7 @@ and confirm that you are on the list.
 #### Signing Off on an Event (Officers)
 
 According to the original Attendance Book, Officers are required to check the attendance records for any activity 
-they run, and once corrected and checked, sign it off and cross out the page so it can't be changed again.
+they run, and once corrected and checked, sign it off, and cross out the page so that it can't be changed again.
 
 In the sign-in system, this can be done by opening the calendar and finding the event you (the OIC) have run, 
 and clicking on it.
@@ -538,7 +538,7 @@ This shows a summary of vehicle movements in a form similar to the {ref}`Member 
 Vehicle Movements (click to enlarge)
 :::
 
-Each vehicle is listed and it's use in various types of activity is shown. Clicking on the numbers will show a 
+Each vehicle is listed, and it's use in various types of activity is shown. Clicking on the numbers will show a 
 full listing of movements for that vehicles in the required category.
 
 Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.
@@ -555,7 +555,7 @@ This shows a summary of driver journeys in a form similar to the {ref}`Member Ac
 Driver Journeys (click to enlarge)
 :::
 
-Each brigade driver is listed and their participation in various types of activity is shown. Clicking on the 
+Each brigade driver is listed, and their participation in various types of activity is shown. Clicking on the 
 numbers will show a full listing of journeys for this driver in the required category.
 
 Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.

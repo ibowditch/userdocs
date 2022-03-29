@@ -583,15 +583,16 @@
 <p>The system is a standard client-server web application, built on the Django framework, with the following major
 architectural additions:</p>
 <ul class="simple">
-<li><p>Multi-tenanting, to allow the web server to support a number of brigades.</p></li>
-<li><p>Channels/websockets, that allow bi-directional communication between the client and server. These are used to enable
+<li><p><strong>Multi-tenanting</strong>, to allow the web server to support a number of brigades.</p></li>
+<li><p><strong>Channels/websockets</strong>, that allow bi-directional communication between the client and server. These are used to enable
 asynchronous updates of web pages when external events such as tagging in occur.</p></li>
-<li><p>Load balancing and on-demand scaling, provided by AWS Elastic Beanstalk. Under load, the system will automatically
-adjust by adding more servers and network capacity within defined bounds, and will offload these when demands drops.</p></li>
-<li><p>Access control to the web application is through User accounts, with usernames and passwords required for any access
+<li><p><strong>Load balancing</strong> and on-demand scaling, provided by AWS Elastic Beanstalk. Under load, the system will automatically
+adjust by adding more servers and network capacity within defined bounds, and will offload these when demand drops.</p></li>
+<li><p><strong>Traffic splitting</strong> to allow continuous operations even through system updates.</p></li>
+<li><p><strong>Access control</strong> to the web application is through User accounts, with usernames and passwords required for any access
 to the server. This leverages <a class="reference external" href="https://docs.djangoproject.com/en/4.0/topics/auth/#user-authentication-in-django">Django’s excellent User Authentication</a>
 system, which includes granular permission setting by group and for individual users.</p></li>
-<li><p>Fast relational database support is provided using *<em>PostgreSQL</em>, which also provides native support for the
+<li><p><strong>Fast relational database support</strong> is provided using <strong>PostgreSQL</strong>, which also provides native support for the
 partitioning used in multi-tenanting. All data is backed up daily inside the secure AWS infrastructure.</p></li>
 </ul>
 </div>
@@ -624,7 +625,7 @@ partitioning used in multi-tenanting. All data is backed up daily inside the sec
 </div>
 <div class="section" id="multi-tenant">
 <span id="multi-tenant-tech"></span><h3><span class="section-number">6.3.5. </span>Multi-tenant<a class="headerlink" href="#multi-tenant" title="Permalink to this headline">¶</a></h3>
-<p>Each brigade has it’s own database, including the list of members, and you can only login to a brigade system if you
+<p>Each brigade has its own database, including the list of members, and you can only login to a brigade system if you
 are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
 any other brigades.</p>
 </div>

@@ -1,19 +1,17 @@
 # Introduction
 
-This project to build an electronic sign-in system started in 2018, when I decided to build a web application to 
-help automate some admin tasks that were taking a lot of volunteer time at my local brigade.
+The RFStag system is a web application that allows RFS members to sign-in and sign-out at their station using a small 
+NFC keyfob tag, rather than writing their details in the Attendance Book. 
 
-It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.
+Tags are issued to all members, and they can sign-in just by tapping their tag on a reader at station entrance. They 
+can sign-out when they have finished the activity by tapping their tag on the reader a second time.
 
-My background both as a software engineer (in a past life) and as a former Deputy Captain, came in handy, but there was 
-still a big learning curve, and I continue to improve the application as the technology evolves, and as I find better 
-ways of doing things.
+All attendance records are stored electronically, and reports and summaries of attendance are available to members and 
+officers through a web portal which can be accessed on any device with an internet connection and a browser (login required).
 
-The system first went live in November 2018, and has been running (almost) continuously since then, including through 
-the major fires of 2019-2020. 
+The system records attendance for all members, but visitors who do not have a tag should still record their details in
+the Attendance Book.
 
-The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports 
-more than 300 users.
 
 ## Requirements
 
@@ -38,7 +36,7 @@ Attendance records are [State Records](https://legislation.nsw.gov.au/view/pdf/a
 They are occasionally required during Coronial or other enquiries, and may also be used to support claims under
 Workers Compensation legislation, among other things.
 
-As such, they must be an accurate record of who attended RFS activites and for what purpose. The Officer In Charge (OIC) 
+As such, they must be an accurate record of who attended RFS activities and for what purpose. The Officer In Charge (OIC) 
 of each activity is required to {ref}`check and sign-off<off-signoff>` on attendance records for activities that they 
 organise.
 
@@ -57,9 +55,9 @@ As well as meeting the Legal Requirements, this is what I was aiming to do with 
   
 1. Improve visibility and availability of attendance data to all brigade members and management.
 
-1. Futher reduce admin effort by automatically producing useful reports based on attendance data.
+1. Further reduce admin effort by automatically producing useful reports based on attendance data.
 
-1. Provide a low cost solution, using off-the-shelf hardware and a modest annual subscription fee.
+1. Provide a low-cost solution, using off-the-shelf hardware, and a modest annual subscription fee.
 
 1. Provide high availability, reliability, and data security, including regular automatic backups.
 
@@ -106,7 +104,7 @@ However, Attendance Records also contain information that is useful for brigade 
   loss of skills.
   
 * Determining who is entitled to vote in brigade elections, if there is some attendance criteria 
-  for this (eg. minimum of 60 hours during the years) 
+  for this (e.g. minimum of 60 hours during the years) 
   
 * Summarising activity for reporting purposes, to identify trends in types of activity, and to inform
   district headquarters and other stakeholders.
@@ -154,10 +152,31 @@ movements much of the time. No thanks.
 
 :::
 
+## About the Project
+
+This project to build an electronic sign-in system started in 2018, when I decided to build a web application to 
+help automate some admin tasks that were taking a lot of volunteer time at my local brigade.
+
+It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.
+
+My background both as a software engineer (in a past life) and as a former Deputy Captain, came in handy, but there was 
+still a big learning curve, and I continue to improve the application as the technology evolves, and as I find better 
+ways of doing things.
+
+The system first went live in November 2018, and has been running (almost) continuously since then, including through 
+the major fires of 2019-2020. 
+
+The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports 
+more than 300 users.
+
+
+
+
+
 
 ## Site Map
 
-This web site describes following aspects of the electronic sign-in system:
+This website describes following aspects of the electronic sign-in system:
 
 1. [Introduction](background)
 
