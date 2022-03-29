@@ -292,7 +292,7 @@ information in the front seat of a truck using their phone, so it might be handy
 ### Multiple Simultaneous Events
 
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
-(eg. Maintenance, and Training). 
+(e.g. Maintenance, and Training). 
 
 If that's the case, the system needs to {ref}`work out which event you want to join<flowchart-pic>`.
 
@@ -326,8 +326,8 @@ If the Kiosk is not shutdown properly, there is a risk that it will be damaged, 
 
 The Kiosk will beep when a tag is registered, as follows:
 
-* Single high pitched tone for signing in
-* Single low pitched tone for signing out
+* Single high-pitched tone for signing in
+* Single low-pitched tone for signing out
 * Multiple tones when a choice of events is required
 
 (flowchart)=

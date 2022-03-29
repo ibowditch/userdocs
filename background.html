@@ -232,8 +232,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-project">
+   1.4. About the Project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#site-map">
-   1.4. Site Map
+   1.5. Site Map
   </a>
  </li>
 </ul>
@@ -296,8 +301,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-project">
+   1.4. About the Project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#site-map">
-   1.4. Site Map
+   1.5. Site Map
   </a>
  </li>
 </ul>
@@ -311,16 +321,14 @@
                 
   <div class="section" id="introduction">
 <h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>This project to build an electronic sign-in system started in 2018, when I decided to build a web application to
-help automate some admin tasks that were taking a lot of volunteer time at my local brigade.</p>
-<p>It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.</p>
-<p>My background both as a software engineer (in a past life) and as a former Deputy Captain, came in handy, but there was
-still a big learning curve, and I continue to improve the application as the technology evolves, and as I find better
-ways of doing things.</p>
-<p>The system first went live in November 2018, and has been running (almost) continuously since then, including through
-the major fires of 2019-2020.</p>
-<p>The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports
-more than 300 users.</p>
+<p>The RFStag system is a web application that allows RFS members to sign-in and sign-out at their station using a small
+NFC keyfob tag, rather than writing their details in the Attendance Book.</p>
+<p>Tags are issued to all members, and they can sign-in just by tapping their tag on a reader at station entrance. They
+can sign-out when they have finished the activity by tapping their tag on the reader a second time.</p>
+<p>All attendance records are stored electronically, and reports and summaries of attendance are available to members and
+officers through a web portal which can be accessed on any device with an internet connection and a browser (login required).</p>
+<p>The system records attendance for all members, but visitors who do not have a tag should still record their details in
+the Attendance Book.</p>
 <div class="section" id="requirements">
 <h2><span class="section-number">1.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>Brigades have an obligation, <a class="reference internal" href="#legalreqs"><span class="std std-ref">under law</span></a>, to collect and maintain attendance records.
@@ -339,7 +347,7 @@ their signature.</p>
 <a class="reference external" href="https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf">kept for at least 25 years</a>.
 They are occasionally required during Coronial or other enquiries, and may also be used to support claims under
 Workers Compensation legislation, among other things.</p>
-<p>As such, they must be an accurate record of who attended RFS activites and for what purpose. The Officer In Charge (OIC)
+<p>As such, they must be an accurate record of who attended RFS activities and for what purpose. The Officer In Charge (OIC)
 of each activity is required to <a class="reference internal" href="server.html#off-signoff"><span class="std std-ref">check and sign-off</span></a> on attendance records for activities that they
 organise.</p>
 </div>
@@ -353,8 +361,8 @@ procedures used with the Attendance Book.</p></li>
 <li><p>Simple admin procedures, with minimal intervention required by brigade management to keep the system up to date
 and running.</p></li>
 <li><p>Improve visibility and availability of attendance data to all brigade members and management.</p></li>
-<li><p>Futher reduce admin effort by automatically producing useful reports based on attendance data.</p></li>
-<li><p>Provide a low cost solution, using off-the-shelf hardware and a modest annual subscription fee.</p></li>
+<li><p>Further reduce admin effort by automatically producing useful reports based on attendance data.</p></li>
+<li><p>Provide a low-cost solution, using off-the-shelf hardware, and a modest annual subscription fee.</p></li>
 <li><p>Provide high availability, reliability, and data security, including regular automatic backups.</p></li>
 <li><p>Ensure data privacy, with user accounts and passwords required for access.</p></li>
 </ol>
@@ -391,7 +399,7 @@ and commitments in all areas.</p></li>
 <li><p>Training planning - lack of participation in certain areas can indicate that training is needed, to prevent
 loss of skills.</p></li>
 <li><p>Determining who is entitled to vote in brigade elections, if there is some attendance criteria
-for this (eg. minimum of 60 hours during the years)</p></li>
+for this (e.g. minimum of 60 hours during the years)</p></li>
 <li><p>Summarising activity for reporting purposes, to identify trends in types of activity, and to inform
 district headquarters and other stakeholders.</p></li>
 <li><p>Real time updates of who is at station can be provided to Officers, Members and HQ if attendance records
@@ -445,9 +453,22 @@ reliable and accurate attendance records.</p>
 movements much of the time. No thanks.</p>
 </div>
 </div>
+<div class="section" id="about-the-project">
+<h2><span class="section-number">1.4. </span>About the Project<a class="headerlink" href="#about-the-project" title="Permalink to this headline">¶</a></h2>
+<p>This project to build an electronic sign-in system started in 2018, when I decided to build a web application to
+help automate some admin tasks that were taking a lot of volunteer time at my local brigade.</p>
+<p>It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.</p>
+<p>My background both as a software engineer (in a past life) and as a former Deputy Captain, came in handy, but there was
+still a big learning curve, and I continue to improve the application as the technology evolves, and as I find better
+ways of doing things.</p>
+<p>The system first went live in November 2018, and has been running (almost) continuously since then, including through
+the major fires of 2019-2020.</p>
+<p>The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports
+more than 300 users.</p>
+</div>
 <div class="section" id="site-map">
-<h2><span class="section-number">1.4. </span>Site Map<a class="headerlink" href="#site-map" title="Permalink to this headline">¶</a></h2>
-<p>This web site describes following aspects of the electronic sign-in system:</p>
+<h2><span class="section-number">1.5. </span>Site Map<a class="headerlink" href="#site-map" title="Permalink to this headline">¶</a></h2>
+<p>This website describes following aspects of the electronic sign-in system:</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#"><span class="doc std std-doc">Introduction</span></a></p></li>
 </ol>

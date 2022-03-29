@@ -94,7 +94,7 @@ Excluded activity types
 
 ### Set Recurring Events in the Calendar
 
-### Synchonising Member Qualifications
+### Synchronising Member Qualifications
 
 ### AWS Credits (annual)
 
