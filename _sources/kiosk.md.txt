@@ -1,7 +1,8 @@
+(kioskh)=
 # The Kiosk
 
 The Kiosk is a small computer (a Raspberry PI), with a screen and a tag reader attached, that 
-replaces the old Attendance Book, and records attendance in electronic form. It is normally located 
+replaces the old paper Attendance Book, and records attendance in electronic form. It is normally located 
 at the front desk of the station. 
 :::{figure-md} kiosk-parts
 :class: margin
@@ -10,7 +11,7 @@ at the front desk of the station.
 
 NFC tag, reader, and PI
 :::
-It is always-on and available 24h every day. It requires an internet connection (Wi-Fi or wired) 
+It is always-on and available 24 hours every day. It requires an internet connection (Wi-Fi or wired) 
 to function.
 
 The Kiosk screen shows [events](events "described in a later section") that start **or end** on the current day, 
@@ -94,7 +95,7 @@ the kiosk screen, and then you will then see the following form:
 Kiosk new event form
 :::
 
-Once you've completed the details, click <span class="badge badge-pill badge-primary">**Submit**</span> (top left), 
+Once you've entered the details, click <span class="badge badge-pill badge-primary">**Submit**</span> (top left), 
 and the kiosk screen should then show the event you just created.
 
 You can now {ref}`sign-in using your tag<easyway>`.
