@@ -3,14 +3,16 @@
 The RFStag system is a web application that allows RFS members to sign-in and sign-out at their station using a small 
 NFC keyfob tag, rather than writing their details in the Attendance Book. 
 
-Tags are issued to all members, and they can sign-in just by tapping their tag on a reader at station entrance. They 
-can sign-out when they have finished the activity by tapping their tag on the reader a second time.
+Tags are issued to all members, and they can sign-in just by tapping their tag on a reader attached to a 
+{ref}`terminal<kioskh>` at the station entrance. They can sign-out when they have finished the activity by tapping 
+their tag on the reader a second time.
 
 All attendance records are stored electronically, and reports and summaries of attendance are available to members and 
-officers through a web portal which can be accessed on any device with an internet connection and a browser (login required).
+officers through a {ref}`web portal<serverh>` which can be accessed from anywhere on any device with an internet 
+connection and a browser (login required).
 
 The system records attendance for all members, but visitors who do not have a tag should still record their details in
-the Attendance Book.
+the (paper) Attendance Book.
 
 
 ## Requirements
