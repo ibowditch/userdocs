@@ -149,6 +149,10 @@ Member List (excerpt) (click to enlarge)
   * **Drivers** (None of above, but personnel vehicle qualified)
   * **Members** (None of the above)
 
+```{margin} Member Qualifications
+   A more detailed view of Member Qualifications is also available - see {ref}`here<memb-quals>` 
+```
+
 (memb-list-quals)=
 Qualifications
 : This shows any qualification in the following areas (expired qualifications shown in *lower case*):
