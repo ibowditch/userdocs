@@ -94,7 +94,129 @@ Excluded activity types
 
 ### Set Recurring Events in the Calendar
 
-### Synchronising Member Qualifications
+(sync-sap)=
+### Synchronising Qualifications with SAP
+
+Member qualifications are issued and managed by the RFS, and are stored in their SAP system. Until recently, there was no 
+easy way to download all member qualifications for a brigade from SAP, so if the Sign-In system wanted to refer to 
+qualifications, a parallel set of qualification records had to be set up and maintained. 
+
+Training Officers have a lot on their plates, and, not surprisingly, they were not keen on keeping a separate
+set of records for member qualifications.
+
+However, now that member qualifications can easily be downloaded from SAP, I have added a new feature that allows RFS 
+qualification records to be uploaded to the Sign-In system, so that the qualifications used are up to date and in sync 
+with SAP. Once uploaded, they can be refreshed and updated with a new listing taken from SAP whenever required.
+
+:::{figure-md} sap-records
+:class: myclass
+
+<img src="assets/images/sap-records.jpg" alt="RFS SAP Qualifications Spreadsheet" width="1467" class="bg-primary mb-1">
+
+RFS SAP Qualifications Report Spreadsheet (click to enlarge)
+:::
+
+Qualification records are used in the {ref}`Member Qualifications<memb-quals>` view, which allows members to see 
+what qualifications are recorded in their name on SAP, and to check that these records are accurate and complete.
+
+SAP records can be uploaded to the Sign-In system from the Admin system, under Brigade-Certifications, using the 
+Import button on the top right of the page.
+
+You will then see the following page. Enter the name of the Excel file downloaded from RFS SAP that has 
+the full list of brigade qualifications. Select **xlsx** as the format, and then Submit.
+
+:::{figure-md} import-certs
+:class: myclass
+
+<img src="assets/images/import-certs.jpg" alt="Importing RFS SAP Qualifications" width="1467" class="bg-primary mb-1">
+
+Importing RFS SAP Qualifications (click to enlarge)
+:::
+
+
+
+```{margin} SAP files are big!
+   These files can be 4000 lines or more, and the system has to check each record to see if it already has it in the 
+   database. It can take a little while to load all the brigade qualifications, so please be patient.
+
+```
+The system will read each line in the SAP report, and check if it matches an existing qualification in the database. 
+If it finds a match, it will skip the record (existing records remain unchanged), and move on to the next one.
+
+After a short delay, the system will show any qualifications from the SAP file which are not already in the system 
+database, for review. Click **Confirm Import** to complete the import of the new records. After another short delay, 
+your records will be updated.
+
+
+:::{figure-md} update-certs
+:class: myclass
+
+<img src="assets/images/update-certs.jpg" alt="Importing New Qualifications" width="1467" class="bg-primary mb-1">
+
+Importing New Qualifications (click to enlarge)
+:::
+
+
+### Making Training Plans
+
+The system can help with the following aspects of training planning:
+
+**1. Check Basic Qualifications**
+   
+  The {ref}`Member Qualifications<memb-quals>` view shows qualifications for all active members, and any gaps in 
+  basic qualifications such as Induction (VI/SI) and BF, should be clear from that. 
+
+**2. Check Sufficient Numbers of Qualificationss**
+   
+  The {ref}`Member Qualifications<memb-quals>` view also shows how many members are qualified in specific areas (at 
+  the bottom of the page). It should be clear from this if enough members are qualified in specialist areas such as 
+  Chainsaw, First Aid, etc. to meet the needs of the Brigade, and if not, unqualified members can be encouraged to 
+  take further training.
+
+**3. Check Status of Renewable Qualifications**
+
+  The admin view has some useful filters that can help to locate qualifications that match certain criteria. For example, if 
+  we want to find qualifications that are due to expire in the next year (and may have to be renewed), you can set the 
+  filters to make a smaller, more managable, list of qualifications that you are interested in.
+
+  For example, the settings below will show only Chainsaw qualifications for active members, that will expire in 
+  the next 12 months.
+
+  You can mix and match these filters to home into the set of records you need. When you're done, you can clear all 
+  filters get back to the original, unconstrained, view.
+
+:::{figure-md} filter-quals
+:class: myclass
+
+<img src="assets/images/filter-qualsa.jpg" alt="Filtering Certifications" width="1467" class="bg-primary mb-1">
+
+Filtering Certifications (click to enlarge)
+:::
+
+#### Legacy Certifications
+
+Now that the definitive RFS SAP records (used in ACTIV and other places) can be imported, there is no need to maintain 
+a parallel set of qualification records for members. Any reports showing qualifications will reflect the latest data 
+imported from SAP, and the SAP records supersede any other records that may have been set up before.
+
+In general, you should not change or add any certification records, except through importing from SAP. If the SAP records 
+are incorrect, or some are missing, the priority should be to get them fixed in SAP, rather than fixing them in the 
+sign-in system. The corrections will come through next time you import records from SAP.
+
+### Driving Permissions (TD & PD)
+
+Permission to drive Brigade vehicles is given by the Brigade Captain, and records of who can drive which vehicles are
+stored as certifications in the sign-in system.
+
+These are not RFS qualifications, and are not recorded in SAP, as they are local to the brigade.
+
+If the Brigade Captain authorises a member to drive the brigade's heavy vehicles, a certification of type **TD** should be 
+created and stored in the certification section of the sign-in system admin area. Similarly, members who are permitted 
+to drive light vehicles (but not heavy vehicles) should have a **PD** certification recorded in their name.
+
+The **RFD** qualification which goes with this, is issued by the RFS, and is included in the SAP qualifications. The 
+{ref}`Member List<memb-list>` shows TD and PD permissions, and these are shown in lower case if RFD is out of date or not 
+available for the driver.
 
 ### AWS Credits (annual)
 

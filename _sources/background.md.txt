@@ -195,10 +195,10 @@ This website describes following aspects of the electronic sign-in system:
   > Events are a key part of the system, analogous to a page in the old Attendance Book. This section describes the
   > various types of events, and the ways they can be defined and updated.
 
-4. [The Server](server)
+4. [The Web Portal](server)
 
   > The system runs on a cloud server (the Kiosk is connected to the server using a web interface). This section gives a 
-  > review of the features available on the cloud server, which can be accessed by officers and members of the brigade 
+  > review of the features available on the web portal, which can be accessed by officers and members of the brigade 
   > from any device (login required).
 
 5. [Administration Procedures](administration)

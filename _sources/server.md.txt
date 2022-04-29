@@ -1,5 +1,5 @@
 (serverh)=
-# Sign-in Server
+# Web Portal
 
 The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a 
 data centre run by Amazon Web Services in Sydney).
@@ -9,7 +9,7 @@ web application. The Kiosk is the "shopfront" of the system, and is used most fr
 {ref}`earlier section<eventsection>`.
 
 Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has 
-an internet connection and a browser available. This section describes the services available on the Sign-in server.
+an internet connection and a browser available. This section describes the services available on the web portal.
 
 ## Logging In
 
@@ -17,7 +17,7 @@ an internet connection and a browser available. This section describes the servi
 The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you need to say which one you require.
 ```
 
-The sign-in server can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
+The web portal can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
 <span style="color:blue;">brigade</span> in this url with the actual name of your brigade (e.g. westleigh).
 
 You will be challenged to provide a username and password before you can login to the system.
@@ -51,7 +51,7 @@ When you have logged in, the system will take you to the brigade home page, an e
 
 <img src="assets/images/homepage.jpg" alt="Landing page" width="1467" class="bg-primary mb-1">
 
-Home/landing page on the server (click to enlarge)
+Home/landing page on the web portal (click to enlarge)
 :::
 
 Navigation bar 
@@ -93,7 +93,7 @@ Please provide as much detail as possible to assist with investigations:
 * What happened
 * Etc…
 
-You can attach a screenshot if you've been on the sign-in server. This form also works ok on a phone, so if you have 
+You can attach a screenshot if you've been on the web portal. This form also works ok on a phone, so if you have 
 trouble on the kiosk, take a photo of the screen and attach that with your ticket.
 
 Please set the priority to an appropriate level. If you decide it's no longer needed, you can withdraw it.
@@ -115,6 +115,7 @@ Points to this User Guide. You'll need to find your own way back, as it's an ext
 (menu)=
 ## Member Menu
 
+(memb-list-section)=
 ### Member List
 
 Members have access to a summary of basic contact details of all active members through the
@@ -148,6 +149,11 @@ Member List (excerpt) (click to enlarge)
   * **Drivers** (None of above, but personnel vehicle qualified)
   * **Members** (None of the above)
 
+```{margin} Member Qualifications
+   A more detailed view of Member Qualifications is also available - see {ref}`here<memb-quals>` 
+```
+
+(memb-list-quals)=
 Qualifications
 : This shows any qualification in the following areas (expired qualifications shown in *lower case*):
 * Driving
@@ -248,6 +254,56 @@ quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
 
 Anyone with a Total of more than 50.3 hours is coloured white, just less than that is coloured yellow, 
 and further down, red.
+
+(memb-quals)=
+### Member Qualifications
+
+Member qualifications are managed by the RFS, and are stored on their SAP server. The Sign-In system uses 
+member qualifications in various areas, including the {ref}`Member List<memb-list-quals>` and in events, so that 
+users can see the qualification status of members.
+
+Training Officers can download qualifications for their Brigade into an excel file, and this can now be {ref}`uploaded 
+to the Sign-In system<sync-sap>` so that it accurately reflects the current qualifications held by members in this Brigade. 
+There is no need to maintain parallel records of qualifications, as the system will use those imported from the 
+SAP listing.
+
+The Member Qualification view shows a more detailed view of all member qualifications, including the following:
+
+- Qualification status of all members in the major categories such as Firefighting, First Aid, Chainsaw, etc.
+- The highest level of qualification attained by each member in the various categories.
+- Total number of members qualified in each area.
+- Drill down to show all qualifications for a member, or all brigade qualifications in a category.
+
+:::{figure-md} brig-certs
+:class: myclass
+
+<img src="assets/images/brigcerta.jpg" alt="Member Qualifications View" width="1467" class="bg-primary mb-1">
+
+Member Qualifications View (click to enlarge)
+:::
+
+```{margin} Qualification Acronymns
+   The acronyms used to represent particular qualifications are defined in 
+   the [RFS Qualifications document](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0014/9032/6.1.2-Qualifications-for-NSW-RFS-Members.pdf).
+```
+
+Qualifications come in two main types:
+
+**1. Perpetual**
+   
+   These are awarded after successful completion of training, and usually an examination. They are awarded for life,
+   and never expire. If a member has attained a perpetual qualification, a <span style="background-color:lightgreen;">Y</span> 
+   is shown against their name for this qualification.
+  
+**2. Renewable**
+   
+   These also require training, and usually an examination, but the qualification must be renewed periodically - 
+   normally after 12 or 36 months - or it will expire. The table shows the highest qualification 
+   attained by a member in these categories. If it is coloured Green, the qualification is current, and has not expired. 
+   
+   If the member doesn't have any current qualifications in a category, but does have expired ones, it will show the
+   highest expired qualification in Red. Expired qualifications are not included in the count at the foot of each column.
+
 
 (at-stat)=
 ### At Station

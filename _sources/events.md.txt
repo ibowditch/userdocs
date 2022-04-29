@@ -38,7 +38,7 @@ Event components, as seen on the Kiosk (click to enlarge)
 
 Details of an event {ref}`can be updated on the kiosk<change-event>`.
 
-Events can also be changed in other contexts (on the server, rather than on the Kiosk), such as the 
+Events can also be changed in other contexts (on the web portal, rather than on the Kiosk), such as the 
 {ref}`Brigade Calendar<calendar>`, Upcoming Events, etc. but only if you are logged in as the 
 member who is OIC on the event. If you aren't the OIC, you can still see the details of the event, 
 but won't be able to change anything.
@@ -186,7 +186,7 @@ External
 (pagercalls)=
 Pager Calls
       
-:  Pager Calls are detected by a separate system which automagically creates a new event on the server 
+:  Pager Calls are detected by a separate system which automagically creates a new event on the web server 
    as soon as a callout is received for your brigade.
 
    The event should be available for members to sign-in to when they arrive at the station.
