@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Sign-in Server &#8212; RFS Tag</title>
+    <title>4. Web Portal &#8212; RFS Tag</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -108,7 +108,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. Sign-in Server
+   4. Web Portal
   </a>
  </li>
  <li class="toctree-l1">
@@ -267,38 +267,43 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#member-qualifications">
+     4.4.3. Member Qualifications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#at-station">
-     4.4.3. At Station
+     4.4.4. At Station
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#events-calendar">
-     4.4.4. Events Calendar
+     4.4.5. Events Calendar
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#viewing-event-details">
-       4.4.4.1. Viewing Event Details
+       4.4.5.1. Viewing Event Details
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#week-view">
-       4.4.4.2. Week View
+       4.4.5.2. Week View
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#adding-new-events-officers">
-       4.4.4.3. Adding New Events (Officers)
+       4.4.5.3. Adding New Events (Officers)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#plan-to-attend">
-       4.4.4.4. Plan to Attend
+       4.4.5.4. Plan to Attend
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#signing-off-on-an-event-officers">
-       4.4.4.5. Signing Off on an Event (Officers)
+       4.4.5.5. Signing Off on an Event (Officers)
       </a>
      </li>
     </ul>
@@ -428,7 +433,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sign-in Server</h1>
+                <h1>Web Portal</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -513,38 +518,43 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#member-qualifications">
+     4.4.3. Member Qualifications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#at-station">
-     4.4.3. At Station
+     4.4.4. At Station
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#events-calendar">
-     4.4.4. Events Calendar
+     4.4.5. Events Calendar
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#viewing-event-details">
-       4.4.4.1. Viewing Event Details
+       4.4.5.1. Viewing Event Details
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#week-view">
-       4.4.4.2. Week View
+       4.4.5.2. Week View
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#adding-new-events-officers">
-       4.4.4.3. Adding New Events (Officers)
+       4.4.5.3. Adding New Events (Officers)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#plan-to-attend">
-       4.4.4.4. Plan to Attend
+       4.4.5.4. Plan to Attend
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#signing-off-on-an-event-officers">
-       4.4.4.5. Signing Off on an Event (Officers)
+       4.4.5.5. Signing Off on an Event (Officers)
       </a>
      </li>
     </ul>
@@ -673,22 +683,22 @@
             
               <div>
                 
-  <div class="section" id="sign-in-server">
-<span id="serverh"></span><h1><span class="section-number">4. </span>Sign-in Server<a class="headerlink" href="#sign-in-server" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="web-portal">
+<span id="serverh"></span><h1><span class="section-number">4. </span>Web Portal<a class="headerlink" href="#web-portal" title="Permalink to this headline">¶</a></h1>
 <p>The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a
 data centre run by Amazon Web Services in Sydney).</p>
 <p>All interactions with the system, including from the Kiosk (which runs in a web browser), are made through this
 web application. The Kiosk is the “shopfront” of the system, and is used most frequently by most users day-to-day, and is covered in an
 <a class="reference internal" href="events.html#eventsection"><span class="std std-ref">earlier section</span></a>.</p>
 <p>Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has
-an internet connection and a browser available. This section describes the services available on the Sign-in server.</p>
+an internet connection and a browser available. This section describes the services available on the web portal.</p>
 <div class="section" id="logging-in">
 <h2><span class="section-number">4.1. </span>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
 <div class="margin sidebar">
 <p class="sidebar-title">Separate Domains</p>
 <p>The same server supports <a class="reference internal" href="technology.html#multi-tenant-tech"><span class="std std-ref">multiple brigades</span></a>, so you need to say which one you require.</p>
 </div>
-<p>The sign-in server can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
+<p>The web portal can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
 <span style="color:blue;">brigade</span> in this url with the actual name of your brigade (e.g. westleigh).</p>
 <p>You will be challenged to provide a username and password before you can login to the system.</p>
 <p>By default, your username is the same as the email address that you use to communicate with your brigade.</p>
@@ -711,7 +721,7 @@ to specific areas.</p>
 <p>When you have logged in, the system will take you to the brigade home page, an example of which is shown below:</p>
 <div class="myclass figure align-default" id="home-page">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/homepage.jpg"><img alt="Landing page" class="bg-primary mb-1" src="_images/homepage.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Home/landing page on the server (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Home/landing page on the web portal (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="simple myst">
 <dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">Menu</span></a> section below describes each of these in detail.</p>
@@ -748,7 +758,7 @@ feedback or suggestions (these will be much appreciated).</p>
 <li><p>What happened</p></li>
 <li><p>Etc…</p></li>
 </ul>
-<p>You can attach a screenshot if you’ve been on the sign-in server. This form also works ok on a phone, so if you have
+<p>You can attach a screenshot if you’ve been on the web portal. This form also works ok on a phone, so if you have
 trouble on the kiosk, take a photo of the screen and attach that with your ticket.</p>
 <p>Please set the priority to an appropriate level. If you decide it’s no longer needed, you can withdraw it.</p>
 <p>I will investigate and respond to any problems as soon as I can.</p>
@@ -767,7 +777,7 @@ you can see the details, but can’t change them.</p>
 <div class="section" id="member-menu">
 <span id="menu"></span><h2><span class="section-number">4.4. </span>Member Menu<a class="headerlink" href="#member-menu" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="member-list">
-<h3><span class="section-number">4.4.1. </span>Member List<a class="headerlink" href="#member-list" title="Permalink to this headline">¶</a></h3>
+<span id="memb-list-section"></span><h3><span class="section-number">4.4.1. </span>Member List<a class="headerlink" href="#member-list" title="Permalink to this headline">¶</a></h3>
 <p>Members have access to a summary of basic contact details of all active members through the
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser
 if a hard-copy is required.</p>
@@ -793,7 +803,7 @@ Personnel/Membership Officer to remove those details from this list.</p>
 </ul>
 </li>
 </ul>
-<dl class="simple myst">
+<dl class="simple myst" id="memb-list-quals">
 <dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in <em>lower case</em>):</p>
 </dd>
 </dl>
@@ -879,23 +889,59 @@ quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.</p>
 and further down, red.</p>
 </div>
 </div>
+<div class="section" id="member-qualifications">
+<span id="memb-quals"></span><h3><span class="section-number">4.4.3. </span>Member Qualifications<a class="headerlink" href="#member-qualifications" title="Permalink to this headline">¶</a></h3>
+<p>Member qualifications are managed by the RFS, and are stored on their SAP server. The Sign-In system uses
+member qualifications in various areas, including the <a class="reference internal" href="#memb-list-quals"><span class="std std-ref">Member List</span></a> and in events, so that
+users can see the qualification status of members.</p>
+<p>Training Officers can download qualifications for their Brigade into an excel file, and this can now be <a class="reference internal" href="administration.html#sync-sap"><span class="std std-ref">uploaded  to the Sign-In system</span></a> so that it accurately reflects the current qualifications held by members in this Brigade.
+There is no need to maintain parallel records of qualifications, as the system will use those imported from the
+SAP listing.</p>
+<p>The Member Qualification view shows a more detailed view of all member qualifications, including the following:</p>
+<ul class="simple">
+<li><p>Qualification status of all members in the major categories such as Firefighting, First Aid, Chainsaw, etc.</p></li>
+<li><p>The highest level of qualification attained by each member in the various categories.</p></li>
+<li><p>Total number of members qualified in each area.</p></li>
+<li><p>Drill down to show all qualifications for a member, or all brigade qualifications in a category.</p></li>
+</ul>
+<div class="myclass figure align-default" id="brig-certs">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/brigcerta.jpg"><img alt="Member Qualifications View" class="bg-primary mb-1" src="_images/brigcerta.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Member Qualifications View (click to enlarge)</span><a class="headerlink" href="#brig-certs" title="Permalink to this image">¶</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Qualification Acronymns</p>
+<p>The acronyms used to represent particular qualifications are defined in
+the <a class="reference external" href="https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0014/9032/6.1.2-Qualifications-for-NSW-RFS-Members.pdf">RFS Qualifications document</a>.</p>
+</div>
+<p>Qualifications come in two main types:</p>
+<p><strong>1. Perpetual</strong></p>
+<p>These are awarded after successful completion of training, and usually an examination. They are awarded for life,
+and never expire. If a member has attained a perpetual qualification, a <span style="background-color:lightgreen;">Y</span>
+is shown against their name for this qualification.</p>
+<p><strong>2. Renewable</strong></p>
+<p>These also require training, and usually an examination, but the qualification must be renewed periodically -
+normally after 12 or 36 months - or it will expire. The table shows the highest qualification
+attained by a member in these categories. If it is coloured Green, the qualification is current, and has not expired.</p>
+<p>If the member doesn’t have any current qualifications in a category, but does have expired ones, it will show the
+highest expired qualification in Red. Expired qualifications are not included in the count at the foot of each column.</p>
+</div>
 <div class="section" id="at-station">
-<span id="at-stat"></span><h3><span class="section-number">4.4.3. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h3>
+<span id="at-stat"></span><h3><span class="section-number">4.4.4. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>At Station</strong> item shows a replica of the Kiosk, including all events and members attending.</p>
 <div class="myclass figure align-default" id="dashboard">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/dashboard.jpg"><img alt="At Station" class="bg-primary mb-1" src="_images/dashboard.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">¶</a></p>
 </div>
 <p>Unlike the Kiosk, you can not sign-in with this view, nor can you change any details.</p>
 <p>This view is live, and is updated automatically whenever there is any activity on the Kiosk,
 including sign-in/out or new events created.</p>
 </div>
 <div class="section" id="events-calendar">
-<span id="calendar"></span><h3><span class="section-number">4.4.4. </span>Events Calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">¶</a></h3>
+<span id="calendar"></span><h3><span class="section-number">4.4.5. </span>Events Calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">¶</a></h3>
 <p>A calendar view is provided so members can see all brigade activities in the past, and also the future.</p>
 <div class="myclass figure align-default" id="cal-month">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cal-month-a.jpg"><img alt="Calendar Month View" class="bg-primary mb-1" src="_images/cal-month-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Calendar Month View (click to enlarge)</span><a class="headerlink" href="#cal-month" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Calendar Month View (click to enlarge)</span><a class="headerlink" href="#cal-month" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Notes</strong>:</p>
 <ul class="simple">
@@ -908,26 +954,26 @@ as required. Move forward or backward in time using the arrows in the top right.
 all “Training” events, or those attended by a particular member (just search for their surname).</p></li>
 </ul>
 <div class="section" id="viewing-event-details">
-<h4><span class="section-number">4.4.4.1. </span>Viewing Event Details<a class="headerlink" href="#viewing-event-details" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.4.5.1. </span>Viewing Event Details<a class="headerlink" href="#viewing-event-details" title="Permalink to this headline">¶</a></h4>
 <p>You can view the details of any event in the calendar just by clicking on it.</p>
 <p>In general, you will see a view like this:</p>
 <div class="myclass figure align-default" id="ev-read-view">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/ev-read-view.jpg"><img alt="Event read-only view" class="bg-primary mb-1" src="_images/ev-read-view.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">¶</a></p>
 </div>
 <p>Note that all the fields are grey, which means you can’t change anything. However, if you were logged in as the OIC of
 this event, you would be able to update the details as shown earlier <a class="reference internal" href="kiosk.html#event-update"><span class="std std-ref">for the Kiosk</span></a>.</p>
 </div>
 <div class="section" id="week-view">
-<h4><span class="section-number">4.4.4.2. </span>Week View<a class="headerlink" href="#week-view" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.4.5.2. </span>Week View<a class="headerlink" href="#week-view" title="Permalink to this headline">¶</a></h4>
 <p>Click the <span class="badge badge-pill badge-primary"><strong>week</strong></span> button at the top of the page to go to the Week view:</p>
 <div class="myclass figure align-default" id="call-week-a">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cal-week-a.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/cal-week-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Calendar Week View (click to enlarge)</span><a class="headerlink" href="#call-week-a" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Calendar Week View (click to enlarge)</span><a class="headerlink" href="#call-week-a" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="adding-new-events-officers">
-<span id="cal-add-event"></span><h4><span class="section-number">4.4.4.3. </span>Adding New Events (Officers)<a class="headerlink" href="#adding-new-events-officers" title="Permalink to this headline">¶</a></h4>
+<span id="cal-add-event"></span><h4><span class="section-number">4.4.5.3. </span>Adding New Events (Officers)<a class="headerlink" href="#adding-new-events-officers" title="Permalink to this headline">¶</a></h4>
 <p>If you are logged in as an Officer, you can create a new event in the calendar by selecting the area representing the
 times your activity will run (shown in blue above). You will then be asked to provide the details of the event. You can
 only create new events in the future like this, to protect the integrity of the attendance record.</p>
@@ -942,7 +988,7 @@ can see what activities are coming up in the brigade calendar.</p>
 </div>
 </div>
 <div class="section" id="plan-to-attend">
-<h4><span class="section-number">4.4.4.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.4.5.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">¶</a></h4>
 <p>Members can indicate their intention to attend future events using the calendar.</p>
 <p>This allows Officers to get expected numbers for their planned activities, and to see who is interested
 in attending, without needing to exchange a lot of emails.</p>
@@ -963,7 +1009,7 @@ the top right if you have attended them. Past events can not be changed on the c
 and confirm that you are on the list.</p>
 </div>
 <div class="section" id="signing-off-on-an-event-officers">
-<span id="off-signoff"></span><h4><span class="section-number">4.4.4.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">¶</a></h4>
+<span id="off-signoff"></span><h4><span class="section-number">4.4.5.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">¶</a></h4>
 <p>According to the original Attendance Book, Officers are required to check the attendance records for any activity
 they run, and once corrected and checked, sign it off, and cross out the page so that it can’t be changed again.</p>
 <p>In the sign-in system, this can be done by opening the calendar and finding the event you (the OIC) have run,
@@ -972,7 +1018,7 @@ and clicking on it.</p>
 the box marked “Checked” to sign it off.</p>
 <div class="myclass figure align-default" id="offcheck">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/offcheck.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/offcheck.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">¶</a></p>
 </div>
 <p>Once an event has been completed, only the OIC can update the details.</p>
 </div>
@@ -1024,7 +1070,7 @@ either to PDF or to paper by your browser as required, and then sent on to HQ.</
 provides a list of all TRAINING events, with brief details of each activity.</p>
 <div class="myclass figure align-default" id="train-qtr">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/train-qtr.jpg"><img alt="Training Quarterly Return" class="bg-primary mb-1" src="_images/train-qtr.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Training Quarterly Return (click to enlarge)</span><a class="headerlink" href="#train-qtr" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Training Quarterly Return (click to enlarge)</span><a class="headerlink" href="#train-qtr" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="training-calendar">
@@ -1089,7 +1135,7 @@ as well as driving records for members.</p>
 following form:</p>
 <div class="myclass figure align-default" id="vehlog">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/vehlog.jpg"><img alt="Vehicle Log (single journey)" class="bg-primary mb-1" src="_images/vehlog.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Vehicle Log (single journey) (click to enlarge)</span><a class="headerlink" href="#vehlog" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Vehicle Log (single journey) (click to enlarge)</span><a class="headerlink" href="#vehlog" title="Permalink to this image">¶</a></p>
 </div>
 <p>The vehicle which you selected earlier is fixed, as is the initial odometer reading (taken from prior records).</p>
 </div>
@@ -1103,7 +1149,7 @@ following form:</p>
 <p>This shows a summary of vehicle movements in a form similar to the <a class="reference internal" href="#memb-act"><span class="std std-ref">Member Activity table</span></a>.</p>
 <div class="myclass figure align-default" id="veh-mov">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/veh-mov.jpg"><img alt="Vehicle Movements" class="bg-primary mb-1" src="_images/veh-mov.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Vehicle Movements (click to enlarge)</span><a class="headerlink" href="#veh-mov" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Vehicle Movements (click to enlarge)</span><a class="headerlink" href="#veh-mov" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each vehicle is listed, and it’s use in various types of activity is shown. Clicking on the numbers will show a
 full listing of movements for that vehicles in the required category.</p>
@@ -1114,7 +1160,7 @@ full listing of movements for that vehicles in the required category.</p>
 <p>This shows a summary of driver journeys in a form similar to the <a class="reference internal" href="#memb-act"><span class="std std-ref">Member Activity table</span></a>.</p>
 <div class="myclass figure align-default" id="drvmov">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/drvmov.jpg"><img alt="Vehicle Movements" class="bg-primary mb-1" src="_images/drvmov.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Driver Journeys (click to enlarge)</span><a class="headerlink" href="#drvmov" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Driver Journeys (click to enlarge)</span><a class="headerlink" href="#drvmov" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each brigade driver is listed, and their participation in various types of activity is shown. Clicking on the
 numbers will show a full listing of journeys for this driver in the required category.</p>
@@ -1126,7 +1172,7 @@ numbers will show a full listing of journeys for this driver in the required cat
 see <a class="reference internal" href="events.html#ev-veh"><span class="std std-ref">Event Fields</span></a>. It can be useful to see what vehicles are committed, and when, to avoid any clashes.</p>
 <div class="myclass figure align-default" id="vehcal">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/vehcal.jpg"><img alt="Vehicle Bookings" class="bg-primary mb-1" src="_images/vehcal.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Vehicle Bookings (click to enlarge)</span><a class="headerlink" href="#vehcal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Vehicle Bookings (click to enlarge)</span><a class="headerlink" href="#vehcal" title="Permalink to this image">¶</a></p>
 </div>
 <p>It shows all vehicle bookings, but can be filtered using Search (top right) to restrict the events shown.</p>
 </div>
