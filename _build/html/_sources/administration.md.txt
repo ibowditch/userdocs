@@ -108,6 +108,16 @@ However, now that member qualifications can easily be downloaded from SAP, I hav
 qualification records to be uploaded to the Sign-In system, so that the qualifications used are up to date and in sync 
 with SAP. Once uploaded, they can be refreshed and updated with a new listing taken from SAP whenever required.
 
+(sap-download-permissions)=
+:::{admonition} Brigade Manager Permission needed on OneRFS
+
+The Brigade Manager on OneRFS can access details of all qualifications and competencies recorded in SAP for all brigade 
+members, using the Member Portal. The Qualification Report can be found under "Team Reports".
+
+:::
+
+
+
 :::{figure-md} sap-records
 :class: myclass
 
