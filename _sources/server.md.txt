@@ -181,7 +181,7 @@ HR, Maintenance, etc.
 :::{figure-md} act-top
 :class: myclass
 
-<img src="assets/images/act-top-a.jpg" alt="Member Activity (top section)" width="1467" class="bg-primary mb-1">
+<img src="assets/images/act-top2-a.jpg" alt="Member Activity (top section)" width="1467" class="bg-primary mb-1">
 
 Member Activity (top section) (click to enlarge)
 :::
