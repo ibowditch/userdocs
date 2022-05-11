@@ -249,11 +249,13 @@ Details of the pro-rata calculation can be seen by clicking the
 <span class="badge badge-pill badge-primary">**Key**</span> button (top left) - 
 see {ref}`Member Activity (top section)<act-top>`
 
+<!--
 In the {ref}`example above<act-mid>`, we are 306 days through the year (83.8%), and the annual 
 quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
 
 Anyone with a Total of more than 50.3 hours is coloured white, just less than that is coloured yellow, 
 and further down, red.
+-->
 
 (memb-quals)=
 ### Member Qualifications
@@ -469,13 +471,14 @@ update the system.
 
 This allows details of a new member to be recorded in the system. An RFS membership number is required.
 
+(annual-att)=
 ### Annual Attendance
 
 Some districts require hard-copies of attendance records to be sent to HQ for storage each year, similar to the old
 Attendance Books.
 
-This item will produce a listing of all attendance in a format similar to the old Attendance Book, which can be printed 
-either to PDF or to paper by your browser as required, and then sent on to HQ.
+This item will produce a listing of all attendance in a calendar year in a format similar to the old Attendance Book, 
+which can be printed either to PDF or to paper by your browser as required, and then sent on to HQ.
 
 
 ## Training Menu
