@@ -381,7 +381,7 @@
                 
   <div class="section" id="the-kiosk">
 <span id="kioskh"></span><h1><span class="section-number">2. </span>The Kiosk<a class="headerlink" href="#the-kiosk" title="Permalink to this headline">¶</a></h1>
-<p>The Kiosk is a small computer (a Raspberry PI), with a screen and a tag reader attached, that
+<p>The Kiosk is a small computer (a Raspberry PI), with a screen and a NFC tag reader attached, that
 replaces the old paper Attendance Book, and records attendance in electronic form. It is normally located
 at the front desk of the station.</p>
 <div class="margin figure align-default" id="kiosk-parts">
@@ -392,7 +392,7 @@ at the front desk of the station.</p>
 to function.</p>
 <p>The Kiosk screen shows <a class="reference internal" href="events.html"><span class="doc std std-doc">events</span></a> that start <strong>or end</strong> on the current day,
 and is automatically updated every night, just after midnight, to show events for the new day.</p>
-<p>NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out
+<p id="keyfobs">NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out
 of events shown on the kiosk screen.</p>
 <div class="section" id="basic-operations">
 <h2><span class="section-number">2.1. </span>Basic Operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
@@ -423,8 +423,10 @@ the event, and the time you signed in.</p>
 <p class="admonition-title">Why you should always sign-in with your tag</p>
 <p>There is a mechanism which allows <a class="reference internal" href="#notag"><span class="std std-ref">you to sign-in without a tag</span></a> but this should only be used in
 exceptional cases, as the Kiosk is a shared computer, and doesn’t know who is at the keyboard.</p>
-<p>Your tag is unique to you, and essentially replaces your signature in the electronic attendance
-records. Using your tag leaves little doubt that it was you who signed-in, so it should be used whenever possible.</p>
+<p>Your tag is unique to you, and essentially replaces your signature in the electronic
+attendance records. Using your tag leaves little doubt that it was you who signed-in (which is a
+<a class="reference internal" href="background.html#main-reqs"><span class="std std-ref">key requirement of the system</span></a>), so it should be used
+whenever possible.</p>
 <p>The system records when a tag is used, and if your brigade is strict about using tags,
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.</p>
 </div>

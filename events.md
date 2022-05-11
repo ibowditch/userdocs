@@ -49,7 +49,7 @@ Apart from updating the event (as above), the following actions or triggers will
 2. Signing in using the <span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span> icon on the top right of the event
 3. Signing out using the <span class="badge badge-pill badge-success">Sign Out</span> button
 4. Clicking a member name to edit their attendance details.
-5. When the event becomes open as the time reaches 1 hour before start time.
+5. When the event becomes open, as the time reaches 1 hour before start time.
 6. As the event closes when the end time is passed.
 7. Just after midnight, when the "slate is cleaned", and events for the new day are shown.
 
@@ -70,9 +70,10 @@ Start time
 : The time, on the given Date, when the activity begins. Members may sign in to an event from one hour
   before the given Start time, up to the End time.
 
+
 End time 
 : The time when the activity is expected to finish.  In most cases this will be on the same day as the Start 
-  Time, but if an event is expected to [run overnight](overnight), the End Time can be set to a time before the 
+  Time, but if an event is expected to {ref}`run overnight<overnight>`, the End Time can be set to a time before the 
   Start Time, which will be interpreted as being in the following day.
 
 ```{margin} Changing Events
@@ -132,31 +133,26 @@ Events come in the following types (see above for examples):
 
 ### Basic Types 
 
-Open/available - white background, solid border
-   
-:  Events become open 1 hour before their start time and remain open until their end time. When they are open, 
-   they will accept sign-ins from members either using a tag, or using the sign-in icon.
+**Open/available** (white background, solid border)
+: Events become open 1 hour before their start time and remain open until their end time. When they are open, 
+  they will accept sign-ins from members either using a tag, or using the sign-in icon.
 
-Closed/completed - grey background, solid border
+**Closed/completed** (grey background, solid border)
+: Events close when their finish time has passed. They will not accept sign-in attempts with a tag. The sign-in icon 
+  will also be removed.
    
-:  Events close when their finish time has passed. They will be shown with a grey background when they are 
-   closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.
-   
-Future - white background, dashed border
-   
-:  Events starting more than 1 hour in the future are shown with a dashed border. They will not be available 
-   to sign-in with a tag, and no sign-in icon is shown.
+**Future** (white background, dashed border)
+: Events starting more than 1 hour in the future will not be available to sign-in with a tag, and no sign-in icon is shown.
 
 ### Additional Types
 
 (overnight)=
-Overnight
-   
-:  Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
-   that an event runs overnight by giving a finish time in the next day. 
+**Overnight**
+: Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
+  that an event runs overnight by giving a finish time in the next day. 
 
-   The kiosk shows all events that start **or end** on the current day, so an overnight event will appear on both 
-   the start day **and** on the end day. This allows crew to sign out when they return from a night shift.
+  The kiosk shows all events that start **or end** on the current day, so an overnight event will appear on both 
+  the start day **and** on the end day. This allows crew to sign out when they return from a night shift.
 
 :::{admonition} **Always set the end time for overnight events**
 :class: warning
@@ -171,32 +167,30 @@ If you get back early, no problem.
 
 :::
 
-External
+**External**
+: If an event is being run at another location, rather than at the station, attendance can still be recorded in the 
+  system.
 
-:  If an event is being run at another location, rather than at the station, attendance can still be recorded in the 
-   system.
-
-   Members who are known to be attending this event should be added to the event by the OIC ahead 
-   of time. If they arrive at the station to travel to the event (e.g. at a training centre), they can sign-in as normal.
+  Members who are known to be attending this event should be added to the event by the OIC ahead 
+  of time. If they arrive at the station to travel to the event (e.g. at a training centre), they can sign-in as normal.
    
-   Any member not on the preset list will not be offered the option of signing in to external events when they tag in. 
-   External events normally run for a full day, and if the attendees are known up front, there is no point asking 
-   other members not on the list whether they want to attend such events.
+  Any member not on the preset list will not be offered the option of signing in to external events when they tag in. 
+  External events normally run for a full day, and if the attendees are known up front, there is no point asking 
+  other members not on the list whether they want to attend such events.
 
 (pagercalls)=
-Pager Calls
-      
-:  Pager Calls are detected by a separate system which automagically creates a new event on the web server 
-   as soon as a callout is received for your brigade.
+**Pager Calls**
+: Pager Calls are detected by a separate system which automagically creates a new event on the web server 
+  as soon as a callout is received for your brigade.
 
-   The event should be available for members to sign-in to when they arrive at the station.
+  The event should be available for members to sign-in to when they arrive at the station.
 
-   The event title will be the same as the pager message. The format of this message will vary by district, but 
-   generally it includes the name of the paged brigade, the type of call, and the CAD number. 
+  The event title will be the same as the pager message. The format of this message will vary by district, but 
+  generally it includes the name of the paged brigade, the type of call, and the CAD number. 
 
-   The actual OIC is not known when the pager call arrives, so the system assigns the call-out officer or the SDC
-   as the OIC by default. This should be {ref}`updated<change-event>` by the actual OIC when the crew returns 
-   to station.
+  The actual OIC is not known when the pager call arrives, so the system assigns the call-out officer or the SDC
+  as the OIC by default. This should be {ref}`updated<change-event>` by the actual OIC when the crew returns 
+  to station.
 
 :::{figure-md} pager-callout
 :class: myclass

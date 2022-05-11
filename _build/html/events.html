@@ -319,7 +319,7 @@ but won’t be able to change anything.</p>
 <li><p>Signing in using the <span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span> icon on the top right of the event</p></li>
 <li><p>Signing out using the <span class="badge badge-pill badge-success">Sign Out</span> button</p></li>
 <li><p>Clicking a member name to edit their attendance details.</p></li>
-<li><p>When the event becomes open as the time reaches 1 hour before start time.</p></li>
+<li><p>When the event becomes open, as the time reaches 1 hour before start time.</p></li>
 <li><p>As the event closes when the end time is passed.</p></li>
 <li><p>Just after midnight, when the “slate is cleaned”, and events for the new day are shown.</p></li>
 </ol>
@@ -397,21 +397,20 @@ if there are breaks or other activities in between.</p>
 <div class="section" id="basic-types">
 <h3><span class="section-number">3.3.1. </span>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h3>
 <dl class="simple myst">
-<dt>Open/available - white background, solid border</dt><dd><p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
+<dt><strong>Open/available</strong> (white background, solid border)</dt><dd><p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
 they will accept sign-ins from members either using a tag, or using the sign-in icon.</p>
 </dd>
-<dt>Closed/completed - grey background, solid border</dt><dd><p>Events close when their finish time has passed. They will be shown with a grey background when they are
-closed, and will not accept sign-in attempts with a tag. The sign-in icon will also be removed.</p>
+<dt><strong>Closed/completed</strong> (grey background, solid border)</dt><dd><p>Events close when their finish time has passed. They will not accept sign-in attempts with a tag. The sign-in icon
+will also be removed.</p>
 </dd>
-<dt>Future - white background, dashed border</dt><dd><p>Events starting more than 1 hour in the future are shown with a dashed border. They will not be available
-to sign-in with a tag, and no sign-in icon is shown.</p>
+<dt><strong>Future</strong> (white background, dashed border)</dt><dd><p>Events starting more than 1 hour in the future will not be available to sign-in with a tag, and no sign-in icon is shown.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="additional-types">
 <h3><span class="section-number">3.3.2. </span>Additional Types<a class="headerlink" href="#additional-types" title="Permalink to this headline">¶</a></h3>
 <dl class="simple myst" id="overnight">
-<dt>Overnight</dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
+<dt><strong>Overnight</strong></dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
 that an event runs overnight by giving a finish time in the next day.</p>
 <p>The kiosk shows all events that start <strong>or end</strong> on the current day, so an overnight event will appear on both
 the start day <strong>and</strong> on the end day. This allows crew to sign out when they return from a night shift.</p>
@@ -427,7 +426,7 @@ when they return from their shift, as the event will have been wiped from the ki
 If you get back early, no problem.</p>
 </div>
 <dl class="simple myst">
-<dt>External</dt><dd><p>If an event is being run at another location, rather than at the station, attendance can still be recorded in the
+<dt><strong>External</strong></dt><dd><p>If an event is being run at another location, rather than at the station, attendance can still be recorded in the
 system.</p>
 <p>Members who are known to be attending this event should be added to the event by the OIC ahead
 of time. If they arrive at the station to travel to the event (e.g. at a training centre), they can sign-in as normal.</p>
@@ -437,7 +436,7 @@ other members not on the list whether they want to attend such events.</p>
 </dd>
 </dl>
 <dl class="simple myst" id="pagercalls">
-<dt>Pager Calls</dt><dd><p>Pager Calls are detected by a separate system which automagically creates a new event on the web server
+<dt><strong>Pager Calls</strong></dt><dd><p>Pager Calls are detected by a separate system which automagically creates a new event on the web server
 as soon as a callout is received for your brigade.</p>
 <p>The event should be available for members to sign-in to when they arrive at the station.</p>
 <p>The event title will be the same as the pager message. The format of this message will vary by district, but

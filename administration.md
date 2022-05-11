@@ -2,7 +2,7 @@
 
 ```{margin} Restricted Access
 Access to most of the Administration procedures below is restricted to genuine system admins, 
-and these not generally available to Members or Officers.
+and these are not generally available to Members or Officers.
 ```
 
 ## Preparing and Issuing Tags
@@ -45,6 +45,7 @@ with the sign-in time. Tag a second time to sign out
 it should detect an NFC device. It will show the RFS member number, the date when it was created, 
   and the brigade it belongs to.
 
+(brig-sett)=
 ##  Brigade specific settings
 
 If you have full admin privileges, under Brigade Settings, you will see your own Brigade. Select that and then you will
@@ -89,6 +90,82 @@ Excluded activity types
   There is a checkbox on the {ref}`Member Activity Table<memb-act>` labelled *Add Excluded Events*, that will include 
   these events (they are excluded by default). If you drill down into one of the numbers, Excluded events will be shown in 
   grey (normally they are not shown at all).
+
+## Adding a New Brigade
+
+### Data Required from Brigade
+
+The brigade should provide the following details, preferably in an excel spreadsheet:
+
+* All Member Details (preferably from onerfs "Brigade Personnel Response Analysis" report), including
+  * Firezone number
+  * First Name
+  * Last Name
+  * Preferred First Name
+  * Mobile number
+  * Email address
+  * Date Joined
+  * Date of Birth
+  * Active status (yes/no)
+  * Member Type (Operational/Reserve/Social/Administration/Support)
+
+* Member Qualifications 
+  * Brigade manager to obtain "Qualification Report" from onerfs Team Reports
+  * see here for details: [Member Qualifications](https://rfstag-user.netlify.app/administration.html#synchronising-qualifications-with-sap).
+
+* Current Officers (for all Field and Admin positions)
+  * Member Name
+  * Member FireZone number 
+  * Position Title
+  
+* Brigade Vehicles
+  * Full name (eg. Wyee Point 1A)
+  * Abbrev name, eg. WP-1A
+  * Make, eg. Isuzu
+  * Category (eg. 1, 7, 9, ...)
+  * Year
+  * Crew capacity
+  * Aircraft Code
+    
+* Brigade Settings
+  * see {ref}`Brigade Settings section<brig-sett>` above
+  * This can be done last, after all of the above
+
+### Hardware Order Parts List
+
+* Raspberry PI
+  * PI 4 2Gb RAM
+  * PI 4 case
+  * Micro HDMI cable
+  * PI 4 power supply
+  * 16Gb SD RAM card
+  
+* Tags
+  * Sony PaSoRi RC-S380 card reader (USB)
+  * 100 x 13.56MHz NTAG215 NFC Key Fob Tags
+
+### Equipment to be Provided by Brigade
+
+* Kiosk
+  * Computer monitor with HDMI connection (can be touchscreen if available)
+  * USB Mouse (preferably wired)
+  * USB Keyboard (preferably wired)
+  
+* WiFI connection
+  * SSID and password  
+
+### Modem Setup for Remote Access
+
+### Adding a New Tenant Schema
+
+### Populating New Tenant Schema
+
+### Brigade Settings
+
+### Testing
+
+### Full Deployment
+
 
 ## Periodic Admin Procedures
 
@@ -165,6 +242,10 @@ your records will be updated.
 
 Importing New Qualifications (click to enlarge)
 :::
+
+Certifications should be updated every 3 months or so, or whenever there have been significant updates to brigade 
+qualification records in SAP.
+
 
 
 ### Making Training Plans

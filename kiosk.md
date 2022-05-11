@@ -1,7 +1,7 @@
 (kioskh)=
 # The Kiosk
 
-The Kiosk is a small computer (a Raspberry PI), with a screen and a tag reader attached, that 
+The Kiosk is a small computer (a Raspberry PI), with a screen and a NFC tag reader attached, that 
 replaces the old paper Attendance Book, and records attendance in electronic form. It is normally located 
 at the front desk of the station. 
 :::{figure-md} kiosk-parts
@@ -14,9 +14,10 @@ NFC tag, reader, and PI
 It is always-on and available 24 hours every day. It requires an internet connection (Wi-Fi or wired) 
 to function.
 
-The Kiosk screen shows [events](events "described in a later section") that start **or end** on the current day, 
+The Kiosk screen shows [events](events.md "described in a later section") that start **or end** on the current day, 
 and is automatically updated every night, just after midnight, to show events for the new day.
 
+(keyfobs)=
 NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out 
 of events shown on the kiosk screen.
  
@@ -69,8 +70,10 @@ When you've finished the activity, use your tag again to sign-out. That's it!
 There is a mechanism which allows {ref}`you to sign-in without a tag<notag>` but this should only be used in 
 exceptional cases, as the Kiosk is a shared computer, and doesn't know who is at the keyboard. 
 
-Your tag is unique to you, and essentially replaces your signature in the electronic attendance 
-records. Using your tag leaves little doubt that it was you who signed-in, so it should be used whenever possible.
+Your tag is unique to you, and essentially replaces your signature in the electronic 
+attendance records. Using your tag leaves little doubt that it was you who signed-in (which is a 
+{ref}`key requirement of the system<main-reqs>`), so it should be used 
+whenever possible.
 
 The system records when a tag is used, and if your brigade is strict about using tags, 
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
