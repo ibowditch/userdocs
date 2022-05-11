@@ -246,6 +246,25 @@ Importing New Qualifications (click to enlarge)
 Certifications should be updated every 3 months or so, or whenever there have been significant updates to brigade 
 qualification records in SAP.
 
+:::{admonition} Traps for Young Players
+:name: sap-import
+:class: tip
+
+1. If you ignore my advice to be patient, and click on Submit or Confirm before the import has completed, you will
+   get a spooky 500 error, and I will get a whiny email saying someone is breaking the system. Just go back, start
+   again, and find something else to do for 20s while the import completes.
+   
+2. If you don't set the file type to xlsx when you import the SAP file, you will get a weird shouty error message. I 
+   can't prevent that. Just go back, and set the correct file type this time.
+   
+3. The import can fail if the SAP file has any of the following problems:
+    * Qualifications for a Member who isn't registered on the system. Use the line number in the error message to find
+      the offending line in the xlsx file, and that will give you the details of the missing member. Just 
+      {ref}`add the missing member<add-memb>` and retry.
+    * Corrupted entry for a qualification : find the line in the xlsx file (line number should be in the error message), 
+      delete it, and try again. Then report the problem to RFS IT.
+      
+:::
 
 
 ### Making Training Plans

@@ -731,6 +731,25 @@ your records will be updated.</p>
 </div>
 <p>Certifications should be updated every 3 months or so, or whenever there have been significant updates to brigade
 qualification records in SAP.</p>
+<div class="tip admonition" id="sap-import">
+<p class="admonition-title">Traps for Young Players</p>
+<ol class="arabic simple">
+<li><p>If you ignore my advice to be patient, and click on Submit or Confirm before the import has completed, you will
+get a spooky 500 error, and I will get a whiny email saying someone is breaking the system. Just go back, start
+again, and find something else to do for 20s while the import completes.</p></li>
+<li><p>If you don’t set the file type to xlsx when you import the SAP file, you will get a weird shouty error message. I
+can’t prevent that. Just go back, and set the correct file type this time.</p></li>
+<li><p>The import can fail if the SAP file has any of the following problems:</p>
+<ul class="simple">
+<li><p>Qualifications for a Member who isn’t registered on the system. Use the line number in the error message to find
+the offending line in the xlsx file, and that will give you the details of the missing member. Just
+<a class="reference internal" href="server.html#add-memb"><span class="std std-ref">add the missing member</span></a> and retry.</p></li>
+<li><p>Corrupted entry for a qualification : find the line in the xlsx file (line number should be in the error message),
+delete it, and try again. Then report the problem to RFS IT.</p></li>
+</ul>
+</li>
+</ol>
+</div>
 </div>
 <div class="section" id="making-training-plans">
 <h3><span class="section-number">5.4.3. </span>Making Training Plans<a class="headerlink" href="#making-training-plans" title="Permalink to this headline">¶</a></h3>

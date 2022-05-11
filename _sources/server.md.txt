@@ -467,6 +467,7 @@ will create new Officer records for all positions in the new season using the sa
 You can then edit this list by changing the names of the officers to match the election results, then Save to 
 update the system.
 
+(add-memb)=
 ### Add New Member
 
 This allows details of a new member to be recorded in the system. An RFS membership number is required.
