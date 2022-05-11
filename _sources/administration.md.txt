@@ -324,6 +324,8 @@ If the Brigade Captain authorises a member to drive the brigade's heavy vehicles
 created and stored in the certification section of the sign-in system admin area. Similarly, members who are permitted 
 to drive light vehicles (but not heavy vehicles) should have a **PD** certification recorded in their name.
 
+Make sure you add a certification date to these, to keep a record of when they were granted.
+
 The **RFD** qualification which goes with this, is issued by the RFS, and is included in the SAP qualifications. The 
 {ref}`Member List<memb-list>` shows TD and PD permissions, and these are shown in lower case if RFD is out of date or not 
 available for the driver.

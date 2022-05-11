@@ -53,7 +53,7 @@ in the following ways:
    Attendance Book, which is kept at the Station.
 
 1. **Official confirmation** of participation is provided by the Officer In Charge (OIC) checking and signing-off on 
-   attendance records for activities that they organise.
+   attendance records for activities that they organise, to confirm that they are accurate and complete.
    
 1. **Secure storage** of the Attendance records, so that they cannot be changed or altered at a later date. The OIC draws
     a line under the records, and should initial any later changes if they are approved.
@@ -97,7 +97,7 @@ addresses these requirements as follows:
 
 1. **Official Confirmation**: 
    The OIC can and should review any events they run and {ref}`sign them off<off-signoff>` electronically using 
-   the web portal. Only the OIC can change details of activities that they have organised and run.
+   the web portal, and amend them as needed. Only the OIC can change details of activities that they have organised and run.
    
 1. **Secure Storage**: 
    After an event is completed, the {ref}`only person who can change or amend the attendance records<off-signoff>` for 
@@ -218,9 +218,6 @@ the major fires of 2019-2020.
 
 The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports 
 more than 300 users.
-
-
-
 
 
 
