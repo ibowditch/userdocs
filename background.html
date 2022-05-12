@@ -203,18 +203,13 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#meeting-requirements-with-rfstag">
-     1.1.2. Meeting Requirements with RFStag
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-system-requirements">
-     1.1.3. Additional System Requirements
+     1.1.2. Additional System Requirements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unlocking-the-value-of-attendance-data">
-     1.1.4. Unlocking the Value of Attendance Data
+     1.1.3. Unlocking the Value of Attendance Data
     </a>
    </li>
   </ul>
@@ -260,18 +255,13 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#meeting-requirements-with-rfstag">
-     1.1.2. Meeting Requirements with RFStag
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-system-requirements">
-     1.1.3. Additional System Requirements
+     1.1.2. Additional System Requirements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unlocking-the-value-of-attendance-data">
-     1.1.4. Unlocking the Value of Attendance Data
+     1.1.3. Unlocking the Value of Attendance Data
     </a>
    </li>
   </ul>
@@ -326,25 +316,53 @@ that can be used in cases of accident or misadventure, especially when a Workers
 <p>The paper Attendance Book provided a way to collect and preserve attendance records in a secure, controlled, and
 organised way, so that these records would be accurate, reliable, credible, and available for future reference
 whenever needed.</p>
-<p>Used correctly, the Attendance Book provides solid, lasting, evidence that a Member was involved in an activity
-in the following ways:</p>
-<ol class="arabic simple" id="main-reqs">
-<li><p><strong>Unique identification</strong> of the Member, by their signature on the attendance record.</p></li>
-<li><p><strong>Participation</strong> in the activity is clear and unambiguous, since the member’s name and signature are recorded as
-part of an activity described at the top of the Attendance Book page.</p></li>
-<li><p><strong>Physical presence</strong> of the Member at the Station is generally confirmed by the Member’s signature in the
-Attendance Book, which is kept at the Station.</p></li>
-<li><p><strong>Official confirmation</strong> of participation is provided by the Officer In Charge (OIC) checking and signing-off on
-attendance records for activities that they organise, to confirm that they are accurate and complete.</p></li>
-<li><p><strong>Secure storage</strong> of the Attendance records, so that they cannot be changed or altered at a later date. The OIC draws
-a line under the records, and should initial any later changes if they are approved.</p></li>
-<li><p><strong>Long Term storage</strong> of records so that they may be accessed when needed at a later date. Attendance records
-are <a class="reference external" href="https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17">State Records</a>, and must be
-<a class="reference external" href="https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf">kept for at least 25 years</a>.</p></li>
-</ol>
+<p>Used correctly, the Attendance Book provides solid, lasting, evidence that a Member was involved in an activity. The
+following table shows how the Attendance Book meets these requirements, and also how RFSTag does the same:</p>
+<table class="colwidths-auto table" id="main-reqs">
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Key Requirement</p></th>
+<th class="head"><p>Attendance Book</p></th>
+<th class="head"><p>RFSTag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1.</p></td>
+<td><p><strong>Unique identification</strong> of the Member</p></td>
+<td><p>Member’s signature on the attendance record</p></td>
+<td><p>Members sign-in with their <a class="reference internal" href="kiosk.html#keyfobs"><span class="std std-ref">NFC tag</span></a>, which is unique to them.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.</p></td>
+<td><p><strong>Participation</strong> in the activity is clear and unambiguous</p></td>
+<td><p>Member’s name and signature are recorded as part of an activity described at the top of the Attendance Book page.</p></td>
+<td><p>Members <a class="reference internal" href="kiosk.html#easyway"><span class="std std-ref">sign-in</span></a> to a named activity/event on arrival at the station.</p></td>
+</tr>
+<tr class="row-even"><td><p>3.</p></td>
+<td><p><strong>Physical presence</strong> of the Member at the Station</p></td>
+<td><p>Confirmed by the Member’s signature in the Attendance Book, which is kept at the Station.</p></td>
+<td><p>Members can only sign-in to an activity using the <a class="reference internal" href="kiosk.html#kioskh"><span class="std std-ref">Kiosk</span></a>, which is located at the Station.</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.</p></td>
+<td><p><strong>Official confirmation</strong> of participation</p></td>
+<td><p>Provided by the Officer In Charge (OIC) signing-off on attendance records for activities that they organise, to confirm that they are accurate and complete.</p></td>
+<td><p>The OIC reviews any events they run and <a class="reference internal" href="server.html#off-signoff"><span class="std std-ref">signs them off</span></a> electronically using the web portal.</p></td>
+</tr>
+<tr class="row-even"><td><p>5.</p></td>
+<td><p><strong>Secure storage</strong> of the Attendance records, so that they cannot be altered at a later date.</p></td>
+<td><p>OIC draws a line under the records, and initials any later changes if they are approved.</p></td>
+<td><p>After an event is completed, the <a class="reference internal" href="server.html#off-signoff"><span class="std std-ref">only person who can change or amend the attendance records</span></a> for an event is the OIC.</p></td>
+</tr>
+<tr class="row-odd"><td><p>6.</p></td>
+<td><p><strong>Long Term storage</strong> of records so that they may be accessed when needed at a later date.</p></td>
+<td><p>Archived by District. Attendance records are <a class="reference external" href="https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17">State Records</a>, and must be <a class="reference external" href="https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf">kept for at least 25 years</a>.</p></td>
+<td><p>Attendance records can be <a class="reference internal" href="server.html#annual-att"><span class="std std-ref">exported for printing or electronic storage</span></a> for archiving by the District.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="topic">
 <p class="topic-title">Drawbacks of the Attendance Book</p>
-<p>Keeping handwritten attendance records has some significant drawbacks:</p>
+<p>Even though the paper Attendance Book meets all the above requirements, there are some significant drawbacks with
+keeping handwritten attendance records:</p>
 <ul class="simple">
 <li><p>Often written records are messy, sometimes illegible, inconsistent or inaccurate, and require
 interpretation and follow-up to correct.</p></li>
@@ -357,26 +375,6 @@ touched by many Members, and could be a vector for infections such as flu or COV
 <p>RFSTag addresses all these issues by collecting and storing attendance records electronically at the <a class="reference internal" href="kiosk.html#kioskh"><span class="std std-ref">Kiosk</span></a>,
 and providing access to these records and reports using the <a class="reference internal" href="server.html#serverh"><span class="std std-ref">web portal</span></a>.</p>
 </div>
-</div>
-<div class="section" id="meeting-requirements-with-rfstag">
-<h3><span class="section-number">1.1.2. </span>Meeting Requirements with RFStag<a class="headerlink" href="#meeting-requirements-with-rfstag" title="Permalink to this headline">¶</a></h3>
-<p>Any system which aims to replace the paper Attendance Book must meet all the above requirements. The RFSTag system
-addresses these requirements as follows:</p>
-<ol class="arabic simple">
-<li><p><strong>Unique Identification</strong>: The Member’s signature is replaced by their <a class="reference internal" href="kiosk.html#keyfobs"><span class="std std-ref">NFC tag</span></a>, which is unique to them.</p></li>
-<li><p><strong>Participation</strong>: Members <a class="reference internal" href="kiosk.html#easyway"><span class="std std-ref">sign-in</span></a> to a named activity/event on arrival at the station.</p></li>
-<li><p><strong>Physical Presence</strong>: Members can only sign-in to an activity using the <a class="reference internal" href="kiosk.html#kioskh"><span class="std std-ref">Kiosk</span></a>, which is located at
-the Station.</p></li>
-<li><p><strong>Official Confirmation</strong>:
-The OIC can and should review any events they run and <a class="reference internal" href="server.html#off-signoff"><span class="std std-ref">sign them off</span></a> electronically using
-the web portal, and amend them as needed. Only the OIC can change details of activities that they have organised and run.</p></li>
-<li><p><strong>Secure Storage</strong>:
-After an event is completed, the <a class="reference internal" href="server.html#off-signoff"><span class="std std-ref">only person who can change or amend the attendance records</span></a> for
-an event is the OIC. Electronic audit trails record any changes made.</p></li>
-<li><p><strong>Long Term Storage</strong>: Attendance records can be <a class="reference internal" href="server.html#annual-att"><span class="std std-ref">exported for printing or electronic storage</span></a>
-for archiving by the District, in the same way as Attendance Books. Daily backups are made automatically, to
-prevent any data loss.</p></li>
-</ol>
 <div class="admonition-why-not-use-rfs-activ admonition">
 <p class="admonition-title">Why not use RFS ACTIV?</p>
 <p>RFS ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews
@@ -389,7 +387,7 @@ enabled at all times, which may not be feasible, or even acceptable for some mem
 </div>
 </div>
 <div class="section" id="additional-system-requirements">
-<h3><span class="section-number">1.1.3. </span>Additional System Requirements<a class="headerlink" href="#additional-system-requirements" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.1.2. </span>Additional System Requirements<a class="headerlink" href="#additional-system-requirements" title="Permalink to this headline">¶</a></h3>
 <p>As well as meeting the above requirements, this is what I was aiming to do with the new system:</p>
 <ol class="arabic simple" id="availreq">
 <li><p>Provide an easy and quick way for members to sign-in to activities at the RFS station, modelled on existing
@@ -405,7 +403,7 @@ and running.</p></li>
 </ol>
 </div>
 <div class="section" id="unlocking-the-value-of-attendance-data">
-<h3><span class="section-number">1.1.4. </span>Unlocking the Value of Attendance Data<a class="headerlink" href="#unlocking-the-value-of-attendance-data" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.1.3. </span>Unlocking the Value of Attendance Data<a class="headerlink" href="#unlocking-the-value-of-attendance-data" title="Permalink to this headline">¶</a></h3>
 <p>The original Attendance Book is generally fine for the purpose of meeting the legal requirements to record attendance.</p>
 <p>However, Attendance Records also contain information that is useful for brigade management, for example:</p>
 <ul class="simple">
