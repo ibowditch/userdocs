@@ -54,8 +54,22 @@ following table shows how the Attendance Book meets these requirements, and also
 | 6. | **Long Term storage** of records so that they may be accessed when needed at a later date.         | Archived by District. Attendance records are [State Records](https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17), and must be [kept for at least 25 years](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf).                                                                                            | Attendance records can be {ref}`exported for printing or electronic storage<annual-att>` for archiving by the District.                                                                   |
 
 
+:::{admonition} Why not use RFS ACTIV?
 
-:::{topic} Drawbacks of the Attendance Book
+RFS ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews 
+for these callouts. 
+
+However, at the moment, it does not have a reliable way of recording attendance at the station.
+
+It can detect your proximity to the station from the GPS on your phone (including when driving past the station), 
+but this is not the same as attendance, and it does not meet some key requirements above.
+
+It relies on all members having mobile phones switched on at all times, and for those phones to have GPS tracking 
+enabled at all times, which may not be feasible, or even acceptable for some members.
+
+:::
+
+### Drawbacks of the Attendance Book
 
 Even though the paper Attendance Book meets all the above requirements, there are some significant drawbacks with 
 keeping handwritten attendance records:
@@ -73,23 +87,6 @@ keeping handwritten attendance records:
 
 RFSTag addresses all these issues by collecting and storing attendance records electronically at the {ref}`Kiosk<kioskh>`, 
 and providing access to these records and reports using the {ref}`web portal<serverh>`.
-
-:::
- 
-:::{admonition} Why not use RFS ACTIV?
-
-RFS ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews 
-for these callouts. 
-
-However, at the moment, it does not have a reliable way of recording attendance at the station.
-
-It can detect your proximity to the station from the GPS on your phone (including when driving past the station), 
-but this is not the same as attendance, and it does not meet some key requirements above.
-
-It relies on all members having mobile phones switched on at all times, and for those phones to have GPS tracking 
-enabled at all times, which may not be feasible, or even acceptable for some members.
-
-:::
 
 
 ### Additional System Requirements
