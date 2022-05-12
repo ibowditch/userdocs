@@ -264,6 +264,11 @@ qualification records in SAP.
     * Corrupted entry for a qualification : find the line in the xlsx file (line number should be in the error message), 
       delete it, and try again. Then report the problem to RFS IT.
       
+4. If no new qualifications are found when loading the SAP file, check the following:
+    * Are you using the latest download from SAP?
+    * Have there actually been any new qualifications since you last loaded a SAP file?
+    * Has the Brigade Qualifications file been updated on SAP and onerfs (check with RFS IT)?
+
 :::
 
 

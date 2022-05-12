@@ -40,32 +40,25 @@ The paper Attendance Book provided a way to collect and preserve attendance reco
 organised way, so that these records would be accurate, reliable, credible, and available for future reference 
 whenever needed.
 
-Used correctly, the Attendance Book provides solid, lasting, evidence that a Member was involved in an activity 
-in the following ways:
+Used correctly, the Attendance Book provides solid, lasting, evidence that a Member was involved in an activity. The 
+following table shows how the Attendance Book meets these requirements, and also how RFSTag does the same:
 
 (main-reqs)=
-1. **Unique identification** of the Member, by their signature on the attendance record.
+| # | Key Requirement                                                                                    | Attendance Book                                                                                                                                                           | RFSTag                                                                                                                                                                                    |
+|---|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. | **Unique identification** of the Member                                                            | Member's signature on the attendance record                                                                                                                               | Members sign-in with their {ref}`NFC tag<keyfobs>`, which is unique to them.                                                                                                               |
+| 2. | **Participation** in the activity is clear and unambiguous                                         | Member's name and signature are recorded as part of an activity described at the top of the Attendance Book page.                                                         | Members {ref}`sign-in<easyway>` to a named activity/event on arrival at the station.                                                                                                      |
+| 3. | **Physical presence** of the Member at the Station                                                 | Confirmed by the Member's signature in the Attendance Book, which is kept at the Station.                                                                                 | Members can only sign-in to an activity using the {ref}`Kiosk<kioskh>`, which is located at the Station.                                                                                  |
+| 4. | **Official confirmation** of participation                                                         | Provided by the Officer In Charge (OIC) signing-off on attendance records for activities that they organise, to confirm that they are accurate and complete.              | The OIC reviews any events they run and {ref}`signs them off<off-signoff>` electronically using the web portal.                                                                            |
+| 5. | **Secure storage** of the Attendance records, so that they cannot be altered at a later date.      | OIC draws a line under the records, and initials any later changes if they are approved.                                                                                  | After an event is completed, the {ref}`only person who can change or amend the attendance records<off-signoff>` for an event is the OIC.                                                  |
+| 6. | **Long Term storage** of records so that they may be accessed when needed at a later date.         | Archived by District. Attendance records are [State Records](https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17), and must be [kept for at least 25 years](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf).                                                                                            | Attendance records can be {ref}`exported for printing or electronic storage<annual-att>` for archiving by the District.                                                                   |
 
-1. **Participation** in the activity is clear and unambiguous, since the member's name and signature are recorded as 
-   part of an activity described at the top of the Attendance Book page.
-
-1. **Physical presence** of the Member at the Station is generally confirmed by the Member's signature in the 
-   Attendance Book, which is kept at the Station.
-
-1. **Official confirmation** of participation is provided by the Officer In Charge (OIC) checking and signing-off on 
-   attendance records for activities that they organise, to confirm that they are accurate and complete.
-   
-1. **Secure storage** of the Attendance records, so that they cannot be changed or altered at a later date. The OIC draws
-    a line under the records, and should initial any later changes if they are approved.
-
-1. **Long Term storage** of records so that they may be accessed when needed at a later date. Attendance records 
-   are [State Records](https://legislation.nsw.gov.au/view/pdf/asmade/act-1998-17), and must be 
-[kept for at least 25 years](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0003/171471/2.1.7-Management-of-Brigade-Records.pdf).
 
 
 :::{topic} Drawbacks of the Attendance Book
 
-Keeping handwritten attendance records has some significant drawbacks:
+Even though the paper Attendance Book meets all the above requirements, there are some significant drawbacks with 
+keeping handwritten attendance records:
 
 * Often written records are messy, sometimes illegible, inconsistent or inaccurate, and require 
   interpretation and follow-up to correct.
@@ -82,32 +75,7 @@ RFSTag addresses all these issues by collecting and storing attendance records e
 and providing access to these records and reports using the {ref}`web portal<serverh>`.
 
 :::
-   
-### Meeting Requirements with RFStag
-
-Any system which aims to replace the paper Attendance Book must meet all the above requirements. The RFSTag system 
-addresses these requirements as follows:
-
-1. **Unique Identification**: The Member's signature is replaced by their {ref}`NFC tag<keyfobs>`, which is unique to them. 
-
-1. **Participation**: Members {ref}`sign-in<easyway>` to a named activity/event on arrival at the station.
-
-1. **Physical Presence**: Members can only sign-in to an activity using the {ref}`Kiosk<kioskh>`, which is located at 
-   the Station.
-
-1. **Official Confirmation**: 
-   The OIC can and should review any events they run and {ref}`sign them off<off-signoff>` electronically using 
-   the web portal, and amend them as needed. Only the OIC can change details of activities that they have organised and run.
-   
-1. **Secure Storage**: 
-   After an event is completed, the {ref}`only person who can change or amend the attendance records<off-signoff>` for 
-   an event is the OIC. Electronic audit trails record any changes made.
-
-1. **Long Term Storage**: Attendance records can be {ref}`exported for printing or electronic storage<annual-att>` 
-   for archiving by the District, in the same way as Attendance Books. Daily backups are made automatically, to 
-   prevent any data loss.
-
-
+ 
 :::{admonition} Why not use RFS ACTIV?
 
 RFS ACTIV is an excellent system for relaying callouts to members, and assisting with forming crews 
