@@ -106,13 +106,18 @@ You can now {ref}`sign-in using your tag<easyway>`.
 (need-event)=
 :::{topic} Why do I need to create an event rather than just sign-in to the station?
 
+Why not just use a Bundy-style clock in?
+
 As with the old Attendance Book, you would normally sign-in to one activity, described in the heading of the 
 page (OIC, activity type, date, etc.). If you attended another activity later in the day, you would sign-out of the 
 first one and go to the next page and sign-in to the next activity.
 
+This shows that the member participated in a specific activity (see {ref}`Key requirement #2<main-reqs>`), rather 
+than just arrived at the station, where there could be a number of activities underway at any time.
+
 In the new system, signing in without an event would be like signing your name in the middle of a blank page in the 
 old Attendance Book. You need to fill in the details at the top of the page to give the context, and show 
-what you are actually attending, and that's essentially what an event gives you.
+what activity you are actually attending, and that's essentially what an event gives you.
 
 :::
 
