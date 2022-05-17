@@ -294,11 +294,8 @@ The system can help with the following aspects of training planning:
   we want to find qualifications that are due to expire in the next year (and may have to be renewed), you can set the 
   filters to make a smaller, more managable, list of qualifications that you are interested in.
 
-  For example, the settings below will show only Chainsaw qualifications for active members, that will expire in 
+  For example, the Filter settings below will show only Chainsaw qualifications for active members, that will expire in 
   the next 12 months.
-
-  You can mix and match these filters to home into the set of records you need. When you're done, you can clear all 
-  filters get back to the original, unconstrained, view.
 
 :::{figure-md} filter-quals
 :class: myclass
@@ -307,6 +304,9 @@ The system can help with the following aspects of training planning:
 
 Filtering Certifications (click to enlarge)
 :::
+
+  You can mix and match these filters to home into the set of records you need. When you're done, you can clear all 
+  filters get back to the original, unconstrained, view.
 
 #### Legacy Certifications
 
