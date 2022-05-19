@@ -36,6 +36,7 @@ and a list of attendees, including when they signed-in and signed out.
 Event components, as seen on the Kiosk (click to enlarge)
 :::
 
+(change-event)=
 Details of an event {ref}`can be updated on the kiosk<change-event>`.
 
 Events can also be changed in other contexts (on the web portal, rather than on the Kiosk), such as the 
