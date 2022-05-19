@@ -36,8 +36,7 @@ also occasionally referred to in Coronial enquiries.**
 ### Attendance Record Keeping
 
 The paper Attendance Book provided a way to collect and preserve attendance records in a secure, controlled, and 
-organised way, so that these records would be accurate, reliable, credible, and available for future reference 
-whenever needed.
+organised way, so that these records would be available for future reference whenever needed.
 
 Used correctly, the Attendance Book provides solid, lasting, evidence that a Member was involved in an activity. The 
 following table shows how the Attendance Book meets these requirements, and also how RFSTag does the same:
