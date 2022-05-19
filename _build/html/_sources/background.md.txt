@@ -28,7 +28,7 @@ front of the station. Brigade Officers completed the details of the activity at 
 then members who attended recorded their details, including arrival and departure times and 
 their signature.
 
-This may seem like a chore, but it is in place to protect Members. 
+This may seem like a pointless chore, but it is in place to protect Members. 
 
 **The main reason for keeping attendance records is to ensure that there is a reliable record of Member activity 
 that can be used in cases of accident or misadventure, especially when a Workers Compensation Claim is lodged.**
@@ -139,6 +139,11 @@ However, Attendance Records also contain information that is useful for brigade 
   
 * Real time updates of who is at station can be provided to Officers, Members and HQ if attendance records 
   are available on-line.
+  
+* Real-time updates of Crew Strength, including Field Officers and Response Drivers, can easily be provided to Computer
+  Aided Dispatch (CAD) systems, without the need for stations to repeatedly update Crew Strength with Fire Control 
+  over the radio. 
+
 
 To realise the value of attendance data, many brigades transcribe the information from the Attendance Book 
 into a spreadsheet or database, so that it can be analysed and summarised. This is a slow and tedious manual 
