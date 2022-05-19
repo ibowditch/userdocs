@@ -19,9 +19,7 @@ the (paper) Attendance Book.
 
 All RFS brigades are required, 
 by [State Law](https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0007/44098/1.4.3-Public-Access-to-Government-Information-v1.0.pdf), 
-to ensure that all members and visitors record their attendance when participating in brigade activities. These records 
-are occasionally required during Coronial or other enquiries, and may also be used to support claims under
-Workers Compensation legislation, among other things.
+to ensure that all members and visitors record their attendance when participating in brigade activities.
 
 Traditionally, attendance was recorded in an Attendance Book, normally placed at the 
 front of the station. Brigade Officers completed the details of the activity at the top of each page, 
@@ -31,7 +29,8 @@ their signature.
 This may seem like a pointless chore, but it is in place to protect Members. 
 
 **The main reason for keeping attendance records is to ensure that there is a reliable record of Member activity 
-that can be used in cases of accident or misadventure, especially when a Workers Compensation Claim is lodged.**
+that can be used in cases of accident or misadventure, especially when a Workers Compensation Claim is lodged. They are 
+also occasionally referred to in Coronial enquiries.**
 
 
 ### Attendance Record Keeping
