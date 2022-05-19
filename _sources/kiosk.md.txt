@@ -221,7 +221,7 @@ icon <span class="fa fa-trash fa-lg" style="color:blue;"></span> in the event.
 You may not delete an event which already has members listed as attending (the trash icon will not be shown), to avoid 
 accidental loss of attendance records.
 
-### Transferring Members to a New Event
+### Bulk Transfer of Members to a New Event
 
 The <span class="badge badge-pill badge-info">**Transfer**</span> button, available in the form used to 
 change events, allows members to be transferred from one event to another following event. 
