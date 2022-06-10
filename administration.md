@@ -154,18 +154,162 @@ The brigade should provide the following details, preferably in an excel spreads
 * WiFI connection
   * SSID and password  
 
-### Modem Setup for Remote Access
+
+### Setting Up a New Kiosk Raspberry PI
+
+Boot the PI with the NOOBS SD-CARD, and follow the generic instructions in the 
+[Official documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html#configuration-on-first-boot).
+
+Use the following settings where required:
+
+:::{figure-md} pi-country
+:class: myclass
+
+<img src="assets/images/pi-country.jpg" alt="PI Country settingst" width="1467" class="bg-primary mb-1">
+
+PI country settings (click to enlarge)
+:::
+
+Password set to this by convention (but can be changed if needed):
+
+:::{figure-md} pi-password
+:class: myclass
+
+<img src="assets/images/pi-password.jpg" alt="PI Country settings" width="1467" class="bg-primary mb-1">
+
+PI password (click to enlarge)
+:::
+
+Network connections normally via station wifi, but can be hard-wired too. Provide the wifi password, and 
+it will be remembered for next time.
+
+:::{figure-md} pi-network
+:class: myclass
+
+<img src="assets/images/pi-wifi.jpg" alt="PI Network settings" width="1467" class="bg-primary mb-1">
+
+PI network (click to enlarge)
+:::
+
+Update software - don't skip this step, but it will take a while.
+
+Configuration settings 
+
+In system settings tab, make sure Wait for Network is checked, and change Hostname to the same 
+name as brigade
+
+:::{figure-md} pi-settings1
+:class: myclass
+
+<img src="assets/images/pi-settings1.jpg" alt="PI System settings" width="1467" class="bg-primary mb-1">
+
+PI System configuration (click to enlarge)
+:::
+
+In Interface settings tab, Enable SSH and VNC to allow remote support:
+
+:::{figure-md} pi-settings2
+:class: myclass
+
+<img src="assets/images/pi-settings2.jpg" alt="PI Interface settings" width="1467" class="bg-primary mb-1">
+
+PI interface configuration (click to enlarge)
+:::
+
+Reboot after changing PI configuration when prompted.
+
+### Installing the Kiosk Software
+
+Copy the installation package from a thumb drive into folder /home/pi
+
+Open a command Terminal (top menu bar - black box). 
+
+Run the installation procedure as follows:
+
+  ./nfcreader.sh
+
+This can take some time, as it will update the system software.
+
+The installation procedure will do the following:
+
+* Set the Brigade the kiosk will use (when prompted)
+  * A server of this name must exist, or the given name will not be accepted.
+  * The nfcreader.ini file will be updated with the given validated Brigade name.
+* Install sound files (for beeps and buzzes)
+* Install python libraries for sound and nfc support.
+* Remove unwanted, large packages to free disk space (eg. libreoffice, games, wolfram,... )
+* Add kiosk software to /usr/local/bin
+* Set boot script in /home/pi/.config/lxsession/LXDE-pi/autostart
+* Register the Sony nfc reader
+* Register and start the nfcserver service, used to read nfc tags.
+* Set up unattended upgrades to keep the system up to date automatically.
+* Set up remote.it to enable remote support
+
+Then reboot when finished.
+
+### First login
+
+If all is set up correctly, the first screen shown after reboot should be as follows. Login using 
+kiosk user.
+
+:::{figure-md} pi-firstlogin
+:class: myclass
+
+<img src="assets/images/pi-firstlogin.jpg" alt="PI first login" width="1467" class="bg-primary mb-1">
+
+PI first login (click to enlarge)
+:::
+
+You will be prompted to Save Password - click Save to do this (IMPORTANT).
 
 ### Adding a New Tenant Schema
 
-### Populating New Tenant Schema
+* Make backups of any target databases using pgadmin
 
-### Brigade Settings
+* In pycharm terminal window, project bushfire2, wdir ~/PycharmProjects/bushfire2
+  * python manage.py createBrigade WyeePt --short WYP --host signin.org
+  * python manage.py create_tenant_superuser --username=admin --schema=wyeept
+  * python manage.py setupBrigade WyeePt
+  * python manage.py set_tenant_domains 
+    
+* Login to admin in new tenant using admin user
+  * Check passwords for utility users kiosk, tagadmin, pager are set, and if not set to correct values
+  * Import OfficerTypes from another brigade (once set up in dev, export for use in AWS updates)
+  * Import Members from provided list
+    * Run in command line:
+      *./manage.py tenant_command resetpasswords --schema=wyeept
+      This is needed because import of Members does not set passwords correctly.
+      This might also reset utility passwords: double check they are ok
+      If necessary rerun python manage.py create_tenant_superuser --username=admin --schema=wyeept to get access, and 
+      reset utiity passwords.
+      <220609: added change to admin.MemberResource.before_save_instance that might avoid need for this. Test next time>
+  * Set up Officers for previous year with provided details (once set up in dev, export for use in AWS updates)
+  * Set Brigade Details
+    * All activity types are valid: deselect External and any others
+    * Check social as excluded
+    * Set season start date (ignore year)
+    * Set activity types
+    * Set excluded activities
+    * Check and update location, phone number, etc.
+  * Import qualifications from RFS list under admin certifications/import
+  * Add TD/PD certifications for nominated drivers (manually)
+  
+* Kiosk setup
+  * Make server visible on network
+    * On kiosk, add signin.org to /etc/hosts
+    * On dev system, run on 0.0.0.0, not 1.0.0.127
+    * On aws, add redirect for wyeept.rfstag.org and wyeept.rfstag.com (shouldn't be necessary)
+  
+* Test remote.it
+  * If possible, cpnnect PI to external network (eg. SHADOW)
+  * In [remote.it console](https://app.remote.it/#/devices) confirm that device is online, and click VNC to connect with it
+  * Copy address from connection details (eg. proxy65.rt3.io:37011) and add a connection in VNC viewer with this address.
+  * Connect using VNC viewer to confirm connection ok.
+ 
 
 ### Testing
 
 ### Full Deployment
-
 
 ## Periodic Admin Procedures
 

@@ -240,23 +240,23 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modem-setup-for-remote-access">
-     5.3.4. Modem Setup for Remote Access
+    <a class="reference internal nav-link" href="#setting-up-a-new-kiosk-raspberry-pi">
+     5.3.4. Setting Up a New Kiosk Raspberry PI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-the-kiosk-software">
+     5.3.5. Installing the Kiosk Software
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-login">
+     5.3.6. First login
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-a-new-tenant-schema">
-     5.3.5. Adding a New Tenant Schema
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#populating-new-tenant-schema">
-     5.3.6. Populating New Tenant Schema
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#brigade-settings">
-     5.3.7. Brigade Settings
+     5.3.7. Adding a New Tenant Schema
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -395,23 +395,23 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modem-setup-for-remote-access">
-     5.3.4. Modem Setup for Remote Access
+    <a class="reference internal nav-link" href="#setting-up-a-new-kiosk-raspberry-pi">
+     5.3.4. Setting Up a New Kiosk Raspberry PI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-the-kiosk-software">
+     5.3.5. Installing the Kiosk Software
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-login">
+     5.3.6. First login
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-a-new-tenant-schema">
-     5.3.5. Adding a New Tenant Schema
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#populating-new-tenant-schema">
-     5.3.6. Populating New Tenant Schema
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#brigade-settings">
-     5.3.7. Brigade Settings
+     5.3.7. Adding a New Tenant Schema
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -662,17 +662,140 @@ grey (normally they are not shown at all).</p>
 </li>
 </ul>
 </div>
-<div class="section" id="modem-setup-for-remote-access">
-<h3><span class="section-number">5.3.4. </span>Modem Setup for Remote Access<a class="headerlink" href="#modem-setup-for-remote-access" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="setting-up-a-new-kiosk-raspberry-pi">
+<h3><span class="section-number">5.3.4. </span>Setting Up a New Kiosk Raspberry PI<a class="headerlink" href="#setting-up-a-new-kiosk-raspberry-pi" title="Permalink to this headline">¶</a></h3>
+<p>Boot the PI with the NOOBS SD-CARD, and follow the generic instructions in the
+<a class="reference external" href="https://www.raspberrypi.com/documentation/computers/getting-started.html#configuration-on-first-boot">Official documentation</a>.</p>
+<p>Use the following settings where required:</p>
+<div class="myclass figure align-default" id="pi-country">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pi-country.jpg"><img alt="PI Country settingst" class="bg-primary mb-1" src="_images/pi-country.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">PI country settings (click to enlarge)</span><a class="headerlink" href="#pi-country" title="Permalink to this image">¶</a></p>
+</div>
+<p>Password set to this by convention (but can be changed if needed):</p>
+<div class="myclass figure align-default" id="pi-password">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pi-password.jpg"><img alt="PI Country settings" class="bg-primary mb-1" src="_images/pi-password.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">PI password (click to enlarge)</span><a class="headerlink" href="#pi-password" title="Permalink to this image">¶</a></p>
+</div>
+<p>Network connections normally via station wifi, but can be hard-wired too. Provide the wifi password, and
+it will be remembered for next time.</p>
+<div class="myclass figure align-default" id="pi-network">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pi-wifi.jpg"><img alt="PI Network settings" class="bg-primary mb-1" src="_images/pi-wifi.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">PI network (click to enlarge)</span><a class="headerlink" href="#pi-network" title="Permalink to this image">¶</a></p>
+</div>
+<p>Update software - don’t skip this step, but it will take a while.</p>
+<p>Configuration settings</p>
+<p>In system settings tab, make sure Wait for Network is checked, and change Hostname to the same
+name as brigade</p>
+<div class="myclass figure align-default" id="pi-settings1">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pi-settings1.jpg"><img alt="PI System settings" class="bg-primary mb-1" src="_images/pi-settings1.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">PI System configuration (click to enlarge)</span><a class="headerlink" href="#pi-settings1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In Interface settings tab, Enable SSH and VNC to allow remote support:</p>
+<div class="myclass figure align-default" id="pi-settings2">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pi-settings2.jpg"><img alt="PI Interface settings" class="bg-primary mb-1" src="_images/pi-settings2.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">PI interface configuration (click to enlarge)</span><a class="headerlink" href="#pi-settings2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Reboot after changing PI configuration when prompted.</p>
+</div>
+<div class="section" id="installing-the-kiosk-software">
+<h3><span class="section-number">5.3.5. </span>Installing the Kiosk Software<a class="headerlink" href="#installing-the-kiosk-software" title="Permalink to this headline">¶</a></h3>
+<p>Copy the installation package from a thumb drive into folder /home/pi</p>
+<p>Open a command Terminal (top menu bar - black box).</p>
+<p>Run the installation procedure as follows:</p>
+<p>./nfcreader.sh</p>
+<p>This can take some time, as it will update the system software.</p>
+<p>The installation procedure will do the following:</p>
+<ul class="simple">
+<li><p>Set the Brigade the kiosk will use (when prompted)</p>
+<ul>
+<li><p>A server of this name must exist, or the given name will not be accepted.</p></li>
+<li><p>The nfcreader.ini file will be updated with the given validated Brigade name.</p></li>
+</ul>
+</li>
+<li><p>Install sound files (for beeps and buzzes)</p></li>
+<li><p>Install python libraries for sound and nfc support.</p></li>
+<li><p>Remove unwanted, large packages to free disk space (eg. libreoffice, games, wolfram,… )</p></li>
+<li><p>Add kiosk software to /usr/local/bin</p></li>
+<li><p>Set boot script in /home/pi/.config/lxsession/LXDE-pi/autostart</p></li>
+<li><p>Register the Sony nfc reader</p></li>
+<li><p>Register and start the nfcserver service, used to read nfc tags.</p></li>
+<li><p>Set up unattended upgrades to keep the system up to date automatically.</p></li>
+<li><p>Set up remote.it to enable remote support</p></li>
+</ul>
+<p>Then reboot when finished.</p>
+</div>
+<div class="section" id="first-login">
+<h3><span class="section-number">5.3.6. </span>First login<a class="headerlink" href="#first-login" title="Permalink to this headline">¶</a></h3>
+<p>If all is set up correctly, the first screen shown after reboot should be as follows. Login using
+kiosk user.</p>
+<div class="myclass figure align-default" id="pi-firstlogin">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/pi-firstlogin.jpg"><img alt="PI first login" class="bg-primary mb-1" src="_images/pi-firstlogin.jpg" style="width: 1467px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">PI first login (click to enlarge)</span><a class="headerlink" href="#pi-firstlogin" title="Permalink to this image">¶</a></p>
+</div>
+<p>You will be prompted to Save Password - click Save to do this (IMPORTANT).</p>
 </div>
 <div class="section" id="adding-a-new-tenant-schema">
-<h3><span class="section-number">5.3.5. </span>Adding a New Tenant Schema<a class="headerlink" href="#adding-a-new-tenant-schema" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="populating-new-tenant-schema">
-<h3><span class="section-number">5.3.6. </span>Populating New Tenant Schema<a class="headerlink" href="#populating-new-tenant-schema" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="brigade-settings">
-<h3><span class="section-number">5.3.7. </span>Brigade Settings<a class="headerlink" href="#brigade-settings" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.7. </span>Adding a New Tenant Schema<a class="headerlink" href="#adding-a-new-tenant-schema" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Make backups of any target databases using pgadmin</p></li>
+<li><p>In pycharm terminal window, project bushfire2, wdir ~/PycharmProjects/bushfire2</p>
+<ul>
+<li><p>python manage.py createBrigade WyeePt –short WYP –host signin.org</p></li>
+<li><p>python manage.py create_tenant_superuser –username=admin –schema=wyeept</p></li>
+<li><p>python manage.py setupBrigade WyeePt</p></li>
+<li><p>python manage.py set_tenant_domains</p></li>
+</ul>
+</li>
+<li><p>Login to admin in new tenant using admin user</p>
+<ul>
+<li><p>Check passwords for utility users kiosk, tagadmin, pager are set, and if not set to correct values</p></li>
+<li><p>Import OfficerTypes from another brigade (once set up in dev, export for use in AWS updates)</p></li>
+<li><p>Import Members from provided list</p>
+<ul>
+<li><p>Run in command line:
+*./manage.py tenant_command resetpasswords –schema=wyeept
+This is needed because import of Members does not set passwords correctly.
+This might also reset utility passwords: double check they are ok
+If necessary rerun python manage.py create_tenant_superuser –username=admin –schema=wyeept to get access, and
+reset utiity passwords.
+&lt;220609: added change to admin.MemberResource.before_save_instance that might avoid need for this. Test next time&gt;</p></li>
+</ul>
+</li>
+<li><p>Set up Officers for previous year with provided details (once set up in dev, export for use in AWS updates)</p></li>
+<li><p>Set Brigade Details</p>
+<ul>
+<li><p>All activity types are valid: deselect External and any others</p></li>
+<li><p>Check social as excluded</p></li>
+<li><p>Set season start date (ignore year)</p></li>
+<li><p>Set activity types</p></li>
+<li><p>Set excluded activities</p></li>
+<li><p>Check and update location, phone number, etc.</p></li>
+</ul>
+</li>
+<li><p>Import qualifications from RFS list under admin certifications/import</p></li>
+<li><p>Add TD/PD certifications for nominated drivers (manually)</p></li>
+</ul>
+</li>
+<li><p>Kiosk setup</p>
+<ul>
+<li><p>Make server visible on network</p>
+<ul>
+<li><p>On kiosk, add signin.org to /etc/hosts</p></li>
+<li><p>On dev system, run on 0.0.0.0, not 1.0.0.127</p></li>
+<li><p>On aws, add redirect for wyeept.rfstag.org and wyeept.rfstag.com (shouldn’t be necessary)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Test remote.it</p>
+<ul>
+<li><p>If possible, cpnnect PI to external network (eg. SHADOW)</p></li>
+<li><p>In <a class="reference external" href="https://app.remote.it/#/devices">remote.it console</a> confirm that device is online, and click VNC to connect with it</p></li>
+<li><p>Copy address from connection details (eg. proxy65.rt3.io:37011) and add a connection in VNC viewer with this address.</p></li>
+<li><p>Connect using VNC viewer to confirm connection ok.</p></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="section" id="testing">
 <h3><span class="section-number">5.3.8. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
@@ -703,7 +826,7 @@ members, using the Member Portal. The Qualification Report can be found under �
 </div>
 <div class="myclass figure align-default" id="sap-records">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/sap-records.jpg"><img alt="RFS SAP Qualifications Spreadsheet" class="bg-primary mb-1" src="_images/sap-records.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">RFS SAP Qualifications Report Spreadsheet (click to enlarge)</span><a class="headerlink" href="#sap-records" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">RFS SAP Qualifications Report Spreadsheet (click to enlarge)</span><a class="headerlink" href="#sap-records" title="Permalink to this image">¶</a></p>
 </div>
 <p>Qualification records are used in the <a class="reference internal" href="server.html#memb-quals"><span class="std std-ref">Member Qualifications</span></a> view, which allows members to see
 what qualifications are recorded in their name on SAP, and to check that these records are accurate and complete.</p>
@@ -713,7 +836,7 @@ Import button on the top right of the page.</p>
 the full list of brigade qualifications. Select <strong>xlsx</strong> as the format, and then Submit.</p>
 <div class="myclass figure align-default" id="import-certs">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/import-certs.jpg"><img alt="Importing RFS SAP Qualifications" class="bg-primary mb-1" src="_images/import-certs.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Importing RFS SAP Qualifications (click to enlarge)</span><a class="headerlink" href="#import-certs" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Importing RFS SAP Qualifications (click to enlarge)</span><a class="headerlink" href="#import-certs" title="Permalink to this image">¶</a></p>
 </div>
 <div class="margin sidebar">
 <p class="sidebar-title">SAP files are big!</p>
@@ -727,7 +850,7 @@ database, for review. Click <strong>Confirm Import</strong> to complete the impo
 your records will be updated.</p>
 <div class="myclass figure align-default" id="update-certs">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/update-certs.jpg"><img alt="Importing New Qualifications" class="bg-primary mb-1" src="_images/update-certs.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Importing New Qualifications (click to enlarge)</span><a class="headerlink" href="#update-certs" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Importing New Qualifications (click to enlarge)</span><a class="headerlink" href="#update-certs" title="Permalink to this image">¶</a></p>
 </div>
 <p>Certifications should be updated every 3 months or so, or whenever there have been significant updates to brigade
 qualification records in SAP.</p>
@@ -777,7 +900,7 @@ filters to make a smaller, more managable, list of qualifications that you are i
 the next 12 months.</p>
 <div class="myclass figure align-default" id="filter-quals">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/filter-qualsa.jpg"><img alt="Filtering Certifications" class="bg-primary mb-1" src="_images/filter-qualsa.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Filtering Certifications (click to enlarge)</span><a class="headerlink" href="#filter-quals" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Filtering Certifications (click to enlarge)</span><a class="headerlink" href="#filter-quals" title="Permalink to this image">¶</a></p>
 </div>
 <p>You can mix and match these filters to home into the set of records you need. When you’re done, you can clear all
 filters get back to the original, unconstrained, view.</p>
