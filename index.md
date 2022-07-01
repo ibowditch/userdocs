@@ -9,5 +9,6 @@ events
 server
 administration
 technology
+internal
 ```
 

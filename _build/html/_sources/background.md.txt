@@ -184,9 +184,8 @@ ways of doing things.
 The system first went live in November 2018, and has been running (almost) continuously since then, including through 
 the major fires of 2019-2020. 
 
-The user base started with my home brigade (~70 members), then grew to include another 3 brigades, and it now supports 
-more than 300 users.
-
+The user base started with my home brigade (~70 members), then grew to include another 6 brigades, and it now supports 
+more than 500 users.
 
 
 ## Site Map

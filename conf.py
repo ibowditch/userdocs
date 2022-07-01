@@ -39,6 +39,10 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath("."))
 
+# def setup(app):
+#     app.add_config_value('internal', '', 'env')
+
+
 # "sphinx_autodoc_typehints",
 
 extensions = [
@@ -61,7 +65,10 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv', ]
+
+# Use this to keep internal documentation private. Comment out for local use.
+exclude_patterns += ['internal*']
 
 
 # -- Options for HTML output -------------------------------------------------
