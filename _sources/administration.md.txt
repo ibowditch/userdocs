@@ -91,82 +91,6 @@ Excluded activity types
   these events (they are excluded by default). If you drill down into one of the numbers, Excluded events will be shown in 
   grey (normally they are not shown at all).
 
-## Adding a New Brigade
-
-### Data Required from Brigade
-
-The brigade should provide the following details, preferably in an excel spreadsheet:
-
-* All Member Details (preferably from onerfs "Brigade Personnel Response Analysis" report), including
-  * Firezone number
-  * First Name
-  * Last Name
-  * Preferred First Name
-  * Mobile number
-  * Email address
-  * Date Joined
-  * Date of Birth
-  * Active status (yes/no)
-  * Member Type (Operational/Reserve/Social/Administration/Support)
-
-* Member Qualifications 
-  * Brigade manager to obtain "Qualification Report" from onerfs Team Reports
-  * see here for details: [Member Qualifications](https://rfstag-user.netlify.app/administration.html#synchronising-qualifications-with-sap).
-
-* Current Officers (for all Field and Admin positions)
-  * Member Name
-  * Member FireZone number 
-  * Position Title
-  
-* Brigade Vehicles
-  * Full name (eg. Wyee Point 1A)
-  * Abbrev name, eg. WP-1A
-  * Make, eg. Isuzu
-  * Category (eg. 1, 7, 9, ...)
-  * Year
-  * Crew capacity
-  * Aircraft Code
-    
-* Brigade Settings
-  * see {ref}`Brigade Settings section<brig-sett>` above
-  * This can be done last, after all of the above
-
-### Hardware Order Parts List
-
-* Raspberry PI
-  * PI 4 2Gb RAM
-  * PI 4 case
-  * Micro HDMI cable
-  * PI 4 power supply
-  * 16Gb SD RAM card
-  
-* Tags
-  * Sony PaSoRi RC-S380 card reader (USB)
-  * 100 x 13.56MHz NTAG215 NFC Key Fob Tags
-
-### Equipment to be Provided by Brigade
-
-* Kiosk
-  * Computer monitor with HDMI connection (can be touchscreen if available)
-  * USB Mouse (preferably wired)
-  * USB Keyboard (preferably wired)
-  
-* WiFI connection
-  * SSID and password  
-
-### Modem Setup for Remote Access
-
-### Adding a New Tenant Schema
-
-### Populating New Tenant Schema
-
-### Brigade Settings
-
-### Testing
-
-### Full Deployment
-
-
 ## Periodic Admin Procedures
 
 ### Set Recurring Events in the Calendar
@@ -263,6 +187,8 @@ qualification records in SAP.
       {ref}`add the missing member<add-memb>` and retry.
     * Corrupted entry for a qualification : find the line in the xlsx file (line number should be in the error message), 
       delete it, and try again. Then report the problem to RFS IT.
+    * Corrupted xlsx file. If the xlsx file refuses to import in a reasonable time, it may be corrupted. Try saving the 
+      xlsx file as a csv file, then import that instead (remember to change the file type to csv)
       
 4. If no new qualifications are found when loading the SAP file, check the following:
     * Are you using the latest download from SAP?
@@ -334,9 +260,6 @@ Make sure you add a certification date to these, to keep a record of when they w
 The **RFD** qualification which goes with this, is issued by the RFS, and is included in the SAP qualifications. The 
 {ref}`Member List<memb-list>` shows TD and PD permissions, and these are shown in lower case if RFD is out of date or not 
 available for the driver.
-
-### AWS Credits (annual)
-
 
 ## Ad-Hoc Admin Tasks
 
