@@ -13,6 +13,8 @@ div.meetings.docutils > ul > li > p                         { color: darksalmon 
 div.other.docutils > ul > li > p                            { color: coral !important; }
 div.AdditionalActivity.docutils > ul > li > p               { color: teal !important; }
 
+span.optional               { color: red; font-style: italic; font-weight: bold !important; }
+
 
 
 

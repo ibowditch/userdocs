@@ -217,38 +217,43 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-a-new-tenant-schema">
+     7.1.4. Adding a New Tenant Schema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#setting-up-a-new-kiosk-raspberry-pi">
-     7.1.4. Setting Up a New Kiosk Raspberry PI
+     7.1.5. Setting Up a New Kiosk Raspberry PI
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installing-the-kiosk-software">
-     7.1.5. Installing the Kiosk Software
+     7.1.6. Installing the Kiosk Software
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-login">
-     7.1.6. First login
+     7.1.7. First login
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-a-new-tenant-schema">
-     7.1.7. Adding a New Tenant Schema
+    <a class="reference internal nav-link" href="#check-remote-it">
+     7.1.8. Check remote.it
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#testing">
-     7.1.8. Testing
+     7.1.9. Testing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#full-deployment">
-     7.1.9. Full Deployment
+     7.1.10. Full Deployment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aws-credits-annual">
-     7.1.10. AWS Credits (annual)
+     7.1.11. AWS Credits (annual)
     </a>
    </li>
   </ul>
@@ -294,38 +299,43 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-a-new-tenant-schema">
+     7.1.4. Adding a New Tenant Schema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#setting-up-a-new-kiosk-raspberry-pi">
-     7.1.4. Setting Up a New Kiosk Raspberry PI
+     7.1.5. Setting Up a New Kiosk Raspberry PI
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installing-the-kiosk-software">
-     7.1.5. Installing the Kiosk Software
+     7.1.6. Installing the Kiosk Software
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#first-login">
-     7.1.6. First login
+     7.1.7. First login
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-a-new-tenant-schema">
-     7.1.7. Adding a New Tenant Schema
+    <a class="reference internal nav-link" href="#check-remote-it">
+     7.1.8. Check remote.it
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#testing">
-     7.1.8. Testing
+     7.1.9. Testing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#full-deployment">
-     7.1.9. Full Deployment
+     7.1.10. Full Deployment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aws-credits-annual">
-     7.1.10. AWS Credits (annual)
+     7.1.11. AWS Credits (annual)
     </a>
    </li>
   </ul>
@@ -349,7 +359,7 @@
 <h2><span class="section-number">7.1. </span>Adding a New Brigade<a class="headerlink" href="#adding-a-new-brigade" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="data-required-from-brigade">
 <h3><span class="section-number">7.1.1. </span>Data Required from Brigade<a class="headerlink" href="#data-required-from-brigade" title="Permalink to this headline">¶</a></h3>
-<p>The brigade should provide the following details, preferably in an excel spreadsheet:</p>
+<p>The brigade should provide the following details, preferably in an Excel spreadsheet:</p>
 <ul class="simple">
 <li><p>All Member Details (preferably from onerfs “Brigade Personnel Response Analysis” report), including</p>
 <ul>
@@ -380,7 +390,7 @@
 </li>
 <li><p>Brigade Vehicles</p>
 <ul>
-<li><p>Full name (eg. Wyee Point 1A)</p></li>
+<li><p>Full name (e.g. Wyee Point 1A)</p></li>
 <li><p>Abbrev name, eg. WP-1A</p></li>
 <li><p>Make, eg. Isuzu</p></li>
 <li><p>Category (eg. 1, 7, 9, …)</p></li>
@@ -427,15 +437,128 @@
 <li><p>USB Keyboard (preferably wired)</p></li>
 </ul>
 </li>
-<li><p>WiFI connection</p>
+<li><p>Wi-Fi connection</p>
 <ul>
 <li><p>SSID and password</p></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="adding-a-new-tenant-schema">
+<h3><span class="section-number">7.1.4. </span>Adding a New Tenant Schema<a class="headerlink" href="#adding-a-new-tenant-schema" title="Permalink to this headline">¶</a></h3>
+<p>Optional steps (when building schema on tst system) shown in <span style="color:red;"><em>italics</em></span>.</p>
+<ul class="simple">
+<li><p>Make backups of any target databases using pgadmin</p>
+<ul>
+<li><p>Make backup of AWS production database (ebdb) on dev system using pgadmin</p></li>
+<li><p><span style="color:red;"><em>Drop AWS tst system database (ebdb) to clear contents</em></span></p></li>
+<li><p><span style="color:red;"><em>Restore backup of AWS production database to AWS tst database</em></span></p></li>
+</ul>
+</li>
+<li><p>In pycharm project bushfire2:</p>
+<ul>
+<li><p>In bushfire/settings/.env set RDS_HOSTNAME=<span style="color:red;"><em>bushfire2-tst6-rds.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com</em></span></p></li>
+<li><p>Check all migrations in all apps saved in github</p></li>
+<li><p>Run/Edit Configurations</p>
+<ul>
+<li><p>Env vars: PYTHONUNBUFFERED=1;DJANGO_SETTINGS_MODULE=bushfire.settings.local</p></li>
+<li><p>Working directory: ~/PycharmProjects/bushfire2</p></li>
+<li><p>Script path: /home/ian/PycharmProjects/bushfire2/manage.py</p>
+<ul>
+<li><p>createBrigade Parameters: python manage.py createBrigade <span style="color:red;"><em><em>WyeePt</em></em></span> –short <span style="color:red;"><em><em>WYP</em></em></span> –host <span style="color:red;"><em><em>signin.org</em></em></span></p></li>
+</ul>
+</li>
+<li><p>Run createBrigade Python environment</p></li>
+</ul>
+</li>
+<li><p>In Terminal window (note that arguments don’t appear to work on command line):</p>
+<ul>
+<li><p>(bushfire2) ian&#64;ian-ThinkPad-T490:~/PycharmProjects/bushfire2$ python manage.py create_tenant_superuser</p></li>
+<li><p>Enter Tenant Schema (‘?’ to list schemas): <span style="color:red;"><em><em>wyeept</em></em></span></p></li>
+<li><p>Username (leave blank to use ‘ian’): admin</p></li>
+<li><p>Email address: ibowditch&#64;gmail.com</p></li>
+<li><p>Password:</p></li>
+<li><p>Password (again):</p></li>
+<li><p>Superuser created successfully.</p></li>
+</ul>
+</li>
+<li><p>Set Run/Edit Configurations for setupBrigade as for createBrigade</p>
+<ul>
+<li><p>Parameters: python manage.py setupBrigade <span style="color:red;"><em><em>WyeePt</em></em></span></p></li>
+<li><p>Run setupBrigade environment</p></li>
+</ul>
+</li>
+<li><p>Set Run/Edit Configurations for set_tenant_domains</p>
+<ul>
+<li><p>Parameters: python manage.py set_tenant_domains</p></li>
+<li><p>Run set_tenant_domains environment</p></li>
+</ul>
+</li>
+<li><p>Maybe necessary to restart app on AWS after this before possible to login to new tenant</p></li>
+</ul>
+</li>
+<li><p>Login to admin into the new tenant using admin user</p>
+<ul>
+<li><p>Check passwords for utility users kiosk, tagadmin, pager are set, and if not set to correct values</p></li>
+<li><p>Import Members from provided list</p>
+<ul>
+<li><p>Check that all members have unique email addresses</p></li>
+</ul>
+</li>
+<li><p>Set up Officers for previous year with provided details (once set up in dev, export for use in AWS updates)</p>
+<ul>
+<li><p>Check Groups assigned properly (esp. Training, Personnel)</p></li>
+<li><p>Try to get order of DCs (not included in onerfs report)</p></li>
+</ul>
+</li>
+<li><p>Set Brigade Details</p>
+<ul>
+<li><p>All activity types are valid: deselect External and any others</p></li>
+<li><p>Check social as excluded</p></li>
+<li><p>Set season start date (ignore year)</p></li>
+<li><p>Set activity types</p></li>
+<li><p>Set excluded activities</p></li>
+<li><p>Check and update location, phone number, etc.</p></li>
+</ul>
+</li>
+<li><p>Import qualifications from RFS list under admin certifications/import</p></li>
+<li><p>Add TD/PD certifications for nominated drivers (manually)</p>
+<ul>
+<li><p>Not always clear from either Licences or Administration reports</p></li>
+<li><p>Assume initially that &gt;=MR licence is TD, and anyone with RFD but &lt;MR is PD</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Test logins</p>
+<ul>
+<li><p>tagadmin, kiosk, pager</p></li>
+<li><p>Also try one user, with rfsID as password (should prompt to change password)</p></li>
+</ul>
+</li>
+<li><p>Kiosk setup</p>
+<ul>
+<li><p>Make server visible on network</p>
+<ul>
+<li><p>On kiosk, add signin.org to /etc/hosts</p></li>
+<li><p>On dev system, run on 0.0.0.0, not 1.0.0.127</p></li>
+<li><p>On aws, add redirect for wyeept.rfstag.org and wyeept.rfstag.com (shouldn’t be necessary)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Test remote.it</p>
+<ul>
+<li><p>If possible, connect PI to external network (eg. SHADOW)</p></li>
+<li><p>In <a class="reference external" href="https://app.remote.it/#/devices">remote.it console</a> confirm that device is online, and click VNC to connect with it</p></li>
+<li><p>Copy address from connection details (eg. proxy65.rt3.io:37011) and add a connection in VNC viewer with this address.</p></li>
+<li><p>Connect using VNC viewer to confirm connection ok.</p></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="setting-up-a-new-kiosk-raspberry-pi">
-<h3><span class="section-number">7.1.4. </span>Setting Up a New Kiosk Raspberry PI<a class="headerlink" href="#setting-up-a-new-kiosk-raspberry-pi" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.5. </span>Setting Up a New Kiosk Raspberry PI<a class="headerlink" href="#setting-up-a-new-kiosk-raspberry-pi" title="Permalink to this headline">¶</a></h3>
 <p>Boot the PI with the NOOBS SD-CARD, and follow the generic instructions in the
 <a class="reference external" href="https://www.raspberrypi.com/documentation/computers/getting-started.html#configuration-on-first-boot">Official documentation</a>.</p>
 <p>Use the following settings where required:</p>
@@ -470,8 +593,11 @@ name as brigade</p>
 <p>Reboot after changing PI configuration when prompted.</p>
 </div>
 <div class="section" id="installing-the-kiosk-software">
-<h3><span class="section-number">7.1.5. </span>Installing the Kiosk Software<a class="headerlink" href="#installing-the-kiosk-software" title="Permalink to this headline">¶</a></h3>
-<p>Copy the installation package from a thumb drive into folder /home/pi</p>
+<h3><span class="section-number">7.1.6. </span>Installing the Kiosk Software<a class="headerlink" href="#installing-the-kiosk-software" title="Permalink to this headline">¶</a></h3>
+<p>Copy the installation package from a thumb drive into folder /home/pi, or use</p>
+<p>cd /home/ian/PycharmProjects/nfcserver
+makeself –notemp nfcreader nfcreader220704.sh “Bushfire NFC reader” ./nfcinstall</p>
+<p>scp /home/ian/PycharmProjects/nfcserver/nfcreader220704.sh pi&#64;192.168.0.226://home/pi</p>
 <p>Open a command Terminal (top menu bar - black box).</p>
 <p>Run the installation procedure as follows:</p>
 <p>./nfcreader.sh</p>
@@ -486,7 +612,7 @@ name as brigade</p>
 </li>
 <li><p>Install sound files (for beeps and buzzes)</p></li>
 <li><p>Install python libraries for sound and nfc support.</p></li>
-<li><p>Remove unwanted, large packages to free disk space (eg. libreoffice, games, wolfram,… )</p></li>
+<li><p>Remove unwanted, large packages to free disk space (e.g. libreoffice, games, wolfram,… )</p></li>
 <li><p>Add kiosk software to /usr/local/bin</p></li>
 <li><p>Set boot script in /home/pi/.config/lxsession/LXDE-pi/autostart</p></li>
 <li><p>Register the Sony nfc reader</p></li>
@@ -495,9 +621,14 @@ name as brigade</p>
 <li><p>Set up remote.it to enable remote support</p></li>
 </ul>
 <p>Then reboot when finished.</p>
+<p>Then test nfc using:</p>
+<p>python3 -m nfc</p>
+<p>If there’s an error (likely), you’ll need to type the following commands to clear the error, then reboot again:</p>
+<p>sh -c ‘echo SUBSYSTEM==”usb”, ACTION==”add”, ATTRS{idVendor}==”054c”, ATTRS{idProduct}==”06c3”, GROUP=”plugdev” &gt;&gt; /etc/udev/rules.d/nfcdev.rules’
+udevadm control -R</p>
 </div>
 <div class="section" id="first-login">
-<h3><span class="section-number">7.1.6. </span>First login<a class="headerlink" href="#first-login" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.7. </span>First login<a class="headerlink" href="#first-login" title="Permalink to this headline">¶</a></h3>
 <p>If all is set up correctly, the first screen shown after reboot should be as follows. Login using
 kiosk user.</p>
 <div class="myclass figure align-default" id="pi-firstlogin">
@@ -506,116 +637,35 @@ kiosk user.</p>
 </div>
 <p>You will be prompted to Save Password - click Save to do this (IMPORTANT).</p>
 </div>
-<div class="section" id="adding-a-new-tenant-schema">
-<h3><span class="section-number">7.1.7. </span>Adding a New Tenant Schema<a class="headerlink" href="#adding-a-new-tenant-schema" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="check-remote-it">
+<h3><span class="section-number">7.1.8. </span>Check remote.it<a class="headerlink" href="#check-remote-it" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Make backups of any target databases using pgadmin</p>
+<li><p>Go to https://app.remote.it/#/devices</p>
 <ul>
-<li><p>Make backup of AWS production database (ebdb) on dev system</p></li>
-<li><p>Drop AWS tst system database (ebdb) to clear contents</p></li>
-<li><p>Restore backup of AWS production database to AWS tst database</p></li>
+<li><p>Login as ibowditch on google acocunt</p></li>
 </ul>
 </li>
-<li><p>In pycharm project bushfire2:</p>
+<li><p>Check new device is listed in available devices</p>
 <ul>
-<li><p>In bushfire/settings/.env set RDS_HOSTNAME=bushfire2-tst6-rds.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com</p></li>
-<li><p>Check all migrations in all apps saved in github</p></li>
-<li><p>Run/Edit Configurations</p>
-<ul>
-<li><p>Env vars: PYTHONUNBUFFERED=1;DJANGO_SETTINGS_MODULE=bushfire.settings.local</p></li>
-<li><p>Working directory: ~/PycharmProjects/bushfire2</p></li>
-<li><p>Script path: /home/ian/PycharmProjects/bushfire2/manage.py</p>
-<ul>
-<li><p>createBrigade Parameters: python manage.py createBrigade WyeePt –short WYP –host signin.org</p></li>
+<li><p>NB: Only 5 available under free account. Will need paid account if need to exceed this</p></li>
 </ul>
 </li>
-<li><p>Run createBrigade Python environment</p></li>
-</ul>
-</li>
-<li><p>In Terminal window (note that arguments don’t appear to work on command line):</p>
+<li><p>Connect to new device by clicking on  device, then VNC under Service on LHS</p>
 <ul>
-<li><p>(bushfire2) ian&#64;ian-ThinkPad-T490:~/PycharmProjects/bushfire2$ python manage.py create_tenant_superuser</p></li>
-<li><p>Enter Tenant Schema (‘?’ to list schemas): cambewarra</p></li>
-<li><p>Username (leave blank to use ‘ian’): admin</p></li>
-<li><p>Email address: ibowditch&#64;gmail.com</p></li>
-<li><p>Password:</p></li>
-<li><p>Password (again):</p></li>
-<li><p>Superuser created successfully.</p></li>
-</ul>
-</li>
-<li><p>Set Run/Edit Configurations for setupBrigade as for createBrigade</p>
-<ul>
-<li><p>Parameters: python manage.py setupBrigade WyeePt</p></li>
-<li><p>Run setupBrigade environment</p></li>
-</ul>
-</li>
-<li><p>Set Run/Edit Configurations for set_tenant_domains</p>
-<ul>
-<li><p>Parameters: python manage.py set_tenant_domains</p></li>
-<li><p>Run set_tenant_domains environment</p></li>
-</ul>
-</li>
-<li><p>Maybe necessary to restart app on AWS after this before possible to login to new tenant</p></li>
-</ul>
-</li>
-<li><p>Login to admin in new tenant using admin user</p>
-<ul>
-<li><p>Check passwords for utility users kiosk, tagadmin, pager are set, and if not set to correct values</p></li>
-<li><p>Import Members from provided list</p></li>
-<li><p>Set up Officers for previous year with provided details (once set up in dev, export for use in AWS updates)</p>
-<ul>
-<li><p>Check Groups assigned properly (esp. Training, Personnel)</p></li>
-</ul>
-</li>
-<li><p>Set Brigade Details</p>
-<ul>
-<li><p>All activity types are valid: deselect External and any others</p></li>
-<li><p>Check social as excluded</p></li>
-<li><p>Set season start date (ignore year)</p></li>
-<li><p>Set activity types</p></li>
-<li><p>Set excluded activities</p></li>
-<li><p>Check and update location, phone number, etc.</p></li>
-</ul>
-</li>
-<li><p>Import qualifications from RFS list under admin certifications/import</p></li>
-<li><p>Add TD/PD certifications for nominated drivers (manually)</p></li>
-</ul>
-</li>
-<li><p>Test logins</p>
-<ul>
-<li><p>tagadmin, kiosk, pager</p></li>
-<li><p>Also try one user, with rfsID as password (should prompt to change password)</p></li>
-</ul>
-</li>
-<li><p>Kiosk setup</p>
-<ul>
-<li><p>Make server visible on network</p>
-<ul>
-<li><p>On kiosk, add signin.org to /etc/hosts</p></li>
-<li><p>On dev system, run on 0.0.0.0, not 1.0.0.127</p></li>
-<li><p>On aws, add redirect for wyeept.rfstag.org and wyeept.rfstag.com (shouldn’t be necessary)</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Test remote.it</p>
-<ul>
-<li><p>If possible, cpnnect PI to external network (eg. SHADOW)</p></li>
-<li><p>In <a class="reference external" href="https://app.remote.it/#/devices">remote.it console</a> confirm that device is online, and click VNC to connect with it</p></li>
-<li><p>Copy address from connection details (eg. proxy65.rt3.io:37011) and add a connection in VNC viewer with this address.</p></li>
-<li><p>Connect using VNC viewer to confirm connection ok.</p></li>
+<li><p>Once connected, copy url and make new VNC connections on realVNC</p></li>
+<li><p>Connect with this and check access is ok</p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="testing">
-<h3><span class="section-number">7.1.8. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.9. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="full-deployment">
-<h3><span class="section-number">7.1.9. </span>Full Deployment<a class="headerlink" href="#full-deployment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.10. </span>Full Deployment<a class="headerlink" href="#full-deployment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="aws-credits-annual">
-<h3><span class="section-number">7.1.10. </span>AWS Credits (annual)<a class="headerlink" href="#aws-credits-annual" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.11. </span>AWS Credits (annual)<a class="headerlink" href="#aws-credits-annual" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
@@ -640,7 +690,7 @@ kiosk user.</p>
     <footer class="footer">
   <p>
     
-      By Ian Bowditch<br/>
+      By Ian Bowditch email:ibowditch@gmail.com<br/>
     
         &copy; Copyright 2022, Ian Bowditch.<br/>
   </p>

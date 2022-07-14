@@ -177,9 +177,9 @@ help automate some admin tasks that were taking a lot of volunteer time at my lo
 
 It started with capturing attendance records, then grew to include reporting, scheduling, and various other odds and ends.
 
-My background both as a software engineer (in a past life) and as a former Deputy Captain, came in handy, but there was 
-still a big learning curve, and I continue to improve the application as the technology evolves, and as I find better 
-ways of doing things.
+My background both as a professional software engineer (in a past life) and as a former Deputy Captain, came in handy, 
+but there was still a big learning curve, and I continue to improve the application as the technology evolves, 
+and as I find better ways of doing things.
 
 The system first went live in November 2018, and has been running (almost) continuously since then, including through 
 the major fires of 2019-2020. 

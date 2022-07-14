@@ -23,7 +23,7 @@ project = 'RFS Tag'
 # logo = "assets/images/nfc-logo-red-sm.png"
 
 copyright = '2022, Ian Bowditch'
-author = 'Ian Bowditch'
+author = 'Ian Bowditch email:ibowditch@gmail.com'
 # hostsite = "eb.fred"
 
 # The full version, including alpha/beta/rc tags
