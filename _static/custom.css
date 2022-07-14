@@ -13,8 +13,13 @@ div.meetings.docutils > ul > li > p                         { color: darksalmon 
 div.other.docutils > ul > li > p                            { color: coral !important; }
 div.AdditionalActivity.docutils > ul > li > p               { color: teal !important; }
 
-span.optional               { color: red; font-style: italic; font-weight: bold !important; }
+/*span.optional               { color: red; font-style: italic; font-weight: bold !important; }*/
 
 
+/*#adding-a-new-tenant-schema > ul > li:nth-child(1) > ul > li:nth-child(2) > p > span { color: red; font-style: italic; font-weight: bold !important; }*/
 
+span.opt { color: red; font-style: italic; }        /*font-weight: bold; }*/
+
+/*#adding-a-new-tenant-schema > ul > li:nth-child(1) > ul > li:nth-child(2) > p  { color: red; font-style: italic; font-weight: bold !important; }*/
+/*#adding-a-new-tenant-schema > ul > li:nth-child(1) > ul > li:nth-child(2) > p > span.optional*/
 

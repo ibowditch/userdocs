@@ -70,32 +70,33 @@ The brigade should provide the following details, preferably in an Excel spreads
 
 ### Adding a New Tenant Schema
 
-Optional steps (when building schema on tst system) shown in <span style="color:red;">_italics_</span>.
+Optional steps (when building schema on tst system) shown in <span class="opt">italics</span>.
 
 * Make backups of any target databases using pgadmin
   * Make backup of AWS production database (ebdb) on dev system using pgadmin
-  * <span style="color:red;">_Drop AWS tst system database (ebdb) to clear contents_</span>
-  * <span style="color:red;">_Restore backup of AWS production database to AWS tst database_</span>
+  * <span class="opt">Drop AWS tst system database (ebdb) to clear contents</span>
+  * <span class="opt">Restore backup of AWS production database to AWS tst database</span>
 
 * In pycharm project bushfire2: 
-  * In bushfire/settings/.env set RDS_HOSTNAME=<span style="color:red;">_bushfire2-tst6-rds.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com_</span>
+  * In bushfire/settings/.env set RDS_HOSTNAME=<span class="opt">bushfire2-tst6-rds.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com</span>
   * Check all migrations in all apps saved in github  
   * Run/Edit Configurations
      * Env vars: PYTHONUNBUFFERED=1;DJANGO_SETTINGS_MODULE=bushfire.settings.local
      * Working directory: ~/PycharmProjects/bushfire2
      * Script path: /home/ian/PycharmProjects/bushfire2/manage.py
-        * createBrigade Parameters: python manage.py createBrigade <span style="color:red;">*_WyeePt_*</span> --short <span style="color:red;">*_WYP_*</span> --host <span style="color:red;">*_signin.org_*</span>
-     * Run createBrigade Python environment
+        * createBrigade Parameters: 
+          * python manage.py createBrigade <span class="opt">WyeePt</span> --short <span class="opt">WYP</span> --host <span class="opt">signin.org</span>
+     * Run createBrigade in a Python runtime environment
   * In Terminal window (note that arguments don't appear to work on command line): 
        * (bushfire2) ian@ian-ThinkPad-T490:~/PycharmProjects/bushfire2$ python manage.py create_tenant_superuser 
-       * Enter Tenant Schema ('?' to list schemas): <span style="color:red;">*_wyeept_*</span> 
+       * Enter Tenant Schema ('?' to list schemas): <class="opt">wyeept</span> 
        * Username (leave blank to use 'ian'): admin
        * Email address: ibowditch@gmail.com
        * Password: 
        * Password (again): 
        * Superuser created successfully.
   * Set Run/Edit Configurations for setupBrigade as for createBrigade  
-     * Parameters: python manage.py setupBrigade <span style="color:red;">*_WyeePt_*</span>
+     * Parameters: python manage.py setupBrigade <span class="opt">WyeePt</span>
      * Run setupBrigade environment
   * Set Run/Edit Configurations for set_tenant_domains  
      * Parameters: python manage.py set_tenant_domains
