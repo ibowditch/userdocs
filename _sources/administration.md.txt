@@ -93,8 +93,6 @@ Excluded activity types
 
 ## Periodic Admin Procedures
 
-### Set Recurring Events in the Calendar
-
 (sync-sap)=
 ### Synchronising Qualifications with SAP
 
@@ -175,7 +173,7 @@ qualification records in SAP.
 :class: tip
 
 1. If you ignore my advice to be patient, and click on Submit or Confirm before the import has completed, you will
-   get a spooky 500 error, and I will get a whiny email saying someone is breaking the system. Just go back, start
+   get a spooky 500 error, and I will get a whiny email saying someone is trying to break the system. Just go back, start
    again, and find something else to do for 20s while the import completes.
    
 2. If you don't set the file type to xlsx when you import the SAP file, you will get a weird shouty error message. I 
@@ -260,6 +258,8 @@ Make sure you add a certification date to these, to keep a record of when they w
 The **RFD** qualification which goes with this, is issued by the RFS, and is included in the SAP qualifications. The 
 {ref}`Member List<memb-list>` shows TD and PD permissions, and these are shown in lower case if RFD is out of date or not 
 available for the driver.
+
+### Set Recurring Events in the Calendar
 
 ## Ad-Hoc Admin Tasks
 
