@@ -319,6 +319,11 @@ to join. Just click on the appropriate event, and you will be signed in to that.
 * If necessary, the end time for an event can be set earlier than the expected finish to avoid overlaps with other events. 
   Make sure that it is set late enough to allow any latecomers to sign-in (they can't sign-in after the end time), 
   but it doesn't have to go right to the expected end of the activity if it will cause an overlap with other events.
+  
+* {ref}`External events<externalevents>` will only accept tags from members who are pre-registered with the event, so
+  other members won't be asked if they wish to attend if there are overlapping events. This can be used to avoid 
+  asking members if they want to attend an event when it's already clear they won't be going.
+
 
 ### Resetting the Kiosk
 
