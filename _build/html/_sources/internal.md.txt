@@ -74,6 +74,7 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
 
 * Make backups of any target databases using pgadmin
   * Make backup of AWS production database (ebdb) on dev system using pgadmin
+    * Set inbound rule on RDS security group for MyIP if needed
   * <span class="opt">Drop AWS tst system database (ebdb) to clear contents</span>
   * <span class="opt">Restore backup of AWS production database to AWS tst database</span>
 
@@ -85,20 +86,21 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
      * Working directory: ~/PycharmProjects/bushfire2
      * Script path: /home/ian/PycharmProjects/bushfire2/manage.py
         * createBrigade Parameters: 
-          * python manage.py createBrigade <span class="opt">WyeePt</span> --short <span class="opt">WYP</span> --host <span class="opt">signin.org</span>
+          * python manage.py createBrigade <span class="opt">Cambewarra</span> --short <span class="opt">CBW</span> --host <span class="opt">rfstag.com</span>
      * Run createBrigade in a Python runtime environment
   * In Terminal window (note that arguments don't appear to work on command line): 
        * (bushfire2) ian@ian-ThinkPad-T490:~/PycharmProjects/bushfire2$ python manage.py create_tenant_superuser 
-       * Enter Tenant Schema ('?' to list schemas): <class="opt">wyeept</span> 
+       * Enter Tenant Schema ('?' to list schemas): <span class="opt">cambewarra</span> 
        * Username (leave blank to use 'ian'): admin
        * Email address: ibowditch@gmail.com
        * Password: 
        * Password (again): 
        * Superuser created successfully.
   * Set Run/Edit Configurations for setupBrigade as for createBrigade  
-     * Parameters: python manage.py setupBrigade <span class="opt">WyeePt</span>
+     * Parameters: python manage.py setupBrigade <span class="opt">Cambewarra</span>
      * Run setupBrigade environment
-  * Set Run/Edit Configurations for set_tenant_domains  
+  * Set Run/Edit Configurations for set_tenant_domains
+     * IMPORTANT!!!
      * Parameters: python manage.py set_tenant_domains
      * Run set_tenant_domains environment
   * Maybe necessary to restart app on AWS after this before possible to login to new tenant

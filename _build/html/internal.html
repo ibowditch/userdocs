@@ -450,7 +450,11 @@
 <ul class="simple">
 <li><p>Make backups of any target databases using pgadmin</p>
 <ul>
-<li><p>Make backup of AWS production database (ebdb) on dev system using pgadmin</p></li>
+<li><p>Make backup of AWS production database (ebdb) on dev system using pgadmin</p>
+<ul>
+<li><p>Set inbound rule on RDS security group for MyIP if needed</p></li>
+</ul>
+</li>
 <li><p><span class="opt">Drop AWS tst system database (ebdb) to clear contents</span></p></li>
 <li><p><span class="opt">Restore backup of AWS production database to AWS tst database</span></p></li>
 </ul>
@@ -467,7 +471,7 @@
 <ul>
 <li><p>createBrigade Parameters:</p>
 <ul>
-<li><p>python manage.py createBrigade <span class="opt">WyeePt</span> –short <span class="opt">WYP</span> –host <span class="opt">signin.org</span></p></li>
+<li><p>python manage.py createBrigade <span class="opt">Cambewarra</span> –short <span class="opt">CBW</span> –host <span class="opt">rfstag.com</span></p></li>
 </ul>
 </li>
 </ul>
@@ -478,7 +482,7 @@
 <li><p>In Terminal window (note that arguments don’t appear to work on command line):</p>
 <ul>
 <li><p>(bushfire2) ian&#64;ian-ThinkPad-T490:~/PycharmProjects/bushfire2$ python manage.py create_tenant_superuser</p></li>
-<li><p>Enter Tenant Schema (‘?’ to list schemas): &lt;class=”opt”&gt;wyeept</span></p></li>
+<li><p>Enter Tenant Schema (‘?’ to list schemas): <span class="opt">cambewarra</span></p></li>
 <li><p>Username (leave blank to use ‘ian’): admin</p></li>
 <li><p>Email address: ibowditch&#64;gmail.com</p></li>
 <li><p>Password:</p></li>
@@ -488,12 +492,13 @@
 </li>
 <li><p>Set Run/Edit Configurations for setupBrigade as for createBrigade</p>
 <ul>
-<li><p>Parameters: python manage.py setupBrigade <span class="opt">WyeePt</span></p></li>
+<li><p>Parameters: python manage.py setupBrigade <span class="opt">Cambewarra</span></p></li>
 <li><p>Run setupBrigade environment</p></li>
 </ul>
 </li>
 <li><p>Set Run/Edit Configurations for set_tenant_domains</p>
 <ul>
+<li><p>IMPORTANT!!!</p></li>
 <li><p>Parameters: python manage.py set_tenant_domains</p></li>
 <li><p>Run set_tenant_domains environment</p></li>
 </ul>

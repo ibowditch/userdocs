@@ -168,6 +168,7 @@ If you get back early, no problem.
 
 :::
 
+(externalevents)=
 **External**
 : If an event is being run at another location, rather than at the station, attendance can still be recorded in the 
   system.
