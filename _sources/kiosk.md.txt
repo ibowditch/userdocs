@@ -297,7 +297,7 @@ This is used to retrieve most of the information needed to complete a T-Card.
 It's not really intended for use on the Kiosk, but an OIC can access this 
 information in the front seat of a truck using their phone, so it might be handy then.
 
-
+(overlappingevents)=
 ### Multiple Simultaneous Events
 
 On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
