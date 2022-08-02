@@ -130,7 +130,7 @@ However, Attendance Records also contain information that is useful for brigade 
   loss of skills.
   
 * Determining who is entitled to vote in brigade elections, if there is some attendance criteria 
-  for this (e.g. minimum of 60 hours during the years) 
+  for this (e.g. minimum of 60 hours during the season/year) 
   
 * Summarising activity for reporting purposes, to identify trends in types of activity, and to inform
   district headquarters and other stakeholders.

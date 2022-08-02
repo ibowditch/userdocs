@@ -180,6 +180,17 @@ If you get back early, no problem.
   External events normally run for a full day, and if the attendees are known up front, there is no point asking 
   other members not on the list whether they want to attend such events.
 
+  For convenience, and since members will not normally sign-in or sign-out at the station, sign-in and sign-out times
+  are initialised to the event start and end time respectively. These can be changed as needed. Any members listed
+  in the event in advance may still sign-in at the station, and that time will be recorded instead of the event start 
+  time.
+
+  External events should be used for any activity which takes place away from the station, and so most attendees won't
+  sign-in at the station (eg. video-conferences, Out of Area Strike Team shifts, Offsite Training courses, etc.)
+  This avoids {ref}`overlaps<overlappingevents>` with other activities at the station - anyone not in the preset list 
+  of attendees for an external event will not be asked if they want to attend the external event if there is an 
+  overlap in times, so it makes signing in a little easier for most members.
+
 (pagercalls)=
 **Pager Calls**
 : Pager Calls are detected by a separate system which automagically creates a new event on the web server 
