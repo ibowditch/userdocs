@@ -40,6 +40,7 @@
     <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Internal Procedures (Under construction)" href="internal.html" />
     <link rel="prev" title="5. Administration Procedures (Under construction)" href="administration.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -120,6 +121,11 @@
    6. Technology (Under construction)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="internal.html">
+   7. Internal Procedures (Under construction)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -197,174 +203,179 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#security">
+   6.2. Security
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hardware">
-   6.2. Hardware
+   6.3. Hardware
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kiosk">
-     6.2.1. Kiosk
+     6.3.1. Kiosk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nfc">
-     6.2.2. NFC
+     6.3.2. NFC
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#server">
-     6.2.3. Server
+     6.3.3. Server
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#software">
-   6.3. Software
+   6.4. Software
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#django">
-     6.3.1. Django
+     6.4.1. Django
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#forms">
-     6.3.2. Forms
+     6.4.2. Forms
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calendar">
-     6.3.3. Calendar
+     6.4.3. Calendar
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#channels">
-     6.3.4. Channels
+     6.4.4. Channels
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multi-tenant">
-     6.3.5. Multi-tenant
+     6.4.5. Multi-tenant
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#database">
-     6.3.6. Database
+     6.4.6. Database
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#admin">
-     6.3.7. Admin
+     6.4.7. Admin
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#user-authentication">
-     6.3.8. User Authentication
+     6.4.8. User Authentication
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#html-css">
-     6.3.9. html/css
+     6.4.9. html/css
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuration-management">
-     6.3.10. Configuration Management
+     6.4.10. Configuration Management
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#development-environment">
-     6.3.11. Development Environment
+     6.4.11. Development Environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#automated-testing">
-     6.3.12. Automated Testing
+     6.4.12. Automated Testing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nfc-drivers">
-     6.3.13. NFC drivers
+     6.4.13. NFC drivers
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#raspberry-pi">
-   6.4. Raspberry PI
+   6.5. Raspberry PI
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installation-of-kiosk">
-     6.4.1. Installation of Kiosk
+     6.5.1. Installation of Kiosk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#networking">
-     6.4.2. Networking
+     6.5.2. Networking
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#troubleshooting">
-     6.4.3. Troubleshooting
+     6.5.3. Troubleshooting
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations">
-   6.5. Operations
+   6.6. Operations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aws-elastic-beanstalk">
-     6.5.1. AWS Elastic Beanstalk
+     6.6.1. AWS Elastic Beanstalk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#server-deployment">
-     6.5.2. Server Deployment
+     6.6.2. Server Deployment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cache">
-     6.5.3. Cache
+     6.6.3. Cache
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     6.5.4. Database
+     6.6.4. Database
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#security">
-     6.5.5. Security
+    <a class="reference internal nav-link" href="#id2">
+     6.6.5. Security
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#documentation">
-     6.5.6. Documentation
+     6.6.6. Documentation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuration-management-github">
-     6.5.7. Configuration Management (github)
+     6.6.7. Configuration Management (github)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pi-deployment">
-     6.5.8. PI deployment
+     6.6.8. PI deployment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pi-remote-access">
-     6.5.9. PI remote access
+     6.6.9. PI remote access
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pager-sub-system">
-     6.5.10. Pager sub-system
+     6.6.10. Pager sub-system
     </a>
    </li>
   </ul>
@@ -395,174 +406,179 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#security">
+   6.2. Security
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hardware">
-   6.2. Hardware
+   6.3. Hardware
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kiosk">
-     6.2.1. Kiosk
+     6.3.1. Kiosk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nfc">
-     6.2.2. NFC
+     6.3.2. NFC
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#server">
-     6.2.3. Server
+     6.3.3. Server
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#software">
-   6.3. Software
+   6.4. Software
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#django">
-     6.3.1. Django
+     6.4.1. Django
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#forms">
-     6.3.2. Forms
+     6.4.2. Forms
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#calendar">
-     6.3.3. Calendar
+     6.4.3. Calendar
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#channels">
-     6.3.4. Channels
+     6.4.4. Channels
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multi-tenant">
-     6.3.5. Multi-tenant
+     6.4.5. Multi-tenant
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#database">
-     6.3.6. Database
+     6.4.6. Database
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#admin">
-     6.3.7. Admin
+     6.4.7. Admin
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#user-authentication">
-     6.3.8. User Authentication
+     6.4.8. User Authentication
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#html-css">
-     6.3.9. html/css
+     6.4.9. html/css
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuration-management">
-     6.3.10. Configuration Management
+     6.4.10. Configuration Management
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#development-environment">
-     6.3.11. Development Environment
+     6.4.11. Development Environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#automated-testing">
-     6.3.12. Automated Testing
+     6.4.12. Automated Testing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nfc-drivers">
-     6.3.13. NFC drivers
+     6.4.13. NFC drivers
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#raspberry-pi">
-   6.4. Raspberry PI
+   6.5. Raspberry PI
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installation-of-kiosk">
-     6.4.1. Installation of Kiosk
+     6.5.1. Installation of Kiosk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#networking">
-     6.4.2. Networking
+     6.5.2. Networking
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#troubleshooting">
-     6.4.3. Troubleshooting
+     6.5.3. Troubleshooting
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations">
-   6.5. Operations
+   6.6. Operations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aws-elastic-beanstalk">
-     6.5.1. AWS Elastic Beanstalk
+     6.6.1. AWS Elastic Beanstalk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#server-deployment">
-     6.5.2. Server Deployment
+     6.6.2. Server Deployment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cache">
-     6.5.3. Cache
+     6.6.3. Cache
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     6.5.4. Database
+     6.6.4. Database
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#security">
-     6.5.5. Security
+    <a class="reference internal nav-link" href="#id2">
+     6.6.5. Security
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#documentation">
-     6.5.6. Documentation
+     6.6.6. Documentation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuration-management-github">
-     6.5.7. Configuration Management (github)
+     6.6.7. Configuration Management (github)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pi-deployment">
-     6.5.8. PI deployment
+     6.6.8. PI deployment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pi-remote-access">
-     6.5.9. PI remote access
+     6.6.9. PI remote access
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pager-sub-system">
-     6.5.10. Pager sub-system
+     6.6.10. Pager sub-system
     </a>
    </li>
   </ul>
@@ -596,111 +612,145 @@ system, which includes granular permission setting by group and for individual u
 partitioning used in multi-tenanting. All data is backed up daily inside the secure AWS infrastructure.</p></li>
 </ul>
 </div>
+<div class="section" id="security">
+<h2><span class="section-number">6.2. </span>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h2>
+<p>Although RFSTAG does not store particularly sensitive personal data,</p>
+<ul class="simple">
+<li><p>take security seriously</p></li>
+<li></li>
+</ul>
+<p>The RFSTAG web application is built using the Django platform, which has
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security">effective protections</a>
+against a number of common threats, including XSS and CSRF attacks.</p>
+<p>Details of Django’s security features are available <a class="reference external" href="https://docs.djangoproject.com/en/4.1/topics/security/">here</a>,
+but the following is a summary of the main protections:</p>
+<ul class="simple">
+<li><p>Access to the brigade sites requires a registered user name, and password. User names are issued by the brigade
+administrator, and passwords are set by the user.</p></li>
+<li><p>Personal data for Members stored on the system is limited to member name (required), email address (required)
+and mobile phone number (optional).</p>
+<ul>
+<li><p>An email address is required so that the Member can reset their password. It does not have to be the primary email
+address of the Member, and eg. an RFS email address may be used if preferred.</p></li>
+<li><p>Mobile phone numbers are not required, though if they are supplied, they will be shared with other Members
+for their convenience.</p></li>
+</ul>
+</li>
+<li><p>RFSTAG can only be accessed using secure connection (https). This means that the connection between the user and the
+server is encrypted, and cannot be intercepted.</p></li>
+<li><p>Additional protections, including HTTP Strict Transport Security (HSTS), Cross site scripting (XSS), Cross site request
+forgery (CSRF), and all others directly supported by Django are also included in the web application.</p></li>
+<li><p><a class="reference external" href="https://observatory.mozilla.org/analyze/rfstag.org">RFSTAG</a> is rated as B (secure), by mozilla, which is higher
+than most sites, including <a class="reference external" href="https://observatory.mozilla.org/analyze/activ.rfs.nsw.gov.au">activ</a> (rated F).</p></li>
+<li><p>Data is held on a Relational Database System (RDS) stored within Amazon Web Services. Only the web application can
+access the database, and access to the web application is restricted to registered users.</p></li>
+</ul>
+</div>
 <div class="section" id="hardware">
-<h2><span class="section-number">6.2. </span>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="kiosk">
-<h3><span class="section-number">6.2.1. </span>Kiosk<a class="headerlink" href="#kiosk" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>Kiosk<a class="headerlink" href="#kiosk" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="nfc">
-<h3><span class="section-number">6.2.2. </span>NFC<a class="headerlink" href="#nfc" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.2. </span>NFC<a class="headerlink" href="#nfc" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="server">
-<h3><span class="section-number">6.2.3. </span>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.3. </span>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
 <p>t2.medium used as main server. Up to 4 servers can be deployed if demand requires.</p>
 </div>
 </div>
 <div class="section" id="software">
-<h2><span class="section-number">6.3. </span>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="django">
-<h3><span class="section-number">6.3.1. </span>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.1. </span>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="forms">
-<h3><span class="section-number">6.3.2. </span>Forms<a class="headerlink" href="#forms" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.2. </span>Forms<a class="headerlink" href="#forms" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="calendar">
-<h3><span class="section-number">6.3.3. </span>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3. </span>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="channels">
-<h3><span class="section-number">6.3.4. </span>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.4. </span>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="multi-tenant">
-<span id="multi-tenant-tech"></span><h3><span class="section-number">6.3.5. </span>Multi-tenant<a class="headerlink" href="#multi-tenant" title="Permalink to this headline">¶</a></h3>
+<span id="multi-tenant-tech"></span><h3><span class="section-number">6.4.5. </span>Multi-tenant<a class="headerlink" href="#multi-tenant" title="Permalink to this headline">¶</a></h3>
 <p>Each brigade has its own database, including the list of members, and you can only login to a brigade system if you
 are a member there. Once you are logged in, you can only access data for your own brigade, and you won’t see data for
 any other brigades.</p>
 </div>
 <div class="section" id="database">
-<h3><span class="section-number">6.3.6. </span>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.6. </span>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h3>
 <p>PostgreSQL is used as the back-end. <a class="reference external" href="https://opensource.com/article/17/11/django-orm">Django’s Object-Relational Mapper (ORM)</a>
 is used to access the database, so there is very little raw SQL in the system.</p>
 </div>
 <div class="section" id="admin">
-<h3><span class="section-number">6.3.7. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.7. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="user-authentication">
-<h3><span class="section-number">6.3.8. </span>User Authentication<a class="headerlink" href="#user-authentication" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.8. </span>User Authentication<a class="headerlink" href="#user-authentication" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="html-css">
-<h3><span class="section-number">6.3.9. </span>html/css<a class="headerlink" href="#html-css" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.9. </span>html/css<a class="headerlink" href="#html-css" title="Permalink to this headline">¶</a></h3>
 <p>If not completed in 15 minutes, forms will be automatically removed, and the screen will return
 to the normal Kiosk view to allow members to continue signing in and out.</p>
 </div>
 <div class="section" id="configuration-management">
-<h3><span class="section-number">6.3.10. </span>Configuration Management<a class="headerlink" href="#configuration-management" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.10. </span>Configuration Management<a class="headerlink" href="#configuration-management" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="development-environment">
-<h3><span class="section-number">6.3.11. </span>Development Environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.11. </span>Development Environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="automated-testing">
-<h3><span class="section-number">6.3.12. </span>Automated Testing<a class="headerlink" href="#automated-testing" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.12. </span>Automated Testing<a class="headerlink" href="#automated-testing" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="nfc-drivers">
-<h3><span class="section-number">6.3.13. </span>NFC drivers<a class="headerlink" href="#nfc-drivers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.13. </span>NFC drivers<a class="headerlink" href="#nfc-drivers" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="raspberry-pi">
-<h2><span class="section-number">6.4. </span>Raspberry PI<a class="headerlink" href="#raspberry-pi" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Raspberry PI<a class="headerlink" href="#raspberry-pi" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installation-of-kiosk">
-<h3><span class="section-number">6.4.1. </span>Installation of Kiosk<a class="headerlink" href="#installation-of-kiosk" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.5.1. </span>Installation of Kiosk<a class="headerlink" href="#installation-of-kiosk" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="networking">
-<h3><span class="section-number">6.4.2. </span>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.5.2. </span>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="troubleshooting">
-<h3><span class="section-number">6.4.3. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.5.3. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="operations">
-<h2><span class="section-number">6.5. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.6. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="aws-elastic-beanstalk">
-<h3><span class="section-number">6.5.1. </span>AWS Elastic Beanstalk<a class="headerlink" href="#aws-elastic-beanstalk" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.1. </span>AWS Elastic Beanstalk<a class="headerlink" href="#aws-elastic-beanstalk" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="server-deployment">
-<h3><span class="section-number">6.5.2. </span>Server Deployment<a class="headerlink" href="#server-deployment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.2. </span>Server Deployment<a class="headerlink" href="#server-deployment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="cache">
-<h3><span class="section-number">6.5.3. </span>Cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.3. </span>Cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">6.5.4. </span>Database<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.4. </span>Database<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="security">
-<h3><span class="section-number">6.5.5. </span>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3><span class="section-number">6.6.5. </span>Security<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="documentation">
-<h3><span class="section-number">6.5.6. </span>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.6. </span>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="configuration-management-github">
-<h3><span class="section-number">6.5.7. </span>Configuration Management (github)<a class="headerlink" href="#configuration-management-github" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.7. </span>Configuration Management (github)<a class="headerlink" href="#configuration-management-github" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="pi-deployment">
-<h3><span class="section-number">6.5.8. </span>PI deployment<a class="headerlink" href="#pi-deployment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.8. </span>PI deployment<a class="headerlink" href="#pi-deployment" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="pi-remote-access">
-<h3><span class="section-number">6.5.9. </span>PI remote access<a class="headerlink" href="#pi-remote-access" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.9. </span>PI remote access<a class="headerlink" href="#pi-remote-access" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="pager-sub-system">
-<h3><span class="section-number">6.5.10. </span>Pager sub-system<a class="headerlink" href="#pager-sub-system" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.6.10. </span>Pager sub-system<a class="headerlink" href="#pager-sub-system" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
@@ -717,6 +767,13 @@ to the normal Kiosk view to allow members to continue signing in and out.</p>
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">5. </span>Administration Procedures (Under construction)</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="internal.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Internal Procedures (Under construction)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

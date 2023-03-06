@@ -81,6 +81,7 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
 * In pycharm project bushfire2: 
   * In bushfire/settings/.env set RDS_HOSTNAME=<span class="opt">bushfire2-tst6-rds.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com</span>
   * Check all migrations in all apps saved in github  
+  * Add new tenant name to settings.base.CUSTOMER_LIST
   * Run/Edit Configurations
      * Env vars: PYTHONUNBUFFERED=1;DJANGO_SETTINGS_MODULE=bushfire.settings.local
      * Working directory: ~/PycharmProjects/bushfire2
@@ -122,6 +123,7 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
     * Set activity types
     * Set excluded activities
     * Check and update location, phone number, etc.
+  * Change tenant name to readable version, eg. Gosford Bulk (with space) using signin.org
   * Import qualifications from RFS list under admin certifications/import
   * Add TD/PD certifications for nominated drivers (manually)
     * Not always clear from either Licences or Administration reports
@@ -495,3 +497,29 @@ These instructions show how to set up an additional pager listening station in a
   * Capcodes are downloaded from the rfstag server using public url rfstag.com/capcodes
   * Brigades using rfstag in this PAGER_REGION are downloaded using public url rfstag.com/brigades/{PAGER_REGION} 
   * Automated updates are available (not yet fully implemented) using public url rfstag.com/update/pager
+
+
+## PI won't boot
+
+If nothing is shown on the screen, and the PI LED is solid red, it's likely that the SD card is corrupted. This 
+prevents the PI from booting up, as it can't read the operating system from the SD card.
+
+SD card corruption can be caused by wear and tear, extensive long term usage (read/writes), or by incorrect
+shutdown procedures. Always shutdown the PI properly (ctrl-alt-del, then shutdown) rather than just powering off.
+
+To replace the SD card, you need to:
+
+1. Purchase a new SD card
+
+- 32Gb recommended
+- Recommended models at https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards
+- Recommended to buy pre-loaded SD card: 32GB MicroSD Card with NOOBS for all Raspberry Pi Boards
+see https://core-electronics.com.au/32gb-microsd-card-with-noobs-for-all-raspberry-pi-boards.html?gclid=CjwKCAiAk--dBhABEiwAchIwkeJNDdNBnoeqsqydU7FNzhWiyUOdbMh0WV1al7JQ1KDvvGrV-bEEfhoCt9kQAvD_BwE
+- 
+2. Image
+
+For a raw card, follow the procedure at https://www.raspberrypi.com/software/ to load the new SD card with the
+Raspberry O/S.
+
+3. Now set up the PI from scratch using the procedure above.
+

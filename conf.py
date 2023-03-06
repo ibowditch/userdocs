@@ -68,7 +68,7 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv', ]
 
 # Use this to keep internal documentation private. Comment out for local use.
-exclude_patterns += ['internal*']
+##### exclude_patterns += ['internal*']
 
 
 # -- Options for HTML output -------------------------------------------------
