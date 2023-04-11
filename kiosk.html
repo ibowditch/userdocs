@@ -1,423 +1,377 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2. The Kiosk &#8212; RFS Tag</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'kiosk';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="3. Events" href="events.html" />
     <link rel="prev" title="1. Introduction" href="background.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/nfc-logo-red-sm.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">RFS Tag</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   RFS Tag User Guide
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="background.html">
-   1. Introduction
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. The Kiosk
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="events.html">
-   3. Events
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="server.html">
-   4. Web Portal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="administration.html">
-   5. Administration Procedures (Under construction)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="technology.html">
-   6. Technology (Under construction)
-  </a>
- </li>
+    
+    
+    <img src="_static/nfc-logo-red-sm.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/nfc-logo-red-sm.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    RFS Tag User Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="background.html">1. Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. The Kiosk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">3. Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">4. Web Portal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administration.html">5. Administration Procedures (Under construction)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology.html">6. Technology (Under construction)</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/kiosk.md.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/kiosk.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        </div>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Kiosk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-operations">
-   2.1. Basic Operations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#signing-in-the-easy-way">
-     2.1.1. Signing in - The Easy Way
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">
-     2.1.2. What if the Kiosk Screen is Blank?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#signing-in-without-a-tag">
-     2.1.3. Signing in Without a Tag
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#advanced-operations">
-   2.2. Advanced Operations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-events">
-     2.2.1. Changing Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-attendance">
-     2.2.2. Changing Attendance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deleting-events">
-     2.2.3. Deleting Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bulk-transfer-of-members-to-a-new-event">
-     2.2.4. Bulk Transfer of Members to a New Event
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#t-cards">
-     2.2.5. T-Cards
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-simultaneous-events">
-     2.2.6. Multiple Simultaneous Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tips-for-organising-a-busy-day">
-     2.2.7. Tips for Organising a Busy Day
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resetting-the-kiosk">
-     2.2.8. Resetting the Kiosk
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kiosk-beeps">
-     2.2.9. Kiosk Beeps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tagging-flowchart">
-     2.2.10. Tagging Flowchart
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-operations">2.1. Basic Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-the-easy-way">2.1.1. Signing in - The Easy Way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">2.1.2. What if the Kiosk Screen is Blank?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-without-a-tag">2.1.3. Signing in Without a Tag</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-operations">2.2. Advanced Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-events">2.2.1. Changing Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-attendance">2.2.2. Changing Attendance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-events">2.2.3. Deleting Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bulk-transfer-of-members-to-a-new-event">2.2.4. Bulk Transfer of Members to a New Event</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-cards">2.2.5. T-Cards</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-simultaneous-events">2.2.6. Multiple Simultaneous Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-organising-a-busy-day">2.2.7. Tips for Organising a Busy Day</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resetting-the-kiosk">2.2.8. Resetting the Kiosk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kiosk-beeps">2.2.9. Kiosk Beeps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tagging-flowchart">2.2.10. Tagging Flowchart</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The Kiosk</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-operations">
-   2.1. Basic Operations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#signing-in-the-easy-way">
-     2.1.1. Signing in - The Easy Way
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">
-     2.1.2. What if the Kiosk Screen is Blank?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#signing-in-without-a-tag">
-     2.1.3. Signing in Without a Tag
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#advanced-operations">
-   2.2. Advanced Operations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-events">
-     2.2.1. Changing Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-attendance">
-     2.2.2. Changing Attendance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deleting-events">
-     2.2.3. Deleting Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bulk-transfer-of-members-to-a-new-event">
-     2.2.4. Bulk Transfer of Members to a New Event
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#t-cards">
-     2.2.5. T-Cards
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-simultaneous-events">
-     2.2.6. Multiple Simultaneous Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tips-for-organising-a-busy-day">
-     2.2.7. Tips for Organising a Busy Day
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resetting-the-kiosk">
-     2.2.8. Resetting the Kiosk
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kiosk-beeps">
-     2.2.9. Kiosk Beeps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tagging-flowchart">
-     2.2.10. Tagging Flowchart
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="the-kiosk">
-<span id="kioskh"></span><h1><span class="section-number">2. </span>The Kiosk<a class="headerlink" href="#the-kiosk" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="the-kiosk">
+<span id="kioskh"></span><h1><span class="section-number">2. </span>The Kiosk<a class="headerlink" href="#the-kiosk" title="Permalink to this headline">#</a></h1>
 <p>The Kiosk is a small computer (a Raspberry PI), with a screen and a NFC tag reader attached, that
 replaces the old paper Attendance Book, and records attendance in electronic form. It is normally located
 at the front desk of the station.</p>
-<div class="margin figure align-default" id="kiosk-parts">
+<figure class="margin align-default" id="kiosk-parts">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/kiosk-parts.jpg"><img alt="Kiosk parts" class="bg-primary mb-1" src="_images/kiosk-parts.jpg" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">NFC tag, reader, and PI</span><a class="headerlink" href="#kiosk-parts" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">NFC tag, reader, and PI</span><a class="headerlink" href="#kiosk-parts" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>It is always-on and available 24 hours every day. It requires an internet connection (Wi-Fi or wired)
 to function.</p>
-<p>The Kiosk screen shows <a class="reference internal" href="events.html"><span class="doc std std-doc">events</span></a> that start <strong>or end</strong> on the current day,
+<p>The Kiosk screen shows <a class="reference internal" href="events.html"><span class="std std-doc">events</span></a> that start <strong>or end</strong> on the current day,
 and is automatically updated every night, just after midnight, to show events for the new day.</p>
 <p id="keyfobs">NFC tags (keyfobs) are issued to all members, and these can can be used to sign-in and sign-out
 of events shown on the kiosk screen.</p>
-<div class="section" id="basic-operations">
-<h2><span class="section-number">2.1. </span>Basic Operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="signing-in-the-easy-way">
-<span id="easyway"></span><h3><span class="section-number">2.1.1. </span>Signing in - The Easy Way<a class="headerlink" href="#signing-in-the-easy-way" title="Permalink to this headline">¶</a></h3>
+<section id="basic-operations">
+<h2><span class="section-number">2.1. </span>Basic Operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">#</a></h2>
+<section id="signing-in-the-easy-way">
+<span id="easyway"></span><h3><span class="section-number">2.1.1. </span>Signing in - The Easy Way<a class="headerlink" href="#signing-in-the-easy-way" title="Permalink to this headline">#</a></h3>
 <p>The Kiosk is designed to make it as quick and easy as possible for Members to sign-in and
 sign-out of activities at the station.</p>
 <p>In general, the OIC who has organised an activity should <a class="reference internal" href="server.html#cal-add-event"><span class="std std-ref">set up an event in advance</span></a>,
 and when you get to the station, you will see something like this on the kiosk screen:</p>
-<div class="myclass figure align-default" id="kiosk1event">
+<figure class="myclass align-default" id="kiosk1event">
 <img alt="Kiosk with 1 event" class="bg-primary mb-1" src="_images/kiosk1-event-b.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Kiosk screen with 1 event</span><a class="headerlink" href="#kiosk1event" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Kiosk screen with 1 event</span><a class="headerlink" href="#kiosk1event" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>If the event you need is on the screen, all you have to do is to hold your tag near the reader,
 and you will be signed in. (If the screen is blank or no events are available, jump to <a class="reference internal" href="#blank-kiosk"><span class="std std-ref">What if the Kiosk Screen is Blank?</span></a>)</p>
-<div class="margin figure align-default" id="tagging">
+<figure class="margin align-default" id="tagging">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/tagging2.jpg"><img alt="tagging" class="bg-primary mb-1" src="_images/tagging2.jpg" style="width: 1000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Hold your tag close to the centre of the reader for 1 second</span><a class="headerlink" href="#tagging" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Hold your tag close to the centre of the reader for 1 second</span><a class="headerlink" href="#tagging" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>You should hear a beep as the tag is registered, and the screen will be updated as follows, with your name in
 the event, and the time you signed in.</p>
-<div class="myclass figure align-default" id="kiosk1event1att">
+<figure class="myclass align-default" id="kiosk1event1att">
 <img alt="Signed in!" class="bg-primary mb-1" src="_images/kiosk-1event-1att-b.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Signed in!</span><a class="headerlink" href="#kiosk1event1att" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Signed in!</span><a class="headerlink" href="#kiosk1event1att" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>When you’ve finished the activity, use your tag again to sign-out. That’s it!</p>
 <div class="tip admonition" id="usetag">
 <p class="admonition-title">Why you should always sign-in with your tag</p>
@@ -430,18 +384,20 @@ whenever possible.</p>
 <p>The system records when a tag is used, and if your brigade is strict about using tags,
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.</p>
 </div>
-</div>
-<div class="section" id="what-if-the-kiosk-screen-is-blank">
-<span id="blank-kiosk"></span><h3><span class="section-number">2.1.2. </span>What if the Kiosk Screen is Blank?<a class="headerlink" href="#what-if-the-kiosk-screen-is-blank" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="what-if-the-kiosk-screen-is-blank">
+<span id="blank-kiosk"></span><h3><span class="section-number">2.1.2. </span>What if the Kiosk Screen is Blank?<a class="headerlink" href="#what-if-the-kiosk-screen-is-blank" title="Permalink to this headline">#</a></h3>
 <p>If the OIC hasn’t <a class="reference internal" href="server.html#cal-add-event"><span class="std std-ref">set up an event</span></a> in advance, no event is available, and you won’t be
 able to sign-in immediately.</p>
 <p>Never fear - you can still sign-in, but first you’ll need to create a new event on behalf of the OIC. You do this by
 clicking the <span class="badge badge-pill badge-primary"><strong>New Event+</strong></span> button at the top right of
 the kiosk screen, and then you will then see the following form:</p>
-<div class="myclass figure align-default" id="kiosk-newevent">
+<figure class="myclass align-default" id="kiosk-newevent">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/kiosk-newevent-a.jpg"><img alt="Kiosk new event form" class="bg-primary mb-1" src="_images/kiosk-newevent-a.jpg" style="width: 2000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Kiosk new event form</span><a class="headerlink" href="#kiosk-newevent" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Kiosk new event form</span><a class="headerlink" href="#kiosk-newevent" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Once you’ve entered the details, click <span class="badge badge-pill badge-primary"><strong>Submit</strong></span> (top left),
 and the kiosk screen should then show the event you just created.</p>
 <p>You can now <a class="reference internal" href="#easyway"><span class="std std-ref">sign-in using your tag</span></a>.</p>
@@ -457,41 +413,47 @@ than just arrived at the station, where there could be a number of activities un
 old Attendance Book. You need to fill in the details at the top of the page to give the context, and show
 what activity you are actually attending, and that’s essentially what an event gives you.</p>
 </div>
-</div>
-<div class="section" id="signing-in-without-a-tag">
-<span id="notag"></span><h3><span class="section-number">2.1.3. </span>Signing in Without a Tag<a class="headerlink" href="#signing-in-without-a-tag" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="signing-in-without-a-tag">
+<span id="notag"></span><h3><span class="section-number">2.1.3. </span>Signing in Without a Tag<a class="headerlink" href="#signing-in-without-a-tag" title="Permalink to this headline">#</a></h3>
 <p>You really should <a class="reference internal" href="#usetag"><span class="std std-ref">use your tag</span></a>, but if you don’t have it you can still sign-in to
 an event by clicking on the sign-in icon in the event:</p>
-<div class="myclass figure align-default" id="signin">
+<figure class="myclass align-default" id="signin">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/signin.jpg"><img alt="Kiosk sign-in" class="bg-primary mb-1" src="_images/signin.jpg" style="width: 50px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Kiosk sign-in icon</span><a class="headerlink" href="#signin" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Kiosk sign-in icon</span><a class="headerlink" href="#signin" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>You can sign-out without a tag by clicking the <span class="badge badge-pill badge-success">Sign Out</span> button next to your name.</p>
-</div>
-</div>
-<div class="section" id="advanced-operations">
-<h2><span class="section-number">2.2. </span>Advanced Operations<a class="headerlink" href="#advanced-operations" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+</section>
+<section id="advanced-operations">
+<h2><span class="section-number">2.2. </span>Advanced Operations<a class="headerlink" href="#advanced-operations" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title">Forms block sign-in</p>
 <p>Forms such as <a class="reference internal" href="#change-event"><span class="std std-ref">Changing Event Details</span></a> prevent members
 from signing in, so shouldn’t be left uncompleted on the Kiosk screen.</p>
-</div>
-<div class="section" id="changing-events">
-<span id="change-event"></span><h3><span class="section-number">2.2.1. </span>Changing Events<a class="headerlink" href="#changing-events" title="Permalink to this headline">¶</a></h3>
+</aside>
+<section id="changing-events">
+<span id="change-event"></span><h3><span class="section-number">2.2.1. </span>Changing Events<a class="headerlink" href="#changing-events" title="Permalink to this headline">#</a></h3>
 <p>Any event on the Kiosk screen can be updated by clicking on the title, in this case:
 <span style="color:blue;">”Assist SES in Hornsby Area”</span>:</p>
-<div class="myclass figure align-default" id="event2edit">
+<figure class="myclass align-default" id="event2edit">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/kiosk1event-edit.jpg"><img alt="Single event" class="bg-primary mb-1" src="_images/kiosk1event-edit.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Event to be updated</span><a class="headerlink" href="#event2edit" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Event to be updated</span><a class="headerlink" href="#event2edit" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The Kiosk will then display a form with all the details of the event. Everything except the date of the
 event can be changed/updated.</p>
 <p>Click <span class="badge badge-pill badge-primary"><strong>Submit</strong></span> when done, and the revised event will
 appear on the Kiosk.</p>
-<div class="myclass figure align-default" id="event-update">
+<figure class="myclass align-default" id="event-update">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/event-edit-a.jpg"><img alt="Edit an event" class="bg-primary mb-1" src="_images/event-edit-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Update Event Form (click to enlarge)</span><a class="headerlink" href="#event-update" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Update Event Form (click to enlarge)</span><a class="headerlink" href="#event-update" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Notes:</strong></p>
 <ul class="simple">
 <li><p>Members can be added without start or end times, as a placeholder, if you know in advance who is expected to attend.
@@ -507,9 +469,9 @@ useful in determining <a class="reference internal" href="server.html#vehbook"><
 <li><p>Attendees can be removed if necessary using the <em>Delete</em> checkbox to the right of their name. This is useful if someone
 signed in to the wrong event by mistake. Use with caution though, as genuine attendance records should not be deleted.</p></li>
 </ul>
-</div>
-<div class="section" id="changing-attendance">
-<span id="change-att"></span><h3><span class="section-number">2.2.2. </span>Changing Attendance<a class="headerlink" href="#changing-attendance" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="changing-attendance">
+<span id="change-att"></span><h3><span class="section-number">2.2.2. </span>Changing Attendance<a class="headerlink" href="#changing-attendance" title="Permalink to this headline">#</a></h3>
 <p>If you forgot to sign-in when you arrived at the station, and go back later to sign-in, you can revise the start
 time by <em>clicking on your name</em> in the event.</p>
 <p>You will then have the option of changing the sign-in time or other details of your attendance at that event.
@@ -518,16 +480,16 @@ Click <span class="badge badge-pill badge-primary"><strong>Submit</strong></span
 longer be signed out.</p>
 <p>If you sign-in by accident, you can delete your attendance using the <a class="reference internal" href="#delatt"><span class="std std-ref">delete attendance option</span></a>
 in the event form.</p>
-</div>
-<div class="section" id="deleting-events">
-<h3><span class="section-number">2.2.3. </span>Deleting Events<a class="headerlink" href="#deleting-events" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="deleting-events">
+<h3><span class="section-number">2.2.3. </span>Deleting Events<a class="headerlink" href="#deleting-events" title="Permalink to this headline">#</a></h3>
 <p>If a new event is created by mistake, it can be deleted using the trash
 icon <span class="fa fa-trash fa-lg" style="color:blue;"></span> in the event.</p>
 <p>You may not delete an event which already has members listed as attending (the trash icon will not be shown), to avoid
 accidental loss of attendance records.</p>
-</div>
-<div class="section" id="bulk-transfer-of-members-to-a-new-event">
-<h3><span class="section-number">2.2.4. </span>Bulk Transfer of Members to a New Event<a class="headerlink" href="#bulk-transfer-of-members-to-a-new-event" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="bulk-transfer-of-members-to-a-new-event">
+<h3><span class="section-number">2.2.4. </span>Bulk Transfer of Members to a New Event<a class="headerlink" href="#bulk-transfer-of-members-to-a-new-event" title="Permalink to this headline">#</a></h3>
 <p>The <span class="badge badge-pill badge-info"><strong>Transfer</strong></span> button, available in the form used to
 change events, allows members to be transferred from one event to another following event.
 This saves the fuss of everyone signing out and then signing in immediately to a new event.</p>
@@ -536,28 +498,36 @@ finished at 10:30, earlier than the planned finish time of 11:00.
 The current time is 10:40, and 3 of the original 10 attendees have already signed out and left.</p>
 <p>The remaining members are available to help in the next activity - Vehicle Maintenance - which will start at the
 current time.</p>
-<div class="myclass figure align-default" id="prexfer">
+<figure class="myclass align-default" id="prexfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/prexfer-a.jpg"><img alt="Monthly Meeting" class="bg-primary mb-1" src="_images/prexfer-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Monthly Meeting</span><a class="headerlink" href="#prexfer" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Monthly Meeting</span><a class="headerlink" href="#prexfer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Open the meeting event by clicking on the
 title <span style="color:blue;">”March General Meeting”</span>, to get to the following form:</p>
-<div class="myclass figure align-default" id="updxfer">
+<figure class="myclass align-default" id="updxfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/updxfer2.jpg"><img alt="Update Monthly Meeting" class="bg-primary mb-1" src="_images/updxfer2.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Update Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#updxfer" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Update Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#updxfer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Then click the <span class="badge badge-pill badge-info"><strong>Transfer</strong></span> button at the top right.</p>
 <p>In the Transfer form, fill in the details of the next event (Maintenance - Vehicle Checks).</p>
-<div class="myclass figure align-default" id="inxfer">
+<figure class="myclass align-default" id="inxfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/inxfer-a.jpg"><img alt="Transfer from Monthly Meeting" class="bg-primary mb-1" src="_images/inxfer-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Transfer from Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#inxfer" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Transfer from Monthly Meeting (Click to enlarge)</span><a class="headerlink" href="#inxfer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><span class="badge badge-pill badge-primary"><strong>Submit</strong></span> the Transfer form with the new details,
 then you will return to the main Kiosk screen:</p>
-<div class="myclass figure align-default" id="postxfer">
+<figure class="myclass align-default" id="postxfer">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/postxfer.jpg"><img alt="Transfer Complete" class="bg-primary mb-1" src="_images/postxfer.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">Transfer Complete (Click to enlarge)</span><a class="headerlink" href="#postxfer" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.12 </span><span class="caption-text">Transfer Complete (Click to enlarge)</span><a class="headerlink" href="#postxfer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>All remaining members (who hadn’t already signed out from the Meeting event), have been transferred from the
 Meeting event to the new Maintenance event. They have been automatically signed out of the Meeting event, and
 signed into the new Maintenance event. They only need to sign-out once, when they leave.</p>
@@ -566,25 +536,25 @@ signed into the new Maintenance event. They only need to sign-out once, when the
 can sign-in to it.</p>
 <p>Members who had already signed out of the Meeting event at the time of transfer, are not transferred to the
 new Maintenance event. They can sign-in to the new event if they hadn’t really left.</p>
-</div>
-<div class="section" id="t-cards">
-<span id="tcard"></span><h3><span class="section-number">2.2.5. </span>T-Cards<a class="headerlink" href="#t-cards" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="t-cards">
+<span id="tcard"></span><h3><span class="section-number">2.2.5. </span>T-Cards<a class="headerlink" href="#t-cards" title="Permalink to this headline">#</a></h3>
 <p>In the top right of the <a class="reference internal" href="#event-update"><span class="std std-ref">event form</span></a> (top right) you will see a
 <span class="badge badge-pill badge-warning"><strong>T-Card</strong></span>  button.
 This is used to retrieve most of the information needed to complete a T-Card.
 It’s not really intended for use on the Kiosk, but an OIC can access this
 information in the front seat of a truck using their phone, so it might be handy then.</p>
-</div>
-<div class="section" id="multiple-simultaneous-events">
-<span id="overlappingevents"></span><h3><span class="section-number">2.2.6. </span>Multiple Simultaneous Events<a class="headerlink" href="#multiple-simultaneous-events" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="multiple-simultaneous-events">
+<span id="overlappingevents"></span><h3><span class="section-number">2.2.6. </span>Multiple Simultaneous Events<a class="headerlink" href="#multiple-simultaneous-events" title="Permalink to this headline">#</a></h3>
 <p>On a busy day, it is possible that events will overlap in time, or there may be several events running at the same time
 (e.g. Maintenance, and Training).</p>
 <p>If that’s the case, the system needs to <a class="reference internal" href="#flowchart-pic"><span class="std std-ref">work out which event you want to join</span></a>.</p>
 <p>When you present your tag to sign-in, the system will ask you to choose which of the available events you wish
 to join. Just click on the appropriate event, and you will be signed in to that.</p>
-</div>
-<div class="section" id="tips-for-organising-a-busy-day">
-<h3><span class="section-number">2.2.7. </span>Tips for Organising a Busy Day<a class="headerlink" href="#tips-for-organising-a-busy-day" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tips-for-organising-a-busy-day">
+<h3><span class="section-number">2.2.7. </span>Tips for Organising a Busy Day<a class="headerlink" href="#tips-for-organising-a-busy-day" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Where possible, <em>avoid overlapping events</em>, as they will slow down the sign-in process for all members.</p></li>
 <li><p>Choose the start and end times for events to match the expected duration of the event. Members can sign-in up to 1
@@ -596,9 +566,9 @@ but it doesn’t have to go right to the expected end of the activity if it will
 other members won’t be asked if they wish to attend if there are overlapping events. This can be used to avoid
 asking members if they want to attend an event when it’s already clear they won’t be going.</p></li>
 </ul>
-</div>
-<div class="section" id="resetting-the-kiosk">
-<h3><span class="section-number">2.2.8. </span>Resetting the Kiosk<a class="headerlink" href="#resetting-the-kiosk" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="resetting-the-kiosk">
+<h3><span class="section-number">2.2.8. </span>Resetting the Kiosk<a class="headerlink" href="#resetting-the-kiosk" title="Permalink to this headline">#</a></h3>
 <p>If, for any reason, the Kiosk becomes unresponsive, or is not working as intended, it can be restarted by using the
 <em>three finger salute</em> - ctrl-alt-delete - then choose Reboot. This will restart the Kiosk safely, and it should be
 back up and running in a minute or so.</p>
@@ -606,18 +576,18 @@ back up and running in a minute or so.</p>
 <p class="admonition-title">Do not turn the power off and then on again to reset the Kiosk</p>
 <p>If the Kiosk is not shutdown properly, there is a risk that it will be damaged, and it may not restart.</p>
 </div>
-</div>
-<div class="section" id="kiosk-beeps">
-<h3><span class="section-number">2.2.9. </span>Kiosk Beeps<a class="headerlink" href="#kiosk-beeps" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="kiosk-beeps">
+<h3><span class="section-number">2.2.9. </span>Kiosk Beeps<a class="headerlink" href="#kiosk-beeps" title="Permalink to this headline">#</a></h3>
 <p>The Kiosk will beep when a tag is registered, as follows:</p>
 <ul class="simple">
 <li><p>Single high-pitched tone for signing in</p></li>
 <li><p>Single low-pitched tone for signing out</p></li>
 <li><p>Multiple tones when a choice of events is required</p></li>
 </ul>
-</div>
-<div class="section" id="tagging-flowchart">
-<span id="flowchart"></span><h3><span class="section-number">2.2.10. </span>Tagging Flowchart<a class="headerlink" href="#tagging-flowchart" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tagging-flowchart">
+<span id="flowchart"></span><h3><span class="section-number">2.2.10. </span>Tagging Flowchart<a class="headerlink" href="#tagging-flowchart" title="Permalink to this headline">#</a></h3>
 <p>When you place your tag on the reader to sign in, the system goes through the following steps to work out an
 appropriate action:</p>
 <ol class="arabic simple">
@@ -629,53 +599,128 @@ signed into that immediately.</p></li>
 enter.</p></li>
 <li><p>If there are no events available, you will be prompted to create a new event before you can sign in.</p></li>
 </ol>
-<div class="myclass figure align-default" id="flowchart-pic">
+<figure class="myclass align-default" id="flowchart-pic">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/tag-flowchart.jpg"><img alt="Tagging flowchart" class="bg-primary mb-1" src="_images/tag-flowchart.jpg" style="width: 1680px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Tagging flowchart</span><a class="headerlink" href="#flowchart-pic" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Tagging flowchart</span><a class="headerlink" href="#flowchart-pic" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="background.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="background.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="events.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="events.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">3. </span>Events</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Ian Bowditch email:ibowditch@gmail.com<br/>
-    
-        &copy; Copyright 2022, Ian Bowditch.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-operations">2.1. Basic Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-the-easy-way">2.1.1. Signing in - The Easy Way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">2.1.2. What if the Kiosk Screen is Blank?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-without-a-tag">2.1.3. Signing in Without a Tag</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-operations">2.2. Advanced Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-events">2.2.1. Changing Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-attendance">2.2.2. Changing Attendance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-events">2.2.3. Deleting Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bulk-transfer-of-members-to-a-new-event">2.2.4. Bulk Transfer of Members to a New Event</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-cards">2.2.5. T-Cards</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-simultaneous-events">2.2.6. Multiple Simultaneous Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-organising-a-busy-day">2.2.7. Tips for Organising a Busy Day</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resetting-the-kiosk">2.2.8. Resetting the Kiosk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kiosk-beeps">2.2.9. Kiosk Beeps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tagging-flowchart">2.2.10. Tagging Flowchart</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ian Bowditch email:ibowditch@gmail.com
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Ian Bowditch.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

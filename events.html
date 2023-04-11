@@ -1,292 +1,321 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>3. Events &#8212; RFS Tag</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'events';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4. Web Portal" href="server.html" />
     <link rel="prev" title="2. The Kiosk" href="kiosk.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/nfc-logo-red-sm.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">RFS Tag</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   RFS Tag User Guide
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="background.html">
-   1. Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="kiosk.html">
-   2. The Kiosk
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Events
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="server.html">
-   4. Web Portal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="administration.html">
-   5. Administration Procedures (Under construction)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="technology.html">
-   6. Technology (Under construction)
-  </a>
- </li>
+    
+    
+    <img src="_static/nfc-logo-red-sm.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/nfc-logo-red-sm.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    RFS Tag User Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="background.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk.html">2. The Kiosk</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">4. Web Portal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administration.html">5. Administration Procedures (Under construction)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology.html">6. Technology (Under construction)</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/events.md.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/events.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        </div>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Events</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mandatory-event-fields">
-   3.1. Mandatory Event Fields
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optional-fields">
-   3.2. Optional Fields
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#event-types">
-   3.3. Event Types
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-types">
-     3.3.1. Basic Types
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-types">
-     3.3.2. Additional Types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colour-codes">
-   3.4. Colour Codes
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-event-fields">3.1. Mandatory Event Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-fields">3.2. Optional Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-types">3.3. Event Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-types">3.3.1. Basic Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-types">3.3.2. Additional Types</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-codes">3.4. Colour Codes</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Events</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mandatory-event-fields">
-   3.1. Mandatory Event Fields
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optional-fields">
-   3.2. Optional Fields
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#event-types">
-   3.3. Event Types
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-types">
-     3.3.1. Basic Types
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#additional-types">
-     3.3.2. Additional Types
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colour-codes">
-   3.4. Colour Codes
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="events">
-<span id="eventsection"></span><h1><span class="section-number">3. </span>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="events">
+<span id="eventsection"></span><h1><span class="section-number">3. </span>Events<a class="headerlink" href="#events" title="Permalink to this headline">#</a></h1>
 <p>Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.</p>
 <p>When you attend the station, you sign-in to an activity that is occurring at the station, in the same way that
 you signed into an activity on the old Attendance Book.</p>
@@ -304,10 +333,12 @@ Attendance book, including:</p>
 <p>An event consists of a heading, containing information previously held in the heading of a page in the Attendance Book,
 and a list of attendees, including when they signed-in and signed out.</p>
 </div>
-<div class="myclass figure align-default" id="event-anatomy">
+<figure class="myclass align-default" id="event-anatomy">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/currentevent-a2.jpg"><img alt="Edit an event" class="bg-primary mb-1" src="_images/currentevent-a2.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Event components, as seen on the Kiosk (click to enlarge)</span><a class="headerlink" href="#event-anatomy" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Event components, as seen on the Kiosk (click to enlarge)</span><a class="headerlink" href="#event-anatomy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p id="change-event">Details of an event <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">can be updated on the kiosk</span></a>.</p>
 <p>Events can also be changed in other contexts (on the web portal, rather than on the Kiosk), such as the
 <a class="reference internal" href="server.html#calendar"><span class="std std-ref">Brigade Calendar</span></a>, Upcoming Events, etc. but only if you are logged in as the
@@ -323,19 +354,19 @@ but won’t be able to change anything.</p>
 <li><p>As the event closes when the end time is passed.</p></li>
 <li><p>Just after midnight, when the “slate is cleaned”, and events for the new day are shown.</p></li>
 </ol>
-<div class="section" id="mandatory-event-fields">
-<h2><span class="section-number">3.1. </span>Mandatory Event Fields<a class="headerlink" href="#mandatory-event-fields" title="Permalink to this headline">¶</a></h2>
+<section id="mandatory-event-fields">
+<h2><span class="section-number">3.1. </span>Mandatory Event Fields<a class="headerlink" href="#mandatory-event-fields" title="Permalink to this headline">#</a></h2>
 <p>All events must include the following information:</p>
 <dl class="simple myst">
 <dt>Date</dt><dd><p>This defines the day on which the activity starts.</p>
 </dd>
 </dl>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">Extended Operations</p>
 <p>Events represent a single shift, and normally start and end on the same day.
 In the case of extended operations running over several days (eg. out of area), details should be recorded
 using one event for each daily shift.</p>
-</div>
+</aside>
 <dl class="simple myst">
 <dt>Start time</dt><dd><p>The time, on the given Date, when the activity begins. Members may sign in to an event from one hour
 before the given Start time, up to the End time.</p>
@@ -345,11 +376,11 @@ Time, but if an event is expected to <a class="reference internal" href="#overni
 Start Time, which will be interpreted as being in the following day.</p>
 </dd>
 </dl>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">Changing Events</p>
 <p>On the Kiosk, anyone can <a class="reference internal" href="kiosk.html#change-event"><span class="std std-ref">change the details of any event</span></a>. However, on the server, only the OIC is
 allowed to change their own event.</p>
-</div>
+</aside>
 <dl class="simple myst">
 <dt>Officer in Charge (OIC)</dt><dd><p>Only members who hold a current Officer position may be assigned as OIC. This includes
 Field Officers and Administrative positions. The OIC will normally attend the event, but they don’t have to.</p>
@@ -360,14 +391,14 @@ will set these up for the brigade. The activity type for an event should be chos
 <dt>Description</dt><dd><p>A brief description of the activity should be provided for future reference, e.g. “HR at Dawsons Creek”.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="optional-fields">
-<h2><span class="section-number">3.2. </span>Optional Fields<a class="headerlink" href="#optional-fields" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+<section id="optional-fields">
+<h2><span class="section-number">3.2. </span>Optional Fields<a class="headerlink" href="#optional-fields" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title">Events with no attendees</p>
 <p>Events can exist with no attendees, but if they are in the past, this usually serves no purpose, so the empty
 event can be deleted.</p>
-</div>
+</aside>
 <dl class="simple myst">
 <dt>Attendees/Crew</dt><dd><p>As members sign-in to an event, they are added to the list of attendees, along with the times they
 joined and left the activity. Any active member can sign-in to an event, and the number of attendees is only
@@ -386,16 +417,18 @@ if there are breaks or other activities in between.</p>
 <a class="reference internal" href="server.html#vehbook"><span class="std std-ref">vehicle availability</span></a> when events are planned in advance.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="event-types">
-<h2><span class="section-number">3.3. </span>Event Types<a class="headerlink" href="#event-types" title="Permalink to this headline">¶</a></h2>
-<div class="myclass figure align-default" id="full-kiosk">
+</section>
+<section id="event-types">
+<h2><span class="section-number">3.3. </span>Event Types<a class="headerlink" href="#event-types" title="Permalink to this headline">#</a></h2>
+<figure class="myclass align-default" id="full-kiosk">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/fullkiosk-a.jpg"><img alt="Busy Kiosk" class="bg-primary mb-1" src="_images/fullkiosk-a.jpg" style="width: 2000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Busy Kiosk screen (click to enlarge)</span><a class="headerlink" href="#full-kiosk" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Busy Kiosk screen (click to enlarge)</span><a class="headerlink" href="#full-kiosk" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Events come in the following types (see above for examples):</p>
-<div class="section" id="basic-types">
-<h3><span class="section-number">3.3.1. </span>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h3>
+<section id="basic-types">
+<h3><span class="section-number">3.3.1. </span>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">#</a></h3>
 <dl class="simple myst">
 <dt><strong>Open/available</strong> (white background, solid border)</dt><dd><p>Events become open 1 hour before their start time and remain open until their end time. When they are open,
 they will accept sign-ins from members either using a tag, or using the sign-in icon.</p>
@@ -406,9 +439,9 @@ will also be removed.</p>
 <dt><strong>Future</strong> (white background, dashed border)</dt><dd><p>Events starting more than 1 hour in the future will not be available to sign-in with a tag, and no sign-in icon is shown.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="additional-types">
-<h3><span class="section-number">3.3.2. </span>Additional Types<a class="headerlink" href="#additional-types" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="additional-types">
+<h3><span class="section-number">3.3.2. </span>Additional Types<a class="headerlink" href="#additional-types" title="Permalink to this headline">#</a></h3>
 <dl class="simple myst" id="overnight">
 <dt><strong>Overnight</strong></dt><dd><p>Normally, events are removed from the kiosk at midnight when the display is updated. However, you can specify
 that an event runs overnight by giving a finish time in the next day.</p>
@@ -455,14 +488,16 @@ as the OIC by default. This should be <a class="reference internal" href="kiosk.
 to station.</p>
 </dd>
 </dl>
-<div class="myclass figure align-default" id="pager-callout">
+<figure class="myclass align-default" id="pager-callout">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/pagercall-a2.jpg"><img alt="Pager callout event" class="bg-primary mb-1" src="_images/pagercall-a2.jpg" style="width: 2000px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Pager callout event (click to enlarge)</span><a class="headerlink" href="#pager-callout" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="colour-codes">
-<span id="colour-coding"></span><h2><span class="section-number">3.4. </span>Colour Codes<a class="headerlink" href="#colour-codes" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Pager callout event (click to enlarge)</span><a class="headerlink" href="#pager-callout" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="colour-codes">
+<span id="colour-coding"></span><h2><span class="section-number">3.4. </span>Colour Codes<a class="headerlink" href="#colour-codes" title="Permalink to this headline">#</a></h2>
 <p>The border around events is colour coded depending on the activity type, as follows:</p>
 <div class="training docutils">
 <ul class="simple">
@@ -499,48 +534,110 @@ to station.</p>
 <li><p><strong>Other</strong></p></li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="kiosk.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>The Kiosk</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="kiosk.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>The Kiosk</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="server.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="server.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">4. </span>Web Portal</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Ian Bowditch email:ibowditch@gmail.com<br/>
-    
-        &copy; Copyright 2022, Ian Bowditch.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-event-fields">3.1. Mandatory Event Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-fields">3.2. Optional Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-types">3.3. Event Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-types">3.3.1. Basic Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-types">3.3.2. Additional Types</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-codes">3.4. Colour Codes</a></li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ian Bowditch email:ibowditch@gmail.com
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Ian Bowditch.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

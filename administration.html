@@ -1,402 +1,353 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5. Administration Procedures (Under construction) &#8212; RFS Tag</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'administration';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="6. Technology (Under construction)" href="technology.html" />
     <link rel="prev" title="4. Web Portal" href="server.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/nfc-logo-red-sm.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">RFS Tag</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   RFS Tag User Guide
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="background.html">
-   1. Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="kiosk.html">
-   2. The Kiosk
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="events.html">
-   3. Events
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="server.html">
-   4. Web Portal
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. Administration Procedures (Under construction)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="technology.html">
-   6. Technology (Under construction)
-  </a>
- </li>
+    
+    
+    <img src="_static/nfc-logo-red-sm.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/nfc-logo-red-sm.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    RFS Tag User Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="background.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk.html">2. The Kiosk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">3. Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">4. Web Portal</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Administration Procedures (Under construction)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology.html">6. Technology (Under construction)</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/administration.md.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/administration.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        </div>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Administration Procedures (Under construction)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preparing-and-issuing-tags">
-   5.1. Preparing and Issuing Tags
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preparation">
-     5.1.1. Preparation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-tags">
-     5.1.2. Making Tags
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checking-the-tags">
-     5.1.3. Checking the tags
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#brigade-specific-settings">
-   5.2. Brigade specific settings
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#periodic-admin-procedures">
-   5.3. Periodic Admin Procedures
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synchronising-qualifications-with-sap">
-     5.3.1. Synchronising Qualifications with SAP
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-training-plans">
-     5.3.2. Making Training Plans
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#legacy-certifications">
-       5.3.2.1. Legacy Certifications
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#driving-permissions-td-pd">
-     5.3.3. Driving Permissions (TD &amp; PD)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-recurring-events-in-the-calendar">
-     5.3.4. Set Recurring Events in the Calendar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ad-hoc-admin-tasks">
-   5.4. Ad-Hoc Admin Tasks
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deleting-members">
-     5.4.1. Deleting Members
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changes-to-vehicle-fleet">
-     5.4.2. Changes to Vehicle Fleet
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-and-issuing-tags">5.1. Preparing and Issuing Tags</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation">5.1.1. Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-tags">5.1.2. Making Tags</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-the-tags">5.1.3. Checking the tags</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-specific-settings">5.2. Brigade specific settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic-admin-procedures">5.3. Periodic Admin Procedures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronising-qualifications-with-sap">5.3.1. Synchronising Qualifications with SAP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-training-plans">5.3.2. Making Training Plans</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#legacy-certifications">5.3.2.1. Legacy Certifications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#driving-permissions-td-pd">5.3.3. Driving Permissions (TD &amp; PD)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-recurring-events-in-the-calendar">5.3.4. Set Recurring Events in the Calendar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ad-hoc-admin-tasks">5.4. Ad-Hoc Admin Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-members">5.4.1. Deleting Members</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-to-vehicle-fleet">5.4.2. Changes to Vehicle Fleet</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Administration Procedures (Under construction)</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preparing-and-issuing-tags">
-   5.1. Preparing and Issuing Tags
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preparation">
-     5.1.1. Preparation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-tags">
-     5.1.2. Making Tags
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#checking-the-tags">
-     5.1.3. Checking the tags
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#brigade-specific-settings">
-   5.2. Brigade specific settings
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#periodic-admin-procedures">
-   5.3. Periodic Admin Procedures
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synchronising-qualifications-with-sap">
-     5.3.1. Synchronising Qualifications with SAP
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-training-plans">
-     5.3.2. Making Training Plans
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#legacy-certifications">
-       5.3.2.1. Legacy Certifications
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#driving-permissions-td-pd">
-     5.3.3. Driving Permissions (TD &amp; PD)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-recurring-events-in-the-calendar">
-     5.3.4. Set Recurring Events in the Calendar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ad-hoc-admin-tasks">
-   5.4. Ad-Hoc Admin Tasks
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deleting-members">
-     5.4.1. Deleting Members
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changes-to-vehicle-fleet">
-     5.4.2. Changes to Vehicle Fleet
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="administration-procedures-under-construction">
-<h1><span class="section-number">5. </span>Administration Procedures (Under construction)<a class="headerlink" href="#administration-procedures-under-construction" title="Permalink to this headline">¶</a></h1>
-<div class="margin sidebar">
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="administration-procedures-under-construction">
+<h1><span class="section-number">5. </span>Administration Procedures (Under construction)<a class="headerlink" href="#administration-procedures-under-construction" title="Permalink to this headline">#</a></h1>
+<aside class="margin sidebar">
 <p class="sidebar-title">Restricted Access</p>
 <p>Access to most of the Administration procedures below is restricted to genuine system admins,
 and these are not generally available to Members or Officers.</p>
-</div>
-<div class="section" id="preparing-and-issuing-tags">
-<h2><span class="section-number">5.1. </span>Preparing and Issuing Tags<a class="headerlink" href="#preparing-and-issuing-tags" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="preparation">
-<h3><span class="section-number">5.1.1. </span>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h3>
+</aside>
+<section id="preparing-and-issuing-tags">
+<h2><span class="section-number">5.1. </span>Preparing and Issuing Tags<a class="headerlink" href="#preparing-and-issuing-tags" title="Permalink to this headline">#</a></h2>
+<section id="preparation">
+<h3><span class="section-number">5.1.1. </span>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Before you start, make a list of all the new tags you want to prepare, including the member name, and their
 RFS member number</p></li>
 <li><p>Get a batch of tags to write. You can overwrite old tags if they are no longer in use</p></li>
 <li><p>Bring a marker pen to write the initials of the member on the tag when it is written</p></li>
 </ul>
-</div>
-<div class="section" id="making-tags">
-<h3><span class="section-number">5.1.2. </span>Making Tags<a class="headerlink" href="#making-tags" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="making-tags">
+<h3><span class="section-number">5.1.2. </span>Making Tags<a class="headerlink" href="#making-tags" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>On the Raspberry Pi kiosk terminal, press the F11 key to show the background</p></li>
 <li><p>Open a new command shell by clicking the black icon on the top row of the screen</p></li>
@@ -407,9 +358,9 @@ Type this in and hit ENTER. The tag should then be written.</p></li>
 <li><p>On the last tag, if you press ENTER when prompted for an RFS member number the program will terminate. You can
 also terminate the program by typing ctrl-c</p></li>
 </ul>
-</div>
-<div class="section" id="checking-the-tags">
-<h3><span class="section-number">5.1.3. </span>Checking the tags<a class="headerlink" href="#checking-the-tags" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="checking-the-tags">
+<h3><span class="section-number">5.1.3. </span>Checking the tags<a class="headerlink" href="#checking-the-tags" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Reboot the PI by clicking the top left raspberry symbol (top left of page), then choose reboot</p></li>
 <li><p>When restarted, add a new event with description “test” and category Social</p></li>
@@ -419,10 +370,10 @@ with the sign-in time. Tag a second time to sign out</p></li>
 it should detect an NFC device. It will show the RFS member number, the date when it was created,
 and the brigade it belongs to.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="brigade-specific-settings">
-<span id="brig-sett"></span><h2><span class="section-number">5.2. </span>Brigade specific settings<a class="headerlink" href="#brigade-specific-settings" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="brigade-specific-settings">
+<span id="brig-sett"></span><h2><span class="section-number">5.2. </span>Brigade specific settings<a class="headerlink" href="#brigade-specific-settings" title="Permalink to this headline">#</a></h2>
 <p>If you have full admin privileges, under Brigade Settings, you will see your own Brigade. Select that and then you will
 see the following fields:</p>
 <p>The following settings should be set before the system goes live for your brigade:</p>
@@ -458,11 +409,11 @@ these events (they are excluded by default). If you drill down into one of the n
 grey (normally they are not shown at all).</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="periodic-admin-procedures">
-<h2><span class="section-number">5.3. </span>Periodic Admin Procedures<a class="headerlink" href="#periodic-admin-procedures" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="synchronising-qualifications-with-sap">
-<span id="sync-sap"></span><h3><span class="section-number">5.3.1. </span>Synchronising Qualifications with SAP<a class="headerlink" href="#synchronising-qualifications-with-sap" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="periodic-admin-procedures">
+<h2><span class="section-number">5.3. </span>Periodic Admin Procedures<a class="headerlink" href="#periodic-admin-procedures" title="Permalink to this headline">#</a></h2>
+<section id="synchronising-qualifications-with-sap">
+<span id="sync-sap"></span><h3><span class="section-number">5.3.1. </span>Synchronising Qualifications with SAP<a class="headerlink" href="#synchronising-qualifications-with-sap" title="Permalink to this headline">#</a></h3>
 <p>Member qualifications are issued and managed by the RFS, and are stored in their SAP system. Until recently, there was no
 easy way to download all member qualifications for a brigade from SAP, so if the Sign-In system wanted to refer to
 qualifications, a parallel set of qualification records had to be set up and maintained.</p>
@@ -476,34 +427,40 @@ with SAP. Once uploaded, they can be refreshed and updated with a new listing ta
 <p>The Brigade Manager on OneRFS can access details of all qualifications and competencies recorded in SAP for all brigade
 members, using the Member Portal. The Qualification Report can be found under “Team Reports”.</p>
 </div>
-<div class="myclass figure align-default" id="sap-records">
+<figure class="myclass align-default" id="sap-records">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/sap-records.jpg"><img alt="RFS SAP Qualifications Spreadsheet" class="bg-primary mb-1" src="_images/sap-records.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">RFS SAP Qualifications Report Spreadsheet (click to enlarge)</span><a class="headerlink" href="#sap-records" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">RFS SAP Qualifications Report Spreadsheet (click to enlarge)</span><a class="headerlink" href="#sap-records" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Qualification records are used in the <a class="reference internal" href="server.html#memb-quals"><span class="std std-ref">Member Qualifications</span></a> view, which allows members to see
 what qualifications are recorded in their name on SAP, and to check that these records are accurate and complete.</p>
 <p>SAP records can be uploaded to the Sign-In system from the Admin system, under Brigade-Certifications, using the
 Import button on the top right of the page.</p>
 <p>You will then see the following page. Enter the name of the Excel file downloaded from RFS SAP that has
 the full list of brigade qualifications. Select <strong>xlsx</strong> as the format, and then Submit.</p>
-<div class="myclass figure align-default" id="import-certs">
+<figure class="myclass align-default" id="import-certs">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/import-certs.jpg"><img alt="Importing RFS SAP Qualifications" class="bg-primary mb-1" src="_images/import-certs.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Importing RFS SAP Qualifications (click to enlarge)</span><a class="headerlink" href="#import-certs" title="Permalink to this image">¶</a></p>
-</div>
-<div class="margin sidebar">
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Importing RFS SAP Qualifications (click to enlarge)</span><a class="headerlink" href="#import-certs" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<aside class="margin sidebar">
 <p class="sidebar-title">SAP files are big!</p>
 <p>These files can be 4000 lines or more, and the system has to check each record to see if it already has it in the
 database. It can take a little while to load all the brigade qualifications, so please be patient.</p>
-</div>
+</aside>
 <p>The system will read each line in the SAP report, and check if it matches an existing qualification in the database.
 If it finds a match, it will skip the record (existing records remain unchanged), and move on to the next one.</p>
 <p>After a short delay, the system will show any qualifications from the SAP file which are not already in the system
 database, for review. Click <strong>Confirm Import</strong> to complete the import of the new records. After another short delay,
 your records will be updated.</p>
-<div class="myclass figure align-default" id="update-certs">
+<figure class="myclass align-default" id="update-certs">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/update-certs.jpg"><img alt="Importing New Qualifications" class="bg-primary mb-1" src="_images/update-certs.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Importing New Qualifications (click to enlarge)</span><a class="headerlink" href="#update-certs" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Importing New Qualifications (click to enlarge)</span><a class="headerlink" href="#update-certs" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Certifications should be updated every 3 months or so, or whenever there have been significant updates to brigade
 qualification records in SAP.</p>
 <div class="tip admonition" id="sap-import">
@@ -534,9 +491,9 @@ xlsx file as a csv file, then import that instead (remember to change the file t
 </li>
 </ol>
 </div>
-</div>
-<div class="section" id="making-training-plans">
-<h3><span class="section-number">5.3.2. </span>Making Training Plans<a class="headerlink" href="#making-training-plans" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="making-training-plans">
+<h3><span class="section-number">5.3.2. </span>Making Training Plans<a class="headerlink" href="#making-training-plans" title="Permalink to this headline">#</a></h3>
 <p>The system can help with the following aspects of training planning:</p>
 <p><strong>1. Check Basic Qualifications</strong></p>
 <p>The <a class="reference internal" href="server.html#memb-quals"><span class="std std-ref">Member Qualifications</span></a> view shows qualifications for all active members, and any gaps in
@@ -552,24 +509,26 @@ we want to find qualifications that are due to expire in the next year (and may 
 filters to make a smaller, more managable, list of qualifications that you are interested in.</p>
 <p>For example, the Filter settings below will show only Chainsaw qualifications for active members, that will expire in
 the next 12 months.</p>
-<div class="myclass figure align-default" id="filter-quals">
+<figure class="myclass align-default" id="filter-quals">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/filter-qualsa.jpg"><img alt="Filtering Certifications" class="bg-primary mb-1" src="_images/filter-qualsa.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Filtering Certifications (click to enlarge)</span><a class="headerlink" href="#filter-quals" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Filtering Certifications (click to enlarge)</span><a class="headerlink" href="#filter-quals" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>You can mix and match these filters to home into the set of records you need. When you’re done, you can clear all
 filters get back to the original, unconstrained, view.</p>
-<div class="section" id="legacy-certifications">
-<h4><span class="section-number">5.3.2.1. </span>Legacy Certifications<a class="headerlink" href="#legacy-certifications" title="Permalink to this headline">¶</a></h4>
+<section id="legacy-certifications">
+<h4><span class="section-number">5.3.2.1. </span>Legacy Certifications<a class="headerlink" href="#legacy-certifications" title="Permalink to this headline">#</a></h4>
 <p>Now that the definitive RFS SAP records (used in ACTIV and other places) can be imported, there is no need to maintain
 a parallel set of qualification records for members. Any reports showing qualifications will reflect the latest data
 imported from SAP, and the SAP records supersede any other records that may have been set up before.</p>
 <p>In general, you should not change or add any certification records, except through importing from SAP. If the SAP records
 are incorrect, or some are missing, the priority should be to get them fixed in SAP, rather than fixing them in the
 sign-in system. The corrections will come through next time you import records from SAP.</p>
-</div>
-</div>
-<div class="section" id="driving-permissions-td-pd">
-<h3><span class="section-number">5.3.3. </span>Driving Permissions (TD &amp; PD)<a class="headerlink" href="#driving-permissions-td-pd" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="driving-permissions-td-pd">
+<h3><span class="section-number">5.3.3. </span>Driving Permissions (TD &amp; PD)<a class="headerlink" href="#driving-permissions-td-pd" title="Permalink to this headline">#</a></h3>
 <p>Permission to drive Brigade vehicles is given by the Brigade Captain, and records of who can drive which vehicles are
 stored as certifications in the sign-in system.</p>
 <p>These are not RFS qualifications, and are not recorded in SAP, as they are local to the brigade.</p>
@@ -580,63 +539,139 @@ to drive light vehicles (but not heavy vehicles) should have a <strong>PD</stron
 <p>The <strong>RFD</strong> qualification which goes with this, is issued by the RFS, and is included in the SAP qualifications. The
 <a class="reference internal" href="server.html#memb-list"><span class="std std-ref">Member List</span></a> shows TD and PD permissions, and these are shown in lower case if RFD is out of date or not
 available for the driver.</p>
-</div>
-<div class="section" id="set-recurring-events-in-the-calendar">
-<h3><span class="section-number">5.3.4. </span>Set Recurring Events in the Calendar<a class="headerlink" href="#set-recurring-events-in-the-calendar" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="ad-hoc-admin-tasks">
-<h2><span class="section-number">5.4. </span>Ad-Hoc Admin Tasks<a class="headerlink" href="#ad-hoc-admin-tasks" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="deleting-members">
-<h3><span class="section-number">5.4.1. </span>Deleting Members<a class="headerlink" href="#deleting-members" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="set-recurring-events-in-the-calendar">
+<h3><span class="section-number">5.3.4. </span>Set Recurring Events in the Calendar<a class="headerlink" href="#set-recurring-events-in-the-calendar" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="ad-hoc-admin-tasks">
+<h2><span class="section-number">5.4. </span>Ad-Hoc Admin Tasks<a class="headerlink" href="#ad-hoc-admin-tasks" title="Permalink to this headline">#</a></h2>
+<section id="deleting-members">
+<h3><span class="section-number">5.4.1. </span>Deleting Members<a class="headerlink" href="#deleting-members" title="Permalink to this headline">#</a></h3>
 <p>Don’t! If you do, you will also delete their attendance records, which is against the law. To stay out of jail,
 check the <strong>Inactive</strong> box next to the Member’s name instead.</p>
-</div>
-<div class="section" id="changes-to-vehicle-fleet">
-<h3><span class="section-number">5.4.2. </span>Changes to Vehicle Fleet<a class="headerlink" href="#changes-to-vehicle-fleet" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-</div>
+</section>
+<section id="changes-to-vehicle-fleet">
+<h3><span class="section-number">5.4.2. </span>Changes to Vehicle Fleet<a class="headerlink" href="#changes-to-vehicle-fleet" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="server.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Web Portal</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="server.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Web Portal</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="technology.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="technology.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">6. </span>Technology (Under construction)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Ian Bowditch email:ibowditch@gmail.com<br/>
-    
-        &copy; Copyright 2022, Ian Bowditch.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-and-issuing-tags">5.1. Preparing and Issuing Tags</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation">5.1.1. Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-tags">5.1.2. Making Tags</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-the-tags">5.1.3. Checking the tags</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-specific-settings">5.2. Brigade specific settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic-admin-procedures">5.3. Periodic Admin Procedures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronising-qualifications-with-sap">5.3.1. Synchronising Qualifications with SAP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-training-plans">5.3.2. Making Training Plans</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#legacy-certifications">5.3.2.1. Legacy Certifications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#driving-permissions-td-pd">5.3.3. Driving Permissions (TD &amp; PD)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-recurring-events-in-the-calendar">5.3.4. Set Recurring Events in the Calendar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ad-hoc-admin-tasks">5.4. Ad-Hoc Admin Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-members">5.4.1. Deleting Members</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-to-vehicle-fleet">5.4.2. Changes to Vehicle Fleet</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ian Bowditch email:ibowditch@gmail.com
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Ian Bowditch.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
