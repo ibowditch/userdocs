@@ -209,7 +209,188 @@ PI interface configuration (click to enlarge)
 
 Reboot after changing PI configuration when prompted.
 
-### Installing the Kiosk Software
+### Installing the Kiosk Software (apt procedure)
+
+Kiosk software is now delivered as a package using the APT tool. The package replaces most of the original 
+installation procedure, and includes the following components:
+
+- nfcreader program, for reading and writing tags (writetags)
+- systemd services to launch the kiosk in a browser (launch_kiosk2) and start the nfcreader (nfcserver2)
+- Configuration files for nfcreader and tag reader (udev)
+- Unattended upgrades and schedules for automatic updating
+- journal set up to maintain long term record
+
+#### Initial Preparation
+
+- Preserve then remove the original installation if needed:
+  - Copy file nfcmanifest2 to the new PI using scp
+    - scp ~/PycharmProjects/nfcserver/nfcreader/nfcmanifest2 pi@192.168.0.101://home/pi
+  - Save original installation if needed (this leaves files in place)
+    - sudo tar -czvf oldnfc.tar.gz `cat nfcmanifest2`
+    - tar -tvf oldnfc.tar.zip   				# to confirm
+  - Remove original installation
+    - cat nfcmanifest2 | sudo xargs rm -rf
+
+- Confirm that the PI hostname is set to the brigade/tenant name and change if needed
+
+- Set up access to remote.it
+  - REMOTE_IT_CODE="D95F00F0-3DDC-5535-9D47-CF7BBFD8C5A4"
+  - ! [ -d /etc/remoteit ] && R3_REGISTRATION_CODE=$REMOTE_IT_CODE sh -c "$(curl -L https://downloads.remote.it/remoteit/install_agent.sh)"
+
+
+#### Add the rfstag-kiosk repository (one-off procedure)
+
+* Add the public security key so access is granted:
+
+  - curl -s --compressed "https://ibowditch.github.io/rfstag-kiosk/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/rfstag.gpg >/dev/null
+
+* Add the rfstag-kiosk repository to the list of available sources:
+
+  - sudo curl -s --compressed -o /etc/apt/sources.list.d/rfstag.list "https://ibowditch.github.io/rfstag-kiosk/rfstag.list"
+  - sudo apt update
+  - reboot
+
+
+#### First installation
+
+Installation is now just:
+
+- sudo apt update
+- sudo apt -y full-upgrade        # to get system up to date
+- **sudo apt install nfcserver2**
+- reboot (not strictly needed but just to be sure)
+
+Notes:
+
+1. By default, the package will use the hostname of the PI as the brigade/tenant name, so make sure that is set correctly before installing the package.
+2. If successful, a browser will start on the kiosk page for the given brigade. Sign in, and save the password.
+3. In the background, the nfcreader program should also have been launched, and after creating a new event, tags for the brigade should work correctly.
+4. After the first installation, the package will be automatically updated by unattended-upgrades in the middle of the night.
+
+
+
+Post-install checks
+
+1. Check sound is configured correctly and operates as expected
+2. Check access to remote.it works as expected using the remote.it phone app.
+3. Check tag reader operates correctly. Use **journalctl -b | grep nfc** to review logger messages. 
+4. Check services are up and running:
+   - systemctl status launch_kiosk2
+   - systemctl status nfcreader2
+5. Check that nfc reader can be plugged into other USB ports. The nfcserver2 service should stop when disconnected, and restart automatically whne reconnected. Check the journal for required behavior. This is controlled by file **/etc/udev/rules.d/90-nfcdev.rules**
+
+
+Further configuration
+
+Basic configuration is controlled by the file **/etc/profile.d/rfstag/base.env**. This should be sufficient in 
+most cases.
+
+These settings can be overriden if needed, by copying **/home/pi/.config/rfstag/local-example.env** to local.env in the same
+directory, then editing local.env as needed.
+
+This can be used to do the following:
+
+- Change KIOSK_BRIGADE if the hostname is not the brigade name (eg. multiple kiosks)
+- Change KIOSK_LOCATION to a second kiosk name
+- Change BUSHFIRE_SERVER to use a test system, eg. rfstag.org, rather than the production server.
+
+
+### Building the nfcserver2 package
+
+ref: https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/
+
+See /home/ian/PycharmProjects/nfcserver2 for source code. Note that settings from **/etc/apt/apt.conf.d/rfstag.conf** are used when building the package.
+
+Key areas:
+
+- debian
+  - contains configuration files for the package, the most significant of which are:
+    - changelog: needs to be updated with every release. Can be done manually or using dch
+    - install: lists all files included in the package, and where they need to go on the target machine
+    - pre/postinst: pre and post installation procedures
+    - rules: basic makefile template
+- conf
+  - Include configuration files for
+    - APT (02periodic, 51unattended-upgrades)
+    - udev (90-nfcdev.rules) to launch service when nfc device connected
+    - base/local.env: rfstag kiosk configuration
+    - msmtprc: email server configuration
+- src
+  - top level scripts, installed in /usr/bin, some called from service file
+- systemd
+  - launch_kiosk2.service
+    - starts a browser at the kiosk page for the brigade
+    - Depends on network, and will restart if fails
+  - nfserver2.service
+    - Runs tag reader in background
+    - Launched on startup
+    - Stopped if reader disconnected, restarted when reconnected
+    - Requires alsa sound system to function for beeps (might not be ready first time on restart, but will retry).
+
+A new deb file is built using the **buildeb** script. It is named after the version number, 
+eg. nfcserver2_1.42.0_all.deb, and is placed in the ~/PycharmProjects directory.
+
+The deb file can be tested by scp'ing to a test PI, then **sudo apt install ./nfcserver2_1.42.0_all.deb**
+
+ref: https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
+
+Once it is ok, it can be placed on the github repository as follows:
+
+- cd ~/rfstag-kiosk
+- cp ~/Pyc*/*42*.deb .
+- ./rebuild
+
+This will send the new .deb file to the github repository, and it will be available for download by clients after a few minutes.
+
+rfstag kiosks are set to check for updates each night, and unattended-upgrades will automatically download and install kiosk updates.
+
+
+### On screen keyboard
+
+Normally, a USB keyboard and mouse are connected to the Raspberry PI to allow normal interaction with the Kiosk.
+
+If required, the USB keyboard can be replaced with an on-screen keyboard, similar to those used on mobile phones.
+
+There are several options available: see [3 options](https://www.industrialshields.com/blog/raspberry-pi-for-industry-26/post/top-3-on-screen-virtual-keyboards-for-raspberry-plc-panel-pc-401) here.
+
+[onboard](https://manpages.ubuntu.com/manpages/bionic/man1/onboard.1.html) has been tested and used by one brigade.
+
+To make sure the keyboard is visible while running the kiosk:
+
+* echo "SCREEN_KEYBOARD=/usr/bin/onboard" >> ~/.config/rfstag/local.env
+
+Should be able to replace **onboard** with any other keyboard in the above, but not tested.
+
+#### Running the ACTIV dashboard on the PI
+
+The latest Raspberry PI 4B has 2 HDMI sockets, so a second screen can be attached. If needed, this can be used
+to display the ACTIV dashboard, as well as run the normal sign-in Kiosk.
+
+Will need a second HDMI cable with micro-HDMI connection: get from [Core Electronics](https://core-electronics.com.au/raspberry-pi-micro-hdmi-to-standard-hdmi-1m-cable.html).
+
+With a second monitor attached, type **launch_activ** on a command line.
+
+Files:
+
+* /etc/profile.d/rfstag/base.env
+  * Offset of second screen set with HDMI2_X_OFFSET=1920
+  * Overwrite in /home/pi/.config/rfstag/local.env if needed
+  * Depends on resolution of the first monitor. 
+* /usr/bin/launch_activ 
+  * Uses default of 1920 if HDMI2_X_OFFSET not set.
+  * sudo systemctl start 
+* /lib/systemd/system/launch_activ 
+  * sudo systemctl start launch_activ to set ok
+  * enable if ok, so starts at reboot
+* /home/pi/Documents/Profiles/1
+  * Need to define a second profile for the second screen, separate from kiosk
+  * set this in env file: ACTIV_CHROME_PROFILE=/home/pi/Documents/Profiles/1
+* Launch page will initially require login
+  * Use brigades dashboard login and password
+  * Remember credentials
+
+
+### Installing the Kiosk Software (original procedure)
 
 Copy the installation package from a thumb drive into folder /home/pi, or use (in tpad shell, not pycharm):
 

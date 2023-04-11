@@ -290,6 +290,57 @@ Qualifications come in two main types:
    highest expired qualification in Red. Expired qualifications are not included in the count at the foot of each column.
 
 
+(brigact-summ)=
+### Brigade Activity Summary
+
+The **Brigade Activity Summary** item shows a summary of brigade activities over a defined period.
+
+The listing shows the number of events and total member hours for each category of events held during 
+the specified period, as well as totals for each.
+
+The default period ends on the current day, and starts 90 days earlier. The start and end dates for the 
+required period can be changed by clicking on the dates in the top right of the page and selecting new 
+start/end dates.
+
+:::{figure-md} brigact-summary
+:class: myclass
+
+<img src="assets/images/brigact-summ.jpg" alt="Brigade Activity Summary" width="1467" class="bg-primary mb-1">
+
+Brigade Activity Summary (click to enlarge)
+:::
+
+To view the events in each Category, click the category name, and this will show a listing of all individual events 
+of that category that were held in the specified period.
+
+
+(brigact-log)=
+### Brigade Activity Log
+
+The **Brigade Activity Log** item shows a listing of brigade events over a defined period.
+
+Events are shown in ascending date order, starting from the date specified as the start of the reporting Period.
+
+The order of events can be changed by clicking any of the table headings.
+
+Further details, such as sign-in/out times for individual members can be viewed by clicking on the event description 
+on the far right. 
+
+By default, this list shows all events. The Brigade Activity Summary can be used to list only events of a specified 
+Category if required.
+
+The default period ends on the current day, and starts 90 days earlier. The start and end dates for the 
+required period can be changed by clicking on the dates in the top right of the page and selecting new 
+start/end dates.
+
+:::{figure-md} brigact-log-pic
+:class: myclass
+
+<img src="assets/images/brigact-log.jpg" alt="Brigade Activity Log" width="1467" class="bg-primary mb-1">
+
+Brigade Activity Log (click to enlarge)
+:::
+
 (at-stat)=
 ### At Station
 

@@ -39,7 +39,7 @@ The paper Attendance Book provided a way to collect and preserve attendance reco
 organised way, so that these records would be available for future reference whenever needed.
 
 Used correctly, the Attendance Book provides solid, lasting, evidence that a Member was involved in an activity. The 
-following table shows how the Attendance Book meets these requirements, and also how RFSTag does the same:
+following table shows how the Attendance Book meets these requirements, and also how RFStag does the same:
 
 (main-reqs)=
 | # | Key Requirement                                                                                    | Attendance Book                                                                                                                                                           | RFSTag                                                                                                                                                                                    |
@@ -184,8 +184,8 @@ and as I find better ways of doing things.
 The system first went live in November 2018, and has been running (almost) continuously since then, including through 
 the major fires of 2019-2020. 
 
-The user base started with my home brigade (~70 members), then grew to include another 6 brigades, and it now supports 
-more than 500 users.
+The user base started with my home brigade (~70 members), then grew to include another 8 brigades, and it now supports 
+more than 700 users.
 
 
 ## Site Map

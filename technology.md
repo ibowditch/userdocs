@@ -25,11 +25,7 @@ adjust by adding more servers and network capacity within defined bounds, and wi
 
 ## Security
 
-Although RFSTAG does not store particularly sensitive personal data, 
-- take security seriously
-- 
-
-The RFSTAG web application is built using the Django platform, which has 
+The RFStAG web application is built using the Django platform, which has 
 [effective protections](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security) 
 against a number of common threats, including XSS and CSRF attacks.
 
@@ -48,7 +44,7 @@ but the following is a summary of the main protections:
   * Mobile phone numbers are not required, though if they are supplied, they will be shared with other Members 
     for their convenience.
     
-* RFSTAG can only be accessed using secure connection (https). This means that the connection between the user and the 
+* RFStag can only be accessed using secure connection (https). This means that the connection between the user and the 
   server is encrypted, and cannot be intercepted. 
   
 * Additional protections, including HTTP Strict Transport Security (HSTS), Cross site scripting (XSS), Cross site request 
@@ -60,17 +56,13 @@ but the following is a summary of the main protections:
 * Data is held on a Relational Database System (RDS) stored within Amazon Web Services. Only the web application can 
   access the database, and access to the web application is restricted to registered users.
   
-
-    
-
-
-
-
-
-
+  
 ## Hardware
 
 ### Kiosk
+
+
+
 
 ### NFC
 

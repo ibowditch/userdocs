@@ -1,695 +1,374 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4. Web Portal &#8212; RFS Tag</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/hacks.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'server';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="5. Administration Procedures (Under construction)" href="administration.html" />
     <link rel="prev" title="3. Events" href="events.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/nfc-logo-red-sm.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">RFS Tag</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   RFS Tag User Guide
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="background.html">
-   1. Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="kiosk.html">
-   2. The Kiosk
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="events.html">
-   3. Events
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   4. Web Portal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="administration.html">
-   5. Administration Procedures (Under construction)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="technology.html">
-   6. Technology (Under construction)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="internal.html">
-   7. Internal Procedures (Under construction)
-  </a>
- </li>
+    
+    
+    <img src="_static/nfc-logo-red-sm.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/nfc-logo-red-sm.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    RFS Tag User Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="background.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk.html">2. The Kiosk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">3. Events</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Web Portal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administration.html">5. Administration Procedures (Under construction)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology.html">6. Technology (Under construction)</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
 <div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
-            </div>
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/server.md.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/server.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        </div>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Web Portal</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logging-in">
-   4.1. Logging In
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#landing-home-page">
-   4.2. Landing/home page
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#home-menu">
-   4.3. Home Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#executive-team">
-     4.3.1. Executive Team
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-problem-report">
-     4.3.2. Create Problem Report
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#list-problem-reports">
-     4.3.3. List Problem Reports
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#user-guide">
-     4.3.4. User Guide
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#member-menu">
-   4.4. Member Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#member-list">
-     4.4.1. Member List
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#member-activity">
-     4.4.2. Member Activity
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sorting">
-       4.4.2.1. Sorting
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#activity-details">
-       4.4.2.2. Activity Details
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#totals">
-       4.4.2.3. Totals
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#voting-criteria-and-colouring">
-       4.4.2.4. Voting Criteria and Colouring
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#member-qualifications">
-     4.4.3. Member Qualifications
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#at-station">
-     4.4.4. At Station
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#events-calendar">
-     4.4.5. Events Calendar
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#viewing-event-details">
-       4.4.5.1. Viewing Event Details
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#week-view">
-       4.4.5.2. Week View
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adding-new-events-officers">
-       4.4.5.3. Adding New Events (Officers)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#plan-to-attend">
-       4.4.5.4. Plan to Attend
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#signing-off-on-an-event-officers">
-       4.4.5.5. Signing Off on an Event (Officers)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#personnel-menu">
-   4.5. Personnel Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#change-officers">
-     4.5.1. Change Officers
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-new-member">
-     4.5.2. Add New Member
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#annual-attendance">
-     4.5.3. Annual Attendance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training-menu">
-   4.6. Training Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#courses-available">
-     4.6.1. Courses Available
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quarterly-return">
-     4.6.2. Quarterly Return
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#training-calendar">
-     4.6.3. Training Calendar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#officers-menu">
-   4.7. Officers Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-new-event">
-     4.7.1. Add New Event
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-past-events">
-     4.7.2. Review Past Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-future-events">
-     4.7.3. Review Future Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#officer-calendar">
-     4.7.4. Officer Calendar
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#covid-19-attendance">
-     4.7.5. COVID-19 Attendance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#admin-deprecated">
-     4.7.6. Admin (deprecated)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vehicles-menu">
-   4.8. Vehicles Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-vehicle-log">
-     4.8.1. Update Vehicle Log
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-vehicle-log-sheet">
-     4.8.2. Update Vehicle Log Sheet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vehicle-movements">
-     4.8.3. Vehicle Movements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#driver-activity">
-     4.8.4. Driver Activity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vehicle-bookings">
-     4.8.5. Vehicle Bookings
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-in">4.1. Logging In</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#landing-home-page">4.2. Landing/home page</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#home-menu">4.3. Home Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-team">4.3.1. Executive Team</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-problem-report">4.3.2. Create Problem Report</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-problem-reports">4.3.3. List Problem Reports</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-guide">4.3.4. User Guide</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#member-menu">4.4. Member Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-list">4.4.1. Member List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-activity">4.4.2. Member Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting">4.4.2.1. Sorting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-details">4.4.2.2. Activity Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#totals">4.4.2.3. Totals</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#voting-criteria-and-colouring">4.4.2.4. Voting Criteria and Colouring</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-qualifications">4.4.3. Member Qualifications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.4. Brigade Activity Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-log">4.4.5. Brigade Activity Log</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#at-station">4.4.6. At Station</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#events-calendar">4.4.7. Events Calendar</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-event-details">4.4.7.1. Viewing Event Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#week-view">4.4.7.2. Week View</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-events-officers">4.4.7.3. Adding New Events (Officers)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-to-attend">4.4.7.4. Plan to Attend</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-off-on-an-event-officers">4.4.7.5. Signing Off on an Event (Officers)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personnel-menu">4.5. Personnel Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-officers">4.5.1. Change Officers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-new-member">4.5.2. Add New Member</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-attendance">4.5.3. Annual Attendance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-menu">4.6. Training Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#courses-available">4.6.1. Courses Available</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quarterly-return">4.6.2. Quarterly Return</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-calendar">4.6.3. Training Calendar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#officers-menu">4.7. Officers Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-new-event">4.7.1. Add New Event</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-past-events">4.7.2. Review Past Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-future-events">4.7.3. Review Future Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#officer-calendar">4.7.4. Officer Calendar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#covid-19-attendance">4.7.5. COVID-19 Attendance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#admin-deprecated">4.7.6. Admin (deprecated)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles-menu">4.8. Vehicles Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-vehicle-log">4.8.1. Update Vehicle Log</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-vehicle-log-sheet">4.8.2. Update Vehicle Log Sheet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicle-movements">4.8.3. Vehicle Movements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#driver-activity">4.8.4. Driver Activity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicle-bookings">4.8.5. Vehicle Bookings</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Web Portal</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logging-in">
-   4.1. Logging In
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#landing-home-page">
-   4.2. Landing/home page
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#home-menu">
-   4.3. Home Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#executive-team">
-     4.3.1. Executive Team
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-problem-report">
-     4.3.2. Create Problem Report
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#list-problem-reports">
-     4.3.3. List Problem Reports
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#user-guide">
-     4.3.4. User Guide
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#member-menu">
-   4.4. Member Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#member-list">
-     4.4.1. Member List
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#member-activity">
-     4.4.2. Member Activity
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sorting">
-       4.4.2.1. Sorting
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#activity-details">
-       4.4.2.2. Activity Details
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#totals">
-       4.4.2.3. Totals
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#voting-criteria-and-colouring">
-       4.4.2.4. Voting Criteria and Colouring
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#member-qualifications">
-     4.4.3. Member Qualifications
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#at-station">
-     4.4.4. At Station
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#events-calendar">
-     4.4.5. Events Calendar
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#viewing-event-details">
-       4.4.5.1. Viewing Event Details
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#week-view">
-       4.4.5.2. Week View
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adding-new-events-officers">
-       4.4.5.3. Adding New Events (Officers)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#plan-to-attend">
-       4.4.5.4. Plan to Attend
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#signing-off-on-an-event-officers">
-       4.4.5.5. Signing Off on an Event (Officers)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#personnel-menu">
-   4.5. Personnel Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#change-officers">
-     4.5.1. Change Officers
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-new-member">
-     4.5.2. Add New Member
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#annual-attendance">
-     4.5.3. Annual Attendance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training-menu">
-   4.6. Training Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#courses-available">
-     4.6.1. Courses Available
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quarterly-return">
-     4.6.2. Quarterly Return
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#training-calendar">
-     4.6.3. Training Calendar
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#officers-menu">
-   4.7. Officers Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-new-event">
-     4.7.1. Add New Event
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-past-events">
-     4.7.2. Review Past Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-future-events">
-     4.7.3. Review Future Events
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#officer-calendar">
-     4.7.4. Officer Calendar
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#covid-19-attendance">
-     4.7.5. COVID-19 Attendance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#admin-deprecated">
-     4.7.6. Admin (deprecated)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vehicles-menu">
-   4.8. Vehicles Menu
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-vehicle-log">
-     4.8.1. Update Vehicle Log
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-vehicle-log-sheet">
-     4.8.2. Update Vehicle Log Sheet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vehicle-movements">
-     4.8.3. Vehicle Movements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#driver-activity">
-     4.8.4. Driver Activity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vehicle-bookings">
-     4.8.5. Vehicle Bookings
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="web-portal">
-<span id="serverh"></span><h1><span class="section-number">4. </span>Web Portal<a class="headerlink" href="#web-portal" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="web-portal">
+<span id="serverh"></span><h1><span class="section-number">4. </span>Web Portal<a class="headerlink" href="#web-portal" title="Permalink to this headline">#</a></h1>
 <p>The entire system is a web application, which runs on a server in the cloud (in our case, this is a server in a
 data centre run by Amazon Web Services in Sydney).</p>
 <p>All interactions with the system, including from the Kiosk (which runs in a web browser), are made through this
@@ -697,12 +376,12 @@ web application. The Kiosk is the “shopfront” of the system, and is used mos
 <a class="reference internal" href="events.html#eventsection"><span class="std std-ref">earlier section</span></a>.</p>
 <p>Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has
 an internet connection and a browser available. This section describes the services available on the web portal.</p>
-<div class="section" id="logging-in">
-<h2><span class="section-number">4.1. </span>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+<section id="logging-in">
+<h2><span class="section-number">4.1. </span>Logging In<a class="headerlink" href="#logging-in" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title">Separate Domains</p>
 <p>The same server supports <a class="reference internal" href="technology.html#multi-tenant-tech"><span class="std std-ref">multiple brigades</span></a>, so you need to say which one you require.</p>
-</div>
+</aside>
 <p>The web portal can be reached at <a class="reference external" href="https://brigade.rsftag.com/bfb">https://brigade.rsftag.com/bfb</a>. Note that you need to substitute the word
 <span style="color:blue;">brigade</span> in this url with the actual name of your brigade (e.g. westleigh).</p>
 <p>You will be challenged to provide a username and password before you can login to the system.</p>
@@ -720,14 +399,16 @@ log into the server you use your own personal identifier (usually your email add
 ordinary members (eg. they can create new events), and specialist Officers, eg. Training, have access
 to specific areas.</p>
 </div>
-</div>
-<div class="section" id="landing-home-page">
-<h2><span class="section-number">4.2. </span>Landing/home page<a class="headerlink" href="#landing-home-page" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="landing-home-page">
+<h2><span class="section-number">4.2. </span>Landing/home page<a class="headerlink" href="#landing-home-page" title="Permalink to this headline">#</a></h2>
 <p>When you have logged in, the system will take you to the brigade home page, an example of which is shown below:</p>
-<div class="myclass figure align-default" id="home-page">
+<figure class="myclass align-default" id="home-page">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/homepage.jpg"><img alt="Landing page" class="bg-primary mb-1" src="_images/homepage.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Home/landing page on the web portal (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Home/landing page on the web portal (click to enlarge)</span><a class="headerlink" href="#home-page" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <dl class="simple myst">
 <dt>Navigation bar</dt><dd><p>Used to access most functions. The <a class="reference internal" href="#menu"><span class="std std-ref">Menu</span></a> section below describes each of these in detail.</p>
 </dd>
@@ -745,31 +426,31 @@ access the <a class="reference internal" href="#calendar"><span class="std std-r
 in the Navigation bar.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="home-menu">
-<h2><span class="section-number">4.3. </span>Home Menu<a class="headerlink" href="#home-menu" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="executive-team">
-<h3><span class="section-number">4.3.1. </span>Executive Team<a class="headerlink" href="#executive-team" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="home-menu">
+<h2><span class="section-number">4.3. </span>Home Menu<a class="headerlink" href="#home-menu" title="Permalink to this headline">#</a></h2>
+<section id="executive-team">
+<h3><span class="section-number">4.3.1. </span>Executive Team<a class="headerlink" href="#executive-team" title="Permalink to this headline">#</a></h3>
 <p>This shows a list of current Officers, both Field  and Administrative.</p>
-</div>
-<div class="section" id="create-problem-report">
-<h3><span class="section-number">4.3.2. </span>Create Problem Report<a class="headerlink" href="#create-problem-report" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="create-problem-report">
+<h3><span class="section-number">4.3.2. </span>Create Problem Report<a class="headerlink" href="#create-problem-report" title="Permalink to this headline">#</a></h3>
 <p>This allows you to create a new problem ticket if you see any problems with the system. You can also use it to provide
 feedback or suggestions (these will be much appreciated).</p>
-</div>
-<div class="section" id="list-problem-reports">
-<h3><span class="section-number">4.3.3. </span>List Problem Reports<a class="headerlink" href="#list-problem-reports" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="list-problem-reports">
+<h3><span class="section-number">4.3.3. </span>List Problem Reports<a class="headerlink" href="#list-problem-reports" title="Permalink to this headline">#</a></h3>
 <p>This shows a list of all tickets raised by your brigade.</p>
-</div>
-<div class="section" id="user-guide">
-<h3><span class="section-number">4.3.4. </span>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="user-guide">
+<h3><span class="section-number">4.3.4. </span>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">#</a></h3>
 <p>Points to this User Guide. You’ll need to find your own way back, as it’s an external site.</p>
-</div>
-</div>
-<div class="section" id="member-menu">
-<span id="menu"></span><h2><span class="section-number">4.4. </span>Member Menu<a class="headerlink" href="#member-menu" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="member-list">
-<span id="memb-list-section"></span><h3><span class="section-number">4.4.1. </span>Member List<a class="headerlink" href="#member-list" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="member-menu">
+<span id="menu"></span><h2><span class="section-number">4.4. </span>Member Menu<a class="headerlink" href="#member-menu" title="Permalink to this headline">#</a></h2>
+<section id="member-list">
+<span id="memb-list-section"></span><h3><span class="section-number">4.4.1. </span>Member List<a class="headerlink" href="#member-list" title="Permalink to this headline">#</a></h3>
 <p>Members have access to a summary of basic contact details of all active members through the
 Member List menu item, an excerpt of which is shown below. This can be printed to PDF format from your browser
 if a hard-copy is required.</p>
@@ -779,10 +460,12 @@ if a hard-copy is required.</p>
 Personnel/Membership Officer to remove those details from this list.</p>
 <p>Also, this list is for Brigade use only, and should not be shared outside the Brigade.</p>
 </div>
-<div class="myclass figure align-default" id="memb-list">
+<figure class="myclass align-default" id="memb-list">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/memblist-a.jpg"><img alt="Landing page" class="bg-primary mb-1" src="_images/memblist-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Member List (excerpt) (click to enlarge)</span><a class="headerlink" href="#memb-list" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Member List (excerpt) (click to enlarge)</span><a class="headerlink" href="#memb-list" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Notes</strong></p>
 <ul class="simple">
 <li><p>Members only appear once on this list, in the first section they fit in to. It has the following sections:</p>
@@ -795,10 +478,10 @@ Personnel/Membership Officer to remove those details from this list.</p>
 </ul>
 </li>
 </ul>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">Member Qualifications</p>
 <p>A more detailed view of Member Qualifications is also available - see <a class="reference internal" href="#memb-quals"><span class="std std-ref">here</span></a></p>
-</div>
+</aside>
 <dl class="simple myst" id="memb-list-quals">
 <dt>Qualifications</dt><dd><p>This shows any qualification in the following areas (expired qualifications shown in <em>lower case</em>):</p>
 </dd>
@@ -822,46 +505,50 @@ Personnel/Membership Officer to remove those details from this list.</p>
 <dt>RfsID</dt><dd><p>This is the RFS Membership number issued by the RFS.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="member-activity">
-<span id="memb-act"></span><h3><span class="section-number">4.4.2. </span>Member Activity<a class="headerlink" href="#member-activity" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="member-activity">
+<span id="memb-act"></span><h3><span class="section-number">4.4.2. </span>Member Activity<a class="headerlink" href="#member-activity" title="Permalink to this headline">#</a></h3>
 <p>The Member Activity menu item shows a summary of all activity in a fire season, in the form of a table with one row
 for each active member. The member activity is broken down into major categories such as Training,
 HR, Maintenance, etc.</p>
-<div class="myclass figure align-default" id="act-top">
+<figure class="myclass align-default" id="act-top">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/act-top2-a.jpg"><img alt="Member Activity (top section)" class="bg-primary mb-1" src="_images/act-top2-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Member Activity (top section) (click to enlarge)</span><a class="headerlink" href="#act-top" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Member Activity (top section) (click to enlarge)</span><a class="headerlink" href="#act-top" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p style="text-align: center">---/\/\/\/\/\---</p>
 <p>The Season (top right, above) is normally the current season, but records for previous years can be viewed
 by selecting an earlier season if historical data is available.</p>
 <p>The numbers in the table can represent either <strong>Hours</strong> - the total time contributed by the member,
 or <strong>Events</strong> - the number of activities attended, and these can be switched using the control in the top
 right of the page.</p>
-<div class="section" id="sorting">
-<h4><span class="section-number">4.4.2.1. </span>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h4>
+<section id="sorting">
+<h4><span class="section-number">4.4.2.1. </span>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">#</a></h4>
 <p>The table is initially sorted in ascending alphabetical order of Member name, but the sort order may be changed
 by clicking any of the table headings. For the numeric columns, the default order is descending (high to low), but
 this can be reversed by clicking the heading once more. The example in <a class="reference internal" href="#act-top"><span class="std std-ref">Member Activity (top section)</span></a>
 is sorted by <em>Total</em>.</p>
-</div>
-<div class="section" id="activity-details">
-<h4><span class="section-number">4.4.2.2. </span>Activity Details<a class="headerlink" href="#activity-details" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="activity-details">
+<h4><span class="section-number">4.4.2.2. </span>Activity Details<a class="headerlink" href="#activity-details" title="Permalink to this headline">#</a></h4>
 <p>If you click on any of the numbers in the table, it will drill down to the underlying data, and show a complete
 listing of all the events attended in the chosen category.</p>
-<div class="myclass figure align-default" id="act-detail">
+<figure class="myclass align-default" id="act-detail">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/act-detail.jpg"><img alt="Sample of Maintenance Activity for a Member" class="bg-primary mb-1" src="_images/act-detail.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Sample of Maintenance Activity for a Member (click to enlarge)</span><a class="headerlink" href="#act-detail" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="totals">
-<h4><span class="section-number">4.4.2.3. </span>Totals<a class="headerlink" href="#totals" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Sample of Maintenance Activity for a Member (click to enlarge)</span><a class="headerlink" href="#act-detail" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="totals">
+<h4><span class="section-number">4.4.2.3. </span>Totals<a class="headerlink" href="#totals" title="Permalink to this headline">#</a></h4>
 <p>Each row has a <strong>Total</strong> figure, and when clicked this will show activity in all categories, for the selected member.</p>
 <p>Similarly, the last row in the table has Totals for each category of activity, and these can be clicked to show
 a full listing of all member attendance for that type of activity.</p>
-</div>
-<div class="section" id="voting-criteria-and-colouring">
-<h4><span class="section-number">4.4.2.4. </span>Voting Criteria and Colouring<a class="headerlink" href="#voting-criteria-and-colouring" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="voting-criteria-and-colouring">
+<h4><span class="section-number">4.4.2.4. </span>Voting Criteria and Colouring<a class="headerlink" href="#voting-criteria-and-colouring" title="Permalink to this headline">#</a></h4>
 <p>Many brigades define Voting Criteria to determine which members are eligible to vote in Brigade Elections. Normally
 these criteria specify a minimum number of hours in a season/year (or attendance at a minimum number of events),
 that the member must complete to be eligible to vote.</p>
@@ -869,10 +556,12 @@ that the member must complete to be eligible to vote.</p>
 to identify members who have met the criteria and those who have not. Members
 coloured yellow, are just below
 the criteria, those coloured red, are well below the criteria, and the others are above.</p>
-<div class="myclass figure align-default" id="act-mid">
+<figure class="myclass align-default" id="act-mid">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/act-mid-a.jpg"><img alt="Member Activity (middle section)" class="bg-primary mb-1" src="_images/act-mid-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Member Activity sorted on Total (middle section) (click to enlarge)</span><a class="headerlink" href="#act-mid" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Member Activity sorted on Total (middle section) (click to enlarge)</span><a class="headerlink" href="#act-mid" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The criteria are normally specified for an entire year. Since the Member Activity report is available to all members
 throughout the year, rather than having all members shown as well below the criteria for the first part of the year,
 the table calculates progress on a pro-rata basis.</p>
@@ -886,10 +575,10 @@ quota is 60 hours, so the pro-rata quota is 60 x 83% = 50.3 hours.
 Anyone with a Total of more than 50.3 hours is coloured white, just less than that is coloured yellow, 
 and further down, red.
 -->
-</div>
-</div>
-<div class="section" id="member-qualifications">
-<span id="memb-quals"></span><h3><span class="section-number">4.4.3. </span>Member Qualifications<a class="headerlink" href="#member-qualifications" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="member-qualifications">
+<span id="memb-quals"></span><h3><span class="section-number">4.4.3. </span>Member Qualifications<a class="headerlink" href="#member-qualifications" title="Permalink to this headline">#</a></h3>
 <p>Member qualifications are managed by the RFS, and are stored on their SAP server. The Sign-In system uses
 member qualifications in various areas, including the <a class="reference internal" href="#memb-list-quals"><span class="std std-ref">Member List</span></a> and in events, so that
 users can see the qualification status of members.</p>
@@ -903,15 +592,17 @@ SAP listing.</p>
 <li><p>Total number of members qualified in each area.</p></li>
 <li><p>Drill down to show all qualifications for a member, or all brigade qualifications in a category.</p></li>
 </ul>
-<div class="myclass figure align-default" id="brig-certs">
+<figure class="myclass align-default" id="brig-certs">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/brigcerts2a.jpg"><img alt="Member Qualifications View" class="bg-primary mb-1" src="_images/brigcerts2a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Member Qualifications View (click to enlarge)</span><a class="headerlink" href="#brig-certs" title="Permalink to this image">¶</a></p>
-</div>
-<div class="margin sidebar">
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Member Qualifications View (click to enlarge)</span><a class="headerlink" href="#brig-certs" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<aside class="margin sidebar">
 <p class="sidebar-title">Qualification Acronymns</p>
 <p>The acronyms used to represent particular qualifications are defined in
 the <a class="reference external" href="https://www.rfs.nsw.gov.au/__data/assets/pdf_file/0014/9032/6.1.2-Qualifications-for-NSW-RFS-Members.pdf">RFS Qualifications document</a>.</p>
-</div>
+</aside>
 <p>Qualifications come in two main types:</p>
 <p><strong>1. Perpetual</strong></p>
 <p>These are awarded after successful completion of training, and usually an examination. They are awarded for life,
@@ -923,25 +614,65 @@ normally after 12 or 36 months - or it will expire. The table shows the highest 
 attained by a member in these categories. If it is coloured Green, the qualification is current, and has not expired.</p>
 <p>If the member doesn’t have any current qualifications in a category, but does have expired ones, it will show the
 highest expired qualification in Red. Expired qualifications are not included in the count at the foot of each column.</p>
-</div>
-<div class="section" id="at-station">
-<span id="at-stat"></span><h3><span class="section-number">4.4.4. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="brigade-activity-summary">
+<span id="brigact-summ"></span><h3><span class="section-number">4.4.4. </span>Brigade Activity Summary<a class="headerlink" href="#brigade-activity-summary" title="Permalink to this headline">#</a></h3>
+<p>The <strong>Brigade Activity Summary</strong> item shows a summary of brigade activities over a defined period.</p>
+<p>The listing shows the number of events and total member hours for each category of events held during
+the specified period, as well as totals for each.</p>
+<p>The default period ends on the current day, and starts 90 days earlier. The start and end dates for the
+required period can be changed by clicking on the dates in the top right of the page and selecting new
+start/end dates.</p>
+<figure class="myclass align-default" id="brigact-summary">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/brigact-summ.jpg"><img alt="Brigade Activity Summary" class="bg-primary mb-1" src="_images/brigact-summ.jpg" style="width: 1467px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Brigade Activity Summary (click to enlarge)</span><a class="headerlink" href="#brigact-summary" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>To view the events in each Category, click the category name, and this will show a listing of all individual events
+of that category that were held in the specified period.</p>
+</section>
+<section id="brigade-activity-log">
+<span id="brigact-log"></span><h3><span class="section-number">4.4.5. </span>Brigade Activity Log<a class="headerlink" href="#brigade-activity-log" title="Permalink to this headline">#</a></h3>
+<p>The <strong>Brigade Activity Log</strong> item shows a listing of brigade events over a defined period.</p>
+<p>Events are shown in ascending date order, starting from the date specified as the start of the reporting Period.</p>
+<p>The order of events can be changed by clicking any of the table headings.</p>
+<p>Further details, such as sign-in/out times for individual members can be viewed by clicking on the event description
+on the far right.</p>
+<p>By default, this list shows all events. The Brigade Activity Summary can be used to list only events of a specified
+Category if required.</p>
+<p>The default period ends on the current day, and starts 90 days earlier. The start and end dates for the
+required period can be changed by clicking on the dates in the top right of the page and selecting new
+start/end dates.</p>
+<figure class="myclass align-default" id="brigact-log-pic">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/brigact-log.jpg"><img alt="Brigade Activity Log" class="bg-primary mb-1" src="_images/brigact-log.jpg" style="width: 1467px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Brigade Activity Log (click to enlarge)</span><a class="headerlink" href="#brigact-log-pic" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="at-station">
+<span id="at-stat"></span><h3><span class="section-number">4.4.6. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">#</a></h3>
 <p>The <strong>At Station</strong> item shows a replica of the Kiosk, including all events and members attending.</p>
-<div class="myclass figure align-default" id="dashboard">
+<figure class="myclass align-default" id="dashboard">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/dashboard.jpg"><img alt="At Station" class="bg-primary mb-1" src="_images/dashboard.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Unlike the Kiosk, you can not sign-in with this view, nor can you change any details.</p>
 <p>This view is live, and is updated automatically whenever there is any activity on the Kiosk,
 including sign-in/out or new events created.</p>
-</div>
-<div class="section" id="events-calendar">
-<span id="calendar"></span><h3><span class="section-number">4.4.5. </span>Events Calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="events-calendar">
+<span id="calendar"></span><h3><span class="section-number">4.4.7. </span>Events Calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">#</a></h3>
 <p>A calendar view is provided so members can see all brigade activities in the past, and also the future.</p>
-<div class="myclass figure align-default" id="cal-month">
+<figure class="myclass align-default" id="cal-month">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cal-month-a.jpg"><img alt="Calendar Month View" class="bg-primary mb-1" src="_images/cal-month-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Calendar Month View (click to enlarge)</span><a class="headerlink" href="#cal-month" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Calendar Month View (click to enlarge)</span><a class="headerlink" href="#cal-month" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Notes</strong>:</p>
 <ul class="simple">
 <li><p>The calendar view can be adjusted to show a <span class="badge badge-pill badge-primary"><strong>day</strong></span>,
@@ -952,27 +683,31 @@ as required. Move forward or backward in time using the arrows in the top right.
 <li><p>The view can be filtered using the Search function (top right of the page), so for example you can easily find
 all “Training” events, or those attended by a particular member (just search for their surname).</p></li>
 </ul>
-<div class="section" id="viewing-event-details">
-<h4><span class="section-number">4.4.5.1. </span>Viewing Event Details<a class="headerlink" href="#viewing-event-details" title="Permalink to this headline">¶</a></h4>
+<section id="viewing-event-details">
+<h4><span class="section-number">4.4.7.1. </span>Viewing Event Details<a class="headerlink" href="#viewing-event-details" title="Permalink to this headline">#</a></h4>
 <p>You can view the details of any event in the calendar just by clicking on it.</p>
 <p>In general, you will see a view like this:</p>
-<div class="myclass figure align-default" id="ev-read-view">
+<figure class="myclass align-default" id="ev-read-view">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/ev-read-view.jpg"><img alt="Event read-only view" class="bg-primary mb-1" src="_images/ev-read-view.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Note that all the fields are grey, which means you can’t change anything. However, if you were logged in as the OIC of
 this event, you would be able to update the details as shown earlier <a class="reference internal" href="kiosk.html#event-update"><span class="std std-ref">for the Kiosk</span></a>.</p>
-</div>
-<div class="section" id="week-view">
-<h4><span class="section-number">4.4.5.2. </span>Week View<a class="headerlink" href="#week-view" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="week-view">
+<h4><span class="section-number">4.4.7.2. </span>Week View<a class="headerlink" href="#week-view" title="Permalink to this headline">#</a></h4>
 <p>Click the <span class="badge badge-pill badge-primary"><strong>week</strong></span> button at the top of the page to go to the Week view:</p>
-<div class="myclass figure align-default" id="call-week-a">
+<figure class="myclass align-default" id="call-week-a">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cal-week-a.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/cal-week-a.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Calendar Week View (click to enlarge)</span><a class="headerlink" href="#call-week-a" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="adding-new-events-officers">
-<span id="cal-add-event"></span><h4><span class="section-number">4.4.5.3. </span>Adding New Events (Officers)<a class="headerlink" href="#adding-new-events-officers" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Calendar Week View (click to enlarge)</span><a class="headerlink" href="#call-week-a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="adding-new-events-officers">
+<span id="cal-add-event"></span><h4><span class="section-number">4.4.7.3. </span>Adding New Events (Officers)<a class="headerlink" href="#adding-new-events-officers" title="Permalink to this headline">#</a></h4>
 <p>If you are logged in as an Officer, you can create a new event in the calendar by selecting the area representing the
 times your activity will run (shown in blue above). You will then be asked to provide the details of the event. You can
 only create new events in the future like this, to protect the integrity of the attendance record.</p>
@@ -985,9 +720,9 @@ Maintenance etc. are planned in advance, and events <a class="reference internal
 It’s better not to leave this to the very last moment (at the kiosk), but instead set them up in advance so members
 can see what activities are coming up in the brigade calendar.</p>
 </div>
-</div>
-<div class="section" id="plan-to-attend">
-<h4><span class="section-number">4.4.5.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="plan-to-attend">
+<h4><span class="section-number">4.4.7.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">#</a></h4>
 <p>Members can indicate their intention to attend future events using the calendar.</p>
 <p>This allows Officers to get expected numbers for their planned activities, and to see who is interested
 in attending, without needing to exchange a lot of emails.</p>
@@ -1006,31 +741,33 @@ the top right if you have attended them. Past events can not be changed on the c
 </ul>
 <p>You can always click in the centre of the event itself to <a class="reference internal" href="#ev-read-view"><span class="std std-ref">see all the details</span></a>,
 and confirm that you are on the list.</p>
-</div>
-<div class="section" id="signing-off-on-an-event-officers">
-<span id="off-signoff"></span><h4><span class="section-number">4.4.5.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="signing-off-on-an-event-officers">
+<span id="off-signoff"></span><h4><span class="section-number">4.4.7.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">#</a></h4>
 <p>According to the original Attendance Book, Officers are required to check the attendance records for any activity
 they run, and once corrected and checked, sign it off, and cross out the page so that it can’t be changed again.</p>
 <p>In the sign-in system, this can be done by opening the calendar and finding the event you (the OIC) have run,
 and clicking on it.</p>
 <p>You will then be able to check the attendance records, making any corrections as needed. You should then click
 the box marked “Checked” to sign it off.</p>
-<div class="myclass figure align-default" id="offcheck">
+<figure class="myclass align-default" id="offcheck">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/offcheck.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/offcheck.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Once an event has been completed, only the OIC can update the details.</p>
-</div>
-</div>
-</div>
-<div class="section" id="personnel-menu">
-<h2><span class="section-number">4.5. </span>Personnel Menu<a class="headerlink" href="#personnel-menu" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+</section>
+</section>
+<section id="personnel-menu">
+<h2><span class="section-number">4.5. </span>Personnel Menu<a class="headerlink" href="#personnel-menu" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title">Restricted Access</p>
 <p>Only the Personnel/Membership Officer and their assistants have access to this Menu.</p>
-</div>
-<div class="section" id="change-officers">
-<h3><span class="section-number">4.5.1. </span>Change Officers<a class="headerlink" href="#change-officers" title="Permalink to this headline">¶</a></h3>
+</aside>
+<section id="change-officers">
+<h3><span class="section-number">4.5.1. </span>Change Officers<a class="headerlink" href="#change-officers" title="Permalink to this headline">#</a></h3>
 <p>Most brigades hold elections every year, and new Officers are elected by members.</p>
 <p>This item allows the Personnel Officer to update the list of Officers of the brigade. If the current date is before
 the end of the season, it just shows the current list of Officer positions, with the members who hold those positions.
@@ -1040,183 +777,308 @@ also show a button that allows you to <strong>“Copy Officers to new season”<
 will create new Officer records for all positions in the new season using the same names as the previous season.
 You can then edit this list by changing the names of the officers to match the election results, then Save to
 update the system.</p>
-</div>
-<div class="section" id="add-new-member">
-<span id="add-memb"></span><h3><span class="section-number">4.5.2. </span>Add New Member<a class="headerlink" href="#add-new-member" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="add-new-member">
+<span id="add-memb"></span><h3><span class="section-number">4.5.2. </span>Add New Member<a class="headerlink" href="#add-new-member" title="Permalink to this headline">#</a></h3>
 <p>This allows details of a new member to be recorded in the system. An RFS membership number is required.</p>
-</div>
-<div class="section" id="annual-attendance">
-<span id="annual-att"></span><h3><span class="section-number">4.5.3. </span>Annual Attendance<a class="headerlink" href="#annual-attendance" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="annual-attendance">
+<span id="annual-att"></span><h3><span class="section-number">4.5.3. </span>Annual Attendance<a class="headerlink" href="#annual-attendance" title="Permalink to this headline">#</a></h3>
 <p>Some districts require hard-copies of attendance records to be sent to HQ for storage each year, similar to the old
 Attendance Books.</p>
 <p>This item will produce a listing of all attendance in a calendar year in a format similar to the old Attendance Book,
 which can be printed either to PDF or to paper by your browser as required, and then sent on to HQ.</p>
-</div>
-</div>
-<div class="section" id="training-menu">
-<h2><span class="section-number">4.6. </span>Training Menu<a class="headerlink" href="#training-menu" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+</section>
+<section id="training-menu">
+<h2><span class="section-number">4.6. </span>Training Menu<a class="headerlink" href="#training-menu" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title">Restricted Access</p>
 <p>Only the Training Officer and their assistants have access to this Menu.</p>
-</div>
-<div class="section" id="courses-available">
-<h3><span class="section-number">4.6.1. </span>Courses Available<a class="headerlink" href="#courses-available" title="Permalink to this headline">¶</a></h3>
+</aside>
+<section id="courses-available">
+<h3><span class="section-number">4.6.1. </span>Courses Available<a class="headerlink" href="#courses-available" title="Permalink to this headline">#</a></h3>
 <p>This shows a list of Courses available in the brigade calendar.</p>
-</div>
-<div class="section" id="quarterly-return">
-<h3><span class="section-number">4.6.2. </span>Quarterly Return<a class="headerlink" href="#quarterly-return" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="quarterly-return">
+<h3><span class="section-number">4.6.2. </span>Quarterly Return<a class="headerlink" href="#quarterly-return" title="Permalink to this headline">#</a></h3>
 <p>Some districts require brigades to submit a summary of all Training activities undertaken each querter. This report
 provides a list of all TRAINING events, with brief details of each activity.</p>
-<div class="myclass figure align-default" id="train-qtr">
+<figure class="myclass align-default" id="train-qtr">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/train-qtr.jpg"><img alt="Training Quarterly Return" class="bg-primary mb-1" src="_images/train-qtr.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Training Quarterly Return (click to enlarge)</span><a class="headerlink" href="#train-qtr" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="training-calendar">
-<h3><span class="section-number">4.6.3. </span>Training Calendar<a class="headerlink" href="#training-calendar" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Training Quarterly Return (click to enlarge)</span><a class="headerlink" href="#train-qtr" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="training-calendar">
+<h3><span class="section-number">4.6.3. </span>Training Calendar<a class="headerlink" href="#training-calendar" title="Permalink to this headline">#</a></h3>
 <p>This is just a filtered version of the Brigade Event calendar, showing only events of type TRAINING.
 It operates in exactly the same way as <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Event calendar</span></a></p>
-</div>
-</div>
-<div class="section" id="officers-menu">
-<h2><span class="section-number">4.7. </span>Officers Menu<a class="headerlink" href="#officers-menu" title="Permalink to this headline">¶</a></h2>
-<div class="margin sidebar">
+</section>
+</section>
+<section id="officers-menu">
+<h2><span class="section-number">4.7. </span>Officers Menu<a class="headerlink" href="#officers-menu" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title">Restricted Access</p>
 <p>Only current Office bearers, either Field Officers or Administrative Officers, have access to this Menu.</p>
-</div>
-<div class="section" id="add-new-event">
-<h3><span class="section-number">4.7.1. </span>Add New Event<a class="headerlink" href="#add-new-event" title="Permalink to this headline">¶</a></h3>
+</aside>
+<section id="add-new-event">
+<h3><span class="section-number">4.7.1. </span>Add New Event<a class="headerlink" href="#add-new-event" title="Permalink to this headline">#</a></h3>
 <p>This is an alternative way for Officers to create a new event (it’s probably easier
 to <a class="reference internal" href="#cal-add-event"><span class="std std-ref">use the Brigade Calendar</span></a>). A blank event form <a class="reference internal" href="kiosk.html#event-update"><span class="std std-ref">as used in the Kiosk</span></a>
 is displayed. Fill in the details to add a new event.</p>
-</div>
-<div class="section" id="review-past-events">
-<h3><span class="section-number">4.7.2. </span>Review Past Events<a class="headerlink" href="#review-past-events" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="review-past-events">
+<h3><span class="section-number">4.7.2. </span>Review Past Events<a class="headerlink" href="#review-past-events" title="Permalink to this headline">#</a></h3>
 <p>This a legacy feature to show past events run by this Officer. It is superseded by the <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Calendar</span></a>.
 Just search for your surname with the calendar, and you will see all events - past and future - that you have
 been involved with.</p>
-</div>
-<div class="section" id="review-future-events">
-<h3><span class="section-number">4.7.3. </span>Review Future Events<a class="headerlink" href="#review-future-events" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="review-future-events">
+<h3><span class="section-number">4.7.3. </span>Review Future Events<a class="headerlink" href="#review-future-events" title="Permalink to this headline">#</a></h3>
 <p>This a legacy feature to show future events run by this Officer. It is superseded by the <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Calendar</span></a>.
 Just search for your surname with the calendar, and you will see all events - past and future - that you have
 been involved with.</p>
-</div>
-<div class="section" id="officer-calendar">
-<h3><span class="section-number">4.7.4. </span>Officer Calendar<a class="headerlink" href="#officer-calendar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="officer-calendar">
+<h3><span class="section-number">4.7.4. </span>Officer Calendar<a class="headerlink" href="#officer-calendar" title="Permalink to this headline">#</a></h3>
 <p>This is just a filtered version of the Brigade Event calendar, showing only events where the
 OIC is the member who is logged in. It operates in exactly the same way as <a class="reference internal" href="#calendar"><span class="std std-ref">Brigade Event calendar</span></a></p>
-</div>
-<div class="section" id="covid-19-attendance">
-<h3><span class="section-number">4.7.5. </span>COVID-19 Attendance<a class="headerlink" href="#covid-19-attendance" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="covid-19-attendance">
+<h3><span class="section-number">4.7.5. </span>COVID-19 Attendance<a class="headerlink" href="#covid-19-attendance" title="Permalink to this headline">#</a></h3>
 <p>This report was produced to assist in contact tracing during the COVID-19 pandemic. It shows details of all members who
 attended the station during the past 21 days. Unless another pandemic or similar requires this, it will be withdrawn
 in the near future.</p>
-</div>
-<div class="section" id="admin-deprecated">
-<h3><span class="section-number">4.7.6. </span>Admin (deprecated)<a class="headerlink" href="#admin-deprecated" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="admin-deprecated">
+<h3><span class="section-number">4.7.6. </span>Admin (deprecated)<a class="headerlink" href="#admin-deprecated" title="Permalink to this headline">#</a></h3>
 <p>All Officers have access to the special administration section of the application, though some have more
 access than others.</p>
 <p>There are very few features in the admin section that can not be done in the main section, so access to this area will
 probably be restricted further to genuine system administrators in the near future.</p>
-</div>
-</div>
-<div class="section" id="vehicles-menu">
-<h2><span class="section-number">4.8. </span>Vehicles Menu<a class="headerlink" href="#vehicles-menu" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="vehicles-menu">
+<h2><span class="section-number">4.8. </span>Vehicles Menu<a class="headerlink" href="#vehicles-menu" title="Permalink to this headline">#</a></h2>
 <p>An optional feature of the system is to record and maintain records of vehicle movements. It is intended to replace
 the paper logbook records used in most RFS vehicles.</p>
 <p>As well as recording details of vehicles movements, this feature also provides reports and summaries of vehicles use,
 as well as driving records for members.</p>
-<div class="section" id="update-vehicle-log">
-<span id="vehlogs"></span><h3><span class="section-number">4.8.1. </span>Update Vehicle Log<a class="headerlink" href="#update-vehicle-log" title="Permalink to this headline">¶</a></h3>
+<section id="update-vehicle-log">
+<span id="vehlogs"></span><h3><span class="section-number">4.8.1. </span>Update Vehicle Log<a class="headerlink" href="#update-vehicle-log" title="Permalink to this headline">#</a></h3>
 <p>This records the information journey taken in a brigade vehicle which was normally written in the log book.</p>
 <p>When selected, this will ask you to choose which vehicle you want to add a record for, then it will show the
 following form:</p>
-<div class="myclass figure align-default" id="vehlog">
+<figure class="myclass align-default" id="vehlog">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/vehlog.jpg"><img alt="Vehicle Log (single journey)" class="bg-primary mb-1" src="_images/vehlog.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Vehicle Log (single journey) (click to enlarge)</span><a class="headerlink" href="#vehlog" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Vehicle Log (single journey) (click to enlarge)</span><a class="headerlink" href="#vehlog" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The vehicle which you selected earlier is fixed, as is the initial odometer reading (taken from prior records).</p>
-</div>
-<div class="section" id="update-vehicle-log-sheet">
-<h3><span class="section-number">4.8.2. </span>Update Vehicle Log Sheet<a class="headerlink" href="#update-vehicle-log-sheet" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="update-vehicle-log-sheet">
+<h3><span class="section-number">4.8.2. </span>Update Vehicle Log Sheet<a class="headerlink" href="#update-vehicle-log-sheet" title="Permalink to this headline">#</a></h3>
 <p>This item allows bulk input of journeys, and can be used to transcribe a log sheet into the system.</p>
 <p>It has one line for each journey, with the same content as the <a class="reference internal" href="#vehlogs"><span class="std std-ref">Vehicle Log</span></a>.</p>
-</div>
-<div class="section" id="vehicle-movements">
-<h3><span class="section-number">4.8.3. </span>Vehicle Movements<a class="headerlink" href="#vehicle-movements" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="vehicle-movements">
+<h3><span class="section-number">4.8.3. </span>Vehicle Movements<a class="headerlink" href="#vehicle-movements" title="Permalink to this headline">#</a></h3>
 <p>This shows a summary of vehicle movements in a form similar to the <a class="reference internal" href="#memb-act"><span class="std std-ref">Member Activity table</span></a>.</p>
-<div class="myclass figure align-default" id="veh-mov">
+<figure class="myclass align-default" id="veh-mov">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/veh-mov.jpg"><img alt="Vehicle Movements" class="bg-primary mb-1" src="_images/veh-mov.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Vehicle Movements (click to enlarge)</span><a class="headerlink" href="#veh-mov" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Vehicle Movements (click to enlarge)</span><a class="headerlink" href="#veh-mov" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Each vehicle is listed, and it’s use in various types of activity is shown. Clicking on the numbers will show a
 full listing of movements for that vehicles in the required category.</p>
 <p>Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.</p>
-</div>
-<div class="section" id="driver-activity">
-<h3><span class="section-number">4.8.4. </span>Driver Activity<a class="headerlink" href="#driver-activity" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="driver-activity">
+<h3><span class="section-number">4.8.4. </span>Driver Activity<a class="headerlink" href="#driver-activity" title="Permalink to this headline">#</a></h3>
 <p>This shows a summary of driver journeys in a form similar to the <a class="reference internal" href="#memb-act"><span class="std std-ref">Member Activity table</span></a>.</p>
-<div class="myclass figure align-default" id="drvmov">
+<figure class="myclass align-default" id="drvmov">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/drvmov.jpg"><img alt="Vehicle Movements" class="bg-primary mb-1" src="_images/drvmov.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Driver Journeys (click to enlarge)</span><a class="headerlink" href="#drvmov" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.17 </span><span class="caption-text">Driver Journeys (click to enlarge)</span><a class="headerlink" href="#drvmov" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Each brigade driver is listed, and their participation in various types of activity is shown. Clicking on the
 numbers will show a full listing of journeys for this driver in the required category.</p>
 <p>Statistics for Hours, Kilometers, or number of Trips can be selected using the control at the top right of the page.</p>
-</div>
-<div class="section" id="vehicle-bookings">
-<span id="vehbook"></span><h3><span class="section-number">4.8.5. </span>Vehicle Bookings<a class="headerlink" href="#vehicle-bookings" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="vehicle-bookings">
+<span id="vehbook"></span><h3><span class="section-number">4.8.5. </span>Vehicle Bookings<a class="headerlink" href="#vehicle-bookings" title="Permalink to this headline">#</a></h3>
 <p>This shows a calendar with all events where a vehicle has been reserved as part of an event -
 see <a class="reference internal" href="events.html#ev-veh"><span class="std std-ref">Event Fields</span></a>. It can be useful to see what vehicles are committed, and when, to avoid any clashes.</p>
-<div class="myclass figure align-default" id="vehcal">
+<figure class="myclass align-default" id="vehcal">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/vehcal.jpg"><img alt="Vehicle Bookings" class="bg-primary mb-1" src="_images/vehcal.jpg" style="width: 1467px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Vehicle Bookings (click to enlarge)</span><a class="headerlink" href="#vehcal" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.18 </span><span class="caption-text">Vehicle Bookings (click to enlarge)</span><a class="headerlink" href="#vehcal" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>It shows all vehicle bookings, but can be filtered using Search (top right) to restrict the events shown.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="events.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Events</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="events.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Events</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="administration.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="administration.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">5. </span>Administration Procedures (Under construction)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Ian Bowditch email:ibowditch@gmail.com<br/>
-    
-        &copy; Copyright 2022, Ian Bowditch.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-in">4.1. Logging In</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#landing-home-page">4.2. Landing/home page</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#home-menu">4.3. Home Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-team">4.3.1. Executive Team</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-problem-report">4.3.2. Create Problem Report</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-problem-reports">4.3.3. List Problem Reports</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-guide">4.3.4. User Guide</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#member-menu">4.4. Member Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-list">4.4.1. Member List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-activity">4.4.2. Member Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting">4.4.2.1. Sorting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-details">4.4.2.2. Activity Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#totals">4.4.2.3. Totals</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#voting-criteria-and-colouring">4.4.2.4. Voting Criteria and Colouring</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-qualifications">4.4.3. Member Qualifications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.4. Brigade Activity Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-log">4.4.5. Brigade Activity Log</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#at-station">4.4.6. At Station</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#events-calendar">4.4.7. Events Calendar</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-event-details">4.4.7.1. Viewing Event Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#week-view">4.4.7.2. Week View</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-events-officers">4.4.7.3. Adding New Events (Officers)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-to-attend">4.4.7.4. Plan to Attend</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-off-on-an-event-officers">4.4.7.5. Signing Off on an Event (Officers)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personnel-menu">4.5. Personnel Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-officers">4.5.1. Change Officers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-new-member">4.5.2. Add New Member</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-attendance">4.5.3. Annual Attendance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-menu">4.6. Training Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#courses-available">4.6.1. Courses Available</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quarterly-return">4.6.2. Quarterly Return</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-calendar">4.6.3. Training Calendar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#officers-menu">4.7. Officers Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-new-event">4.7.1. Add New Event</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-past-events">4.7.2. Review Past Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-future-events">4.7.3. Review Future Events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#officer-calendar">4.7.4. Officer Calendar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#covid-19-attendance">4.7.5. COVID-19 Attendance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#admin-deprecated">4.7.6. Admin (deprecated)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles-menu">4.8. Vehicles Menu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-vehicle-log">4.8.1. Update Vehicle Log</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-vehicle-log-sheet">4.8.2. Update Vehicle Log Sheet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicle-movements">4.8.3. Vehicle Movements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#driver-activity">4.8.4. Driver Activity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicle-bookings">4.8.5. Vehicle Bookings</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ian Bowditch email:ibowditch@gmail.com
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, Ian Bowditch.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
