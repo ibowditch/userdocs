@@ -104,11 +104,14 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
      * IMPORTANT!!!
      * Parameters: python manage.py set_tenant_domains
      * Run set_tenant_domains environment
-   * **NOW RESTART APPLICATION SERVER**
+    
+* Login to admin into the new tenant using admin user
+*   Change tenant name to readable version, eg. Gosford Bulk (with space) using signin.org
+  *    * **NOW RESTART APPLICATION SERVER**
       * All might look ok, but probably isn't
       * Need to clear caches to rds (?)
       * If don't restart, often get weird, scary, server crashes about 36h after adding new tenant
-    
+
 * Login to admin into the new tenant using admin user
   * Check passwords for utility users kiosk, tagadmin, pager are set, and if not set to correct values
   * Import Members from provided list
@@ -123,7 +126,8 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
     * Set activity types
     * Set excluded activities
     * Check and update location, phone number, etc.
-  * Change tenant name to readable version, eg. Gosford Bulk (with space) using signin.org
+    * Add pager capcode and region
+  * Add tenant name to relevant entry in kbfb/media/public/capcodes.csv (may be deprecated at some point)
   * Import qualifications from RFS list under admin certifications/import
   * Add TD/PD certifications for nominated drivers (manually)
     * Not always clear from either Licences or Administration reports
@@ -145,6 +149,9 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
   * Copy address from connection details (eg. proxy65.rt3.io:37011) and add a connection in VNC viewer with this address.
   * Connect using VNC viewer to confirm connection ok.
  
+* Restart pager server
+  * Confirm new brigade registered (check journalctl -b | grep page)
+
 (pi-setup)=
 ### Setting Up a New Kiosk Raspberry PI
 
@@ -207,6 +214,13 @@ In Interface settings tab, Enable SSH and VNC to allow remote support:
 PI interface configuration (click to enlarge)
 :::
 
+**Final checks**
+* Configuration/Display: screen blanking disabled (enabled by default!)
+  * May be redundant: launch_kiosk turns off screen blanking as well
+* */boot/config.txt* : Comment out #dtoverlay=vc4-fkms-v3d (maybe multiple places)
+
+
+
 Reboot after changing PI configuration when prompted.
 
 ### Installing the Kiosk Software (apt procedure)
@@ -233,7 +247,7 @@ installation procedure, and includes the following components:
 
 - Confirm that the PI hostname is set to the brigade/tenant name and change if needed
 
-- Set up access to remote.it
+- Set up access to remote.it (!! Make sure quotes are right if doing copy/paste !!!)
   - REMOTE_IT_CODE="D95F00F0-3DDC-5535-9D47-CF7BBFD8C5A4"
   - ! [ -d /etc/remoteit ] && R3_REGISTRATION_CODE=$REMOTE_IT_CODE sh -c "$(curl -L https://downloads.remote.it/remoteit/install_agent.sh)"
 
@@ -249,6 +263,14 @@ installation procedure, and includes the following components:
   - sudo curl -s --compressed -o /etc/apt/sources.list.d/rfstag.list "https://ibowditch.github.io/rfstag-kiosk/rfstag.list"
   - sudo apt update
   - reboot
+
+#### PI display problems and VNC connections
+
+Very tricky. Best to copy a working config.txt to the new machine.
+
+If get VNC saying connection not ready, shutdown with monitor connected, then disconnect monitor and restart
+While standing on left leg. See notes from 230413 and weep.
+ 
 
 
 #### First installation
@@ -330,7 +352,9 @@ Key areas:
 A new deb file is built using the **buildeb** script. It is named after the version number, 
 eg. nfcserver2_1.42.0_all.deb, and is placed in the ~/PycharmProjects directory.
 
-The deb file can be tested by scp'ing to a test PI, then **sudo apt install ./nfcserver2_1.42.0_all.deb**
+The deb file can be tested by scp'ing to a test PI, then **sudo apt install /home/pi/nfcserver2_1.42.0_all.deb**
+
+NB: .deb filename must be spelled out in full - no wildcards. 
 
 ref: https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
 
@@ -388,6 +412,18 @@ Files:
 * Launch page will initially require login
   * Use brigades dashboard login and password
   * Remember credentials
+
+
+230412: As of this date, the second ACTIV screen config has some problems.
+
+It works, but there are lots of warnings and errors logged in the journal, probably related to having 2 independent 
+chromium browsers running in parallel.
+launch_kiosk2 files have been updated to remove ACTIV and a seocnd screen until this is fixed properly.
+ACTIV support has not been released, and is not generally available at present, and it should stay that way until
+further investigations are completed.
+NB: Further journal messages are still being generated unless dtoverlay=vc4-fkms-v3d is commented out of /boot/config.txt.
+This file can't be included in the APT package, so will require a manual check on each kiosk to ensure it is disabled.
+These messages seem benign, but better to remove source if possible.
 
 
 ### Installing the Kiosk Software (original procedure)
@@ -559,7 +595,16 @@ You will be prompted to Save Password - click Save to do this (IMPORTANT).
     * Set RDS_DB_NAME=bushfire2-prd2-220916  (for example)
   * Run local app and confirm latest RDS in use
 
-    
+### Updating Models/Migrations
+
+- On dev system, run the following in a Pycharm terminal:
+
+    * python manage.py makemigrations
+    * python manage.py migrate_schemas
+
+- Then check for any new files under migrations folder in each module, and add them to git.
+
+- Next deployment will run migrate_schemas, and will include the changes providing the new migrations file is in git.
   
 ## AWS Credits (annual)
 

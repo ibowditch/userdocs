@@ -344,7 +344,10 @@ Brigade Activity Log (click to enlarge)
 (at-stat)=
 ### At Station
 
-The **At Station** item shows a replica of the Kiosk, including all events and members attending. 
+The **At Station** item shows a replica of the Kiosk, including all events and members attending.
+
+If, for any reason, the station needs to be evacuated, this page can be accessed on a phone to see who was 
+in the building at the time.
 
 :::{figure-md} dashboard
 :class: myclass

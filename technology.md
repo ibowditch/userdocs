@@ -68,7 +68,7 @@ but the following is a summary of the main protections:
 
 ### Server
 
-t2.medium used as main server. Up to 4 servers can be deployed if demand requires.
+t3.medium used as main server. Up to 4 servers can be deployed if demand requires.
 
 ## Software
 
