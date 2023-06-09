@@ -11,6 +11,7 @@ web application. The Kiosk is the "shopfront" of the system, and is used most fr
 Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has 
 an internet connection and a browser available. This section describes the services available on the web portal.
 
+(logging_in)=
 ## Logging In
 
 ```{margin} Separate Domains

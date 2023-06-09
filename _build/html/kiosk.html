@@ -149,7 +149,6 @@
 <li class="toctree-l1"><a class="reference internal" href="server.html">4. Web Portal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="administration.html">5. Administration Procedures (Under construction)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="technology.html">6. Technology (Under construction)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="internal.html">7. Internal Procedures (Under construction)</a></li>
 </ul>
 
     </div>
@@ -298,8 +297,9 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-operations">2.1. Basic Operations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-the-easy-way">2.1.1. Signing in - The Easy Way</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">2.1.2. What if the Kiosk Screen is Blank?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-without-a-tag">2.1.3. Signing in Without a Tag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-using-your-mobile-phone">2.1.2. Signing in Using Your Mobile Phone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">2.1.3. What if the Kiosk Screen is Blank?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-without-a-tag">2.1.4. Signing in Without a Tag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-operations">2.2. Advanced Operations</a><ul class="nav section-nav flex-column">
@@ -386,8 +386,51 @@ whenever possible.</p>
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.</p>
 </div>
 </section>
+<section id="signing-in-using-your-mobile-phone">
+<h3><span class="section-number">2.1.2. </span>Signing in Using Your Mobile Phone<a class="headerlink" href="#signing-in-using-your-mobile-phone" title="Permalink to this headline">#</a></h3>
+<div class="tip admonition" id="phonetag">
+<p class="admonition-title">Phone Sign-in Not Yet Generally Available</p>
+<p>Phone sign-in is currently on limited trial. When the trial is completed, it will be distributed to all brigades,
+probably in 3Q2023.</p>
+</div>
+<p>The Kiosk uses an NFC (Near Field Communications) tag reader to allow Members to sign-in and sign-out with an NFC tag.</p>
+<p>Most mobile phones also have NFC capability, which can be used for electronic banking,
+transport cards, etc. The Kiosk software has been updated to use this NFC capability so that mobile phone can be used
+instead of an NFC tag to sign-in and sign-out.</p>
+<p>Before you try to sign-in with your mobile phone, some preparations are necessary:</p>
+<ol class="arabic">
+<li><p><strong>Confirm that your phone has NFC</strong></p>
+<p>Most modern phones have NFC, and if you already use your phone for electronic banking or as a transport (Opal) card,
+you will have NFC enabled on your phone.</p>
+<p>There are guides available for <a class="reference external" href="https://www.androidauthority.com/how-to-use-nfc-android-164644/">android</a> and
+<a class="reference external" href="https://www.groovypost.com/howto/use-nfc-on-iphone/">iphone</a> to check your NFC capability and settings - please use
+these to confirm that your phone has NFC, and that it is switched on.</p>
+</li>
+<li><p><strong>Log in to the RFStag web portal using your phone</strong></p>
+<p>Signing in with your phone is achieved by sending a url to your phone. The url points to a page on the RFStag
+web portal, and when the phone receives the url, it will open that page in the web browser on the phone.
+This signals to the web portal that someone wants to sign-in, and the request is then processed as if it
+were an NFC tag.</p>
+<p>For this to work smoothly, it is necessary for you to first <a class="reference internal" href="server.html#logging-in"><span class="std std-ref">login to the web portal</span></a> using
+the browser on your phone, and <strong>remember the username and password</strong> for the web portal in your password manager.
+This will mean you don’t have to login each time you access the web portal, and makes signing in with your
+phone much quicker.</p>
+</li>
+</ol>
+<p>Once you have set up NFC on your phone, and logged into the web portal on your phone, you are ready to go.</p>
+<p>Here’s how you sign-in using your phone:</p>
+<ol class="arabic simple">
+<li><p>Unlock your phone (NFC won’t work on a locked phone)</p></li>
+<li><p>Hold the back of your phone near the tag reader, with the screen facing you.</p></li>
+<li><p>Hold the phone close to the tag reader for a second or so, until you hear a beep from the kiosk. You may also feel
+a vibration on your phone when it receives the url from the tag reader.</p></li>
+<li><p>When you see the web portal page displayed on your phone, you may remove it from the reader.</p></li>
+<li><p>The system will <a class="reference internal" href="#flowchart"><span class="std std-ref">react the same way</span></a> as it would if you had presented an NFC tag to the reader.
+The result will be shown on your phone, and the kiosk screen will be updated.</p></li>
+</ol>
+</section>
 <section id="what-if-the-kiosk-screen-is-blank">
-<span id="blank-kiosk"></span><h3><span class="section-number">2.1.2. </span>What if the Kiosk Screen is Blank?<a class="headerlink" href="#what-if-the-kiosk-screen-is-blank" title="Permalink to this headline">#</a></h3>
+<span id="blank-kiosk"></span><h3><span class="section-number">2.1.3. </span>What if the Kiosk Screen is Blank?<a class="headerlink" href="#what-if-the-kiosk-screen-is-blank" title="Permalink to this headline">#</a></h3>
 <p>If the OIC hasn’t <a class="reference internal" href="server.html#cal-add-event"><span class="std std-ref">set up an event</span></a> in advance, no event is available, and you won’t be
 able to sign-in immediately.</p>
 <p>Never fear - you can still sign-in, but first you’ll need to create a new event on behalf of the OIC. You do this by
@@ -416,7 +459,7 @@ what activity you are actually attending, and that’s essentially what an event
 </div>
 </section>
 <section id="signing-in-without-a-tag">
-<span id="notag"></span><h3><span class="section-number">2.1.3. </span>Signing in Without a Tag<a class="headerlink" href="#signing-in-without-a-tag" title="Permalink to this headline">#</a></h3>
+<span id="notag"></span><h3><span class="section-number">2.1.4. </span>Signing in Without a Tag<a class="headerlink" href="#signing-in-without-a-tag" title="Permalink to this headline">#</a></h3>
 <p>You really should <a class="reference internal" href="#usetag"><span class="std std-ref">use your tag</span></a>, but if you don’t have it you can still sign-in to
 an event by clicking on the sign-in icon in the event:</p>
 <figure class="myclass align-default" id="signin">
@@ -654,8 +697,9 @@ enter.</p></li>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-operations">2.1. Basic Operations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-the-easy-way">2.1.1. Signing in - The Easy Way</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">2.1.2. What if the Kiosk Screen is Blank?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-without-a-tag">2.1.3. Signing in Without a Tag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-using-your-mobile-phone">2.1.2. Signing in Using Your Mobile Phone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-the-kiosk-screen-is-blank">2.1.3. What if the Kiosk Screen is Blank?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-in-without-a-tag">2.1.4. Signing in Without a Tag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-operations">2.2. Advanced Operations</a><ul class="nav section-nav flex-column">

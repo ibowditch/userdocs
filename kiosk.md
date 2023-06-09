@@ -79,7 +79,63 @@ The system records when a tag is used, and if your brigade is strict about using
 your administrator may remind you to use your tag if they see you are repeatedly signing in without it.
 :::
 
+### Signing in Using Your Mobile Phone
 
+:::{admonition} Phone Sign-in Not Yet Generally Available
+:name: phonetag
+:class: tip
+
+Phone sign-in is currently on limited trial. When the trial is completed, it will be distributed to all brigades, 
+probably in 3Q2023.
+:::
+
+The Kiosk uses an NFC (Near Field Communications) tag reader to allow Members to sign-in and sign-out with an NFC tag. 
+
+Most mobile phones also have NFC capability, which can be used for electronic banking, 
+transport cards, etc. The Kiosk software has been updated to use this NFC capability so that mobile phone can be used 
+instead of an NFC tag to sign-in and sign-out.
+
+Before you try to sign-in with your mobile phone, some preparations are necessary:
+
+1. **Confirm that your phone has NFC**
+
+    Most modern phones have NFC, and if you already use your phone for electronic banking or as a transport (Opal) card, 
+    you will have NFC enabled on your phone.
+    
+    There are guides available for [android](https://www.androidauthority.com/how-to-use-nfc-android-164644/) and 
+    [iphone](https://www.groovypost.com/howto/use-nfc-on-iphone/) to check your NFC capability and settings - please use 
+    these to confirm that your phone has NFC, and that it is switched on.
+
+1. **Log in to the RFStag web portal using your phone**
+
+     Signing in with your phone is achieved by sending a url to your phone. The url points to a page on the RFStag 
+     web portal, and when the phone receives the url, it will open that page in the web browser on the phone. 
+     This signals to the web portal that someone wants to sign-in, and the request is then processed as if it 
+     were an NFC tag.
+    
+     For this to work smoothly, it is necessary for you to first {ref}`login to the web portal<logging_in>` using 
+     the browser on your phone, and **remember the username and password** for the web portal in your password manager. 
+     This will mean you don't have to login each time you access the web portal, and makes signing in with your 
+     phone much quicker.
+
+
+Once you have set up NFC on your phone, and logged into the web portal on your phone, you are ready to go.
+
+Here's how you sign-in using your phone:
+
+1. Unlock your phone (NFC won't work on a locked phone)
+
+2. Hold the back of your phone near the tag reader, with the screen facing you.
+
+3. Hold the phone close to the tag reader for a second or so, until you hear a beep from the kiosk. You may also feel 
+a vibration on your phone when it receives the url from the tag reader.
+
+4. When you see the web portal page displayed on your phone, you may remove it from the reader.
+
+5. The system will {ref}`react the same way<flowchart>` as it would if you had presented an NFC tag to the reader.
+The result will be shown on your phone, and the kiosk screen will be updated.
+
+   
 (blank_kiosk)=
 ### What if the Kiosk Screen is Blank?
 

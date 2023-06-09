@@ -634,6 +634,7 @@ Then redeem credits on AWS Credits page:
 * Remove Internal section by editing this line in conf.py
   * Use this to keep internal documentation private. Comment out for local use.
   *   exclude_patterns += ['internal*']
+  * Repeat make clean html
   
 * Check Internal section not visible on dev machine
 
