@@ -95,7 +95,7 @@ Most mobile phones also have NFC capability, which can be used for electronic ba
 transport cards, etc. The Kiosk software has been updated to use this NFC capability so that mobile phone can be used 
 instead of an NFC tag to sign-in and sign-out.
 
-Before you try to sign-in with your mobile phone, some preparations are necessary:
+Before you try to sign in with your mobile phone, some preparations are necessary:
 
 1. **Confirm that your phone has NFC**
 
