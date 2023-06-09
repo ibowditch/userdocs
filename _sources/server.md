@@ -11,6 +11,7 @@ web application. The Kiosk is the "shopfront" of the system, and is used most fr
 Brigade members can also access the web application directly, using their phone, tablet, or PC, as long as it has 
 an internet connection and a browser available. This section describes the services available on the web portal.
 
+(logging_in)=
 ## Logging In
 
 ```{margin} Separate Domains
@@ -344,7 +345,10 @@ Brigade Activity Log (click to enlarge)
 (at-stat)=
 ### At Station
 
-The **At Station** item shows a replica of the Kiosk, including all events and members attending. 
+The **At Station** item shows a replica of the Kiosk, including all events and members attending.
+
+If, for any reason, the station needs to be evacuated, this page can be accessed on a phone to see who was 
+in the building at the time.
 
 :::{figure-md} dashboard
 :class: myclass

@@ -25,7 +25,7 @@ adjust by adding more servers and network capacity within defined bounds, and wi
 
 ## Security
 
-The RFStAG web application is built using the Django platform, which has 
+The RFStag web application is built using the Django platform, which has 
 [effective protections](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security) 
 against a number of common threats, including XSS and CSRF attacks.
 
@@ -68,7 +68,7 @@ but the following is a summary of the main protections:
 
 ### Server
 
-t2.medium used as main server. Up to 4 servers can be deployed if demand requires.
+t3.medium used as main server. Up to 4 servers can be deployed if demand requires.
 
 ## Software
 
