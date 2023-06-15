@@ -18,7 +18,7 @@ an internet connection and a browser available. This section describes the servi
 The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you need to say which one you require.
 ```
 
-The web portal can be reached at <https://brigade.rsftag.com/bfb>. Note that you need to substitute the word 
+The web portal can be reached at <https://brigade.rfstag.com/bfb>. Note that you need to substitute the word 
 <span style="color:blue;">brigade</span> in this url with the actual name of your brigade (e.g. westleigh).
 
 You will be challenged to provide a username and password before you can login to the system.

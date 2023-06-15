@@ -135,6 +135,22 @@ a vibration on your phone when it receives the url from the tag reader.
 5. The system will {ref}`react the same way<flowchart>` as it would if you had presented an NFC tag to the reader.
 The result will be shown on your phone, and the kiosk screen will be updated.
 
+:::{admonition} Phone Sign-in uses One-Time Token
+:name: phonetagexpire
+:class: warning
+
+The url used to sign-in from a phone is generated on the kiosk, and contains a unique token.
+
+This url is valid for only a short period, and can only be used once. If you try to use the 
+same url again to sign in, it won't work, and will report that the url has expired.
+
+If you present your phone to the tag reader again, a new url wil be sent to the phone, and this will work as though 
+you had tagged a second time.
+
+:::
+
+
+
    
 (blank_kiosk)=
 ### What if the Kiosk Screen is Blank?
