@@ -149,6 +149,7 @@
 <li class="toctree-l1"><a class="reference internal" href="server.html">4. Web Portal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="administration.html">5. Administration Procedures (Under construction)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="technology.html">6. Technology (Under construction)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internal.html">7. Internal Procedures (Under construction)</a></li>
 </ul>
 
     </div>
@@ -397,7 +398,7 @@ probably in 3Q2023.</p>
 <p>Most mobile phones also have NFC capability, which can be used for electronic banking,
 transport cards, etc. The Kiosk software has been updated to use this NFC capability so that mobile phone can be used
 instead of an NFC tag to sign-in and sign-out.</p>
-<p>Before you try to sign-in with your mobile phone, some preparations are necessary:</p>
+<p>Before you try to sign in with your mobile phone, some preparations are necessary:</p>
 <ol class="arabic">
 <li><p><strong>Confirm that your phone has NFC</strong></p>
 <p>Most modern phones have NFC, and if you already use your phone for electronic banking or as a transport (Opal) card,
@@ -428,6 +429,14 @@ a vibration on your phone when it receives the url from the tag reader.</p></li>
 <li><p>The system will <a class="reference internal" href="#flowchart"><span class="std std-ref">react the same way</span></a> as it would if you had presented an NFC tag to the reader.
 The result will be shown on your phone, and the kiosk screen will be updated.</p></li>
 </ol>
+<div class="warning admonition" id="phonetagexpire">
+<p class="admonition-title">Phone Sign-in uses One-Time Token</p>
+<p>The url used to sign-in from a phone is generated on the kiosk, and contains a unique token.</p>
+<p>This url is valid for only a short period, and can only be used once. If you try to use the
+same url again to sign in, it won’t work, and will report that the url has expired.</p>
+<p>If you present your phone to the tag reader again, a new url wil be sent to the phone, and this will work as though
+you had tagged a second time.</p>
+</div>
 </section>
 <section id="what-if-the-kiosk-screen-is-blank">
 <span id="blank-kiosk"></span><h3><span class="section-number">2.1.3. </span>What if the Kiosk Screen is Blank?<a class="headerlink" href="#what-if-the-kiosk-screen-is-blank" title="Permalink to this headline">#</a></h3>
