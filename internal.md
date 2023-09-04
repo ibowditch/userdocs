@@ -641,6 +641,7 @@ Then redeem credits on AWS Credits page:
 * Save in Git
   * ghp-import -n -p -f _build/html
     * NB: will need latest GIT token as password: see https://github.com/settings/tokens
+    * Use the google authenticator app to get access when prompted.
 
 * Commit and Push whole thing
   * This will update both git version at https://ibowditch.github.io/userdocs

@@ -388,14 +388,9 @@ your administrator may remind you to use your tag if they see you are repeatedly
 </section>
 <section id="signing-in-using-your-mobile-phone">
 <h3><span class="section-number">2.1.2. </span>Signing in Using Your Mobile Phone<a class="headerlink" href="#signing-in-using-your-mobile-phone" title="Permalink to this headline">#</a></h3>
-<div class="tip admonition" id="phonetag">
-<p class="admonition-title">Phone Sign-in Not Yet Generally Available</p>
-<p>Phone sign-in is currently on limited trial. When the trial is completed, it will be distributed to all brigades,
-probably in 3Q2023.</p>
-</div>
 <p>The Kiosk uses an NFC (Near Field Communications) tag reader to allow Members to sign-in and sign-out with an NFC tag.</p>
 <p>Most mobile phones also have NFC capability, which can be used for electronic banking,
-transport cards, etc. The Kiosk software has been updated to use this NFC capability so that mobile phone can be used
+transport cards, etc. The Kiosk software has been updated to use this NFC capability so that a mobile phone can be used
 instead of an NFC tag to sign-in and sign-out.</p>
 <p>Before you try to sign in with your mobile phone, some preparations are necessary:</p>
 <ol class="arabic">
@@ -417,6 +412,19 @@ This will mean you don’t have to login each time you access the web portal, an
 phone much quicker.</p>
 </li>
 </ol>
+<div class="tip admonition" id="phonetesttag">
+<p class="admonition-title">Make a test tag to check phone NFC</p>
+<p>You can easily make a test tag to check if a member’s phone is ready for signing in, using the <strong>NFC Tools</strong> phone app
+(available for <a class="reference external" href="https://apps.apple.com/us/app/nfc-tools/id1252962749">iPhone</a>
+and <a class="reference external" href="https://play.google.com/store/apps/details?id=com.wakdev.wdnfc&amp;amp;hl=en&amp;amp;gl=US">android</a>)</p>
+<p>Get a spare tag and write the url for your brigade’s web portal (eg. <strong>https://your-brigade.rfstag.com</strong>) onto the tag.</p>
+<p>Then put the tag on the back of the member’s phone. The phone should read the url from the tag, open a browser tab, and
+go to your brigade’s web portal. You may need to <a class="reference internal" href="server.html#serverh"><span class="std std-ref">log in to the web portal</span></a> first - if you do, be sure to
+save the password in the password manager.</p>
+<p>If that doesn’t work, check the phone’s NFC settings.</p>
+<p>When you can put the tag on the back of the phone, and it goes immediately to your brigade’s web portal, you are ready
+to sign in on RFStag.</p>
+</div>
 <p>Once you have set up NFC on your phone, and logged into the web portal on your phone, you are ready to go.</p>
 <p>Here’s how you sign-in using your phone:</p>
 <ol class="arabic simple">
