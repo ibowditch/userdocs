@@ -14,7 +14,7 @@ an internet connection and a browser available. This section describes the servi
 (logging_in)=
 ## Logging In
 
-```{margin} Separate Domains 
+```{margin} Separate Domains
 The same server supports {ref}`multiple brigades<multi-tenant-tech>`, so you need to say which one you require.
 ```
 
