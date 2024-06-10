@@ -433,7 +433,7 @@ The Kiosk will beep when a tag is registered, as follows:
 When you place your tag on the reader to sign in, the system goes through the following steps to work out an 
 appropriate action:
 
-1. Check if you are an active member of this brigade. If not, you can't sign-in.
+1. Check if you are a member of this brigade. If not, you can't sign-in.
 
 2. Check if you are already signed in to an event today. If you are, your tag will sign you out of that event.
 
