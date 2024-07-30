@@ -50,8 +50,8 @@ but the following is a summary of the main protections:
 * Additional protections, including HTTP Strict Transport Security (HSTS), Cross site scripting (XSS), Cross site request 
   forgery (CSRF), and all others directly supported by Django are also included in the web application. 
   
-* [RFSTAG](https://observatory.mozilla.org/analyze/rfstag.org) is rated as B (secure), by mozilla, which is higher 
-  than most sites, including [activ](https://observatory.mozilla.org/analyze/activ.rfs.nsw.gov.au) (rated F).
+* [RFSTAG](https://observatory.mozilla.org/analyze/rfstag.org) is rated as A+ (very secure), by Mozilla Observatory, 
+  which is higher than most sites, including [activ](https://observatory.mozilla.org/analyze/activ.rfs.nsw.gov.au) (rated F).
   
 * Data is held on a Relational Database System (RDS) stored within Amazon Web Services. Only the web application can 
   access the database, and access to the web application is restricted to registered users.

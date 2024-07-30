@@ -184,8 +184,36 @@ and as I find better ways of doing things.
 The system first went live in November 2018, and has been running (almost) continuously since then, including through 
 the major fires of 2019-2020. 
 
-The user base started with my home brigade (~70 members), then grew to include another 8 brigades, and it now supports 
-more than 700 users.
+The user base started with my home brigade (~70 members), then grew to include another 12 brigades, and it now supports 
+more than 1000 users.
+
+:::{admonition} Why not use QR Codes?
+
+I initially started to build this attendance system using QR codes, but soon realised that there were serious limitations
+to using them.
+
+Some {ref}`key requirements<main-reqs>` can not be met with a QR code based solution, viz :
+
+* **Physical presence** at the station can not be confirmed, since it is very easy to copy the QR code 
+and use it anywhere. Similarly, the url represented by the QR code can easily be bookmarked and used later. 
+Either of these would allow members to sign in from anywhere (Bali?), rather than only at the station. 
+
+* **Unique identification** of the member is difficult, unless the target url (eg. google doc or spreadsheet) is secured, 
+and requires a login. If the target url is not secured, it will be open to anyone (including non-members), and anyone 
+can sign in, or see who is at the station (and not home), or even possibly change the attendance records, unless 
+it is carefully controlled.
+
+* **Participation in a specific activity** is difficult to determine with a QR code, since the target url is generally fixed.
+We have the same problems as a {ref}`Bundy style sign in<need-event>` - i.e. if there are multiple events happening at 
+the station, which one is the member attending? This could be very significant in 
+the event of coronial enquiries or insurance claims, and the attendance records must be unequivocal about what the 
+member was doing while at the station.
+
+* **Official confirmation** and scrutiny of the attendance log is also not clear, unless the OIC is identified 
+in the log, and they have the ability to check and update the log as needed.
+
+:::
+
 
 
 ## Site Map
