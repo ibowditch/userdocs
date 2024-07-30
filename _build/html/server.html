@@ -314,15 +314,21 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-qualifications">4.4.3. Member Qualifications</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.4. Brigade Activity Summary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-log">4.4.5. Brigade Activity Log</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#at-station">4.4.6. At Station</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#events-calendar">4.4.7. Events Calendar</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-event-details">4.4.7.1. Viewing Event Details</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#week-view">4.4.7.2. Week View</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-events-officers">4.4.7.3. Adding New Events (Officers)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-to-attend">4.4.7.4. Plan to Attend</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-off-on-an-event-officers">4.4.7.5. Signing Off on an Event (Officers)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-currency">4.4.4. Member Skills Currency</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-table">4.4.4.1. Member Skills Table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessors">4.4.4.2. Assessors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">4.4.4.3. Assessment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.5. Brigade Activity Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-log">4.4.6. Brigade Activity Log</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#at-station">4.4.7. At Station</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#events-calendar">4.4.8. Events Calendar</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-event-details">4.4.8.1. Viewing Event Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#week-view">4.4.8.2. Week View</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-events-officers">4.4.8.3. Adding New Events (Officers)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-to-attend">4.4.8.4. Plan to Attend</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-off-on-an-event-officers">4.4.8.5. Signing Off on an Event (Officers)</a></li>
 </ul>
 </li>
 </ul>
@@ -615,8 +621,78 @@ attained by a member in these categories. If it is coloured Green, the qualifica
 <p>If the member doesn’t have any current qualifications in a category, but does have expired ones, it will show the
 highest expired qualification in Red. Expired qualifications are not included in the count at the foot of each column.</p>
 </section>
+<section id="member-skills-currency">
+<span id="memb-skills"></span><h3><span class="section-number">4.4.4. </span>Member Skills Currency<a class="headerlink" href="#member-skills-currency" title="Permalink to this headline">#</a></h3>
+<p>Some districts require brigades to actively assess and refresh the basic fire-fighting skills of their members on a
+regular basis, and this is generally done before the start of a new fire season.</p>
+<p>The district may provide guidelines and checklists for specific skill sets that should be checked, but it is up to the
+local brigades to ensure that these checks are done, and that records are kept by the brigade to show what checks
+have been completed.</p>
+<p>My home district - Hornsby/Ku-ring-gai - recently introduced a Local Standard Operation Procedure (LSOP) <strong>6.4.1 MEMBER
+SKILLS MAINTENANCE</strong>, which specifies the checks to be done, and the form to be used to record the results of these checks.</p>
+<p>I have added a new function to RFStag which wil hopefully make it easy to run these checks, and to record the results.</p>
+<section id="member-skills-table">
+<h4><span class="section-number">4.4.4.1. </span>Member Skills Table<a class="headerlink" href="#member-skills-table" title="Permalink to this headline">#</a></h4>
+<p>This table has a row for each brigade member, and a column for each skill to be checked. If the member has successfully
+passed a check of these skills, the date of the check is recorded in the table. If the cell is blank, no check has yet
+been completed.</p>
+<figure class="myclass align-default" id="user-brigade-skills">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/user_brigade_skills.jpg"><img alt="Brigade Skills Table" class="bg-primary mb-1" src="_images/user_brigade_skills.jpg" style="width: 1467px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Brigade Skills Table(click to enlarge)</span><a class="headerlink" href="#user-brigade-skills" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the case of Village or Crew Leader checks, these will be marked “n/a” if the member is not qualified to that level,
+so the check is not applicable.</p>
+<p>There are currently 5 groups of checks to be recorded (these are subject to change):</p>
+<ol class="arabic simple">
+<li><p>All Members (Safety, Radio, Overrun, Teams)</p></li>
+<li><p>Firefighters (Draft, Tools, Fires, Hoses, Pumps)</p></li>
+<li><p>Basic First Aid (optional)</p></li>
+<li><p>Village Skills</p></li>
+<li><p>Crew leader Skills</p></li>
+</ol>
+</section>
+<section id="assessors">
+<h4><span class="section-number">4.4.4.2. </span>Assessors<a class="headerlink" href="#assessors" title="Permalink to this headline">#</a></h4>
+<p>Normally, the current set of Field Officers are authorised to perform skill checks on members, including other Field
+Officers. Note that no Assessor is permitted to check themselves.</p>
+<p>If required, other members who are not currently Field Officers, can be added (by the brigade administrator) to the
+User Group <strong>Assessors</strong>, and they will then have permission to run skills checks on members in the same way as
+Field Officers (see below).</p>
+</section>
+<section id="assessment">
+<h4><span class="section-number">4.4.4.3. </span>Assessment<a class="headerlink" href="#assessment" title="Permalink to this headline">#</a></h4>
+<p>Assessors will see the word <strong>Check</strong> in the Skills table when a skills check has not yet been completed.</p>
+<figure class="myclass align-default" id="assess-brigade-skills">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/assess_brigade_skills.jpg"><img alt="Assessor Brigade Skills Table" class="bg-primary mb-1" src="_images/assess_brigade_skills.jpg" style="width: 1467px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Assessor Brigade Skills Table(click to enlarge)</span><a class="headerlink" href="#assess-brigade-skills" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If they click on <strong>Check</strong>, a checklist will appear which shows the specific checks to be tested.</p>
+<figure class="myclass align-default" id="skill-checks">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/check_skills_overrun.jpg"><img alt="Skills Checklist View" class="bg-primary mb-1" src="_images/check_skills_overrun.jpg" style="width: 1467px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Skills Checklist (click to enlarge)</span><a class="headerlink" href="#skill-checks" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>These are just bullet points, and full details of the checks can be found in the appropriate SOP.</p>
+<p>When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the <strong>Pass</strong> button,
+and details of the check will be recorded. The date of the successful check will be added to the table, and the name
+of the Assessor is also recorded.</p>
+<p>The Assessor can also click on the Member’s name (leftmost column), and they will see the status of all skills for that
+member. They can also run a check on a skills set by clicking <strong>Check</strong>.</p>
+<figure class="myclass align-default" id="member-skill-checks">
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/member_skills.jpg"><img alt="Member Skills View" class="bg-primary mb-1" src="_images/member_skills.jpg" style="width: 1467px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Member Skills (click to enlarge)</span><a class="headerlink" href="#member-skill-checks" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 <section id="brigade-activity-summary">
-<span id="brigact-summ"></span><h3><span class="section-number">4.4.4. </span>Brigade Activity Summary<a class="headerlink" href="#brigade-activity-summary" title="Permalink to this headline">#</a></h3>
+<span id="brigact-summ"></span><h3><span class="section-number">4.4.5. </span>Brigade Activity Summary<a class="headerlink" href="#brigade-activity-summary" title="Permalink to this headline">#</a></h3>
 <p>The <strong>Brigade Activity Summary</strong> item shows a summary of brigade activities over a defined period.</p>
 <p>The listing shows the number of events and total member hours for each category of events held during
 the specified period, as well as totals for each.</p>
@@ -626,14 +702,14 @@ start/end dates.</p>
 <figure class="myclass align-default" id="brigact-summary">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/brigact-summ.jpg"><img alt="Brigade Activity Summary" class="bg-primary mb-1" src="_images/brigact-summ.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Brigade Activity Summary (click to enlarge)</span><a class="headerlink" href="#brigact-summary" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Brigade Activity Summary (click to enlarge)</span><a class="headerlink" href="#brigact-summary" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To view the events in each Category, click the category name, and this will show a listing of all individual events
 of that category that were held in the specified period.</p>
 </section>
 <section id="brigade-activity-log">
-<span id="brigact-log"></span><h3><span class="section-number">4.4.5. </span>Brigade Activity Log<a class="headerlink" href="#brigade-activity-log" title="Permalink to this headline">#</a></h3>
+<span id="brigact-log"></span><h3><span class="section-number">4.4.6. </span>Brigade Activity Log<a class="headerlink" href="#brigade-activity-log" title="Permalink to this headline">#</a></h3>
 <p>The <strong>Brigade Activity Log</strong> item shows a listing of brigade events over a defined period.</p>
 <p>Events are shown in ascending date order, starting from the date specified as the start of the reporting Period.</p>
 <p>The order of events can be changed by clicking any of the table headings.</p>
@@ -647,19 +723,19 @@ start/end dates.</p>
 <figure class="myclass align-default" id="brigact-log-pic">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/brigact-log.jpg"><img alt="Brigade Activity Log" class="bg-primary mb-1" src="_images/brigact-log.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Brigade Activity Log (click to enlarge)</span><a class="headerlink" href="#brigact-log-pic" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Brigade Activity Log (click to enlarge)</span><a class="headerlink" href="#brigact-log-pic" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="at-station">
-<span id="at-stat"></span><h3><span class="section-number">4.4.6. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">#</a></h3>
+<span id="at-stat"></span><h3><span class="section-number">4.4.7. </span>At Station<a class="headerlink" href="#at-station" title="Permalink to this headline">#</a></h3>
 <p>The <strong>At Station</strong> item shows a replica of the Kiosk, including all events and members attending.</p>
 <p>If, for any reason, the station needs to be evacuated, this page can be accessed on a phone to see who was
 in the building at the time.</p>
 <figure class="myclass align-default" id="dashboard">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/dashboard.jpg"><img alt="At Station" class="bg-primary mb-1" src="_images/dashboard.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">At Station (click to enlarge)</span><a class="headerlink" href="#dashboard" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Unlike the Kiosk, you can not sign-in with this view, nor can you change any details.</p>
@@ -667,12 +743,12 @@ in the building at the time.</p>
 including sign-in/out or new events created.</p>
 </section>
 <section id="events-calendar">
-<span id="calendar"></span><h3><span class="section-number">4.4.7. </span>Events Calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">#</a></h3>
+<span id="calendar"></span><h3><span class="section-number">4.4.8. </span>Events Calendar<a class="headerlink" href="#events-calendar" title="Permalink to this headline">#</a></h3>
 <p>A calendar view is provided so members can see all brigade activities in the past, and also the future.</p>
 <figure class="myclass align-default" id="cal-month">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cal-month-a.jpg"><img alt="Calendar Month View" class="bg-primary mb-1" src="_images/cal-month-a.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Calendar Month View (click to enlarge)</span><a class="headerlink" href="#cal-month" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Calendar Month View (click to enlarge)</span><a class="headerlink" href="#cal-month" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Notes</strong>:</p>
@@ -686,30 +762,30 @@ as required. Move forward or backward in time using the arrows in the top right.
 all “Training” events, or those attended by a particular member (just search for their surname).</p></li>
 </ul>
 <section id="viewing-event-details">
-<h4><span class="section-number">4.4.7.1. </span>Viewing Event Details<a class="headerlink" href="#viewing-event-details" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">4.4.8.1. </span>Viewing Event Details<a class="headerlink" href="#viewing-event-details" title="Permalink to this headline">#</a></h4>
 <p>You can view the details of any event in the calendar just by clicking on it.</p>
 <p>In general, you will see a view like this:</p>
 <figure class="myclass align-default" id="ev-read-view">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/ev-read-view.jpg"><img alt="Event read-only view" class="bg-primary mb-1" src="_images/ev-read-view.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Event read-only view (click to enlarge)</span><a class="headerlink" href="#ev-read-view" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that all the fields are grey, which means you can’t change anything. However, if you were logged in as the OIC of
 this event, you would be able to update the details as shown earlier <a class="reference internal" href="kiosk.html#event-update"><span class="std std-ref">for the Kiosk</span></a>.</p>
 </section>
 <section id="week-view">
-<h4><span class="section-number">4.4.7.2. </span>Week View<a class="headerlink" href="#week-view" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">4.4.8.2. </span>Week View<a class="headerlink" href="#week-view" title="Permalink to this headline">#</a></h4>
 <p>Click the <span class="badge badge-pill badge-primary"><strong>week</strong></span> button at the top of the page to go to the Week view:</p>
 <figure class="myclass align-default" id="call-week-a">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cal-week-a.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/cal-week-a.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Calendar Week View (click to enlarge)</span><a class="headerlink" href="#call-week-a" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Calendar Week View (click to enlarge)</span><a class="headerlink" href="#call-week-a" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="adding-new-events-officers">
-<span id="cal-add-event"></span><h4><span class="section-number">4.4.7.3. </span>Adding New Events (Officers)<a class="headerlink" href="#adding-new-events-officers" title="Permalink to this headline">#</a></h4>
+<span id="cal-add-event"></span><h4><span class="section-number">4.4.8.3. </span>Adding New Events (Officers)<a class="headerlink" href="#adding-new-events-officers" title="Permalink to this headline">#</a></h4>
 <p>If you are logged in as an Officer, you can create a new event in the calendar by selecting the area representing the
 times your activity will run (shown in blue above). You will then be asked to provide the details of the event. You can
 only create new events in the future like this, to protect the integrity of the attendance record.</p>
@@ -724,7 +800,7 @@ can see what activities are coming up in the brigade calendar.</p>
 </div>
 </section>
 <section id="plan-to-attend">
-<h4><span class="section-number">4.4.7.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">4.4.8.4. </span>Plan to Attend<a class="headerlink" href="#plan-to-attend" title="Permalink to this headline">#</a></h4>
 <p>Members can indicate their intention to attend future events using the calendar.</p>
 <p>This allows Officers to get expected numbers for their planned activities, and to see who is interested
 in attending, without needing to exchange a lot of emails.</p>
@@ -745,7 +821,7 @@ the top right if you have attended them. Past events can not be changed on the c
 and confirm that you are on the list.</p>
 </section>
 <section id="signing-off-on-an-event-officers">
-<span id="off-signoff"></span><h4><span class="section-number">4.4.7.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">#</a></h4>
+<span id="off-signoff"></span><h4><span class="section-number">4.4.8.5. </span>Signing Off on an Event (Officers)<a class="headerlink" href="#signing-off-on-an-event-officers" title="Permalink to this headline">#</a></h4>
 <p>According to the original Attendance Book, Officers are required to check the attendance records for any activity
 they run, and once corrected and checked, sign it off, and cross out the page so that it can’t be changed again.</p>
 <p>In the sign-in system, this can be done by opening the calendar and finding the event you (the OIC) have run,
@@ -755,7 +831,7 @@ the box marked “Checked” to sign it off.</p>
 <figure class="myclass align-default" id="offcheck">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/offcheck.jpg"><img alt="Calendar Week View" class="bg-primary mb-1" src="_images/offcheck.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.17 </span><span class="caption-text">Officer Checking their Event (click to enlarge)</span><a class="headerlink" href="#offcheck" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Once an event has been completed, only the OIC can update the details.</p>
@@ -809,7 +885,7 @@ provides a list of all TRAINING events, with brief details of each activity.</p>
 <figure class="myclass align-default" id="train-qtr">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/train-qtr.jpg"><img alt="Training Quarterly Return" class="bg-primary mb-1" src="_images/train-qtr.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Training Quarterly Return (click to enlarge)</span><a class="headerlink" href="#train-qtr" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.18 </span><span class="caption-text">Training Quarterly Return (click to enlarge)</span><a class="headerlink" href="#train-qtr" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -876,7 +952,7 @@ following form:</p>
 <figure class="myclass align-default" id="vehlog">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/vehlog.jpg"><img alt="Vehicle Log (single journey)" class="bg-primary mb-1" src="_images/vehlog.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Vehicle Log (single journey) (click to enlarge)</span><a class="headerlink" href="#vehlog" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.19 </span><span class="caption-text">Vehicle Log (single journey) (click to enlarge)</span><a class="headerlink" href="#vehlog" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The vehicle which you selected earlier is fixed, as is the initial odometer reading (taken from prior records).</p>
@@ -892,7 +968,7 @@ following form:</p>
 <figure class="myclass align-default" id="veh-mov">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/veh-mov.jpg"><img alt="Vehicle Movements" class="bg-primary mb-1" src="_images/veh-mov.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Vehicle Movements (click to enlarge)</span><a class="headerlink" href="#veh-mov" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.20 </span><span class="caption-text">Vehicle Movements (click to enlarge)</span><a class="headerlink" href="#veh-mov" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Each vehicle is listed, and it’s use in various types of activity is shown. Clicking on the numbers will show a
@@ -905,7 +981,7 @@ full listing of movements for that vehicles in the required category.</p>
 <figure class="myclass align-default" id="drvmov">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/drvmov.jpg"><img alt="Vehicle Movements" class="bg-primary mb-1" src="_images/drvmov.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.17 </span><span class="caption-text">Driver Journeys (click to enlarge)</span><a class="headerlink" href="#drvmov" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.21 </span><span class="caption-text">Driver Journeys (click to enlarge)</span><a class="headerlink" href="#drvmov" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Each brigade driver is listed, and their participation in various types of activity is shown. Clicking on the
@@ -919,7 +995,7 @@ see <a class="reference internal" href="events.html#ev-veh"><span class="std std
 <figure class="myclass align-default" id="vehcal">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/vehcal.jpg"><img alt="Vehicle Bookings" class="bg-primary mb-1" src="_images/vehcal.jpg" style="width: 1467px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.18 </span><span class="caption-text">Vehicle Bookings (click to enlarge)</span><a class="headerlink" href="#vehcal" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.22 </span><span class="caption-text">Vehicle Bookings (click to enlarge)</span><a class="headerlink" href="#vehcal" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>It shows all vehicle bookings, but can be filtered using Search (top right) to restrict the events shown.</p>
@@ -988,15 +1064,21 @@ see <a class="reference internal" href="events.html#ev-veh"><span class="std std
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-qualifications">4.4.3. Member Qualifications</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.4. Brigade Activity Summary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-log">4.4.5. Brigade Activity Log</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#at-station">4.4.6. At Station</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#events-calendar">4.4.7. Events Calendar</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-event-details">4.4.7.1. Viewing Event Details</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#week-view">4.4.7.2. Week View</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-events-officers">4.4.7.3. Adding New Events (Officers)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-to-attend">4.4.7.4. Plan to Attend</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-off-on-an-event-officers">4.4.7.5. Signing Off on an Event (Officers)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-currency">4.4.4. Member Skills Currency</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-table">4.4.4.1. Member Skills Table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessors">4.4.4.2. Assessors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">4.4.4.3. Assessment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.5. Brigade Activity Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-log">4.4.6. Brigade Activity Log</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#at-station">4.4.7. At Station</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#events-calendar">4.4.8. Events Calendar</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-event-details">4.4.8.1. Viewing Event Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#week-view">4.4.8.2. Week View</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-events-officers">4.4.8.3. Adding New Events (Officers)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-to-attend">4.4.8.4. Plan to Attend</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signing-off-on-an-event-officers">4.4.8.5. Signing Off on an Event (Officers)</a></li>
 </ul>
 </li>
 </ul>

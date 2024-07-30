@@ -291,6 +291,97 @@ Qualifications come in two main types:
    highest expired qualification in Red. Expired qualifications are not included in the count at the foot of each column.
 
 
+(memb-skills)=
+### Member Skills Currency
+
+Some districts require brigades to actively assess and refresh the basic fire-fighting skills of their members on a 
+regular basis, and this is generally done before the start of a new fire season.
+
+The district may provide guidelines and checklists for specific skill sets that should be checked, but it is up to the
+local brigades to ensure that these checks are done, and that records are kept by the brigade to show what checks 
+have been completed.
+
+My home district - Hornsby/Ku-ring-gai - recently introduced a Local Standard Operation Procedure (LSOP) **6.4.1 MEMBER 
+SKILLS MAINTENANCE**, which specifies the checks to be done, and the form to be used to record the results of these checks.
+
+I have added a new function to RFStag which wil hopefully make it easy to run these checks, and to record the results.
+
+#### Member Skills Table
+
+This table has a row for each brigade member, and a column for each skill to be checked. If the member has successfully 
+passed a check of these skills, the date of the check is recorded in the table. If the cell is blank, no check has yet 
+been completed.
+
+:::{figure-md} user_brigade_skills
+:class: myclass
+
+<img src="assets/images/user_brigade_skills.jpg" alt="Brigade Skills Table" width="1467" class="bg-primary mb-1">
+
+Brigade Skills Table(click to enlarge)
+:::
+
+In the case of Village or Crew Leader checks, these will be marked "n/a" if the member is not qualified to that level, 
+so the check is not applicable.
+
+There are currently 5 groups of checks to be recorded (these are subject to change):
+
+1. All Members (Safety, Radio, Overrun, Teams)
+2. Firefighters (Draft, Tools, Fires, Hoses, Pumps)
+3. Basic First Aid (optional)
+4. Village Skills
+5. Crew leader Skills
+
+
+#### Assessors
+
+Normally, the current set of Field Officers are authorised to perform skill checks on members, including other Field 
+Officers. Note that no Assessor is permitted to check themselves.
+
+If required, other members who are not currently Field Officers, can be added (by the brigade administrator) to the 
+User Group **Assessors**, and they will then have permission to run skills checks on members in the same way as 
+Field Officers (see below).
+
+#### Assessment
+
+Assessors will see the word **Check** in the Skills table when a skills check has not yet been completed. 
+
+:::{figure-md} assess_brigade_skills
+:class: myclass
+
+<img src="assets/images/assess_brigade_skills.jpg" alt="Assessor Brigade Skills Table" width="1467" class="bg-primary mb-1">
+
+Assessor Brigade Skills Table(click to enlarge)
+:::
+
+
+If they click on **Check**, a checklist will appear which shows the specific checks to be tested. 
+
+:::{figure-md} skill-checks
+:class: myclass
+
+<img src="assets/images/check_skills_overrun.jpg" alt="Skills Checklist View" width="1467" class="bg-primary mb-1">
+
+Skills Checklist (click to enlarge)
+:::
+
+These are just bullet points, and full details of the checks can be found in the appropriate SOP.
+
+When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the **Pass** button, 
+and details of the check will be recorded. The date of the successful check will be added to the table, and the name 
+of the Assessor is also recorded.
+
+The Assessor can also click on the Member's name (leftmost column), and they will see the status of all skills for that 
+member. They can also run a check on a skills set by clicking **Check**.
+
+:::{figure-md} member-skill-checks
+:class: myclass
+
+<img src="assets/images/member_skills.jpg" alt="Member Skills View" width="1467" class="bg-primary mb-1">
+
+Member Skills (click to enlarge)
+:::
+
+
 (brigact-summ)=
 ### Brigade Activity Summary
 
