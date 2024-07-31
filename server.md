@@ -331,7 +331,7 @@ There are currently 5 groups of checks to be recorded (these are subject to chan
 4. Village Skills
 5. Crew leader Skills
 
-
+(assessors)=
 #### Assessors
 
 Normally, the current set of Field Officers are authorised to perform skill checks on members, including other Field 
@@ -380,6 +380,23 @@ member. They can also run a check on a skills set by clicking **Check**.
 
 Member Skills (click to enlarge)
 :::
+
+#### Administration
+
+To get the best from Member Skills Currency, brigade administrators should ensure 
+that {ref}`Officers are up-to-date<change-officers>`, so that Field Officers can be identified, and 
+that {ref}`member qualifications are up-to-date<sync-sap>`, so CL and VF members can be identified.
+
+Current Field Officers will automatically be considered as {ref}`Assessors<assessors>`. Any other members who should 
+be an assessor can be added by adding the corresponding User to the Assessor group.
+
+Brigade Administrators should ensure that all Assessors are familiar with the procedure for 
+{ref}`logging in to the web portal<logging_in>` so that any skills assessment they do will be recorded in their name.
+
+If any Competency records need to be modified or deleted, the brigade administrator can locate them in admin
+under Brigade/Certifications. Use the Category filter (right hand side) "Skill Checks" to show only annual competencies. 
+
+
 
 
 (brigact-summ)=
@@ -581,7 +598,7 @@ Once an event has been completed, only the OIC can update the details.
 Only the Personnel/Membership Officer and their assistants have access to this Menu.
 ```
 
-
+(change-officers)=
 ### Change Officers
 
 Most brigades hold elections every year, and new Officers are elected by members.
