@@ -390,6 +390,9 @@ that {ref}`member qualifications are up-to-date<sync-sap>`, so CL and VF members
 Current Field Officers will automatically be considered as {ref}`Assessors<assessors>`. Any other members who should 
 be an assessor can be added by adding the corresponding User to the Assessor group.
 
+Brigade Administrators should ensure that all Assessors are familiar with the procedure for 
+{ref}`logging in to the web portal<logging_in>` so that any skills assessment they do will be recorded in their name.
+
 If any Competency records need to be modified or deleted, the brigade administrator can locate them in admin
 under Brigade/Certifications. Use the Category filter (right hand side) "Skill Checks" to show only annual competencies. 
 
