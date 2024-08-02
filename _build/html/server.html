@@ -317,10 +317,10 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-qualifications">4.4.3. Member Qualifications</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-currency">4.4.4. Member Skills Currency</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-table">4.4.4.1. Member Skills Table</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessors">4.4.4.2. Assessors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">4.4.4.3. Assessment</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#administration">4.4.4.4. Administration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-and-administration">4.4.4.1. Preparation and Administration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-table">4.4.4.2. Member Skills Table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessors">4.4.4.3. Assessors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">4.4.4.4. Assessment</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.5. Brigade Activity Summary</a></li>
@@ -634,8 +634,21 @@ have been completed.</p>
 <p>My home district - Hornsby/Ku-ring-gai - recently introduced a Local Standard Operation Procedure (LSOP) <strong>6.4.1 MEMBER
 SKILLS MAINTENANCE</strong>, which specifies the checks to be done, and the form to be used to record the results of these checks.</p>
 <p>I have added a new function to RFStag which wil hopefully make it easy to run these checks, and to record the results.</p>
+<section id="preparation-and-administration">
+<h4><span class="section-number">4.4.4.1. </span>Preparation and Administration<a class="headerlink" href="#preparation-and-administration" title="Permalink to this headline">#</a></h4>
+<p>To get the best from Member Skills Currency, brigade administrators should ensure
+that <a class="reference internal" href="#change-officers"><span class="std std-ref">Officers are up-to-date</span></a>, so that Field Officers can be correctly identified, and
+that <a class="reference internal" href="administration.html#sync-sap"><span class="std std-ref">member qualifications are up-to-date</span></a>, so CL and VF members can be identified.</p>
+<p>Current Field Officers (i.e. Captain, SDC and DCs) will automatically be considered
+as <a class="reference internal" href="#assessors"><span class="std std-ref">Assessors</span></a>. Any other members who should
+be an assessor can be included by adding their corresponding User to the Assessor group.</p>
+<p>Brigade Administrators should ensure that all Assessors are familiar with the procedure for
+<a class="reference internal" href="#logging-in"><span class="std std-ref">logging in to the web portal</span></a> so that any skills assessment they do will be recorded in their name.</p>
+<p>If any Competency records need to be modified or deleted, the brigade administrator can locate them in admin
+under Brigade/Certifications. Use the Category filter (right hand side) “Skill Checks” to show only annual competencies.</p>
+</section>
 <section id="member-skills-table">
-<h4><span class="section-number">4.4.4.1. </span>Member Skills Table<a class="headerlink" href="#member-skills-table" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">4.4.4.2. </span>Member Skills Table<a class="headerlink" href="#member-skills-table" title="Permalink to this headline">#</a></h4>
 <p>This table has a row for each brigade member, and a column for each skill to be checked. If the member has successfully
 passed a check of these skills, the date of the check is recorded in the table. If the cell is blank, no check has yet
 been completed.</p>
@@ -645,27 +658,30 @@ been completed.</p>
 <p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Brigade Skills Table(click to enlarge)</span><a class="headerlink" href="#user-brigade-skills" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<aside class="margin sidebar">
+<p class="sidebar-title">VF and CL</p>
 <p>In the case of Village or Crew Leader checks, these will be marked “n/a” if the member is not qualified to that level,
 so the check is not applicable.</p>
+</aside>
 <p>There are currently 5 groups of checks to be recorded (these are subject to change):</p>
 <ol class="arabic simple">
 <li><p>All Members (Safety, Radio, Overrun, Teams)</p></li>
 <li><p>Firefighters (Draft, Tools, Fires, Hoses, Pumps)</p></li>
 <li><p>Basic First Aid (optional)</p></li>
 <li><p>Village Skills</p></li>
-<li><p>Crew leader Skills</p></li>
+<li><p>Crew Leader Skills</p></li>
 </ol>
 </section>
 <section id="assessors">
-<span id="id2"></span><h4><span class="section-number">4.4.4.2. </span>Assessors<a class="headerlink" href="#assessors" title="Permalink to this headline">#</a></h4>
-<p>Normally, the current set of Field Officers are authorised to perform skill checks on members, including other Field
-Officers. Note that no Assessor is permitted to check themselves.</p>
+<span id="id2"></span><h4><span class="section-number">4.4.4.3. </span>Assessors<a class="headerlink" href="#assessors" title="Permalink to this headline">#</a></h4>
+<p>Normally, the current set of Field Officers, i.e. Captain, Senior DC, and other DCs, are authorised to perform skill
+checks on members, including other Field Officers. Note that no Assessor is permitted to check themselves.</p>
 <p>If required, other members who are not currently Field Officers, can be added (by the brigade administrator) to the
 User Group <strong>Assessors</strong>, and they will then have permission to run skills checks on members in the same way as
 Field Officers (see below).</p>
 </section>
 <section id="assessment">
-<h4><span class="section-number">4.4.4.3. </span>Assessment<a class="headerlink" href="#assessment" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">4.4.4.4. </span>Assessment<a class="headerlink" href="#assessment" title="Permalink to this headline">#</a></h4>
 <p>Assessors will see the word <strong>Check</strong> in the Skills table when a skills check has not yet been completed.</p>
 <figure class="myclass align-default" id="assess-brigade-skills">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/assess_brigade_skills.jpg"><img alt="Assessor Brigade Skills Table" class="bg-primary mb-1" src="_images/assess_brigade_skills.jpg" style="width: 1467px;" /></a>
@@ -681,9 +697,15 @@ Field Officers (see below).</p>
 </figcaption>
 </figure>
 <p>These are just bullet points, and full details of the checks can be found in the appropriate SOP.</p>
-<p>When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the <strong>Pass</strong> button,
+<p>When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the
+<span class="badge badge-pill badge-primary"><strong>Pass</strong></span> button,
 and details of the check will be recorded. The date of the successful check will be added to the table, and the name
 of the Assessor is also recorded.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">Pass shortcut</p>
+<p>Assessors can check each point to keep track of where they are, but they don’t need to, and can
+click <span class="badge badge-pill badge-primary"><strong>Pass</strong></span> at any time.</p>
+</aside>
 <p>The Assessor can also click on the Member’s name (leftmost column), and they will see the status of all skills for that
 member. They can also run a check on a skills set by clicking <strong>Check</strong>.</p>
 <figure class="myclass align-default" id="member-skill-checks">
@@ -692,18 +714,6 @@ member. They can also run a check on a skills set by clicking <strong>Check</str
 <p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Member Skills (click to enlarge)</span><a class="headerlink" href="#member-skill-checks" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
-<section id="administration">
-<h4><span class="section-number">4.4.4.4. </span>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">#</a></h4>
-<p>To get the best from Member Skills Currency, brigade administrators should ensure
-that <a class="reference internal" href="#change-officers"><span class="std std-ref">Officers are up-to-date</span></a>, so that Field Officers can be identified, and
-that <a class="reference internal" href="administration.html#sync-sap"><span class="std std-ref">member qualifications are up-to-date</span></a>, so CL and VF members can be identified.</p>
-<p>Current Field Officers will automatically be considered as <a class="reference internal" href="#assessors"><span class="std std-ref">Assessors</span></a>. Any other members who should
-be an assessor can be added by adding the corresponding User to the Assessor group.</p>
-<p>Brigade Administrators should ensure that all Assessors are familiar with the procedure for
-<a class="reference internal" href="#logging-in"><span class="std std-ref">logging in to the web portal</span></a> so that any skills assessment they do will be recorded in their name.</p>
-<p>If any Competency records need to be modified or deleted, the brigade administrator can locate them in admin
-under Brigade/Certifications. Use the Category filter (right hand side) “Skill Checks” to show only annual competencies.</p>
 </section>
 </section>
 <section id="brigade-activity-summary">
@@ -1080,10 +1090,10 @@ see <a class="reference internal" href="events.html#ev-veh"><span class="std std
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-qualifications">4.4.3. Member Qualifications</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-currency">4.4.4. Member Skills Currency</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-table">4.4.4.1. Member Skills Table</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessors">4.4.4.2. Assessors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">4.4.4.3. Assessment</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#administration">4.4.4.4. Administration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-and-administration">4.4.4.1. Preparation and Administration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#member-skills-table">4.4.4.2. Member Skills Table</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessors">4.4.4.3. Assessors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">4.4.4.4. Assessment</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brigade-activity-summary">4.4.5. Brigade Activity Summary</a></li>
