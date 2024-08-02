@@ -306,6 +306,23 @@ SKILLS MAINTENANCE**, which specifies the checks to be done, and the form to be 
 
 I have added a new function to RFStag which wil hopefully make it easy to run these checks, and to record the results.
 
+#### Preparation and Administration
+
+To get the best from Member Skills Currency, brigade administrators should ensure 
+that {ref}`Officers are up-to-date<change-officers>`, so that Field Officers can be correctly identified, and 
+that {ref}`member qualifications are up-to-date<sync-sap>`, so CL and VF members can be identified.
+
+Current Field Officers (i.e. Captain, SDC and DCs) will automatically be considered 
+as {ref}`Assessors<assessors>`. Any other members who should 
+be an assessor can be included by adding their corresponding User to the Assessor group.
+
+Brigade Administrators should ensure that all Assessors are familiar with the procedure for 
+{ref}`logging in to the web portal<logging_in>` so that any skills assessment they do will be recorded in their name.
+
+If any Competency records need to be modified or deleted, the brigade administrator can locate them in admin
+under Brigade/Certifications. Use the Category filter (right hand side) "Skill Checks" to show only annual competencies. 
+
+
 #### Member Skills Table
 
 This table has a row for each brigade member, and a column for each skill to be checked. If the member has successfully 
@@ -320,8 +337,11 @@ been completed.
 Brigade Skills Table(click to enlarge)
 :::
 
+
+```{margin} VF and CL
 In the case of Village or Crew Leader checks, these will be marked "n/a" if the member is not qualified to that level, 
 so the check is not applicable.
+```
 
 There are currently 5 groups of checks to be recorded (these are subject to change):
 
@@ -329,13 +349,13 @@ There are currently 5 groups of checks to be recorded (these are subject to chan
 2. Firefighters (Draft, Tools, Fires, Hoses, Pumps)
 3. Basic First Aid (optional)
 4. Village Skills
-5. Crew leader Skills
+5. Crew Leader Skills
 
 (assessors)=
 #### Assessors
 
-Normally, the current set of Field Officers are authorised to perform skill checks on members, including other Field 
-Officers. Note that no Assessor is permitted to check themselves.
+Normally, the current set of Field Officers, i.e. Captain, Senior DC, and other DCs, are authorised to perform skill 
+checks on members, including other Field Officers. Note that no Assessor is permitted to check themselves.
 
 If required, other members who are not currently Field Officers, can be added (by the brigade administrator) to the 
 User Group **Assessors**, and they will then have permission to run skills checks on members in the same way as 
@@ -352,7 +372,7 @@ Assessors will see the word **Check** in the Skills table when a skills check ha
 
 Assessor Brigade Skills Table(click to enlarge)
 :::
-
+ 
 
 If they click on **Check**, a checklist will appear which shows the specific checks to be tested. 
 
@@ -366,9 +386,15 @@ Skills Checklist (click to enlarge)
 
 These are just bullet points, and full details of the checks can be found in the appropriate SOP.
 
-When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the **Pass** button, 
+When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the
+<span class="badge badge-pill badge-primary">**Pass**</span> button,
 and details of the check will be recorded. The date of the successful check will be added to the table, and the name 
-of the Assessor is also recorded.
+of the Assessor is also recorded. 
+
+```{margin} Pass shortcut
+Assessors can check each point to keep track of where they are, but they don't need to, and can 
+click <span class="badge badge-pill badge-primary">**Pass**</span> at any time. 
+```
 
 The Assessor can also click on the Member's name (leftmost column), and they will see the status of all skills for that 
 member. They can also run a check on a skills set by clicking **Check**.
@@ -380,23 +406,6 @@ member. They can also run a check on a skills set by clicking **Check**.
 
 Member Skills (click to enlarge)
 :::
-
-#### Administration
-
-To get the best from Member Skills Currency, brigade administrators should ensure 
-that {ref}`Officers are up-to-date<change-officers>`, so that Field Officers can be identified, and 
-that {ref}`member qualifications are up-to-date<sync-sap>`, so CL and VF members can be identified.
-
-Current Field Officers will automatically be considered as {ref}`Assessors<assessors>`. Any other members who should 
-be an assessor can be added by adding the corresponding User to the Assessor group.
-
-Brigade Administrators should ensure that all Assessors are familiar with the procedure for 
-{ref}`logging in to the web portal<logging_in>` so that any skills assessment they do will be recorded in their name.
-
-If any Competency records need to be modified or deleted, the brigade administrator can locate them in admin
-under Brigade/Certifications. Use the Category filter (right hand side) "Skill Checks" to show only annual competencies. 
-
-
 
 
 (brigact-summ)=
