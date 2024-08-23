@@ -440,7 +440,7 @@ what qualifications are recorded in their name on SAP, and to check that these r
 <p>SAP records can be uploaded to the Sign-In system from the Admin system, under Brigade-Certifications, using the
 Import button on the top right of the page.</p>
 <p>You will then see the following page. Enter the name of the Excel file downloaded from RFS SAP that has
-the full list of brigade qualifications. Select <strong>xlsx</strong> as the format, and then Submit.</p>
+the full list of brigade qualifications. Select the correct file format, and then Submit.</p>
 <figure class="myclass align-default" id="import-certs">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/import-certs.jpg"><img alt="Importing RFS SAP Qualifications" class="bg-primary mb-1" src="_images/import-certs.jpg" style="width: 1467px;" /></a>
 <figcaption>
@@ -471,14 +471,14 @@ qualification records in SAP.</p>
 <li><p>If you ignore my advice to be patient, and click on Submit or Confirm before the import has completed, you will
 get a spooky 500 error, and I will get a whiny email saying someone is trying to break the system. Just go back, start
 again, and find something else to do for 20s while the import completes.</p></li>
-<li><p>If you don’t set the file type to xlsx when you import the SAP file, you will get a weird shouty error message. I
+<li><p>If you don’t set the file type correctly when you import the SAP file, you will get a weird shouty error message. I
 can’t prevent that. Just go back, and set the correct file type this time.</p></li>
 <li><p>The import can fail if the SAP file has any of the following problems:</p>
 <ul class="simple">
 <li><p>Qualifications for a Member who isn’t registered on the system. Use the line number in the error message to find
-the offending line in the xlsx file, and that will give you the details of the missing member. Just
+the offending line in the input file, and that will give you the details of the missing member. Just
 <a class="reference internal" href="server.html#add-memb"><span class="std std-ref">add the missing member</span></a> and retry.</p></li>
-<li><p>Corrupted entry for a qualification : find the line in the xlsx file (line number should be in the error message),
+<li><p>Corrupted entry for a qualification : find the line in the input file (line number should be in the error message),
 delete it, and try again. Then report the problem to RFS IT.</p></li>
 <li><p>Corrupted xlsx file. If the xlsx file refuses to import in a reasonable time, it may be corrupted. Try saving the
 xlsx file as a csv file, then import that instead (remember to change the file type to csv)</p></li>

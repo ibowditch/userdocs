@@ -308,6 +308,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-rfstag-kiosk-repository-one-off-procedure">7.1.6.2. Add the rfstag-kiosk repository (one-off procedure)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pi-display-problems-and-vnc-connections">7.1.6.3. PI display problems and VNC connections</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-installation">7.1.6.4. First installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-2024-08-22">7.1.6.5. Update 2024-08-22</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-nfcserver2-package">7.1.7. Building the nfcserver2 package</a></li>
@@ -374,6 +375,12 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-low-cost-ec2-rds">8.3.8. Creating a low-cost EC2 RDS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-settings-mozilla-observatory">8.3.9. Security Settings Mozilla Observatory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-eb-platforms">8.4. AWS EB Platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ec2-platform-version-upgrades">8.4.1. EC2 Platform Version Upgrades</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upgrading-ec2-platform">8.4.2. Upgrading EC2 Platform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-issues-when-upgrading-ec2-platform">8.4.3. Common Issues when Upgrading EC2 Platform</a></li>
 </ul>
 </li>
 </ul>
@@ -490,7 +497,25 @@ document.write(`
 <p>Optional steps (when building schema on tst system) shown in <span class="opt">italics</span>.</p>
 <p>Overview:</p>
 <ul class="simple">
-<li><p>Make a backup of the latest prd RDS -&gt; bushfire2-prd-YYMMDD</p></li>
+<li><p>Make a backup of the latest prd RDS -&gt; bushfire2-prd-YYMMDD</p>
+<ul>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/56462616/how-to-use-pg-restore-with-aws-rds-correctly-to-restore-postgresql-database">Revised procedure</a></p>
+<ul>
+<li><p>cd ~/kbfb/aws-backups/tst2$</p>
+<ul>
+<li><p><strong>pg_dump</strong> -h bushfire2-prd-rds5.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com -U ian -Fc ebdb2 &gt; bushfire2-prd-rds2-240731.dump</p></li>
+<li><p>Password: ib15…</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Create new RDS in ec2 called bushfire2-prd-rds2-240731</p>
+<ul>
+<li><p><strong>pg_restore</strong> -h ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com -p 5432 –no-owner –no-privileges –role=ian -d bushfire2-prd-rds2-240731 bushfire2-prd-rds2-240731.dump</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>Create a new empty database called bushfire2-prd-YYMMDD in the EC2 postgres server</p></li>
 <li><p>Restore the prd backup to the new EC2 database</p></li>
 <li><p>Make the tpad env point to the new EC2 database</p></li>
@@ -831,6 +856,45 @@ directory, then editing local.env as needed.</p>
 <li><p>Change KIOSK_BRIGADE if the hostname is not the brigade name (eg.. multiple kiosks)</p></li>
 <li><p>Change KIOSK_LOCATION to a second kiosk name</p></li>
 <li><p>Change BUSHFIRE_SERVER to use a test system, eg. rfstag.org, rather than the production server.</p></li>
+</ul>
+</section>
+<section id="update-2024-08-22">
+<h4><span class="section-number">7.1.6.5. </span>Update 2024-08-22<a class="headerlink" href="#update-2024-08-22" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Producing kingcreek kiosk</p>
+<ul>
+<li><p>Latest PI raspian version, included in kit from Core Electronics, is bookworm (version 12)</p></li>
+<li><p>All previous releases have been bullseye (V11) or earlier</p></li>
+<li><p><strong>nfcserver2 APT package fails to install on bookwork using python 3.11</strong></p></li>
+<li><p>Need to rethink delivery strategy, and work out a solution for bookworm and future releases</p>
+<ul>
+<li><p>Continue with bullseye for now, so not urgent yet</p></li>
+</ul>
+</li>
+<li><p>Downloaded bullseye raspian image and wrote onto SD card using imager on Acer</p></li>
+</ul>
+</li>
+<li><p>latest nfcserver2 version</p>
+<ul>
+<li><p>Last version on github is 64</p>
+<ul>
+<li><p>Check using this command</p>
+<ul>
+<li><p><strong>journalctl | grep KIOSK_VERSION</strong></p></li>
+<li><p><strong>grep -i phone /usr/bin/nfc*py</strong></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>V64 does not include phone tagging, but V70 does</p></li>
+<li><p>Need to install latest version for phone tags</p>
+<ul>
+<li><p><strong>sudo apt-get install -f /home/pi/tmp/nfcserver2_1.70.0_all.deb</strong></p></li>
+</ul>
+</li>
+<li><p>Check services in /lib/systemd/system/[nfcserver3,launch_kiosk2,kiosk_beeper].service</p></li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
@@ -1911,6 +1975,94 @@ User tagadmin</p></li>
 <p><a class="reference external" href="https://blogthedata.com/post/how-to-implement-subresource-integrity-django/">ref2 </a></p>
 </section>
 </section>
+<section id="aws-eb-platforms">
+<h2><span class="section-number">8.4. </span>AWS EB Platforms<a class="headerlink" href="#aws-eb-platforms" title="Permalink to this headline">#</a></h2>
+<p>In general, the <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-python.html">latest available EC2 platform</a>
+should be used for testing and production where possible.</p>
+<p>This avoids major jumps between versions, and the compatibility problems that brings.</p>
+<p>Leave the production version on a LTS (long term support) version where possible, rather than a minor release.</p>
+<p>RFStag has limited automatic testing available, and regression testing is rudimentary, so staying current
+with latest releases reduces the risk of major problems by identifying them early.</p>
+<section id="ec2-platform-version-upgrades">
+<h3><span class="section-number">8.4.1. </span>EC2 Platform Version Upgrades<a class="headerlink" href="#ec2-platform-version-upgrades" title="Permalink to this headline">#</a></h3>
+<p>Platform <strong>version upgrades</strong> can normally be done safely using the AWS EB <a class="reference external" href="https://ap-southeast-2.console.aws.amazon.com/elasticbeanstalk/home?region=ap-southeast-2#/environments">environment console</a></p>
+<p>Occasionally, version upgrades go wrong, so it’s important to upgrade the version first using a test environment. Check the logs for
+any errors or suspicious messages, and make sure all is well before deploying to production.</p>
+</section>
+<section id="upgrading-ec2-platform">
+<h3><span class="section-number">8.4.2. </span>Upgrading EC2 Platform<a class="headerlink" href="#upgrading-ec2-platform" title="Permalink to this headline">#</a></h3>
+<p>There are many different platforms available for EC2 instances. The python platforms normally have a python version number, and a linux type -
+see <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-python.html">Python Platform History</a> for details.</p>
+<p>It isn’t possible to change the platform for an environment once it has been deployed. Changing version is ok
+(using the AWS EB environment console), but if a new platform is needed, and new environment must be created.</p>
+<p>To do that, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>In pycharm terminal, <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-platform.html"><strong>eb platform select</strong></a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Choose the new platform branch to use for subsequent environments. This value will be stored in
+<strong>.elasticbeanstalk/config.yml</strong> as global:<strong>default_platform</strong>.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Now create the new environment using <a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html"><strong>eb create</strong></a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Choose the environment name carefully, as it will be used in the github deployment chain. e.g. for (existing)
+EB application bushfire2, choose bushfire2-tst8.</p></li>
+<li><p>Choose an application load balancer</p></li>
+<li><p>eb create will set up all the infrastructure required to run the environment.</p></li>
+<li><p>It will also pass on the latest source package, so make sure all files have been checked into github.</p></li>
+<li><p>NB: The github deployment procedure will NOT be followed when using eb create, so many critical environment
+variables, which are set in the github deployment script <strong>.github/workflows/awseb.yml</strong> will not be set in the
+new EB environment. The deployment will only partially work, and will probably show failing health.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Set up the github deployment environment</p></li>
+</ol>
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://github.com/ibowditch/bushfire2/settings/environments">github environments</a> and create a new environment</p></li>
+<li><p>Copy values from an existing environment.</p></li>
+<li><p>Re-use secrets for S3 buckets</p></li>
+<li><p>Generate a new Django secret</p></li>
+<li><p>Make sure AWS_ENV_SUFFIX is set to match the new envronment name suffix (e.g. tst8)</p></li>
+<li><p>Make sure the DOMAIN_SUFFIX is set correctly (usually org)</p></li>
+<li><p>Probably create a new RDS in EC2 RDS, and set django RDS* variables pointing to it.</p></li>
+<li><p>Re-use the existing REDIS server (keys will be different, so easy to share)</p></li>
+<li><p>Finally, make sure repository variable <strong>DEPLOY_ENV</strong> is set to the appropriate value, i.e. the new github
+environment name (bushfire2-tst8).</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Deploy to the new environment via github</p></li>
+</ol>
+<ul class="simple">
+<li><p>If needed, make a dummy edit to a file, then Commit and Push the latest version to github.</p></li>
+<li><p>This will trigger the github deployment script <strong>.github/workflows/awseb.yml</strong>.</p></li>
+<li><p>Environment variables will be set in github, and then passed on to the new EB environment.</p></li>
+<li><p>If all variables are set correctly, the new environment should now show good health.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Redirect the host domain to the new environment</p></li>
+</ol>
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=ap-southeast-2#">Route 53 dashboard</a>
+and select the required hosted zone.</p></li>
+<li><p>Edit the A-type records for eg. <strong>rfstag.org</strong> and <strong>.rfstag.org</strong> to point to the new environment.</p></li>
+<li><p>Wait until the change is completed</p></li>
+<li><p>Test the record to ensure and OK value is returned.</p></li>
+<li><p>Now try running the appropriate host, eg. <a class="reference external" href="https://kuringai.rfstag.org">kuringai.rfstag.org</a>, and confirm working as expected.</p></li>
+</ul>
+</section>
+<section id="common-issues-when-upgrading-ec2-platform">
+<h3><span class="section-number">8.4.3. </span>Common Issues when Upgrading EC2 Platform<a class="headerlink" href="#common-issues-when-upgrading-ec2-platform" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Python dependencies. Check messages.log, eb-engine.log, rfstag.log for hints. Update <strong>Pipfile</strong> if needed.</p></li>
+<li><p>channels/daphne: try running daphne on the ec2 command line and see if running. Check systemctl status websocket</p></li>
+<li><p>Caching: cache should be cleared on deployment by .platform/hooks/postdeploy/04_reset_cache.sh, but confirm this.</p></li>
+<li><p>Environment variables not set correctly. These can be viewed in the AWS env configuration - check carefully.
+Investigate, and check awseb.yml is working as expected, and github variables set properly.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
 
@@ -1958,6 +2110,7 @@ User tagadmin</p></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-rfstag-kiosk-repository-one-off-procedure">7.1.6.2. Add the rfstag-kiosk repository (one-off procedure)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pi-display-problems-and-vnc-connections">7.1.6.3. PI display problems and VNC connections</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-installation">7.1.6.4. First installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-2024-08-22">7.1.6.5. Update 2024-08-22</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-nfcserver2-package">7.1.7. Building the nfcserver2 package</a></li>
@@ -2024,6 +2177,12 @@ User tagadmin</p></li>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-low-cost-ec2-rds">8.3.8. Creating a low-cost EC2 RDS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-settings-mozilla-observatory">8.3.9. Security Settings Mozilla Observatory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-eb-platforms">8.4. AWS EB Platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ec2-platform-version-upgrades">8.4.1. EC2 Platform Version Upgrades</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upgrading-ec2-platform">8.4.2. Upgrading EC2 Platform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-issues-when-upgrading-ec2-platform">8.4.3. Common Issues when Upgrading EC2 Platform</a></li>
 </ul>
 </li>
 </ul>

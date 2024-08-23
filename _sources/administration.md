@@ -132,7 +132,7 @@ SAP records can be uploaded to the Sign-In system from the Admin system, under B
 Import button on the top right of the page.
 
 You will then see the following page. Enter the name of the Excel file downloaded from RFS SAP that has 
-the full list of brigade qualifications. Select **xlsx** as the format, and then Submit.
+the full list of brigade qualifications. Select the correct file format, and then Submit.
 
 :::{figure-md} import-certs
 :class: myclass
@@ -176,14 +176,14 @@ qualification records in SAP.
    get a spooky 500 error, and I will get a whiny email saying someone is trying to break the system. Just go back, start
    again, and find something else to do for 20s while the import completes.
    
-2. If you don't set the file type to xlsx when you import the SAP file, you will get a weird shouty error message. I 
+2. If you don't set the file type correctly when you import the SAP file, you will get a weird shouty error message. I 
    can't prevent that. Just go back, and set the correct file type this time.
    
 3. The import can fail if the SAP file has any of the following problems:
     * Qualifications for a Member who isn't registered on the system. Use the line number in the error message to find
-      the offending line in the xlsx file, and that will give you the details of the missing member. Just 
+      the offending line in the input file, and that will give you the details of the missing member. Just 
       {ref}`add the missing member<add-memb>` and retry.
-    * Corrupted entry for a qualification : find the line in the xlsx file (line number should be in the error message), 
+    * Corrupted entry for a qualification : find the line in the input file (line number should be in the error message), 
       delete it, and try again. Then report the problem to RFS IT.
     * Corrupted xlsx file. If the xlsx file refuses to import in a reasonable time, it may be corrupted. Try saving the 
       xlsx file as a csv file, then import that instead (remember to change the file type to csv)
