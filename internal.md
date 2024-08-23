@@ -75,6 +75,14 @@ Optional steps (when building schema on tst system) shown in <span class="opt">i
 Overview:
 
 * Make a backup of the latest prd RDS -> bushfire2-prd-YYMMDD
+
+  * [Revised procedure](https://stackoverflow.com/questions/56462616/how-to-use-pg-restore-with-aws-rds-correctly-to-restore-postgresql-database)
+    * cd ~/kbfb/aws-backups/tst2$ 
+      * **pg_dump** -h bushfire2-prd-rds5.c5b4rv0axnji.ap-southeast-2.rds.amazonaws.com -U ian -Fc ebdb2 > bushfire2-prd-rds2-240731.dump
+      * Password: ib15…
+  * Create new RDS in ec2 called bushfire2-prd-rds2-240731
+    * **pg_restore** -h ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com -p 5432 --no-owner --no-privileges --role=ian -d bushfire2-prd-rds2-240731 bushfire2-prd-rds2-240731.dump
+
 * Create a new empty database called bushfire2-prd-YYMMDD in the EC2 postgres server
 * Restore the prd backup to the new EC2 database
 * Make the tpad env point to the new EC2 database
@@ -361,6 +369,26 @@ This can be used to do the following:
 - Change KIOSK_LOCATION to a second kiosk name
 - Change BUSHFIRE_SERVER to use a test system, eg. rfstag.org, rather than the production server.
 
+
+#### Update 2024-08-22
+
+- Producing kingcreek kiosk
+  - Latest PI raspian version, included in kit from Core Electronics, is bookworm (version 12)
+  - All previous releases have been bullseye (V11) or earlier
+  - **nfcserver2 APT package fails to install on bookwork using python 3.11**
+  - Need to rethink delivery strategy, and work out a solution for bookworm and future releases
+    - Continue with bullseye for now, so not urgent yet
+  - Downloaded bullseye raspian image and wrote onto SD card using imager on Acer
+
+- latest nfcserver2 version
+  - Last version on github is 64
+    - Check using this command
+      - **journalctl | grep KIOSK_VERSION**
+      - **grep -i phone /usr/bin/nfc*py**
+  - V64 does not include phone tagging, but V70 does
+  - Need to install latest version for phone tags
+    - **sudo apt-get install -f /home/pi/tmp/nfcserver2_1.70.0_all.deb**
+  - Check services in /lib/systemd/system/[nfcserver3,launch_kiosk2,kiosk_beeper].service
 
 ### Building the nfcserver2 package
 
@@ -1445,11 +1473,88 @@ User tagadmin
 
 
 
+## AWS EB Platforms
+
+In general, the [latest available EC2 platform](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-python.html)
+should be used for testing and production where possible. 
+
+This avoids major jumps between versions, and the compatibility problems that brings. 
+
+Leave the production version on a LTS (long term support) version where possible, rather than a minor release.
+
+RFStag has limited automatic testing available, and regression testing is rudimentary, so staying current 
+with latest releases reduces the risk of major problems by identifying them early.
+
+### EC2 Platform Version Upgrades
+
+Platform **version upgrades** can normally be done safely using the AWS EB [environment console](https://ap-southeast-2.console.aws.amazon.com/elasticbeanstalk/home?region=ap-southeast-2#/environments)
+
+Occasionally, version upgrades go wrong, so it's important to upgrade the version first using a test environment. Check the logs for 
+any errors or suspicious messages, and make sure all is well before deploying to production.
+
+### Upgrading EC2 Platform
+
+There are many different platforms available for EC2 instances. The python platforms normally have a python version number, and a linux type - 
+see [Python Platform History](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-python.html) for details.
+
+It isn't possible to change the platform for an environment once it has been deployed. Changing version is ok 
+(using the AWS EB environment console), but if a new platform is needed, and new environment must be created.
+
+To do that, follow these steps:
+
+1. In pycharm terminal, [**eb platform select**](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-platform.html)
+
+* Choose the new platform branch to use for subsequent environments. This value will be stored in 
+  **.elasticbeanstalk/config.yml** as global:**default_platform**.
+
+2. Now create the new environment using [**eb create**](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html)
+
+* Choose the environment name carefully, as it will be used in the github deployment chain. e.g. for (existing) 
+EB application bushfire2, choose bushfire2-tst8.
+* Choose an application load balancer
+* eb create will set up all the infrastructure required to run the environment.
+* It will also pass on the latest source package, so make sure all files have been checked into github.
+* NB: The github deployment procedure will NOT be followed when using eb create, so many critical environment 
+variables, which are set in the github deployment script **.github/workflows/awseb.yml** will not be set in the
+new EB environment. The deployment will only partially work, and will probably show failing health.
+
+3. Set up the github deployment environment
+
+* Go to [github environments](https://github.com/ibowditch/bushfire2/settings/environments) and create a new environment
+* Copy values from an existing environment. 
+* Re-use secrets for S3 buckets
+* Generate a new Django secret
+* Make sure AWS_ENV_SUFFIX is set to match the new envronment name suffix (e.g. tst8)
+* Make sure the DOMAIN_SUFFIX is set correctly (usually org)
+* Probably create a new RDS in EC2 RDS, and set django RDS* variables pointing to it.
+* Re-use the existing REDIS server (keys will be different, so easy to share)
+* Finally, make sure repository variable **DEPLOY_ENV** is set to the appropriate value, i.e. the new github 
+environment name (bushfire2-tst8).
+
+4. Deploy to the new environment via github
+
+* If needed, make a dummy edit to a file, then Commit and Push the latest version to github.
+* This will trigger the github deployment script **.github/workflows/awseb.yml**.
+* Environment variables will be set in github, and then passed on to the new EB environment.
+* If all variables are set correctly, the new environment should now show good health.
+
+5. Redirect the host domain to the new environment
+
+* Go to [Route 53 dashboard](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=ap-southeast-2#) 
+  and select the required hosted zone.
+* Edit the A-type records for eg. **rfstag.org** and **.rfstag.org** to point to the new environment.
+* Wait until the change is completed
+* Test the record to ensure and OK value is returned.
+* Now try running the appropriate host, eg. [kuringai.rfstag.org](https://kuringai.rfstag.org), and confirm working as expected.
 
 
+### Common Issues when Upgrading EC2 Platform
 
-
-
+* Python dependencies. Check messages.log, eb-engine.log, rfstag.log for hints. Update **Pipfile** if needed.
+* channels/daphne: try running daphne on the ec2 command line and see if running. Check systemctl status websocket
+* Caching: cache should be cleared on deployment by .platform/hooks/postdeploy/04_reset_cache.sh, but confirm this.
+* Environment variables not set correctly. These can be viewed in the AWS env configuration - check carefully. 
+Investigate, and check awseb.yml is working as expected, and github variables set properly.
 
 
 
