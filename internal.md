@@ -376,6 +376,9 @@ This can be used to do the following:
   - Latest PI raspian version, included in kit from Core Electronics, is bookworm (version 12)
   - All previous releases have been bullseye (V11) or earlier
   - **nfcserver2 APT package fails to install on bookwork using python 3.11**
+    - Reason is that latest python no longer accepts system-wide packages, and they must be included in a venv
+    - Solution is to use pipx to install python packages, which provdes the venv, and works in bookworm and earlier releases
+    - rfs_pager_project is a template for building and delivering pipx project
   - Need to rethink delivery strategy, and work out a solution for bookworm and future releases
     - Continue with bullseye for now, so not urgent yet
   - Downloaded bullseye raspian image and wrote onto SD card using imager on Acer
