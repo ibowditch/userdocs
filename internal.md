@@ -185,182 +185,40 @@ Procedure
 Boot the PI with the NOOBS SD-CARD, and follow the generic instructions in the 
 [Official documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html#configuration-on-first-boot).
 
-Use the following settings where required:
+Use the Raspberry PI Imager application to prepare a new SD card.
 
-:::{figure-md} pi-country
-:class: myclass
+- Set up the environment with the home wifi, hostname, and locale
+- Choose the latest image, normally bookworm, but can also use bullseye if available
+- Write image to the SD card, then load into the PI
 
-<img src="assets/images/pi-country.jpg" alt="PI Country settingst" width="1467" class="bg-primary mb-1">
+SSH should be enabled by default in the image, though VNC won't be. Set up a secure connection from dev 
+machine (tpad) to the PI as follows (assumes 192.168.0.143 is the birthing machine):
 
-PI country settings (click to enlarge)
-:::
+- ssh-keygen -f ~/.ssh/**kuringai** -N ""
+  - Overwrite if needed
+- ssh-keygen -f '/home/ian/.ssh/known_hosts' -R '192.168.0.143'
+- ssh-copy-id -i ~/.ssh/**kuringai** pi@192.168.0.143
+  - Yes, then fire0000
+- ssh pi@192.168.0.143
+  - Check connection
 
-Password set to this by convention (but can be changed if needed):
+Now prepare to install the kiosk software from the dev machine using ansible. 
 
-:::{figure-md} pi-password
-:class: myclass
+- cd /home/ian/ansible_quickstart
+- ansible-playbook -vi inventory.ini PI_playbooks/setup.yml -e "newhost=**kuringai**" -e "target_hosts=new_pi"
+  - wait for reboot
+- ansible-playbook -vi inventory.ini setup_new_pi.yml -e "newhost=**kuringai**" -e "target_hosts=new_pi"
+  - Monitor with separate shell using journalctl -f
+- ssh-keygen -f '/home/ian/.ssh/known_hosts' -R '[ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com]:2209'
+- ssh -p 2209 pi@ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com
+  - Tests comms and allows next step
 
-<img src="assets/images/pi-password.jpg" alt="PI Country settings" width="1467" class="bg-primary mb-1">
-
-PI password (click to enlarge)
-:::
-
-Network connections normally via station wifi, but can be hard-wired too. Provide the wifi password, and 
-it will be remembered for next time.
-
-:::{figure-md} pi-network
-:class: myclass
-
-<img src="assets/images/pi-wifi.jpg" alt="PI Network settings" width="1467" class="bg-primary mb-1">
-
-PI network (click to enlarge)
-:::
-
-Update software - don't skip this step, but it will take a while.
-
-Configuration settings 
-
-In system settings tab, make sure Wait for Network is checked, and change Hostname to the same 
-name as brigade
-
-:::{figure-md} pi-settings1
-:class: myclass
-
-<img src="assets/images/pi-settings1.jpg" alt="PI System settings" width="1467" class="bg-primary mb-1">
-
-PI System configuration (click to enlarge)
-:::
-
-In Interface settings tab, Enable SSH and VNC to allow remote support:
-
-:::{figure-md} pi-settings2
-:class: myclass
-
-<img src="assets/images/pi-settings2.jpg" alt="PI Interface settings" width="1467" class="bg-primary mb-1">
-
-PI interface configuration (click to enlarge)
-:::
-
-**Final checks**
-* Configuration/Display: screen blanking disabled (enabled by default!)
-  * May be redundant: launch_kiosk turns off screen blanking as well
-* */boot/config.txt* : Comment out #dtoverlay=vc4-fkms-v3d (maybe multiple places)
-
-
-
-Reboot after changing PI configuration when prompted.
-
-### Installing the Kiosk Software (apt procedure)
-
-Kiosk software is now delivered as a package using the APT tool. The package replaces most of the original 
-installation procedure, and includes the following components:
-
-- nfcreader program, for reading and writing tags (writetags)
-- systemd services to launch the kiosk in a browser (launch_kiosk2) and start the nfcreader (nfcserver2)
-- Configuration files for nfcreader and tag reader (udev)
-- Unattended upgrades and schedules for automatic updating
-- journal set up to maintain long term record
-
-#### Initial Preparation
-
-- Preserve then remove the original installation if needed:
-    - !! This isn't needed if updating to a new version. Old files will be automatically removed as part of the update. 
-    - Copy file nfcmanifest2 to the new PI using scp
-      - scp ~/PycharmProjects/nfcserver/nfcreader/nfcmanifest2 pi@192.168.0.101://home/pi
-    - Save original installation if needed (this leaves files in place)
-      - sudo tar -czvf oldnfc.tar.gz `cat nfcmanifest2`
-      - tar -tvf oldnfc.tar.zip   				# to confirm
-    - Remove original installation
-      - cat nfcmanifest2 | sudo xargs rm -rf
-
-- Confirm that the PI hostname is set to the brigade/tenant name and change if needed
-
-- Set up remote access using https://dwservice.net:
-
-  - First add a new agent for the PI in server side, and note down access code.
-  - Make sure new PI has VNC server switched on
-
-    - cd /home/ian/PycharmProjects/nfcserver2/tmp/dwservice
-    - scp dwagent.sh pi@192.168.0.XXX://home/pi
-    - ssh -v -l pi 192.168.0.XXX
-    - cd ~
-    - chmod a+x dwagent.sh
-    - sudo ./dwagent.sh
-
-  - Provide the access code from the server
-  - Reboot PI, then check that agent appears as available on server. 
-
-
-
-#### Add the rfstag-kiosk repository (one-off procedure)
-
-* In the PI, add the public security key so access is granted:
-
-    - cd /tmp
-    - curl -s –compressed "https://ibowditch.github.io/rfstag-kiosk/KEY.gpg" > KEY.gpg
-    - cat KEY.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/rfstag.gpg > /dev/null
-
-* Add the rfstag-kiosk repository to the list of available sources:
-
-    - sudo curl -s –compressed  "https://ibowditch.github.io/rfstag-kiosk/rfstag.list" > rfstag.list
-    - sudo cp rfstag.list /etc/apt/sources.list.d
-    - sudo apt update
-    - apt list nfcserver2 -a
-    .
-    - rm KEY.gpg rfstag.list
-
-
-
-  - sudo curl -s --compressed -o /etc/apt/sources.list.d/rfstag.list "https://ibowditch.github.io/rfstag-kiosk/rfstag.list"
-  - sudo apt update
-
-  - reboot
-
-#### PI display problems and VNC connections
-
-Very tricky. Best to copy a working config.txt to the new machine.
-
-If get VNC saying connection not ready, shutdown with monitor connected, then disconnect monitor and restart
-While standing on left leg. See notes from 230413 and weep.
- 
-
-
-#### First installation
-
-Installation is now just:
-
-- sudo apt update
-- sudo apt -y full-upgrade        # to get system up to date
-- **sudo apt install nfcserver2**
-- <edit ~/.config/rfstag/local.env to suit>
-- reboot (not strictly needed but just to be sure)
-
-Notes:
-
-1. By default, the package will use the hostname of the PI as the brigade/tenant name, so make sure that is set correctly before installing the package.
-2. If successful, a browser will start on the kiosk page for the given brigade. Sign in, and save the password.
-3. In the background, the nfcreader program should also have been launched, and after creating a new event, tags for the brigade should work correctly.
-4. After the first installation, the package will be automatically updated by unattended-upgrades in the middle of the night.
-
-
-
-Post-install checks
-
-1. Check sound is configured correctly and operates as expected
-2. Check access to dwservice works as expected using the dwservice phone app.
-3. Check tag reader operates correctly. Use **journalctl -b | grep nfc** to review logger messages. 
-4. Check services are up and running:
-   - systemctl status launch_kiosk2
-   - systemctl status nfcreader2
-5. Check that nfc reader can be plugged into other USB ports. The nfcserver2 service should stop when disconnected, and restart automatically whne reconnected. Check the journal for required behavior. This is controlled by file **/etc/udev/rules.d/90-nfcdev.rules**
-
-
-Further configuration
+Then ssh to the new PI, and do the following further configuration:
 
 Basic configuration is controlled by the file **/etc/profile.d/rfstag/base.env**. This should be sufficient in 
 most cases.
 
-These settings can be overriden if needed, by copying **/home/pi/.config/rfstag/local-example.env** to local.env in the same
+These settings can be overridden if needed, by copying **/home/pi/.config/rfstag/local-example.env** to local.env in the same
 directory, then editing local.env as needed.
 
 This can be used to do the following:
@@ -369,29 +227,18 @@ This can be used to do the following:
 - Change KIOSK_LOCATION to a second kiosk name
 - Change BUSHFIRE_SERVER to use a test system, eg. rfstag.org, rather than the production server.
 
+#### Setting Up a New Kiosk Raspberry PI - bullseye variant
 
-#### Update 2024-08-22
+Same as bookworm, except
+After setup.yml, run update_python.yml
+Then had to 
+pi@bullseye2:~ $ pyenv global 3.10.12
+pi@bullseye2:~ $ pyenv local 3.10.12
+pi@bullseye2:~ $ pyenv reshash
+<reboot>
+Headless screen res not set correctly, and VNC was slow
+Reset manually, then ok except VNC running slow
 
-- Producing kingcreek kiosk
-  - Latest PI raspian version, included in kit from Core Electronics, is bookworm (version 12)
-  - All previous releases have been bullseye (V11) or earlier
-  - **nfcserver2 APT package fails to install on bookwork using python 3.11**
-    - Reason is that latest python no longer accepts system-wide packages, and they must be included in a venv
-    - Solution is to use pipx to install python packages, which provdes the venv, and works in bookworm and earlier releases
-    - rfs_pager_project is a template for building and delivering pipx project
-  - Need to rethink delivery strategy, and work out a solution for bookworm and future releases
-    - Continue with bullseye for now, so not urgent yet
-  - Downloaded bullseye raspian image and wrote onto SD card using imager on Acer
-
-- latest nfcserver2 version
-  - Last version on github is 64
-    - Check using this command
-      - **journalctl | grep KIOSK_VERSION**
-      - **grep -i phone /usr/bin/nfc*py**
-  - V64 does not include phone tagging, but V70 does
-  - Need to install latest version for phone tags
-    - **sudo apt-get install -f /home/pi/tmp/nfcserver2_1.70.0_all.deb**
-  - Check services in /lib/systemd/system/[nfcserver3,launch_kiosk2,kiosk_beeper].service
 
 ### Building the nfcserver2 package
 
@@ -501,49 +348,6 @@ NB: Further journal messages are still being generated unless dtoverlay=vc4-fkms
 This file can't be included in the APT package, so will require a manual check on each kiosk to ensure it is disabled.
 These messages seem benign, but better to remove source if possible.
 
-
-### Installing the Kiosk Software (original procedure)
-
-Copy the installation package from a thumb drive into folder /home/pi, or use (in tpad shell, not pycharm):
-
-* cd /home/ian/PycharmProjects/nfcserver
-* makeself --notemp nfcreader nfcreader220920f.sh bushfire ./nfcinstall 
-
-* scp /home/ian/PycharmProjects/nfcserver/nfcreader220920f.sh pi@192.168.0.226://home/pi
-
-Open a command Terminal (top menu bar - black box). 
-
-Run the installation procedure as follows:
-
-  ./nfcreader220920f.sh
-
-This can take some time, as it will update the system software.
-
-The installation procedure will do the following:
-
-* Set the Brigade the kiosk will use (when prompted)
-  * A server of this name must exist, or the given name will not be accepted.
-  * The nfcreader.ini file will be updated with the given validated Brigade name.
-* Install sound files (for beeps and buzzes)
-* Install python libraries for sound and nfc support.
-* Remove unwanted, large packages to free disk space (e.g. libreoffice, games, wolfram,... )
-* Add kiosk software to /usr/local/bin
-* Set boot script in /home/pi/.config/lxsession/LXDE-pi/autostart
-* Register the Sony nfc reader
-* Register and start the nfcserver service, used to read nfc tags.
-* Set up unattended upgrades to keep the system up to date automatically.
-* Set up remote.it to enable remote support
-
-Then reboot when finished.
-
-Then test nfc using:
-
-   python3 -m nfc
-
-If there's an error (likely), you'll need to type the following commands to clear the error, then reboot again:
-
-   sh -c 'echo SUBSYSTEM==\"usb\", ACTION==\"add\", ATTRS{idVendor}==\"054c\", ATTRS{idProduct}==\"06c3\", GROUP=\"plugdev\" >> /etc/udev/rules.d/nfcdev.rules'
-   udevadm control -R
 
 
 ### First login
