@@ -187,7 +187,7 @@ Boot the PI with the NOOBS SD-CARD, and follow the generic instructions in the
 
 Use the Raspberry PI Imager application to prepare a new SD card.
 
-- Set up the environment with the home wifi, hostname, and locale
+- Set up the environment with the home wifi, hostname, and locale (normally from Installer settings)
 - Choose the latest image, normally bookworm, but can also use bullseye if available
 - Write image to the SD card, then load into the PI
 
@@ -207,11 +207,12 @@ Now prepare to install the kiosk software from the dev machine using ansible.
 - cd /home/ian/ansible_quickstart
 - ansible-playbook -vi inventory.ini PI_playbooks/setup.yml -e "newhost=**kuringai**" -e "target_hosts=new_pi"
   - wait for reboot
-- ansible-playbook -vi inventory.ini setup_new_pi.yml -e "newhost=**kuringai**" -e "target_hosts=new_pi"
+- ansible-playbook -i inventory.ini setup_new_pi.yml -e "newhost=**kuringai**" -e "new_pi_ref_num=25" -e "target_hosts=new_pi"
   - Monitor with separate shell using journalctl -f
-- ssh-keygen -f '/home/ian/.ssh/known_hosts' -R '[ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com]:2209'
-- ssh -p 2209 pi@ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com
+- ssh -p 2225 pi@ec2-13-211-99-59.ap-southeast-2.compute.amazonaws.com
   - Tests comms and allows next step
+  - Make any updates to config, then sudo shutdown -r now
+    - Reboot required to register NFC reader anyway
 
 Then ssh to the new PI, and do the following further configuration:
 
@@ -231,11 +232,13 @@ This can be used to do the following:
 
 Same as bookworm, except
 After setup.yml, run update_python.yml
+
 Then had to 
-pi@bullseye2:~ $ pyenv global 3.10.12
-pi@bullseye2:~ $ pyenv local 3.10.12
-pi@bullseye2:~ $ pyenv reshash
-<reboot>
+- pi@bullseye2:~ $ pyenv global 3.10.12
+- pi@bullseye2:~ $ pyenv local 3.10.12
+- pi@bullseye2:~ $ pyenv reshash
+- \<reboot\>
+
 Headless screen res not set correctly, and VNC was slow
 Reset manually, then ok except VNC running slow
 
@@ -453,6 +456,8 @@ You will be prompted to Save Password - click Save to do this (IMPORTANT).
   * Click Edit Inbound Rules
     * Update inbound rule for buckraYYMMDD
     * Click Source=Custom, and select My IP - this will update home IP if changed.
+    * **NB: Check that default security group** (normally sg-bbc0cbc4) is included with a PostGresql rule in inbound rules
+      * This allows all instances in my EB domain to access the RDS
 * Open pgadmin on dev machine
   * Make backup of current prd RDS on AWS
     * Select and open AWS prd server - currently bushfire2-prd2-rds2
@@ -825,6 +830,9 @@ and the Create Database. Refer to settings for production RDS, and copy them in 
 - Additional configuration/Encryption: On
 
 For new VPC security group, we will need to set Inbound Rules for any instances that need to use it.
+
+**NB: Check that the default security group (normally sg-bbc0cbc4) is included with a PostGresql rule in inbound rules. 
+This allows all instances in my EB domain to access the RDS**
 
 Also provided access to dev machine, home IP address, so can be accessed with pgadmin.
 
