@@ -1,7 +1,7 @@
 (eventsection)=
 # Events
 
-Events are a central part of the sign-in system. Think of an event like a page in the old Attendance Book.
+Events are a central part of RFStag. Think of an event as like a page in the old Attendance Book.
 
 When you attend the station, you sign-in to an activity that is occurring at the station, in the same way that 
 you signed into an activity on the old Attendance Book.
@@ -48,7 +48,7 @@ Apart from updating the event (as above), the following actions or triggers will
 
 1. Signing in or signing out with a tag.
 2. Signing in using the <span class="fa fa-sign-in fa-xl" style="color:blue; font-size:20px;"></span> icon on the top right of the event
-3. Signing out using the <span class="badge badge-pill badge-success">Sign Out</span> button
+3. Signing out using the <span class="sd-badge sd-bg-success sd-pill sd-text-white">**Sign Out**</span> button
 4. Clicking a member name to edit their attendance details.
 5. When the event becomes open, as the time reaches 1 hour before start time.
 6. As the event closes when the end time is passed.
@@ -78,7 +78,7 @@ End time
   Start Time, which will be interpreted as being in the following day.
 
 ```{margin} Changing Events
-On the Kiosk, anyone can [change the details of any event](change-event). However, on the server, only the OIC is 
+On the Kiosk, anyone can [change the details of any event](change-event). However, on the web portal, only the OIC is 
 allowed to change their own event.
 ```
 Officer in Charge (OIC) 

@@ -229,8 +229,8 @@ The criteria are normally specified for an entire year. Since the Member Activit
 throughout the year, rather than having all members shown as well below the criteria for the first part of the year, 
 the table calculates progress on a pro-rata basis.
 
-Details of the pro-rata calculation can be seen by clicking the 
-<span class="badge badge-pill badge-primary">**Key**</span> button (top left) - 
+Details of the pro-rata calculation can be seen by clicking the large 
+<span class="sd-badge sd-bg-primary sd-pill sd-text-white">**Key**</span> button (top) - 
 see {ref}`Member Activity (top section)<act-top>`
 
 <!--
@@ -384,16 +384,17 @@ If they click on **Check**, a checklist will appear which shows the specific che
 Skills Checklist (click to enlarge)
 :::
 
-These are just bullet points, and full details of the checks can be found in the appropriate SOP.
+These are just bullet points, and full details of the checks can be found in the appropriate SOP. A summary of the 
+detailed checks is shown when your mouse hovers over the bullet point.
 
 When the Assessor is satisfied that the member has demonstrated the requisite skill, they can click the
-<span class="badge badge-pill badge-primary">**Pass**</span> button,
+<span class="sd-badge sd-bg-primary sd-pill sd-text-white">**Pass**</span> button,
 and details of the check will be recorded. The date of the successful check will be added to the table, and the name 
 of the Assessor is also recorded. 
 
 ```{margin} Pass shortcut
 Assessors can check each point to keep track of where they are, but they don't need to, and can 
-click <span class="badge badge-pill badge-primary">**Pass**</span> at any time. 
+click <span class="sd-badge sd-bg-primary sd-pill sd-text-white">**Pass**</span> at any time. 
 ```
 
 The Assessor can also click on the Member's name (leftmost column), and they will see the status of all skills for that 
@@ -495,9 +496,9 @@ Calendar Month View (click to enlarge)
 
 **Notes**:
 
-* The calendar view can be adjusted to show a <span class="badge badge-pill badge-primary">**day**</span>, 
-  <span class="badge badge-pill badge-primary">**week**</span>, 
-  or <span class="badge badge-pill badge-primary">**month**</span>,
+* The calendar view can be adjusted to show a <span class="sd-badge sd-bg-primary sd-pill sd-text-white">**day**</span>, 
+  <span class="sd-badge sd-bg-primary sd-pill sd-text-white">**week**</span>, 
+  or <span class="sd-badge sd-bg-primary sd-pill sd-text-white">**month**</span>,
   as required. Move forward or backward in time using the arrows in the top right.
 
 * Events are {ref}`colour coded<colour-coding>` by Activity type in the same way as on the Kiosk.
@@ -525,7 +526,7 @@ this event, you would be able to update the details as shown earlier {ref}`for t
 
 #### Week View
 
-Click the <span class="badge badge-pill badge-primary">**week**</span> button at the top of the page to go to the Week view:
+Click the <span class="sd-badge sd-bg-primary sd-pill sd-text-white">**week**</span> button at the top of the page to go to the Week view:
 
 :::{figure-md} call-week-a
 :class: myclass

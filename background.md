@@ -42,7 +42,7 @@ Used correctly, the Attendance Book provides solid, lasting, evidence that a Mem
 following table shows how the Attendance Book meets these requirements, and also how RFStag does the same:
 
 (main-reqs)=
-| # | Key Requirement                                                                                    | Attendance Book                                                                                                                                                           | RFSTag                                                                                                                                                                                    |
+| # | Key Requirement                                                                                    | Attendance Book                                                                                                                                                           | RFStag                                                                                                                                                                                    |
 |---|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1. | **Unique identification** of the Member                                                            | Member's signature on the attendance record                                                                                                                               | Members sign-in with their {ref}`NFC tag<keyfobs>`, which is unique to them.                                                                                                               |
 | 2. | **Participation** in the activity is clear and unambiguous                                         | Member's name and signature are recorded as part of an activity described at the top of the Attendance Book page.                                                         | Members {ref}`sign-in<easyway>` to a named activity/event on arrival at the station.                                                                                                      |
@@ -83,7 +83,7 @@ keeping handwritten attendance records:
 * Keeping a physical Attendance Book can be unhygienic, as it (and the often shared pen) is 
   touched by many Members, and could be a vector for infections such as flu or COVID-19.
 
-RFSTag addresses all these issues by collecting and storing attendance records electronically at the {ref}`Kiosk<kioskh>`, 
+RFStag addresses all these issues by collecting and storing attendance records electronically at the {ref}`Kiosk<kioskh>`, 
 and providing access to these records and reports using the {ref}`web portal<serverh>`.
 
 
@@ -147,7 +147,7 @@ To realise the value of attendance data, many brigades transcribe the informatio
 into a spreadsheet or database, so that it can be analysed and summarised. This is a slow and tedious manual 
 process, which requires a great deal of effort on the part of volunteer members. 
 
-RFSTag utilises the attendance records collected at the {ref}`Kiosk<kioskh>` to provide access to all the above 
+RFStag utilises the attendance records collected at the {ref}`Kiosk<kioskh>` to provide access to all the above 
 data to all members via the {ref}`web portal<serverh>`, without the need to collect or transcribe any additional data.
 
 <!--  

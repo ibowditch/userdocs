@@ -46,11 +46,12 @@ sys.path.insert(0, os.path.abspath("."))
 # "sphinx_autodoc_typehints",
 
 extensions = [
+    'sphinx_design',
     "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.intersphinx",
-    'sphinx_panels',
+##    'sphinx_panels',
 ]
 
 intersphinx_mapping = {
@@ -103,6 +104,7 @@ myst_enable_extensions = [
     "colon_fence",
     "substitution",
     "deflist",
+    "html_image",
 ]
 
 myst_substitutions = {

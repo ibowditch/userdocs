@@ -23,3 +23,63 @@ span.opt { color: red; font-style: italic; }        /*font-weight: bold; }*/
 /*#adding-a-new-tenant-schema > ul > li:nth-child(1) > ul > li:nth-child(2) > p  { color: red; font-style: italic; font-weight: bold !important; }*/
 /*#adding-a-new-tenant-schema > ul > li:nth-child(1) > ul > li:nth-child(2) > p > span.optional*/
 
+/* From https://chatgpt.com/c/68916648-8394-8004-93b9-59abfa337e67 */
+
+/* Pill badge base */
+.sd-badge {
+  display: inline-block;
+  padding: 0.25em 0.55em;
+  border-radius: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.sd-pill {
+  border-radius: 10rem;
+}
+
+/* Text colors */
+.sd-text-white {
+  color: #fff !important;
+}
+
+.sd-text-dark {
+  color: #212529 !important;
+}
+
+/* Background color classes */
+.sd-bg-primary {
+  background-color: #007bff !important;
+}
+
+.sd-bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.sd-bg-success {
+  background-color: #28a745 !important;
+}
+
+.sd-bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.sd-bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.sd-bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.sd-bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.sd-bg-dark {
+  background-color: #343a40 !important;
+}

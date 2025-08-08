@@ -1,2 +1,5 @@
-sphynx
+sphinx
 livereload
+myst-parser
+sphinx-design
+sphinx-book-theme
