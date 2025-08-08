@@ -1,4 +1,4 @@
-# RFS Tag User Guide
+# RFStag User Guide
 
 ```{toctree}
     :maxdepth: 2
@@ -9,5 +9,6 @@ events
 server
 administration
 technology
+internal
 ```
 
