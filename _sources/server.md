@@ -244,12 +244,12 @@ and further down, red.
 (memb-quals)=
 ### Member Qualifications
 
-Member qualifications are managed by the RFS, and are stored on their SAP server. The Sign-In system uses 
+Member qualifications are managed by the RFS, and are stored on their SAP server. RFStag uses 
 member qualifications in various areas, including the {ref}`Member List<memb-list-quals>` and in events, so that 
 users can see the qualification status of members.
 
 Training Officers can download qualifications for their Brigade into an excel file, and this can now be {ref}`uploaded 
-to the Sign-In system<sync-sap>` so that it accurately reflects the current qualifications held by members in this Brigade. 
+to RFStag<sync-sap>` so that it accurately reflects the current qualifications held by members in this Brigade. 
 There is no need to maintain parallel records of qualifications, as the system will use those imported from the 
 SAP listing.
 
@@ -329,6 +329,26 @@ This table has a row for each brigade member, and a column for each skill to be 
 passed a check of these skills, the date of the check is recorded in the table. If the cell is blank, no check has yet 
 been completed.
 
+
+```{admonition} Competency checks expire after 12 months
+:class: tip
+
+Under normal use, the Member Skills table will show dates (in the format dd/mm to save space) whenever a competency 
+has been checked within the last 12 months.
+
+This will mean that in some cases dates shown will be from the previous calendar year, and may be almost 12 months old. 
+If required, the skill can be checked again by an Assessor (see below), and the date will be updated to today.
+
+The exact date of a skill check can be seen by clicking the Member Surname in the leftmost column, and this will show
+details of all skill checks for that member,
+
+The competency checks for previous years can be shown using the drop down **Year** in the top left of the page. 
+This will only show skills that were checked within the selected Calendar year, regardless of their expiry date.
+
+
+```
+
+
 :::{figure-md} user_brigade_skills
 :class: myclass
 
@@ -339,17 +359,18 @@ Brigade Skills Table(click to enlarge)
 
 
 ```{margin} VF and CL
-In the case of Village or Crew Leader checks, these will be marked "n/a" if the member is not qualified to that level, 
+In the case of Village, Crew Leader or SWR checks, these will be marked "n/a" if the member is not qualified to that level, 
 so the check is not applicable.
 ```
 
-There are currently 5 groups of checks to be recorded (these are subject to change):
+There are currently 6 groups of checks to be recorded (these are subject to change):
 
 1. All Members (Safety, Radio, Overrun, Teams)
 2. Firefighters (Draft, Tools, Fires, Hoses, Pumps)
 3. Basic First Aid (optional)
-4. Village Skills
-5. Crew Leader Skills
+4. Safe Working on Roofs
+5. Village Skills
+6. Crew Leader Skills
 
 (assessors)=
 #### Assessors

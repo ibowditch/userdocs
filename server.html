@@ -618,10 +618,10 @@ and further down, red.
 </section>
 <section id="member-qualifications">
 <span id="memb-quals"></span><h3><span class="section-number">4.4.3. </span>Member Qualifications<a class="headerlink" href="#member-qualifications" title="Link to this heading">#</a></h3>
-<p>Member qualifications are managed by the RFS, and are stored on their SAP server. The Sign-In system uses
+<p>Member qualifications are managed by the RFS, and are stored on their SAP server. RFStag uses
 member qualifications in various areas, including the <a class="reference internal" href="#memb-list-quals"><span class="std std-ref">Member List</span></a> and in events, so that
 users can see the qualification status of members.</p>
-<p>Training Officers can download qualifications for their Brigade into an excel file, and this can now be <a class="reference internal" href="administration.html#sync-sap"><span class="std std-ref">uploaded  to the Sign-In system</span></a> so that it accurately reflects the current qualifications held by members in this Brigade.
+<p>Training Officers can download qualifications for their Brigade into an excel file, and this can now be <a class="reference internal" href="administration.html#sync-sap"><span class="std std-ref">uploaded  to RFStag</span></a> so that it accurately reflects the current qualifications held by members in this Brigade.
 There is no need to maintain parallel records of qualifications, as the system will use those imported from the
 SAP listing.</p>
 <p>The Member Qualification view shows a more detailed view of all member qualifications, including the following:</p>
@@ -683,6 +683,17 @@ under Brigade/Certifications. Use the Category filter (right hand side) “Skill
 <p>This table has a row for each brigade member, and a column for each skill to be checked. If the member has successfully
 passed a check of these skills, the date of the check is recorded in the table. If the cell is blank, no check has yet
 been completed.</p>
+<div class="tip admonition">
+<p class="admonition-title">Competency checks expire after 12 months</p>
+<p>Under normal use, the Member Skills table will show dates (in the format dd/mm to save space) whenever a competency
+has been checked within the last 12 months.</p>
+<p>This will mean that in some cases dates shown will be from the previous calendar year, and may be almost 12 months old.
+If required, the skill can be checked again by an Assessor (see below), and the date will be updated to today.</p>
+<p>The exact date of a skill check can be seen by clicking the Member Surname in the leftmost column, and this will show
+details of all skill checks for that member,</p>
+<p>The competency checks for previous years can be shown using the drop down <strong>Year</strong> in the top left of the page.
+This will only show skills that were checked within the selected Calendar year, regardless of their expiry date.</p>
+</div>
 <figure class="myclass align-default" id="user-brigade-skills">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/user_brigade_skills.jpg"><img alt="Brigade Skills Table" class="bg-primary mb-1" src="_images/user_brigade_skills.jpg" style="width: 1467px;" />
 </a>
@@ -692,14 +703,15 @@ been completed.</p>
 </figure>
 <aside class="margin sidebar">
 <p class="sidebar-title">VF and CL</p>
-<p>In the case of Village or Crew Leader checks, these will be marked “n/a” if the member is not qualified to that level,
+<p>In the case of Village, Crew Leader or SWR checks, these will be marked “n/a” if the member is not qualified to that level,
 so the check is not applicable.</p>
 </aside>
-<p>There are currently 5 groups of checks to be recorded (these are subject to change):</p>
+<p>There are currently 6 groups of checks to be recorded (these are subject to change):</p>
 <ol class="arabic simple">
 <li><p>All Members (Safety, Radio, Overrun, Teams)</p></li>
 <li><p>Firefighters (Draft, Tools, Fires, Hoses, Pumps)</p></li>
 <li><p>Basic First Aid (optional)</p></li>
+<li><p>Safe Working on Roofs</p></li>
 <li><p>Village Skills</p></li>
 <li><p>Crew Leader Skills</p></li>
 </ol>
