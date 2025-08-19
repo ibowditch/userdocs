@@ -97,14 +97,14 @@ Excluded activity types
 ### Synchronising Qualifications with SAP
 
 Member qualifications are issued and managed by the RFS, and are stored in their SAP system. Until recently, there was no 
-easy way to download all member qualifications for a brigade from SAP, so if the Sign-In system wanted to refer to 
+easy way to download all member qualifications for a brigade from SAP, so if RFStag wanted to refer to 
 qualifications, a parallel set of qualification records had to be set up and maintained. 
 
 Training Officers have a lot on their plates, and, not surprisingly, they were not keen on keeping a separate
 set of records for member qualifications.
 
 However, now that member qualifications can easily be downloaded from SAP, I have added a new feature that allows RFS 
-qualification records to be uploaded to the Sign-In system, so that the qualifications used are up to date and in sync 
+qualification records to be uploaded to RFStag, so that the qualifications used are up to date and in sync 
 with SAP. Once uploaded, they can be refreshed and updated with a new listing taken from SAP whenever required.
 
 (sap-download-permissions)=
@@ -128,7 +128,7 @@ RFS SAP Qualifications Report Spreadsheet (click to enlarge)
 Qualification records are used in the {ref}`Member Qualifications<memb-quals>` view, which allows members to see 
 what qualifications are recorded in their name on SAP, and to check that these records are accurate and complete.
 
-SAP records can be uploaded to the Sign-In system from the Admin system, under Brigade-Certifications, using the 
+SAP records can be uploaded to RFStag from the Admin system, under Brigade-Certifications, using the 
 Import button on the top right of the page.
 
 You will then see the following page. Enter the name of the Excel file downloaded from RFS SAP that has 
@@ -239,18 +239,18 @@ a parallel set of qualification records for members. Any reports showing qualifi
 imported from SAP, and the SAP records supersede any other records that may have been set up before.
 
 In general, you should not change or add any certification records, except through importing from SAP. If the SAP records 
-are incorrect, or some are missing, the priority should be to get them fixed in SAP, rather than fixing them in the 
-sign-in system. The corrections will come through next time you import records from SAP.
+are incorrect, or some are missing, the priority should be to get them fixed in SAP, rather than fixing them in RFStag. 
+The corrections will come through next time you import records from SAP.
 
 ### Driving Permissions (TD & PD)
 
 Permission to drive Brigade vehicles is given by the Brigade Captain, and records of who can drive which vehicles are
-stored as certifications in the sign-in system.
+stored as certifications in RFStag.
 
 These are not RFS qualifications, and are not recorded in SAP, as they are local to the brigade.
 
 If the Brigade Captain authorises a member to drive the brigade's heavy vehicles, a certification of type **TD** should be 
-created and stored in the certification section of the sign-in system admin area. Similarly, members who are permitted 
+created and stored in the certification section of the RFStag admin area. Similarly, members who are permitted 
 to drive light vehicles (but not heavy vehicles) should have a **PD** certification recorded in their name.
 
 Make sure you add a certification date to these, to keep a record of when they were granted.

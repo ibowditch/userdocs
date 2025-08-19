@@ -218,7 +218,7 @@ in the log, and they have the ability to check and update the log as needed.
 
 ## Site Map
 
-This website describes following aspects of the electronic sign-in system:
+This website describes following aspects of RFStag:
 
 1. [Introduction](background.md)
 
